@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/fsoarez
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://datacryptoanalytics.ml
+  * I am fsoarez (https://keybase.io/fsoarez) on keybase.
+  * I have a public key ASDR_wdJVQgwqNsT9U7GckTT3bW9vIabpFZcIRIV7k34WQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012006bd5bda33f25a174ae50ff9614b538ec6e2e5462a51b1379ef535071f9199ff0a",
+      "host": "keybase.io",
+      "kid": "0120d1ff0749550830a8db13f54ec67244d3ddb5bdbc869ba4565c211215ee4df8590a",
+      "uid": "d39dcc82cb9b856cfdbae06a528afe19",
+      "username": "fsoarez"
+    },
+    "merkle_root": {
+      "ctime": 1585961739,
+      "hash": "0409107b6a34e882f59efc5ab65e299d0afdc21e01e35792e08c6d5dae0b2db9ebf32094cfda368eb5a283dffdda7501a8bc455f97a90690f18ce7f63d1f7ef6",
+      "hash_meta": "bf29ec82dd099172f3d1712d4dd4136bf20f7fbc113dcde970793d45b5d2e0e1",
+      "seqno": 15759320
+    },
+    "service": {
+      "entropy": "sY/VQ0XUk/B1ItrNgyPjZdX8",
+      "hostname": "datacryptoanalytics.ml",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.3.0"
+  },
+  "ctime": 1585961780,
+  "expire_in": 504576000,
+  "prev": "f6e1c09811e658ab055e791de894c0b8439a0a126340915d05c4badb07cc7bc7",
+  "seqno": 30,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg0f8HSVUIMKjbE/VOxnJE0921vbyGm6RWXCESFe5N+FkKp3BheWxvYWTESpcCHsQg9uHAmBHmWKsFXnkd6JTAuEOaChJjQJFdBcS62wfMe8fEIFPC5JVoak+NS7sfKDGdduH3DpRuAotLTp8XIdo2o5RRAgHCo3NpZ8RAJFnxuqruC9P4+OjAxeJ90DEiESJ8KKfjcpDZHowwhFqct6o3ux9BxpHcpVYUL3TnP3gh9vGTqZCWJm0NNv5nBKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINTcJvTSY8yJJFw940Apibg/QeobyrvO4BVU4/tT/Dqgo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/fsoarez
+
+==================================================================
