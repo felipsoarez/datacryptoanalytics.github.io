@@ -165,18 +165,28 @@
                         <a href="#" class="single-blog-h4"></a>
                         <div class="space-20"></div>
 
-                        <script src="https://bin.bnbstatic.com/static/js/ocbs/binance-fiat-widget.js"></script> 
-                        <div id="widget"></div>
-                        <script>
+                    <script src="https://public.bnbstatic.com/static/js/ocbs/binance-fiat-widget.js"></script> 
+    <div id="widget"></div>
+			    
+			     <script>
         window.onload = function () {
             var t = document.querySelector('#widget')
             window.binanceFiatWidget.Widget(t, {
+                coinInfo: {
+                  fiat: '',
+                  crypto: '',
+                  isInUS: false
+                },
                 urlParmas: {
-                        ref: '28097223'
+                  us_ref: 'your us refId',
+                  ref: '28097223'
                 }
             })
         }
     </script>
+			    
+			    
+		
            
 
           
