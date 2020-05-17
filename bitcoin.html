@@ -213,7 +213,28 @@
   <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
 <coingecko-coin-ticker-widget  coin-id="bitcoin" currency="usd" locale="pt" background-color="#ffffff" width="0"></coingecko-coin-ticker-widget>
 
+</table>
+<script type="text/javascript">
+	var api = 'https://openchains.info/api/v1/{id}/getrawtransaction ';
+	var info;
+   	function setUp() {
+   		var button = select('#txid');
+   		button.mousePressed(cepDados);
+   		document.getElementById("blockhash").innerHTML = recebeDados().info.logradouro;
+   		document.getElementById("confirmations").innerHTML = recebeDados().info.logradouro;
+   		document.getElementById("blocktime").innerHTML = recebeDados().info.logradouro;
+   		document.getElementById("fee").innerHTML = recebeDados().info.logradouro;
+   	}
 
+   	function cepDados(){
+ 		var url = api + input.value();
+   		loadJSON(url, recebeDados);
+   	}
+
+   	function recebeDados(dados_str){
+        info = JSON.parse(dados_str);
+    }
+</script>
 
 
 
