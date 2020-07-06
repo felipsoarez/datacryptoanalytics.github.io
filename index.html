@@ -122,7 +122,32 @@ new TradingView.UserInfoWidget({
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<h4>Preformatted</h4>
+									<pre><code>import numpy as np
+from numpy import *
+import pandas as pd
+from binance.client import Client
+from binance.enums import *
+import CoreFunctions as cf
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.metrics import accuracy_score, mean_squared_error
+from joblib import dump, load
+
+#Você não precisa digitar sua chave / segredo para obter dados da troca, eles são necessários apenas para transações na classe TradingBot.py.
+api_key = '#'
+api_secret = '#'
+client = Client(api_key, api_secret)
+
+candles = client.get_historical_klines("BTCUSDT", Client.KLINE_INTERVAL_1HOUR, "01 Jan, 2017", "10 Jul, 2020")
+
+#Converta os dados brutos da troca em um formulário mais amigável, com alguma criação básica de recursos
+x = cf.FeatureCreation(candles)
+
+#Criar nossas metas
+y = cf.CreateTargets(candles,1)</code></pre>
+								
+								
+								<span class="image main"><img src="" alt="" /></span>
 								<h3>Somos um grupo de <b>Traders</b> e <b>Desenvolvedores de Softwares</b></h3>
 								<div class="space-10"></div>
 								<p>Temos como <b><i>missão</i></b> automatizar operações no mercado financeiro, ganhar muito dinheiro de forma automatizada com algoritmos Machine Learning e diminuir os prejuízos, criando boas análises dos cenários econômicos, e assim ter maior controle do capital. </p>
