@@ -214,43 +214,78 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 </div>
 
  <script>
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
+ let myChart = document.getElementById('myChart').getContext('2d');
+
+ // Global Options
+ Chart.defaults.global.defaultFontFamily = 'Lato';
+ Chart.defaults.global.defaultFontsize = 18;
+ Chart.defaults.global.defaultFontColor = '#777';
+
+
+ let PrPopChart = new Chart(myChart, {
+   type:'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+   data:{
+     labels:['San Juan', 'Bayamón', 'Carolina', 'Ponce', 'Caguas', 'Guaynabo', 'Mayaguez', 'Trujillo Alto', 'Arecibo', 'Fajardo'],
+     datasets:[{
+       label:'Population',
+       data:[
+         418140,
+         203499,
+         170404,
+         152634,
+         86804,
+         81360,
+         78647,
+         54189,
+         49318,
+         34068
+       ],
+
+       // backgroundColor: 'green',
+       backgroundColor:[
+         '#e65100',
+         '#e65100',
+         '#f57c00',
+         '#fb8c00',
+         '#ff9800',
+         '#ffa726',
+         '#ffb74d',
+         '#ffcc80',
+         '#ffe0b2',
+         '#fff3e0'
+       ],
+       borderWidth:1,
+       borderColor:'white',
+       hoverBorderWidth: 3,
+       hoverBorderColor: 'grey'
+     }]
+   },
+   options:{
+     title:{
+       display: true,
+       text: 'Largest Municipalities in Puerto Rico',
+       fontSize:25
+     },
+     legend:{
+       display:true,
+       position:'right',
+       labels:{
+         fontColor: '#000'
+       }
+     },
+     layout:{
+       padding:{
+         left:50,
+         right:0,
+         bottom:0,
+         top:0
+       }
+     },
+     tooltips:{
+       enabled:true
+     }
+   }
+ });
 </script>
 
 
