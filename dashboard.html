@@ -214,16 +214,8 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 </div>
 
  <script>
-
- let myChart = document.getElementById('myChart').getContext('2d');
-
- // Global Options
- Chart.defaults.global.defaultFontFamily = 'Lato';
- Chart.defaults.global.defaultFontsize = 18;
- Chart.defaults.global.defaultFontColor = '#777';
-
-
- var myChart = new Chart(ctx, {
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
