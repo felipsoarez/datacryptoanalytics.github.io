@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Downloads</title>
+    <title>Dashboard</title>
 
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,23 +21,23 @@
     <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101267773);</script>
     <script async src="//static.getclicky.com/js"></script>
 
-    <meta name="description" content="Downloads">
-    <link rel="canonical" href="https://datacryptoanalytics.github.io/page/downloads">
+    <meta name="description" content="Dashboard">
+    <link rel="canonical" href="https://datacryptoanalytics.github.io/dashboard">
     <meta name="referrer" content="no-referrer-when-downgrade">
 
     <meta property="og:site_name" content="DataCrypto Analytics Blog">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Downloads">
+    <meta property="og:title" content="Dashboard">
     <meta property="og:description" content="">
-    <meta property="og:url" content="https://datacryptoanalytics.github.io/page/downloads">
+    <meta property="og:url" content="https://datacryptoanalytics.github.io/dashboard">
     <meta property="og:image" content="">
     
     
     <meta property="article:publisher" content="https://fb.me/datacryptopy">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Downloads">
+    <meta name="twitter:title" content="Dashboard">
     <meta name="twitter:description" content="">
-    <meta name="twitter:url" content="https://datacryptoanalytics.github.io/page/downloads">
+    <meta name="twitter:url" content="https://datacryptoanalytics.github.io/dashboard">
     <meta name="twitter:image" content="">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="DataCrypto Analytics Dev Team">
@@ -151,7 +151,7 @@
                                 <li><a href="https://twitter.com/DataCryptoML" class="twitter" target="_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="@DataCryptoML"><ion-icon name="logo-twitter"></ion-icon></a></li>
                                 <li><a href="https://www.youtube.com/channel/UCxfGBCV9E04Uw4flJLjBCqg?view_as=subscriber" class="youtube" title="" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Youtube"><ion-icon name="logo-youtube"></ion-icon></a></li>
                                 <li><a href="https://www.instagram.com/analyticsdatacrypto/" class="instagram" title="" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                                <li><a href="https://github.com/datacryptoanalytics/algoritmos" target="_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="GitHub"><ion-icon name="logo-github"></ion-icon></a></li>
+                                <li><a href="https://github.com/datacryptoanalytics/" target="_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="GitHub"><ion-icon name="logo-github"></ion-icon></a></li>
                             </ul>
                         </div>
                     </div>
@@ -223,7 +223,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 
  let PrPopChart = new Chart(myChart, {
-   type:'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+   type:'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
    data:{
      labels:['San Juan', 'Bayamón', 'Carolina', 'Ponce', 'Caguas', 'Guaynabo', 'Mayaguez', 'Trujillo Alto', 'Arecibo', 'Fajardo'],
      datasets:[{
@@ -287,6 +287,21 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
    }
  });
 </script>
+                                     
+                                     <script> 
+                                          Chart.defaults.global.defaultFontColor = 'red';
+let chart = new Chart(ctx, {
+    type: 'line',
+    data: data,
+    options: {
+        legend: {
+            labels: {
+                // This more specific font property overrides the global property
+                fontColor: 'black'
+            }
+        }
+    }
+}); </script>
 
 
 
