@@ -289,88 +289,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
    }
  });
 </script>
-                                     
-                                     <div class="container2">
-   <canvas id="myChart2"></canvas>
-</div>
-
- <script>
- let myChart = document.getElementById('myChart2').getContext('2d');
-
- // Global Options
- Chart.defaults.global.defaultFontFamily = 'Lato';
- Chart.defaults.global.defaultFontsize = 18;
- Chart.defaults.global.defaultFontColor = '#777';
-
-
- let PrPopChart = new Chart(myChart, {
-   type:'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-   data:{
-     labels:['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-     datasets:[{
-       label:'',
-       data:[
-         100,
-         142,
-         170,
-         152,
-         213,
-         240,
-         272,
-         321,
-         493,
-         380,
-         526,
-         502
-       ],
-
-       // backgroundColor: 'green',
-       backgroundColor:[
-         '#e65100',
-         '#e65100',
-         '#f57c00',
-         '#fb8c00',
-         '#ff9800',
-         '#ffa726',
-         '#ffb74d',
-         '#ffcc80',
-         '#ffe0b2',
-         '#fff3e0'
-       ],
-       borderWidth:1,
-       borderColor:'white',
-       hoverBorderWidth: 3,
-       hoverBorderColor: 'grey'
-     }]
-   },
-   options:{
-     title:{
-       display: true,
-       text: 'Volume em Dólar',
-       fontSize:25
-     },
-     legend:{
-       display:false,
-       position:'right',
-       labels:{
-         fontColor: '#000'
-       }
-     },
-     layout:{
-       padding:{
-         left:0,
-         right:0,
-         bottom:0,
-         top:0
-       }
-     },
-     tooltips:{
-       enabled:true
-     }
-   }
- });
-</script>
-                                     
+                              
                                     
 
 
@@ -386,7 +305,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                                     <div class="col-sm-6">
                                             <div class="tags">
                                                 Tags:
-                                                <a href="#">Educação</a>
+                                                <a href="#">Info</a>
                                             </div>
                                     </div>
                                     
