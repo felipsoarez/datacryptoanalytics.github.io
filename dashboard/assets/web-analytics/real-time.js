@@ -37,11 +37,11 @@ $(function () {
 				{ name: "Ripple", users: 4 }
 			],
 			categories: [
-				{ name: "Cardano", users: 8 },
-				{ name: "EOS", users: 9 },
-				{ name: "Bitcoin", users: 10 },
-				{ name: "LINK", users: 5 },
-				{ name: "Others", users: 23 }
+				{ name: "Bitstamp ", users: 8 },
+				{ name: "Kraken ", users: 9 },
+				{ name: "Coinbase Pro  ", users: 10 },
+				{ name: "Bithumb ", users: 5 },
+				{ name: "Binance ", users: 23 }
 			],
 			states: [
 				{ name: "Others", users: 16 },
@@ -69,10 +69,10 @@ $(function () {
 				{ name: "Ripple", users: 4 }
 			],
 			categories: [
-				{ name: "Cardano", users: 9 },
-				{ name: "Women Clothing", users: 9 },
-				{ name: "Gadgets", users: 10 },
-				{ name: "Books", users: 5 },
+				{ name: "Bitstamp", users: 9 },
+				{ name: "Kraken", users: 9 },
+				{ name: "Coinbase Pro", users: 10 },
+				{ name: "Bithumb", users: 5 },
 				{ name: "Others", users: 23 }
 			],
 			states: [
@@ -101,10 +101,10 @@ $(function () {
 				{ name: "Ripple", users: 4 }
 			],
 			categories: [
-				{ name: "Cardano", users: 8 },
-				{ name: "Women Clothing", users: 9 },
-				{ name: "Gadgets", users: 11 },
-				{ name: "Books", users: 5 },
+				{ name: "Bitstamp", users: 8 },
+				{ name: "Kraken", users: 9 },
+				{ name: "Coinbase Pro", users: 11 },
+				{ name: "Bithumb", users: 5 },
 				{ name: "Others", users: 24 }
 			],
 			states: [
@@ -133,10 +133,10 @@ $(function () {
 				{ name: "Ripple", users: 4 }
 			],
 			categories: [
-				{ name: "Cardano", users: 9 },
-				{ name: "Women Clothing", users: 10 },
-				{ name: "Gadgets", users: 11 },
-				{ name: "Books", users: 4 },
+				{ name: "Bitstamp", users: 9 },
+				{ name: "Kraken", users: 10 },
+				{ name: "Coinbase Pro", users: 11 },
+				{ name: "Bithumb", users: 4 },
 				{ name: "Others", users: 24 }
 			],
 			states: [
@@ -165,10 +165,10 @@ $(function () {
 				{ name: "Ripple", users: 4 }
 			],
 			categories: [
-				{ name: "Cardano", users: 9 },
-				{ name: "Women Clothing", users: 10 },
-				{ name: "Gadgets", users: 11 },
-				{ name: "Books", users: 5 },
+				{ name: "Bitstamp", users: 9 },
+				{ name: "Kraken", users: 10 },
+				{ name: "Coinbase Pro", users: 11 },
+				{ name: "Bithumb", users: 5 },
 				{ name: "Others", users: 24 }
 			],
 			states: [
@@ -197,10 +197,10 @@ $(function () {
 				{ name: "Ripple", users: 5 }
 			],
 			categories: [
-				{ name: "Cardano", users: 9 },
-				{ name: "Women Clothing", users: 10 },
-				{ name: "Gadgets", users: 12 },
-				{ name: "Books", users: 5 },
+				{ name: "Bitstamp", users: 9 },
+				{ name: "Kraken", users: 10 },
+				{ name: "Coinbase Pro", users: 12 },
+				{ name: "Bithumb", users: 5 },
 				{ name: "Others", users: 24 }
 			],
 			states: [
@@ -229,10 +229,10 @@ $(function () {
 				{ name: "Ripple", users: 5 }
 			],
 			categories: [
-				{ name: "Cardano", users: 9 },
-				{ name: "Women Clothing", users: 10 },
-				{ name: "Gadgets", users: 12 },
-				{ name: "Books", users: 5 },
+				{ name: "Bitstamp", users: 9 },
+				{ name: "Kraken", users: 10 },
+				{ name: "Coinbase Pro", users: 12 },
+				{ name: "Bithumb", users: 5 },
 				{ name: "Others", users: 25 }
 			],
 			states: [
@@ -373,10 +373,10 @@ $(function () {
 				startAngle: 90,
 				type: "pie",
 				dataPoints: [
-					{ y: 8, name:"Cardano" },
-					{ y: 9, name:"Women Clothing" },
-					{ y: 10, name:"Gadgets" },
-					{ y: 5, name:"Books" },
+					{ y: 8, name:"Bitstamp" },
+					{ y: 9, name:"Kraken" },
+					{ y: 10, name:"Coinbase Pro" },
+					{ y: 5, name:"Bithumb" },
 					{ y: 23, name:"Others" }
 				]
 			}
