@@ -224,70 +224,42 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
  let PrPopChart = new Chart(myChart, {
    type:'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-   data:{
-     labels:['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-     datasets:[{
-       label:'',
-       data:[
-         100,
-         142,
-         170,
-         152,
-         213,
-         240,
-         272,
-         321,
-         493,
-         380,
-         526,
-         502
-       ],
-
-       // backgroundColor: 'green',
-       backgroundColor:[
-         '#e65100',
-         '#e65100',
-         '#f57c00',
-         '#fb8c00',
-         '#ff9800',
-         '#ffa726',
-         '#ffb74d',
-         '#ffcc80',
-         '#ffe0b2',
-         '#fff3e0'
-       ],
-       borderWidth:1,
-       borderColor:'white',
-       hoverBorderWidth: 3,
-       hoverBorderColor: 'grey'
-     }]
-   },
-   options:{
-     title:{
-       display: true,
-       text: 'Volume em Dólar',
-       fontSize:25
-     },
-     legend:{
-       display:false,
-       position:'right',
-       labels:{
-         fontColor: '#000'
-       }
-     },
-     layout:{
-       padding:{
-         left:0,
-         right:0,
-         bottom:0,
-         top:0
-       }
-     },
-     tooltips:{
-       enabled:true
-     }
-   }
- });
+   data: {
+      labels: ["1900", "1950", "1999", "2050"],
+      datasets: [{
+          label: "Europe",
+          type: "line",
+          borderColor: "#8e5ea2",
+          data: [408,547,675,734],
+          fill: false
+        }, {
+          label: "Africa",
+          type: "line",
+          borderColor: "#3e95cd",
+          data: [133,221,783,2478],
+          fill: false
+        }, {
+          label: "Europe",
+          type: "bar",
+          backgroundColor: "rgba(0,0,0,0.2)",
+          data: [408,547,675,734],
+        }, {
+          label: "Africa",
+          type: "bar",
+          backgroundColor: "rgba(0,0,0,0.2)",
+          backgroundColorHover: "#3e95cd",
+          data: [133,221,783,2478]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Population growth (millions): Europe & Africa'
+      },
+      legend: { display: false }
+    }
+});
 </script>
                               
                                     
