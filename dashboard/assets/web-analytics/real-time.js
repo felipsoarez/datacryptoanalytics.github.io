@@ -59,12 +59,12 @@ $(function () {
 
 			device: [
 				{ name: "Long", users: 40 },
-				{ name: "Tablet", users: 5 },
-				{ name: "Mobile", users: 11 }
+				{ name: "Neutro", users: 5 },
+				{ name: "Short", users: 11 }
 			],
 			trafficMedium: [
-				{ name: "Organic", users: 39 },
-				{ name: "Direct", users: 8 },
+				{ name: "Bitcoin", users: 39 },
+				{ name: "Ethereum", users: 8 },
 				{ name: "Paid", users: 5 },
 				{ name: "Referral", users: 4 }
 			],
@@ -91,12 +91,12 @@ $(function () {
 
 			device: [
 				{ name: "Long", users: 41 },
-				{ name: "Tablet", users: 5 },
-				{ name: "Mobile", users: 11 }
+				{ name: "Neutro", users: 5 },
+				{ name: "Short", users: 11 }
 			],
 			trafficMedium: [
-				{ name: "Organic", users: 39 },
-				{ name: "Direct", users: 9 },
+				{ name: "Bitcoin", users: 39 },
+				{ name: "Ethereum", users: 9 },
 				{ name: "Paid", users: 5 },
 				{ name: "Referral", users: 4 }
 			],
@@ -123,12 +123,12 @@ $(function () {
 
 			device: [
 				{ name: "Long", users: 42 },
-				{ name: "Tablet", users: 5 },
-				{ name: "Mobile", users: 11 }
+				{ name: "Neutro", users: 5 },
+				{ name: "Short", users: 11 }
 			],
 			trafficMedium: [
-				{ name: "Organic", users: 40 },
-				{ name: "Direct", users: 8 },
+				{ name: "Bitcoin", users: 40 },
+				{ name: "Ethereum", users: 8 },
 				{ name: "Paid", users: 6 },
 				{ name: "Referral", users: 4 }
 			],
@@ -155,12 +155,12 @@ $(function () {
 
 			device: [
 				{ name: "Long", users: 43 },
-				{ name: "Tablet", users: 4 },
-				{ name: "Mobile", users: 12 }
+				{ name: "Neutro", users: 4 },
+				{ name: "Short", users: 12 }
 			],
 			trafficMedium: [
-				{ name: "Organic", users: 41 },
-				{ name: "Direct", users: 8 },
+				{ name: "Bitcoin", users: 41 },
+				{ name: "Ethereum", users: 8 },
 				{ name: "Paid", users: 6 },
 				{ name: "Referral", users: 4 }
 			],
@@ -187,12 +187,12 @@ $(function () {
 
 			device: [
 				{ name: "Long", users: 43 },
-				{ name: "Tablet", users: 5 },
-				{ name: "Mobile", users: 12 }
+				{ name: "Neutro", users: 5 },
+				{ name: "Short", users: 12 }
 			],
 			trafficMedium: [
-				{ name: "Organic", users: 40 },
-				{ name: "Direct", users: 9 },
+				{ name: "Bitcoin", users: 40 },
+				{ name: "Ethereum", users: 9 },
 				{ name: "Paid", users: 6 },
 				{ name: "Referral", users: 5 }
 			],
@@ -219,12 +219,12 @@ $(function () {
 
 			device: [
 				{ name: "Long", users: 44 },
-				{ name: "Tablet", users: 5 },
-				{ name: "Mobile", users: 12 }
+				{ name: "Neutro", users: 5 },
+				{ name: "Short", users: 12 }
 			],
 			trafficMedium: [
-				{ name: "Organic", users: 42 },
-				{ name: "Direct", users: 9 },
+				{ name: "Bitcoin", users: 42 },
+				{ name: "Ethereum", users: 9 },
 				{ name: "Paid", users: 5 },
 				{ name: "Referral", users: 5 }
 			],
@@ -296,8 +296,8 @@ $(function () {
 				type: "doughnut",
 				dataPoints: [
 					{  y: 39, name: "Long" },
-					{  y: 5, name: "Tablet" },
-					{  y: 11, name: "Mobile" }
+					{  y: 5, name: "Neutro" },
+					{  y: 11, name: "Short" }
 				]
 			}
 		]
@@ -333,8 +333,8 @@ $(function () {
 				startAngle: 90,
 				type: "pie",
 				dataPoints: [
-					{  y: 38, name:"Organic" },
-					{  y: 8, name:"Direct" },
+					{  y: 38, name:"Bitcoin" },
+					{  y: 8, name:"Ethereum" },
 					{  y: 5, name:"Paid" },
 					{  y: 4, name:"Referral" }
 				]
