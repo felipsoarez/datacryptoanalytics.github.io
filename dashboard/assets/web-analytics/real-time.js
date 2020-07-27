@@ -26,21 +26,21 @@ $(function () {
 			pageViewsPerSecondUpperLimit: 3,
 
 			device: [
-				{ name: "Desktop", users: 39 },
-				{ name: "Tablet", users: 5 },
-				{ name: "Mobile", users: 11 }
+				{ name: "Long", users: 39 },
+				{ name: "Neutro", users: 5 },
+				{ name: "Short", users: 11 }
 			],
 			trafficMedium: [
-				{ name: "Organic", users: 38 },
-				{ name: "Direct", users: 8 },
-				{ name: "Paid", users: 5 },
-				{ name: "Referral", users: 4 }
+				{ name: "Bitcoin", users: 38 },
+				{ name: "Ethereum", users: 8 },
+				{ name: "Tether", users: 5 },
+				{ name: "Ripple", users: 4 }
 			],
 			categories: [
-				{ name: "Men Clothing", users: 8 },
-				{ name: "Women Clothing", users: 9 },
-				{ name: "Gadgets", users: 10 },
-				{ name: "Books", users: 5 },
+				{ name: "Cardano", users: 8 },
+				{ name: "EOS", users: 9 },
+				{ name: "Bitcoin", users: 10 },
+				{ name: "LINK", users: 5 },
 				{ name: "Others", users: 23 }
 			],
 			states: [
@@ -58,7 +58,7 @@ $(function () {
 			pageViewsPerSecondUpperLimit: 3,
 
 			device: [
-				{ name: "Desktop", users: 40 },
+				{ name: "Long", users: 40 },
 				{ name: "Tablet", users: 5 },
 				{ name: "Mobile", users: 11 }
 			],
@@ -90,7 +90,7 @@ $(function () {
 			pageViewsPerSecondUpperLimit: 3,
 
 			device: [
-				{ name: "Desktop", users: 41 },
+				{ name: "Long", users: 41 },
 				{ name: "Tablet", users: 5 },
 				{ name: "Mobile", users: 11 }
 			],
@@ -122,7 +122,7 @@ $(function () {
 			pageViewsPerSecondUpperLimit: 3,
 
 			device: [
-				{ name: "Desktop", users: 42 },
+				{ name: "Long", users: 42 },
 				{ name: "Tablet", users: 5 },
 				{ name: "Mobile", users: 11 }
 			],
@@ -154,7 +154,7 @@ $(function () {
 			pageViewsPerSecondUpperLimit: 4,
 
 			device: [
-				{ name: "Desktop", users: 43 },
+				{ name: "Long", users: 43 },
 				{ name: "Tablet", users: 4 },
 				{ name: "Mobile", users: 12 }
 			],
@@ -186,7 +186,7 @@ $(function () {
 			pageViewsPerSecondUpperLimit: 4,
 
 			device: [
-				{ name: "Desktop", users: 43 },
+				{ name: "Long", users: 43 },
 				{ name: "Tablet", users: 5 },
 				{ name: "Mobile", users: 12 }
 			],
@@ -218,7 +218,7 @@ $(function () {
 			pageViewsPerSecondUpperLimit: 5,
 
 			device: [
-				{ name: "Desktop", users: 44 },
+				{ name: "Long", users: 44 },
 				{ name: "Tablet", users: 5 },
 				{ name: "Mobile", users: 12 }
 			],
@@ -295,7 +295,7 @@ $(function () {
 				startAngle: 90,
 				type: "doughnut",
 				dataPoints: [
-					{  y: 39, name: "Desktop" },
+					{  y: 39, name: "Long" },
 					{  y: 5, name: "Tablet" },
 					{  y: 11, name: "Mobile" }
 				]
