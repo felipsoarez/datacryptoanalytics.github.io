@@ -225,30 +225,30 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
  let PrPopChart = new Chart(myChart, {
    type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
    data: {
-      labels: ["Março", "Abril", "Maio", "Junho"],
+      labels: ["Março", "Abril", "Maio", "Junho", "Julho"],
       datasets: [{
           label: "Investimentos",
           type: "line",
           borderColor: "#8e5ea2",
-          data: [100,168,148,182],
+          data: [100,168,148,182,0],
           fill: false
         }, {
           label: "Lucros",
           type: "line",
           borderColor: "#3e95cd",
-          data: [90,146,221,247],
+          data: [90,146,221,247,306],
           fill: false
         }, {
-          label: "Investimentos",
+          label: "Capital",
           type: "bar",
           backgroundColor: "rgba(0,0,0,0.2)",
-          data: [100,168,148,182],
+          data: [100,268,416,598],
         }, {
           label: "Lucros",
           type: "bar",
           backgroundColor: "rgba(0,0,0,0.2)",
           backgroundColorHover: "#3e95cd",
-          data: [90,146,221,247]
+          data: [90,146,221,247,306]
         }
       ]
     },
