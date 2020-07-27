@@ -65,11 +65,11 @@ $(function () {
 			trafficMedium: [
 				{ name: "Bitcoin", users: 39 },
 				{ name: "Ethereum", users: 8 },
-				{ name: "Paid", users: 5 },
-				{ name: "Referral", users: 4 }
+				{ name: "Tether", users: 5 },
+				{ name: "Ripple", users: 4 }
 			],
 			categories: [
-				{ name: "Men Clothing", users: 9 },
+				{ name: "Cardano", users: 9 },
 				{ name: "Women Clothing", users: 9 },
 				{ name: "Gadgets", users: 10 },
 				{ name: "Books", users: 5 },
@@ -97,11 +97,11 @@ $(function () {
 			trafficMedium: [
 				{ name: "Bitcoin", users: 39 },
 				{ name: "Ethereum", users: 9 },
-				{ name: "Paid", users: 5 },
-				{ name: "Referral", users: 4 }
+				{ name: "Tether", users: 5 },
+				{ name: "Ripple", users: 4 }
 			],
 			categories: [
-				{ name: "Men Clothing", users: 8 },
+				{ name: "Cardano", users: 8 },
 				{ name: "Women Clothing", users: 9 },
 				{ name: "Gadgets", users: 11 },
 				{ name: "Books", users: 5 },
@@ -129,11 +129,11 @@ $(function () {
 			trafficMedium: [
 				{ name: "Bitcoin", users: 40 },
 				{ name: "Ethereum", users: 8 },
-				{ name: "Paid", users: 6 },
-				{ name: "Referral", users: 4 }
+				{ name: "Tether", users: 6 },
+				{ name: "Ripple", users: 4 }
 			],
 			categories: [
-				{ name: "Men Clothing", users: 9 },
+				{ name: "Cardano", users: 9 },
 				{ name: "Women Clothing", users: 10 },
 				{ name: "Gadgets", users: 11 },
 				{ name: "Books", users: 4 },
@@ -161,11 +161,11 @@ $(function () {
 			trafficMedium: [
 				{ name: "Bitcoin", users: 41 },
 				{ name: "Ethereum", users: 8 },
-				{ name: "Paid", users: 6 },
-				{ name: "Referral", users: 4 }
+				{ name: "Tether", users: 6 },
+				{ name: "Ripple", users: 4 }
 			],
 			categories: [
-				{ name: "Men Clothing", users: 9 },
+				{ name: "Cardano", users: 9 },
 				{ name: "Women Clothing", users: 10 },
 				{ name: "Gadgets", users: 11 },
 				{ name: "Books", users: 5 },
@@ -193,11 +193,11 @@ $(function () {
 			trafficMedium: [
 				{ name: "Bitcoin", users: 40 },
 				{ name: "Ethereum", users: 9 },
-				{ name: "Paid", users: 6 },
-				{ name: "Referral", users: 5 }
+				{ name: "Tether", users: 6 },
+				{ name: "Ripple", users: 5 }
 			],
 			categories: [
-				{ name: "Men Clothing", users: 9 },
+				{ name: "Cardano", users: 9 },
 				{ name: "Women Clothing", users: 10 },
 				{ name: "Gadgets", users: 12 },
 				{ name: "Books", users: 5 },
@@ -225,11 +225,11 @@ $(function () {
 			trafficMedium: [
 				{ name: "Bitcoin", users: 42 },
 				{ name: "Ethereum", users: 9 },
-				{ name: "Paid", users: 5 },
-				{ name: "Referral", users: 5 }
+				{ name: "Tether", users: 5 },
+				{ name: "Ripple", users: 5 }
 			],
 			categories: [
-				{ name: "Men Clothing", users: 9 },
+				{ name: "Cardano", users: 9 },
 				{ name: "Women Clothing", users: 10 },
 				{ name: "Gadgets", users: 12 },
 				{ name: "Books", users: 5 },
@@ -335,8 +335,8 @@ $(function () {
 				dataPoints: [
 					{  y: 38, name:"Bitcoin" },
 					{  y: 8, name:"Ethereum" },
-					{  y: 5, name:"Paid" },
-					{  y: 4, name:"Referral" }
+					{  y: 5, name:"Tether" },
+					{  y: 4, name:"Ripple" }
 				]
 			}
 		]
@@ -373,7 +373,7 @@ $(function () {
 				startAngle: 90,
 				type: "pie",
 				dataPoints: [
-					{ y: 8, name:"Men Clothing" },
+					{ y: 8, name:"Cardano" },
 					{ y: 9, name:"Women Clothing" },
 					{ y: 10, name:"Gadgets" },
 					{ y: 5, name:"Books" },
@@ -632,7 +632,7 @@ $(function () {
 			sumYValuePageViewsPerSecond = 0;
       numberOfSeconds = 0;
     }
-    
+    380
     numberOfSeconds++;
 }
 	
