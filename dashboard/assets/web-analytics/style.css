@@ -30,6 +30,12 @@ body {
   padding: 12px 6px;
 }
 
+
+#header .navbar-icons {
+  right: 0;
+}
+
+
 #header .brand {
   display: inline-block;
   padding: 12px 16px 12px 0;
