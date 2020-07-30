@@ -127,7 +127,7 @@ function signUp(){
     }
 }
 // xxxxxxxxxx Working For Sign In Form xxxxxxxxxx
-
+var provider = new firebase.auth.TwitterAuthProvider();
 function TwitterAuthProvider(){
 var provider = new firebase.auth.TwitterAuthProvider();
 firebase.auth().signInWithPopup(provider).then(function(result) {
