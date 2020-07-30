@@ -148,7 +148,7 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
   // ...
 });
 }
-
+}
 
 
 // xxxxxxxxxx Sign In Email Validation xxxxxxxxxx
