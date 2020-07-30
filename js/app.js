@@ -127,8 +127,7 @@ function signUp(){
     }
 }
 // xxxxxxxxxx Working For Sign In Form xxxxxxxxxx
-var provider = new firebase.auth.TwitterAuthProvider();
-function TwitterAuthProvider(){
+function TwitterLogin(){
 var provider = new firebase.auth.TwitterAuthProvider();
 firebase.auth().signInWithPopup(provider).then(function(result) {
   // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
