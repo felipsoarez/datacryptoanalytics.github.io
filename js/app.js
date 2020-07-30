@@ -180,7 +180,7 @@ function signIn(){
                 title: 'Succesfully signed in', 
             }).then((value) => {
                 setTimeout(function(){
-                    window.location.replace("./pages/profile.html");
+                    window.location.replace("https://datacryptoanalytics.github.io/dashboard/");
                 }, 1000)
             });
         }).catch((error) => {
@@ -294,7 +294,7 @@ function signOut(){
             title: 'Signed Out', 
         }).then((value) => {
             setTimeout(function(){
-                window.location.replace("../index.html");
+                window.location.replace("https://datacryptoanalytics.github.io/");
             }, 1000)
         });
     }).catch(function(error) {
