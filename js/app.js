@@ -113,7 +113,7 @@ function signUp(){
             swal('Your Account Created','Your account was created successfully, you can log in now.',
             ).then((value) => {
                 setTimeout(function(){
-                    window.location.replace("../index.html");
+                    window.location.replace("https://datacryptoanalytics.github.io/dashboard/");
                 }, 1000)
             });
         }).catch((error) => {
@@ -299,7 +299,7 @@ function signOut(){
             title: 'Signed Out', 
         }).then((value) => {
             setTimeout(function(){
-                window.location.replace("https://datacryptoanalytics.github.io/");
+                window.location.replace("https://datacryptoanalytics.github.io/login");
             }, 1000)
         });
     }).catch(function(error) {
