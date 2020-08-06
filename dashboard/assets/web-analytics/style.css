@@ -15,6 +15,7 @@ body {
 
 #header .container-fluid {
   padding: 8px;
+  background-color: #4f4f4f;
 }
 
 #header .navbar-header {
