@@ -208,12 +208,24 @@ new TradingView.UserInfoWidget({
 		<h3>Grupo de assinantes</h3>
 <p>Grupo dos assinantes da DataCrypto Analytics no Telegram com resultados dos algoritmos atualizados diariamente. </p>
 <!-- Receber Pagamentos em bitcoin -->
-<form action="https://bitpay.com/checkout" method="post">
-  <input type="hidden" name="action" value="checkout" />
-  <input type="hidden" name="posData" value="" />
-  <input type="hidden" name="data" value="ImOIZpuRsflOXUuSPWSosL2W6YCSFg/VKXLOMjSqOKrW3YuCifLo3ei28En4rqYy/qFA7kwc1Kv6D1wD170OiPC06i8ZTD1kr1qqKRIOCesTGi9K3wb0l09BjuIrJJbRAVfKU7uMnoWop3VAyg43YUDAoyOfpvSJEcVwWPSCx8S/x8oJf9K5JtkmVRGrrVPOqVwiZ/2Ckbwdju/JWr6VVufAm0JmeT+9ExVS5Xy4abEPAOqmuIxFsym/ibe/rfq+oDKcBHJ3LyQaPA9q7GUNVw7q+6f0gInih48tiuu3Dus=" />
-  <input type="image" src="https://bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width: 210px" alt="BitPay, the easy way to pay with bitcoins.">
-</form>
+<div id="bp-payment-button"></div>
+
+<script src="https://confirmo.net/sdk/scripts/confirmo.js"></script>
+<script type="text/javascript">
+  Confirmo.PaymentButton.initialize({
+    "id": "bp-payment-button",
+    "url": "https://confirmo.net",
+    "buttonType": "SIMPLE",
+    "paymentButtonId": "XwE8lj7veq0VBLpJ3NlnG1yAYgM9RxmO6ZW",
+    "values": {
+        "productDescription": null,
+        "reference": null,
+        "returnUrl": null,
+        "customerCurrency": "BTC",
+        "overlay": true
+    }
+});
+</script>
 
 <img src="images/privategroup.png" alt="" style="width:100%" />
 
