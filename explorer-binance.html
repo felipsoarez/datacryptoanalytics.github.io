@@ -500,6 +500,84 @@
 
 <h3>Últimos Blocos</h4>
 
+  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+<div id="latest_blocks"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+                        query ($network: EthereumNetwork!,
+                                $limit: Int!,
+                                $offset: Int!
+                                $from: ISO8601DateTime,
+                                $till: ISO8601DateTime){
+                    ethereum(network: $network){
+                      blocks(options:{desc: "height", limit: $limit, offset: $offset},
+                        date: {since: $from till: $till }
+                        ) {
+
+
+                          timestamp {
+                            time (format: "%Y-%m-%d %H:%M:%S")
+                          }
+                          height
+
+                          transactionCount
+
+                          address: miner {
+                            address
+                            annotation
+                          }
+
+                          reward
+                          rewardCurrency {
+                            symbol
+                          }
+
+                      }
+                    }
+                  }`);
+    var wdts = new widgets.table('#latest_blocks', query, 'ethereum.blocks', {
+ "title": "Latest Blocks",
+ "dataOptions": [
+  {
+   "title": "Timestamp",
+   "type": "string",
+   "path": "timestamp.time"
+  },
+  {
+   "title": "Bloco",
+   "type": "string",
+   "path": "height",
+   "urlCallbackName": "block_path"
+  },
+  {
+   "title": "Transações",
+   "type": "string",
+   "path": "transactionCount"
+  },
+  {
+   "title": "Minerador",
+   "type": "string",
+   "path": [
+    "address.annotation",
+    "address.address"
+   ],
+   "urlCallbackName": "address_path"
+  },
+  {
+   "title": "Bloco Reward, BNB",
+   "type": "amount",
+   "path": "reward"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bsc", "from": "2020-09-02", "till": null, "dateFormat": "%Y-%m-%d"});
+    })()
+</script>
+
+
 
                       </div>
                                 <div class="row post-footer">
