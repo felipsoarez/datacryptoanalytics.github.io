@@ -282,7 +282,7 @@
                                    "chartOptions": {
                                     "vAxes": {
                                      "0": {
-                                      "title": "Transactions count"
+                                      "title": "Transações"
                                      }
                                     },
                                     "seriesType": "line",
@@ -301,7 +301,7 @@
                                      "path": "date.date"
                                     },
                                     {
-                                     "title": "Transactions count",
+                                     "title": "Transações",
                                      "path": "count"
                                     }
                                    ]
@@ -313,66 +313,117 @@
 
 
 
-<h4>Últimos Blocos</h4>
+<h4>Últimas Transferências</h4>
 
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-<div id="latest_blocks"></div>
+<div id="latest_transfers"></div>
 <script>
     (function(){
     widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
     var query = new widgets.query(`
-                        query ($network: BitcoinNetwork!,
+                        query ($network: EthereumNetwork!,
                                 $limit: Int!,
                                 $offset: Int!
                                 $from: ISO8601DateTime,
                                 $till: ISO8601DateTime){
-                    bitcoin(network: $network){
-                      blocks(options:{desc: "height", limit: $limit, offset: $offset},
+                    ethereum(network: $network){
+                      transfers(options:{desc: "block.height", limit: $limit, offset: $offset},
                         date: {since: $from till: $till }
+                        amount: {gt: 0}
                         ) {
 
-
-                          timestamp {
-                            time (format: "%Y-%m-%d %H:%M:%S")
+                          block {
+                            timestamp {
+                              time (format: "%Y-%m-%d %H:%M:%S")
+                            }
+                            height
                           }
-                          height
-                          difficulty
-                          transactionCount
 
-                          blockSize
+                          sender {
+                            address
+                            annotation
+                          }
+                          receiver {
+                            address
+                            annotation
+                          }
+
+                          currency {
+                            address
+                            symbol
+                          }
+
+                          amount
+
+                          transaction {
+                            hash
+                          }
+                          external
 
                       }
                     }
                   }`);
-    var wdts = new widgets.table('#latest_blocks', query, 'bitcoin.blocks', {
- "title": "Latest Blocks",
+    var wdts = new widgets.table('#latest_transfers', query, 'ethereum.transfers', {
+ "title": "Latest Transfers",
  "dataOptions": [
   {
    "title": "Timestamp",
    "type": "string",
-   "path": "timestamp.time"
+   "path": "block.timestamp.time",
+   "style": "width: 170px;"
   },
   {
    "title": "Bloco",
-   "path": "height",
-   "urlCallbackName": "block_path"
+   "type": "string",
+   "path": "block.height",
+   "urlCallbackName": "block_path",
+   "style": "width: 80px;"
   },
   {
-   "title": "Transações",
-   "path": "transactionCount"
+   "title": "Remetente",
+   "type": "string-ellipsis",
+   "path": [
+    "sender.annotation",
+    "sender.address"
+   ],
+   "urlCallbackName": "sender_address_path"
   },
   {
-   "title": "Tamanho",
-   "path": "blockSize"
+   "title": "",
+   "type": "string",
+   "data": "<i class=\"fa fa-sign-in text-success\"></i>",
+   "html_class": "text-center"
   },
   {
-   "title": "Dificuldade",
-   "path": "difficulty"
+   "title": "Recebedor",
+   "type": "string-ellipsis",
+   "path": [
+    "receiver.annotation",
+    "receiver.address"
+   ],
+   "urlCallbackName": "receiver_address_path"
+  },
+  {
+   "title": "Quantidade",
+   "type": "amount",
+   "path": "amount"
+  },
+  {
+   "title": "Currency",
+   "type": "string",
+   "path": "currency.symbol",
+   "urlCallbackName": "token_path"
+  },
+  {
+   "title": "Hash",
+   "type": "string-ellipsis",
+   "path": "transaction.hash",
+   "urlCallbackName": "transaction_path"
   }
  ]
 });
-    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-09-02", "till": null, "dateFormat": "%Y-%m-%d"});
+    query.request({"limit": 10, "offset": 0, "network": "bsc", "from": "2020-09-02", "till": null, "dateFormat": "%Y-%m-%d"});
     })()
 </script>
 
