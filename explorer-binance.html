@@ -737,56 +737,46 @@
 
 
 
-
-
-
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-<div id="miners_by_time"></div>
+<div id="difficulty_by_time"></div>
 <script>
     (function(){
     widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
     var query = new widgets.query(`
-            query ($network: BitcoinNetwork!,
-              $dateFormat: String!,
+            query ($network: EthereumNetwork!,
+                  $dateFormat: String!,
 
-              $from: ISO8601DateTime,
-              $till: ISO8601DateTime){
-                bitcoin(network: $network ){
-                  outputs(options:{asc: "date.date"}, date: {
-                    since: $from
-                    till: $till}
-
-                    txIndex: {is: 0}
-                    outputDirection: {is: mining}
-                    outputScriptType: {notIn: [nulldata, nonstandard]}
-
-                  ) {
-                    date: date{
-                      date(format: $dateFormat)
+                  $from: ISO8601DateTime,
+                  $till: ISO8601DateTime){
+                    ethereum(network: $network ){
+                      blocks(options:{asc: "date.date"}, date: {
+                        since: $from
+                        till: $till}
+                        height:{gt: 0}
+                      ) {
+                        date: date{
+                          date(format: $dateFormat)
+                        }
+                        count(uniq: miners)
+                        difficulty(calculate: median)
+                      }
                     }
-
-                    count(uniq: addresses)
-
-                    value
-
-                  }
-                }
-              }`);
-    var wdts = new widgets.chartByTime('#miners_by_time', query, 'bitcoin.outputs', {
- "title": "Active Miners By Time",
+                  }`);
+    var wdts = new widgets.chartByTime('#difficulty_by_time', query, 'ethereum.blocks', {
+ "title": "Difficulty By Time",
  "chartOptions": {
   "vAxes": {
    "0": {
-    "title": "Mineradores Ativos"
+    "title": "Median Difficulty"
    }
   },
-  "seriesType": "line",
   "series": {
    "0": {
     "color": "#a8a59b"
    }
-  }
+  },
+  "seriesType": "line"
  },
  "dataOptions": [
   {
@@ -797,14 +787,15 @@
    "path": "date.date"
   },
   {
-   "title": "Mineradores",
-   "path": "count"
+   "title": "Median Difficulty",
+   "path": "difficulty"
   }
  ]
 });
-    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": null, "till": null, "dateFormat": "%Y-%m"});
+    query.request({"limit": 10, "offset": 0, "network": "bsc", "from": null, "till": null, "dateFormat": "%Y-%m"});
     })()
 </script>
+
 
 
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
