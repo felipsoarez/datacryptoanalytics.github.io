@@ -677,45 +677,44 @@
 
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-<div id="transaction_average_fee_by_time"></div>
+<div id="miners_by_time"></div>
 <script>
     (function(){
     widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
     var query = new widgets.query(`
-            query ($network: BitcoinNetwork!,
+            query ($network: EthereumNetwork!,
                   $dateFormat: String!,
 
                   $from: ISO8601DateTime,
                   $till: ISO8601DateTime){
-                    bitcoin(network: $network ){
-                      transactions(options:{asc: "date.date"}, date: {
+                    ethereum(network: $network ){
+                      blocks(options:{asc: "date.date"}, date: {
                         since: $from
                         till: $till}
-
+                        height:{gt: 0}
                       ) {
                         date: date{
                           date(format: $dateFormat)
                         }
-                        count: count
-                        feeValue
-                        avgFee: feeValue(calculate: average)
+                        count(uniq: miners)
+                        difficulty(calculate: median)
                       }
                     }
                   }`);
-    var wdts = new widgets.chartByTime('#transaction_average_fee_by_time', query, 'bitcoin.transactions', {
- "title": "Average Fee per Transactions By Date",
+    var wdts = new widgets.chartByTime('#miners_by_time', query, 'ethereum.blocks', {
+ "title": "Active Miners By Time",
  "chartOptions": {
   "vAxes": {
    "0": {
-    "title": "Taxa por transação, BTC"
+    "title": "Mineradores"
    }
   },
+  "seriesType": "line",
   "series": {
    "0": {
     "color": "#a8a59b"
    }
-  },
-  "seriesType": "line"
+  }
  },
  "dataOptions": [
   {
@@ -726,13 +725,12 @@
    "path": "date.date"
   },
   {
-   "title": "Taxa por transação, BTC",
-   "path": "avgFee",
-   "format": "#,##0.0000000"
+   "title": "Mineradores",
+   "path": "count"
   }
  ]
 });
-    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-08-05", "till": "2020-09-03T23:59:59", "dateFormat": "%Y-%m-%d"});
+    query.request({"limit": 10, "offset": 0, "network": "bsc", "from": null, "till": null, "dateFormat": "%Y-%m"});
     })()
 </script>
 
