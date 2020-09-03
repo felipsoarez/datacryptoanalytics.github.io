@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.0/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.0/dist/widgets.js"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Explorador Blockchain - Transações Bitcoin | Web App - DataCrypto Analytics</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/logo-web-datacrypto-analytics.png">
+    <link rel="stylesheet" href="page_files/all.css">
+    <link rel="stylesheet" type="text/css" href="page_files/libraries.css">
+    <link rel="stylesheet" type="text/css" href="page_files/style.css">
+    <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101267773);</script>
+    <script async src="//static.getclicky.com/js"></script>
+    <meta name="description" content="Explorador Blockchain">
+    <link rel="canonical" href="https://datacryptoanalytics.web.app">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta property="og:site_name" content="DataCrypto Analytics ">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Explorador Blockchain">
+    <meta property="og:description" content="Explorador Blockchain - Transações Bitcoin | Web App - DataCrypto Analytics">
+    <meta property="og:url" content="https://datacryptoanalytics.web.app">
+    <meta property="og:image" content="/logo-web-datacrypto-analytics.png"
+    <meta property="article:publisher" content="https://fb.me/datacryptopy">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Explorador Blockchain">
+    <meta name="twitter:description" content="Explorador Blockchain - Transações Bitcoin | Web App - DataCrypto Analytics">
+    <meta name="twitter:url" content="https://datacryptoanalytics.web.app">
+    <meta name="twitter:image" content="/logo-web-datacrypto-analytics.png">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="DataCrypto Analytics Dev Team">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Articles">
+    <meta name="twitter:site" content="@DataCryptoML">
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script type="text/javascript" async="" src="page_files/analytics.js"></script><script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "DataCrypto Analytics Blog",
+        "logo": "https://datacryptoml.000webhostapp.com/img/icon_DataCrypto.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "DataCrypto Analytics Dev Team",
+        "url": "https://datacryptoanalytics.github.io/#about",
+        "sameAs": []
+    },
+    "headline": "DataCrypto Analytics Dev",
+    "url": "https://www.datacryptoanalytics.ml/",
+    "datePublished": "2020-03-20T16:51:04.000Z",
+    "dateModified": "2020-03-20T16:51:04.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://datacryptoml.000webhostapp.com/img/oficial-logo.jpg",
+        "width": 1800,
+        "height": 1200
+    },
+    "keywords": "Articles",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://datacryptoanalytics.github.io"
+    }
+}
+    </script>
+
+    <script defer="defer" src="page_files/a.js"></script>
+    <link rel="alternate" type="application/rss+xml" title=" Blog" href="https://datacryptoanalytics.github.io">
+    <script async="" src="page_files/js.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+</head>
+<body class="post-template tag-articles nav-closed scroll">
+    <div class="main-container">
+        <header>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 ml-auto">
+                <div class="blog-logo">
+                    <a href="https://datacryptoanalytics.github.io" title="DataCrypto Analytics">
+                         <img src="/logo-datacrypto-analytics.png" alt="DataCrypto Analytics Blog">
+                    </a>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="inner">
+                    <div class="navigation">
+                        <a href="#" class="navigation-trigger" data-toggle="modal" data-target="#menu">
+                            <svg width="19" height="16" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"><use xlink:href="#path0_fill" transform="translate(.344 .195)"></use><defs><path id="path0_fill" d="M1.044 2.128h15.912c.577 0 1.044-.476 1.044-1.064C18 .477 17.533 0 16.956 0H1.044C.467 0 0 .477 0 1.064c0 .588.467 1.064 1.044 1.064zm15.912 4.387H1.044C.467 6.515 0 6.993 0 7.58c0 .589.467 1.064 1.044 1.064h15.912c.577 0 1.044-.475 1.044-1.064 0-.586-.467-1.064-1.044-1.064zm0 6.515H1.044C.467 13.03 0 13.508 0 14.094c0 .589.467 1.064 1.044 1.064h15.912c.577 0 1.044-.476 1.044-1.064 0-.586-.467-1.064-1.044-1.064z"></path></defs></svg>
+                        </a>
+                          <nav class="nav">
+   <ul>
+            <li class="nav-home"><a href="https://datacryptoanalytics.github.io/" title="Inicio"target="_blank">Inicio</a></li>
+            <li class="nav-research"><a href="https://datacryptoanalytics.github.io/blog" title="Blog" target="_blank">Blog</a></li>
+            <li class="nav-news"><a href="https://datacryptoanalytics.github.io/page/downloads" title="Downloads" target="_blank">Downloads</a></li>
+            <li class="nav-articles"><a href="https://datacryptoanalytics.github.io/#algorithm" title="Algoritmos" target="_blank">Algoritmos</a></li>
+            <li class="nav-events"><a href="https://datacryptoanalytics.github.io/#invest" title="Fundo Forex & Bitcoin" target="_blank">Fundo Forex & Bitcoin</a></li>
+            <li class="nav-about"><a href="https://datacryptoanalytics.github.io/#about" title="Sobre-nós" target="_blank">Sobre-nós</a></li>
+    </ul>
+</nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="info-bar">
+        <div class="progress" data-read="read" style="width: 0%;" data-original-title="1% read" title=""></div>
+    </div>
+</header>
+<!-- Menu Modal -->
+<div class="modal fade" id="menu" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a href="#" data-dismiss="modal" aria-label="Close" class="close btn">
+                    <i class="close-button"></i>
+                </a>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="modal-title">Menu</h3>
+                            <div class="modal-nav"></div>
+                        </div>
+                    </div>
+                    <div class="row additional">
+                        <div class="col-sm-12">
+                            <h3 class="modal-title">Social</h3>
+                            <ul class="share">
+                                <li><a href="https://fb.me/datacryptopy" class="facebook" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook" data-original-title="crowdindicator/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                                <li><a href="https://twitter.com/DataCryptoML" class="twitter" target="_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="@DataCryptoML"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCxfGBCV9E04Uw4flJLjBCqg?view_as=subscriber" class="youtube" title="" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Youtube"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                                <li><a href="https://www.instagram.com/analyticsdatacrypto/" class="instagram" title="" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                                <li><a href="https://github.com/datacrypto-analytics/" target="_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="GitHub"><ion-icon name="logo-github"></ion-icon></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <main id="content" role="main" data-id="3">
+    <article class="post tag-articles">
+        <div class="content-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 ml-auto mr-auto">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-12">
+                                <div class="post-meta">
+                                     <div> 
+						<a class="github-button" href="https://github.com/datacrypto-analytics" aria-label="Follow @datacryptoanalytics on GitHub">Follow @datacryptoanalytics</a>
+
+									</div>
+                                    
+                                    <div class="tags"><a href="https://datacryptoanalytics.github.io"> </a></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-12">
+                                <div class="editor-content">
+
+
+
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+<div id="latest_transactions"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+              query ($network: BitcoinNetwork!,
+                      $limit: Int!,
+                      $offset: Int!
+                      $from: ISO8601DateTime,
+                      $till: ISO8601DateTime){
+          bitcoin(network: $network){
+            transactions(options:{desc: ["block.height","index"], limit: $limit, offset: $offset},
+              date: {since: $from till: $till }
+              ) {
+
+                block {
+                  timestamp {
+                    time (format: "%Y-%m-%d %H:%M:%S")
+                  }
+                  height
+                }
+
+
+                inputValue
+                outputCount
+                inputCount
+
+                index
+
+                hash
+                feeValue
+
+            }
+          }
+          }`);
+    var wdts = new widgets.table('#latest_transactions', query, 'bitcoin.transactions', {
+ "title": "Latest Transactions",
+ "dataOptions": [
+  {
+   "title": "Timestamp",
+   "type": "string",
+   "path": "block.timestamp.time",
+   "style": "width: 170px;"
+  },
+  {
+   "title": "Bloco",
+   "type": "string",
+   "path": "block.height",
+   "urlCallbackName": "block_path",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "Bloco Indexado",
+   "path": "index",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "Hash",
+   "type": "string-ellipsis",
+   "path": "hash",
+   "urlCallbackName": "transaction_path"
+  },
+  {
+   "title": "Entradas",
+   "path": "inputCount",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "Saídas",
+   "path": "outputCount",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "Taxa",
+   "type": "number",
+   "path": "feeValue",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "BTC",
+   "type": "amount",
+   "path": "inputValue",
+   "style": "width: 110px;"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-09-02", "till": null, "dateFormat": "%Y-%m-%d"});
+    })()
+</script>
+
+
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+<div id="transactions_by_time"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+            query ($network: BitcoinNetwork!,
+                  $dateFormat: String!,
+
+                  $from: ISO8601DateTime,
+                  $till: ISO8601DateTime){
+                    bitcoin(network: $network ){
+                      transactions(options:{asc: "date.date"}, date: {
+                        since: $from
+                        till: $till}
+
+                      ) {
+                        date: date{
+                          date(format: $dateFormat)
+                        }
+                        count: count
+                        feeValue
+                        avgFee: feeValue(calculate: average)
+                      }
+                    }
+                  }`);
+    var wdts = new widgets.chartByTime('#transactions_by_time', query, 'bitcoin.transactions', {
+ "title": "Transactions By Date",
+ "chartOptions": {
+  "vAxes": {
+   "0": {
+    "title": "Transações"
+   }
+  },
+  "seriesType": "line",
+  "series": {
+   "0": {
+    "color": "#a8a59b"
+   }
+  }
+ },
+ "dataOptions": [
+  {
+   "title": {
+    "label": "Date",
+    "type": "date"
+   },
+   "path": "date.date"
+  },
+  {
+   "title": "Transações",
+   "path": "count"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-08-05", "till": "2020-09-03T23:59:59", "dateFormat": "%Y-%m-%d"});
+    })()
+</script>
+
+
+
+<h4>Últimos Blocos</h4>
+
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+<div id="latest_blocks"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+                        query ($network: BitcoinNetwork!,
+                                $limit: Int!,
+                                $offset: Int!
+                                $from: ISO8601DateTime,
+                                $till: ISO8601DateTime){
+                    bitcoin(network: $network){
+                      blocks(options:{desc: "height", limit: $limit, offset: $offset},
+                        date: {since: $from till: $till }
+                        ) {
+
+
+                          timestamp {
+                            time (format: "%Y-%m-%d %H:%M:%S")
+                          }
+                          height
+                          difficulty
+                          transactionCount
+
+                          blockSize
+
+                      }
+                    }
+                  }`);
+    var wdts = new widgets.table('#latest_blocks', query, 'bitcoin.blocks', {
+ "title": "Latest Blocks",
+ "dataOptions": [
+  {
+   "title": "Timestamp",
+   "type": "string",
+   "path": "timestamp.time"
+  },
+  {
+   "title": "Bloco",
+   "path": "height",
+   "urlCallbackName": "block_path"
+  },
+  {
+   "title": "Transações",
+   "path": "transactionCount"
+  },
+  {
+   "title": "Tamanho",
+   "path": "blockSize"
+  },
+  {
+   "title": "Dificuldade",
+   "path": "difficulty"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-09-02", "till": null, "dateFormat": "%Y-%m-%d"});
+    })()
+</script>
+
+
+
+<h4>Mineradores</h4>
+
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+<div id="miners"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+                query ($network: BitcoinNetwork!,
+                        $limit: Int!,
+                        $offset: Int!
+                        $from: ISO8601DateTime,
+                        $till: ISO8601DateTime){
+                  bitcoin(network: $network ){
+                    outputs(options:{desc: "reward", limit: $limit, offset: $offset},
+                      date: { since: $from till: $till}
+
+                      txIndex: {is: 0}
+                      outputDirection: {is: mining}
+                      outputScriptType: {notIn: [nulldata,nonstandard]}
+
+                    ) {
+
+
+                      address: outputAddress{
+                        address
+                        annotation
+                      }
+
+
+                      reward: value
+                      count(uniq: blocks)
+
+                      min_date: minimum(of: date)
+                      max_date: maximum(of: date)
+
+                    }
+                  }
+                }`);
+    var wdts = new widgets.table('#miners', query, 'bitcoin.outputs', {
+ "title": "Miners",
+ "dataOptions": [
+  {
+   "title": "Mineradores",
+   "type": "string",
+   "path": [
+    "address.annotation",
+    "address.address"
+   ],
+   "urlCallbackName": "address_path"
+  },
+  {
+   "title": "Bloco",
+   "type": "string",
+   "path": "count"
+  },
+  {
+   "title": "Primeiro Bloco",
+   "path": "min_date"
+  },
+  {
+   "title": "Último Bloco",
+   "path": "max_date"
+  },
+  {
+   "title": "Recompensa, BTC",
+   "type": "number",
+   "path": "reward"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-09-03", "till": "2020-09-03T23:59:59", "dateFormat": "%Y-%m-%d"});
+    })()
+</script>
+
+
+
+
+                      </div>
+                                <div class="row post-footer">
+                                    <div class="col-sm-6">
+                                            <div class="tags">
+                                                Tags:
+                                                <a href="#">Explorer</a>
+                                            </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                         <div class="share-post-footer">
+                                            <ul class="share">
+                                            <li><a href="https://fb.me/datacryptopy" class="facebook" target="_blank" /"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                                            <li><a href="https://twitter.com/DataCryptoML" class="twitter" target="_blank" ><ion-icon name="logo-twitter"></ion-icon></a></li>
+                                            <li><a href="https://www.youtube.com/channel/UCxfGBCV9E04Uw4flJLjBCqg?view_as=subscriber" class="youtube" title="" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                                            <li><a href="https://www.instagram.com/analyticsdatacrypto/" class="instagram" title="" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                                            <li><a href="https://github.com/datacrypto-analytics/" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="sidebar">
+                                     <div class="widget widget-share">
+
+
+                                          <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://br.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Dados de Mercado</span></a> por TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+  {
+  "colorTheme": "light",
+  "dateRange": "1d",
+  "showChart": true,
+  "locale": "br",
+  "largeChartUrl": "",
+  "isTransparent": true,
+  "width": "100%",
+  "height": "660",
+  "plotLineColorGrowing": "rgba(255, 255, 255, 1",
+  "plotLineColorFalling": "rgba(179, 179, 179, 1)",
+  "gridLineColor": "rgba(179, 179, 179, 1)",
+  "scaleFontColor": "rgba(54, 54, 54)",
+  "belowLineFillColorGrowing": "rgba(234, 234, 234, 1)",
+  "belowLineFillColorFalling": "rgba(234, 234, 234, 1)",
+  "symbolActiveColor": "rgba(234, 234, 234, 1)",
+  "tabs": [
+    {
+      "title": "Índices",
+      "symbols": [
+        {
+          "s": "FOREXCOM:SPXUSD",
+          "d": "S&P 500"
+        },
+        {
+          "s": "FOREXCOM:NSXUSD",
+          "d": "Nasdaq 100"
+        },
+        {
+          "s": "FOREXCOM:DJI",
+          "d": "Dow 30"
+        },
+        {
+          "s": "INDEX:NKY",
+          "d": "Nikkei 225"
+        },
+        {
+          "s": "INDEX:DEU30",
+          "d": "DAX Index"
+        },
+        {
+          "s": "FOREXCOM:UKXGBP",
+          "d": "FTSE 100"
+        }
+      ],
+      "originalTitle": "Indices"
+    },
+    {
+      "title": "Commodities",
+      "symbols": [
+        {
+          "s": "CME_MINI:ES1!",
+          "d": "E-Mini S&P"
+        },
+        {
+          "s": "CME:6E1!",
+          "d": "Euro"
+        },
+        {
+          "s": "COMEX:GC1!",
+          "d": "Gold"
+        },
+        {
+          "s": "NYMEX:CL1!",
+          "d": "Crude Oil"
+        },
+        {
+          "s": "NYMEX:NG1!",
+          "d": "Natural Gas"
+        },
+        {
+          "s": "CBOT:ZC1!",
+          "d": "Corn"
+        }
+      ],
+      "originalTitle": "Commodities"
+    },
+    {
+      "title": "Títulos",
+      "symbols": [
+        {
+          "s": "CME:GE1!",
+          "d": "Eurodollar"
+        },
+        {
+          "s": "CBOT:ZB1!",
+          "d": "T-Bond"
+        },
+        {
+          "s": "CBOT:UB1!",
+          "d": "Ultra T-Bond"
+        },
+        {
+          "s": "EUREX:FGBL1!",
+          "d": "Euro Bund"
+        },
+        {
+          "s": "EUREX:FBTP1!",
+          "d": "Euro BTP"
+        },
+        {
+          "s": "EUREX:FGBM1!",
+          "d": "Euro BOBL"
+        }
+      ],
+      "originalTitle": "Bonds"
+    },
+    {
+      "title": "Forex",
+      "symbols": [
+        {
+          "s": "FX:EURUSD"
+        },
+        {
+          "s": "FX:GBPUSD"
+        },
+        {
+          "s": "FX:USDJPY"
+        },
+        {
+          "s": "FX:USDCHF"
+        },
+        {
+          "s": "FX:AUDUSD"
+        },
+        {
+          "s": "FX:USDCAD"
+        }
+      ],
+      "originalTitle": "Forex"
+    }
+  ]
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+
+
+
+
+
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+<div id="transaction_average_fee_by_time"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+            query ($network: BitcoinNetwork!,
+                  $dateFormat: String!,
+
+                  $from: ISO8601DateTime,
+                  $till: ISO8601DateTime){
+                    bitcoin(network: $network ){
+                      transactions(options:{asc: "date.date"}, date: {
+                        since: $from
+                        till: $till}
+
+                      ) {
+                        date: date{
+                          date(format: $dateFormat)
+                        }
+                        count: count
+                        feeValue
+                        avgFee: feeValue(calculate: average)
+                      }
+                    }
+                  }`);
+    var wdts = new widgets.chartByTime('#transaction_average_fee_by_time', query, 'bitcoin.transactions', {
+ "title": "Average Fee per Transactions By Date",
+ "chartOptions": {
+  "vAxes": {
+   "0": {
+    "title": "Taxa por transação, BTC"
+   }
+  },
+  "series": {
+   "0": {
+    "color": "#a8a59b"
+   }
+  },
+  "seriesType": "line"
+ },
+ "dataOptions": [
+  {
+   "title": {
+    "label": "Date",
+    "type": "date"
+   },
+   "path": "date.date"
+  },
+  {
+   "title": "Taxa por transação, BTC",
+   "path": "avgFee",
+   "format": "#,##0.0000000"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-08-05", "till": "2020-09-03T23:59:59", "dateFormat": "%Y-%m-%d"});
+    })()
+</script>
+
+
+
+
+
+
+
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+<div id="miners_by_time"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+            query ($network: BitcoinNetwork!,
+              $dateFormat: String!,
+
+              $from: ISO8601DateTime,
+              $till: ISO8601DateTime){
+                bitcoin(network: $network ){
+                  outputs(options:{asc: "date.date"}, date: {
+                    since: $from
+                    till: $till}
+
+                    txIndex: {is: 0}
+                    outputDirection: {is: mining}
+                    outputScriptType: {notIn: [nulldata, nonstandard]}
+
+                  ) {
+                    date: date{
+                      date(format: $dateFormat)
+                    }
+
+                    count(uniq: addresses)
+
+                    value
+
+                  }
+                }
+              }`);
+    var wdts = new widgets.chartByTime('#miners_by_time', query, 'bitcoin.outputs', {
+ "title": "Active Miners By Time",
+ "chartOptions": {
+  "vAxes": {
+   "0": {
+    "title": "Mineradores Ativos"
+   }
+  },
+  "seriesType": "line",
+  "series": {
+   "0": {
+    "color": "#a8a59b"
+   }
+  }
+ },
+ "dataOptions": [
+  {
+   "title": {
+    "label": "Date",
+    "type": "date"
+   },
+   "path": "date.date"
+  },
+  {
+   "title": "Mineradores",
+   "path": "count"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": null, "till": null, "dateFormat": "%Y-%m"});
+    })()
+</script>
+
+
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+<div id="mined_blocks"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+            query ($network: BitcoinNetwork!,
+              $dateFormat: String!,
+
+              $from: ISO8601DateTime,
+              $till: ISO8601DateTime){
+                bitcoin(network: $network ){
+                  transactions(options:{asc: "date.date"}, date: {
+                    since: $from
+                    till: $till}
+
+
+                  ) {
+                    date: date{
+                      date(format: $dateFormat)
+                    }
+
+                    count(uniq: blocks)
+
+                    minedValue
+
+                  }
+                }
+              }`);
+    var wdts = new widgets.chartByTime('#mined_blocks', query, 'bitcoin.transactions', {
+ "title": "Mined blocks",
+ "chartOptions": {
+  "vAxes": {
+   "0": {
+    "title": "Blocos Mineirados"
+   }
+  },
+  "seriesType": "line",
+  "series": {
+   "0": {
+    "color": "#a8a59b"
+   }
+  }
+ },
+ "dataOptions": [
+  {
+   "title": {
+    "label": "Date",
+    "type": "date"
+   },
+   "path": "date.date"
+  },
+  {
+   "title": "Blocos",
+   "path": "count"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": null, "till": null, "dateFormat": "%Y-%m"});
+    })()
+</script>
+
+
+
+
+
+
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
+
+
+
+        <footer class="site-footer clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid copyright">
+        <div class="container ">
+            <div class="row">
+                <section class="social-links-wrapper">
+                    <div class="social-links-inner">
+                        <a href="https://github.com/datacryptoanalytics" target="_blank" rel="noopener nofollow noreferrer" class="social-item social-medium">
+                           <ion-icon size="large"  name="logo-github"></ion-icon>
+
+                            <span class="social-label">GitHub</span>
+                        </a>
+                        <a href="https://twitter.com/DataCryptoML" target="_blank" rel="noopener nofollow noreferrer" class="social-item social-twitter">
+                            <ion-icon size="large" name="logo-twitter"></ion-icon>
+                            <span class="social-label">Twitter</span>
+                        </a>
+                        <a href="https://fb.me/datacryptopy" target="_blank" rel="noopener nofollow noreferrer" class="social-item social-facebook">
+                           <ion-icon size="large" name="logo-facebook"></ion-icon>
+                            <span class="social-label">Facebook</span>
+                        </a>
+                        <a href="https://t.me/datacrypto-analytics" target="_blank" rel="noopener nofollow noreferrer" class="social-item social-telegram">
+                            <svg>
+                                <path d="M36.667 18.842c0-9.97-8.046-18.05-17.97-18.05S.727 8.871.727 18.841s8.046 18.05 17.97 18.05 17.97-8.08 17.97-18.05z"></path>
+                                <path d="M22.17 21.831c1.088-2.988 2.725-7.831 2.986-9.049.222-1.031.179-1.053-1.344-.554-.68.223-1.804.62-3.304 1.165l-.144.052c-.972.353-3.62 1.325-3.796 1.388-.132.047-2.01.696-2.701.94l-.185.064c-1.275.45-2.14.775-2.413.906-.48.259-.569.441-.486.64.135.323.64.715 1.436 1.021.816.394 2.715 1.274 2.923 1.375.766.372 1.18.628 1.528.978.343.344.57.721.915 1.452.085.18.432.937.5 1.084.24.518.469.995.755 1.571.285.708.655 1.356 1 1.69.277.27.333.268.57-.066.165-.254.385-.745.644-1.437.109-.29.224-.61.352-.982.066-.19.633-1.88.763-2.238z"></path>
+                            </svg>
+                            <span class="social-label">Telegram</span>
+                        </a>
+                        <a href="https://www.instagram.com/analyticsdatacrypto/" target="_blank" rel="noopener nofollow noreferrer" class="social-item social-reddit">
+                           <ion-icon size="large" name="logo-instagram"></ion-icon>
+
+                            <span class="social-label">Instagram</span>
+                        </a>
+                        <a href="https://www.linkedin.com/company/datacrypto-analytics" target="_blank" rel="noopener nofollow noreferrer" class="social-item social-discord">
+                            <ion-icon size="large" name="logo-linkedin"></ion-icon>
+
+                            <span class="social-label">LinkedIn</span>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCxfGBCV9E04Uw4flJLjBCqg?view_as=subscriber" target="_blank" rel="noopener nofollow noreferrer" class="social-item social-youtube">
+                           <ion-icon size="large" name="logo-youtube"></ion-icon>
+                            <span class="social-label">Youtube</span>
+                        </a>
+                    </div>
+                </section>
+
+                <div class="col-md-12 text-center footer-copycat">
+                    <p class="footer-rights">Copyright © 2019-2020, All Rights Reserved.</p>
+                    <a href="mailto:datacryptoanalytics@protonmail.com" class="footer-support">
+                         <span><ion-icon name="mail-outline"></ion-icon> datacryptoanalytics@protonmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="https://primexbt.com/?signup=120807" class="go-up btn"><ion-icon name="logo-bitcoin"></ion-icon></a>
+
+    </div>
+
+    <script type="text/javascript" src="page_files/libraries.js"></script>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+
+
+    <script type="text/javascript" src="page_files/main.js"></script>
+
+
+
+<div class="share-selected-text-main-container" style="height: 50px; top: 0px; left: 0px;"><div class="share-selected-text-inner"><a class="share-selected-text-btn share-selected-text-btn-twitter" href="https://twitter.com/intent/tweet?url=https://blog.cindicator.com/bitcoin-is-not-digital-gold/&amp;text=%22%22"><i class="icon-sst-twitter fab fa-twitter" style="pointer-events: none;"></i></a></div></div></body></html>
