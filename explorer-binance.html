@@ -8,7 +8,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Explorador Blockchain - Transações Bitcoin | Web App - DataCrypto Analytics</title>
+    <title>Explorador Binance Smart Chain Mainnet Blockchain - Transações Bitcoin | Web App - DataCrypto Analytics</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/logo-web-datacrypto-analytics.png">
@@ -17,19 +17,19 @@
     <link rel="stylesheet" type="text/css" href="page_files/style.css">
     <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101267773);</script>
     <script async src="//static.getclicky.com/js"></script>
-    <meta name="description" content="Explorador Blockchain">
+    <meta name="description" content="Explorador Binance Smart Chain Mainnet Blockchain">
     <link rel="canonical" href="https://datacryptoanalytics.web.app">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <meta property="og:site_name" content="DataCrypto Analytics ">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Explorador Blockchain">
-    <meta property="og:description" content="Explorador Blockchain - Transações Bitcoin | Web App - DataCrypto Analytics">
+    <meta property="og:title" content="Explorador Binance Smart Chain Mainnet Blockchain">
+    <meta property="og:description" content="Explorador Binance Smart Chain Mainnet Blockchain - Transações Bitcoin | Web App - DataCrypto Analytics">
     <meta property="og:url" content="https://datacryptoanalytics.web.app">
     <meta property="og:image" content="/logo-web-datacrypto-analytics.png"
     <meta property="article:publisher" content="https://fb.me/datacryptopy">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Explorador Blockchain">
-    <meta name="twitter:description" content="Explorador Blockchain - Transações Bitcoin | Web App - DataCrypto Analytics">
+    <meta name="twitter:title" content="Explorador Binance Smart Chain Mainnet Blockchain">
+    <meta name="twitter:description" content="Explorador Binance Smart Chain Mainnet Blockchain - Transações Bitcoin | Web App - DataCrypto Analytics">
     <meta name="twitter:url" content="https://datacryptoanalytics.web.app">
     <meta name="twitter:image" content="/logo-web-datacrypto-analytics.png">
     <meta name="twitter:label1" content="Written by">
@@ -156,11 +156,11 @@
                         <div class="row">
                             <div class="col-lg-8 col-md-12">
                                 <div class="post-meta">
-                                     <div> 
+                                     <div>
 						<a class="github-button" href="https://github.com/datacrypto-analytics" aria-label="Follow @datacryptoanalytics on GitHub">Follow @datacryptoanalytics</a>
 
 									</div>
-                                    
+
                                     <div class="tags"><a href="https://datacryptoanalytics.github.io"> </a></div>
                                 </div>
 
@@ -171,98 +171,84 @@
                                 <div class="editor-content">
 
 
+<h4>Tranações BNB</h4>
+                                  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+                                  <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+                                  <div id="latest_transactions"></div>
+                                  <script>
+                                      (function(){
+                                      widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'dark'});
+                                      var query = new widgets.query(`
+                                                          query ($network: EthereumNetwork!,
+                                                                  $limit: Int!,
+                                                                  $offset: Int!
+                                                                  $from: ISO8601DateTime,
+                                                                  $till: ISO8601DateTime){
+                                                      ethereum(network: $network){
+                                                        transactions(options:{desc: "block.height", limit: $limit, offset: $offset},
+                                                          date: {since: $from till: $till }
+                                                          ) {
 
-<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
-<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-<div id="latest_transactions"></div>
-<script>
-    (function(){
-    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
-    var query = new widgets.query(`
-              query ($network: BitcoinNetwork!,
-                      $limit: Int!,
-                      $offset: Int!
-                      $from: ISO8601DateTime,
-                      $till: ISO8601DateTime){
-          bitcoin(network: $network){
-            transactions(options:{desc: ["block.height","index"], limit: $limit, offset: $offset},
-              date: {since: $from till: $till }
-              ) {
+                                                            block {
+                                                              timestamp {
+                                                                time (format: "%Y-%m-%d %H:%M:%S")
+                                                              }
+                                                              height
+                                                            }
 
-                block {
-                  timestamp {
-                    time (format: "%Y-%m-%d %H:%M:%S")
-                  }
-                  height
-                }
+                                                            address: sender {
+                                                              address
+                                                              annotation
+                                                            }
+                                                            hash
+                                                            gasValue
 
+                                                        }
+                                                      }
+                                                    }`);
+                                      var wdts = new widgets.table('#latest_transactions', query, 'ethereum.transactions', {
+                                   "title": "Latest Transactions",
+                                   "dataOptions": [
+                                    {
+                                     "title": "Timestamp",
+                                     "type": "string",
+                                     "path": "block.timestamp.time",
+                                     "style": "width: 170px;"
+                                    },
+                                    {
+                                     "title": "Bloco",
+                                     "type": "string",
+                                     "path": "block.height",
+                                     "urlCallbackName": "block_path",
+                                     "style": "width: 80px;"
+                                    },
+                                    {
+                                     "title": "Remetente",
+                                     "type": "string-ellipsis",
+                                     "path": [
+                                      "address.annotation",
+                                      "address.address"
+                                     ],
+                                     "urlCallbackName": "address_path"
+                                    },
+                                    {
+                                     "title": "Hash",
+                                     "type": "string-ellipsis",
+                                     "path": "hash",
+                                     "urlCallbackName": "transaction_path"
+                                    },
+                                    {
+                                     "title": "Gas Custo, BNB",
+                                     "type": "amount",
+                                     "path": "gasValue",
+                                     "style": "width: 110px;"
+                                    }
+                                   ]
+                                  });
+                                      query.request({"limit": 10, "offset": 0, "network": "bsc", "from": "2020-09-02", "till": null, "dateFormat": "%Y-%m-%d"});
+                                      })()
+                                  </script>
 
-                inputValue
-                outputCount
-                inputCount
-
-                index
-
-                hash
-                feeValue
-
-            }
-          }
-          }`);
-    var wdts = new widgets.table('#latest_transactions', query, 'bitcoin.transactions', {
- "title": "Latest Transactions",
- "dataOptions": [
-  {
-   "title": "Timestamp",
-   "type": "string",
-   "path": "block.timestamp.time",
-   "style": "width: 170px;"
-  },
-  {
-   "title": "Bloco",
-   "type": "string",
-   "path": "block.height",
-   "urlCallbackName": "block_path",
-   "style": "width: 80px;"
-  },
-  {
-   "title": "Bloco Indexado",
-   "path": "index",
-   "style": "width: 80px;"
-  },
-  {
-   "title": "Hash",
-   "type": "string-ellipsis",
-   "path": "hash",
-   "urlCallbackName": "transaction_path"
-  },
-  {
-   "title": "Entradas",
-   "path": "inputCount",
-   "style": "width: 80px;"
-  },
-  {
-   "title": "Saídas",
-   "path": "outputCount",
-   "style": "width: 80px;"
-  },
-  {
-   "title": "Taxa",
-   "type": "number",
-   "path": "feeValue",
-   "style": "width: 80px;"
-  },
-  {
-   "title": "BTC",
-   "type": "amount",
-   "path": "inputValue",
-   "style": "width: 110px;"
-  }
- ]
-});
-    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-09-02", "till": null, "dateFormat": "%Y-%m-%d"});
-    })()
-</script>
 
 
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
