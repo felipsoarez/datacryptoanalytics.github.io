@@ -221,7 +221,7 @@
   <div class="tradingview-widget-copyright"><a href="https://br.tradingview.com/forex-screener/" rel="noopener" target="_blank"><span class="blue-text">Rastreador Forex</span></a> por TradingView</div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
   {
-  "width": 1100,
+  "width": 100%,
   "height": 512,
   "defaultColumn": "overview",
   "defaultScreen": "general",
@@ -268,17 +268,27 @@
                                 <div class="sidebar">
                                      <div class="widget widget-share">
 						    
-						  <form class="search-form" action="https://www.blockchain.com/pt/explorer" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="YffrkGedPnJSxSG+togcHbtwIB1oBjgwyOHI0rB7CloILwUfc7hD1bUyYOpiofjrdkULGsZvUHwM3zEeatTNpw==">
-  <div class="input-group">
-    <input type="text" name="query" class="form-control form-control-sm" placeholder="Enter blockchain address...">
-    <div class="input-group-append">
-        <button type="button" class="btn-primary btn-sm">Pesquisar</button>
-    </div>
-  </div>
-</form>
-						    
-						    
-						    
+						<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://br.tradingview.com/symbols/INDEX-DXY/" rel="noopener" target="_blank"><span class="blue-text">DXY Cotações</span></a> por TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+  {
+  "symbol": "INDEX:DXY",
+  "width": 100%,
+  "height": 220,
+  "locale": "br",
+  "dateRange": "1d",
+  "colorTheme": "light",
+  "trendLineColor": "rgba(101, 101, 101, 1)",
+  "underLineColor": "#999999",
+  "isTransparent": true,
+  "autosize": false,
+  "largeChartUrl": ""
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->			    
 
 
                                           <!-- TradingView Widget BEGIN -->
