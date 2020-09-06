@@ -194,71 +194,95 @@
 </script>
 					
 					
+	
 					
-					
-					
-
-
-<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
-<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-<div id="transactions_by_time"></div>
-<script>
-    (function(){
-    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
-    var query = new widgets.query(`
-            query ($network: BitcoinNetwork!,
-                  $dateFormat: String!,
-
-                  $from: ISO8601DateTime,
-                  $till: ISO8601DateTime){
-                    bitcoin(network: $network ){
-                      transactions(options:{asc: "date.date"}, date: {
-                        since: $from
-                        till: $till}
-
-                      ) {
-                        date: date{
-                          date(format: $dateFormat)
+<div id="token-history-grouped-2"></div>
+<script type="text/javascript">
+    if (typeof (eWgs) === 'undefined') {
+        document.write('<scr' + 'ipt src="https://api.ethplorer.io/widget.js?' + new Date().getTime().toString().substr(0, 7) + '" async></scr' + 'ipt>');
+        var eWgs = [];
+    }
+    eWgs.push(function () {
+        ethplorerWidget.init(
+            '#token-history-grouped-2', // Placeholder element
+            'tokenHistoryGrouped', // Widget type
+            {
+                'period': 90,
+                'type': 'column', // supported types: area, column, line
+                options: {
+                    'title': 'Ethereum Tokens Pulse',
+                    'pointSize': 2,
+                    'hAxis': {
+                        'title': '90 days token operations chart',
+                        'titleTextStyle': {
+                            'color': '#3366CC',
+                            'italic': true
                         }
-                        count: count
-                        feeValue
-                        avgFee: feeValue(calculate: average)
-                      }
+                    },
+                    'vAxis': {
+                        'title': 'Token operations',
                     }
-                  }`);
-    var wdts = new widgets.chartByTime('#transactions_by_time', query, 'bitcoin.transactions', {
- "title": "Transactions By Date",
- "chartOptions": {
-  "vAxes": {
-   "0": {
-    "title": "Transações"
-   }
-  },
-  "seriesType": "line",
-  "series": {
-   "0": {
-    "color": "#a8a59b"
-   }
-  }
- },
- "dataOptions": [
-  {
-   "title": {
-    "label": "Date",
-    "type": "date"
-   },
-   "path": "date.date"
-  },
-  {
-   "title": "Transações",
-   "path": "count"
-  }
- ]
-});
-    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-08-05", "till": "2020-09-03T23:59:59", "dateFormat": "%Y-%m-%d"});
-    })()
-</script>
+                }
+            }
 
+        );
+    });
+</script>					
+					
+					
+					
+					
+					
+
+<style>
+    #token-txs-11 {
+        line-height: 1.8;
+        border-radius: 8px;
+        max-width: 700px !important;
+        background-blend-mode: darken;
+        background-color: rgba(21,12,70,0.9);
+    }
+    #token-txs-11 .txs.big-screen-table td .tx-amount{
+        display: inline-block;
+        width: 150px;
+        white-space: nowrap;
+    }
+    #token-txs-11 .txs.big-screen-table td .tx-link{
+        max-width: 120px;
+    }
+    #token-txs-11 .txs.big-screen-table td .tx-link:last-child{
+        max-width: 150px;
+    }
+    #token-txs-11 .txs.big-screen-table td .tx-amount a:nth-child(1){
+        max-width: 110px !important;
+    }
+    #token-txs-11 .txs.big-screen-table td .tx-amount  a:nth-child(2){
+        max-width: 50px !important;
+    }
+</style>
+<div id="token-txs-11"></div>
+<script type="text/javascript">
+    if (typeof (eWgs) === 'undefined') {
+        document.write('<scr' + 'ipt src="https://api.ethplorer.io/widget.js?' + new Date().getTime().toString().substr(0, 7) + '" async></scr' + 'ipt>');
+        var eWgs = [];
+    }
+    eWgs.push(function () {
+        ethplorerWidget.init(
+            '#token-txs-11', // Placeholder element
+            'tokenHistory', // Widget type
+            {
+                address: '0xe94327d07fc17907b4db788e5adf2ed424addff6', // keep empty to show all tokens
+                limit: 5, // Number of records to show
+            },
+            {
+                header: '<div class="txs-header">WETH Recent Transactions</div>', // customized header
+                loader: '<div class="txs-loading">* L * O * A * D * I * N * G *<br><small>Please wait...</small></div>', // customized loader
+                bigScreenTable: '<tr><td>%from% <span class="tx-send">sent</span> <span class="tx-amount">%amount% %token%</span> <span class="tx-send">to</span> %to% <span class="tx-send">at</span><span class="tx-date"> %datetime%</span></td></tr>'
+
+            }
+        );
+    });
+</script>
 
 
 <h4>Últimos Blocos</h4>
