@@ -174,45 +174,7 @@
                                 <div class="editor-content">
 
 		
-					
-	
-					
-<div id="token-history-grouped-2"></div>
-<script type="text/javascript">
-    if (typeof (eWgs) === 'undefined') {
-        document.write('<scr' + 'ipt src="https://api.ethplorer.io/widget.js?' + new Date().getTime().toString().substr(0, 7) + '" async></scr' + 'ipt>');
-        var eWgs = [];
-    }
-    eWgs.push(function () {
-        ethplorerWidget.init(
-            '#token-history-grouped-2', // Placeholder element
-            'tokenHistoryGrouped', // Widget type
-            {
-                'period': 90,
-                'type': 'column', // supported types: area, column, line
-                options: {
-                    'title': 'Ethereum Tokens Pulse',
-                    'pointSize': 2,
-                    'hAxis': {
-                        'title': '90 days token operations chart',
-                        'titleTextStyle': {
-                            'color': '#a8a59b',
-                            'italic': true
-                        }
-                    },
-                    'vAxis': {
-                        'title': 'Token operations',
-                    }
-                }
-            }
-
-        );
-    });
-</script>					
-					
-					
-					
-					
+								
 					
 
 <style>
@@ -267,6 +229,65 @@
 
 
 
+<div id="token-history-grouped-2"></div>
+<script type="text/javascript">
+    if (typeof (eWgs) === 'undefined') {
+        document.write('<scr' + 'ipt src="https://api.ethplorer.io/widget.js?' + new Date().getTime().toString().substr(0, 7) + '" async></scr' + 'ipt>');
+        var eWgs = [];
+    }
+    eWgs.push(function () {
+        ethplorerWidget.init(
+            '#token-history-grouped-2', // Placeholder element
+            'tokenHistoryGrouped', // Widget type
+            {
+                'period': 90,
+                'type': 'column', // supported types: area, column, line
+                options: {
+                    'title': 'Ethereum Tokens Pulse',
+                    'pointSize': 2,
+                    'hAxis': {
+                        'title': '90 days token operations chart',
+                        'titleTextStyle': {
+                            'color': '#a8a59b',
+                            'italic': true
+                        }
+                    },
+                    'vAxis': {
+                        'title': 'Token operations',
+                    }
+                }
+            }
+
+        );
+    });
+</script>					
+					
+							
+					
+					
+					
+					
+					
+					
+					
+<div id="token-txs-10"></div>
+<script type="text/javascript">
+    if (typeof (eWgs) === 'undefined') {
+        document.write('<scr' + 'ipt src="https://api.ethplorer.io/widget.js?' + new Date().getTime().toString().substr(0, 7) + '" async></scr' + 'ipt>');
+        var eWgs = [];
+    }
+    eWgs.push(function () {
+        ethplorerWidget.init(
+            '#token-txs-10', // Placeholder element
+            'tokenHistory', // Widget type
+            {
+                address: '0xe94327d07fc17907b4db788e5adf2ed424addff6', // keep empty to show all tokens
+                limit: 5, // Number of records to show
+            }
+
+        );
+    });
+</script>					
 
 
 
