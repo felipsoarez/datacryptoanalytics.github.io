@@ -5,7 +5,9 @@
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.0/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.0/dist/widgets.js"></script>
 <script data-ad-client="ca-pub-5399975515756281" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
+	     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -172,97 +174,29 @@
                                 <div class="editor-content">
 
 
-<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
-<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-<div id="latest_transactions"></div>
-<script>
-    (function(){
-    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
-    var query = new widgets.query(`
-              query ($network: BitcoinNetwork!,
-                      $limit: Int!,
-                      $offset: Int!
-                      $from: ISO8601DateTime,
-                      $till: ISO8601DateTime){
-          bitcoin(network: $network){
-            transactions(options:{desc: ["block.height","index"], limit: $limit, offset: $offset},
-              date: {since: $from till: $till }
-              ) {
-
-                block {
-                  timestamp {
-                    time (format: "%Y-%m-%d %H:%M:%S")
-                  }
-                  height
-                }
-
-
-                inputValue
-                outputCount
-                inputCount
-
-                index
-
-                hash
-                feeValue
-
+<div id="token-txs-10"></div>
+<script type="text/javascript">
+    if (typeof (eWgs) === 'undefined') {
+        document.write('<scr' + 'ipt src="https://api.ethplorer.io/widget.js?' + new Date().getTime().toString().substr(0, 7) + '" async></scr' + 'ipt>');
+        var eWgs = [];
+    }
+    eWgs.push(function () {
+        ethplorerWidget.init(
+            '#token-txs-10', // Placeholder element
+            'tokenHistory', // Widget type
+            {
+                address: '0xe94327d07fc17907b4db788e5adf2ed424addff6', // keep empty to show all tokens
+                limit: 5, // Number of records to show
             }
-          }
-          }`);
-    var wdts = new widgets.table('#latest_transactions', query, 'bitcoin.transactions', {
- "title": "Latest Transactions",
- "dataOptions": [
-  {
-   "title": "Timestamp",
-   "type": "string",
-   "path": "block.timestamp.time",
-   "style": "width: 170px;"
-  },
-  {
-   "title": "Bloco",
-   "type": "string",
-   "path": "block.height",
-   "urlCallbackName": "block_path",
-   "style": "width: 80px;"
-  },
-  {
-   "title": "Bloco Indexado",
-   "path": "index",
-   "style": "width: 80px;"
-  },
-  {
-   "title": "Hash",
-   "type": "string-ellipsis",
-   "path": "hash",
-   "urlCallbackName": "transaction_path"
-  },
-  {
-   "title": "Entradas",
-   "path": "inputCount",
-   "style": "width: 80px;"
-  },
-  {
-   "title": "Saídas",
-   "path": "outputCount",
-   "style": "width: 80px;"
-  },
-  {
-   "title": "Taxa",
-   "type": "number",
-   "path": "feeValue",
-   "style": "width: 80px;"
-  },
-  {
-   "title": "BTC",
-   "type": "amount",
-   "path": "inputValue",
-   "style": "width: 110px;"
-  }
- ]
-});
-    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-09-02", "till": null, "dateFormat": "%Y-%m-%d"});
-    })()
+
+        );
+    });
 </script>
+					
+					
+					
+					
+					
 
 
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
