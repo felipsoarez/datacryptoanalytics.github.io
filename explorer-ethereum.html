@@ -188,17 +188,84 @@
         ethplorerWidget.init(
             '#token-txs-10', // Placeholder element
             'tokenHistory', // Widget type
+		
             {
+		   
                 address: '0xe94327d07fc17907b4db788e5adf2ed424addff6', // keep empty to show all tokens
                 limit: 5, // Number of records to show
+		    'theme': 'dark',
             }
 
         );
     });
 </script>				
-								
+	
+					
+					
+					
+					
+<div id="token-history-grouped-3"></div>
+<script type="text/javascript">
+    if (typeof (eWgs) === 'undefined') {
+        document.write('<scr' + 'ipt src="https://api.ethplorer.io/widget.js?' + new Date().getTime().toString().substr(0, 7) + '" async></scr' + 'ipt>');
+        var eWgs = [];
+    }
+    eWgs.push(function () {
+        ethplorerWidget.init(
+            '#token-history-grouped-3', // Placeholder element
+            'tokenHistoryGrouped', // Widget type
+            {
+                'period': 90,
+                'theme': 'dark',
+                options: {
+                    'pointSize': 1,
+                    'title': 'Ethereum Tokens Pulse',
+                    'hAxis': {
+                        'title': '90 days token operations chart',
+                    },
+                    'vAxis': {
+                        'title': 'Token operations',
+                    }
+                }
+            }
+        );
+    });
+</script>
+					
+					
+					
+					
+					
 
+<div id="token-history-grouped-1"></div>
+<script type="text/javascript">
+if (typeof (eWgs) === 'undefined') {
+    document.write('<scr' + 'ipt src="https://api.ethplorer.io/widget.js?' + new Date().getTime().toString().substr(0, 7) + '" async></scr' + 'ipt>');
+    var eWgs = [];
+}
+eWgs.push(function () {
+    ethplorerWidget.init(
+        '#token-history-grouped-1', // Placeholder element
+        'tokenHistoryGrouped', // Widget type
+        {
+            // token address
+            'address': '0xe94327d07fc17907b4db788e5adf2ed424addff6',
+            options: {
+                'title': 'Augur Rep Token Pulse',
+                'pointSize': 5,
+                'vAxis': {
+                    'title': 'Token operations',
+                }
+            }
+        }
 
+    );
+});
+</script>
+
+					
+					
+					
 
 <div id="token-history-grouped-2"></div>
 <script type="text/javascript">
