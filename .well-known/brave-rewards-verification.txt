@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: datacryptoanalytics.github.io
+Token: 89e0ac159953a6633595f05d4e4308e05cee499311652978af1feef47be0f134
