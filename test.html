@@ -114,6 +114,8 @@
  </li>
 <li>     <a class="dropdown-item" href="https://datacryptoanalytics.github.io/explorer-blockchain">Explorador Blockchain</a>
  </li>
+ <li> <a href="https://liberapay.com/datacryptoanalytics/donate">  <img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a> </li>
+
   </div>
 </div>
 
@@ -153,7 +155,6 @@
                                 <li><a href="https://www.youtube.com/channel/UCxfGBCV9E04Uw4flJLjBCqg?view_as=subscriber" class="youtube" title="" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Youtube"><ion-icon name="logo-youtube"></ion-icon></a></li>
                                 <li><a href="https://www.instagram.com/analyticsdatacrypto/" class="instagram" title="" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
                                 <li><a href="https://github.com/datacrypto-analytics/" target="_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="GitHub"><ion-icon name="logo-github"></ion-icon></a></li>
-                                  <li> <a href="https://liberapay.com/datacryptoanalytics/donate">  <img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a> </li>
                             </ul>
                         </div>
                     </div>
@@ -172,35 +173,39 @@
                         <div class="row">
 
                           <!-- TradingView Widget BEGIN -->
-                          <div class="tradingview-widget-container">
-                            <div class="tradingview-widget-container__widget"></div>
-                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-                            {
-                            "symbols": [
-                              {
-                                "proName": "FOREXCOM:SPXUSD",
-                                "title": "S&P 500"
-                              },
-                              {
-                                "proName": "FOREXCOM:NSXUSD",
-                                "title": "Nasdaq 1000"
-                              },
-                              {
-                                "proName": "BITSTAMP:BTCUSD",
-                                "title": "BTC/USD"
-                              },
-                              {
-                                "proName": "BITSTAMP:ETHUSD",
-                                "title": "ETH/USD"
-                              }
-                            ],
-                            "colorTheme": "light",
-                            "isTransparent": true,
-                            "locale": "br"
-                          }
-                            </script>
-                          </div>
-                          <!-- TradingView Widget END -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+    {
+    "symbols": [
+      {
+        "proName": "FOREXCOM:SPXUSD",
+        "title": "S&P 500"
+      },
+      {
+        "proName": "FOREXCOM:NSXUSD",
+        "title": "Nasdaq 1000"
+      },
+      {
+        "proName": "BITSTAMP:BTCUSD",
+        "title": "BTC/USD"
+      },
+      {
+        "proName": "BITSTAMP:ETHUSD",
+        "title": "ETH/USD"
+      },
+      {
+        "description": "USD/JPY",
+        "proName": "OANDA:USDJPY"
+      }
+    ],
+    "colorTheme": "light",
+    "isTransparent": true,
+    "locale": "br"
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
 
 
 
