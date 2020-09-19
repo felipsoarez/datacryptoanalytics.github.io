@@ -360,68 +360,168 @@
 
 
 
-<div id="token-history-grouped-1"></div>
-<script type="text/javascript">
-if (typeof (eWgs) === 'undefined') {
-    document.write('<scr' + 'ipt src="https://api.ethplorer.io/widget.js?' + new Date().getTime().toString().substr(0, 7) + '" async></scr' + 'ipt>');
-    var eWgs = [];
-}
-eWgs.push(function () {
-    ethplorerWidget.init(
-        '#token-history-grouped-1', // Placeholder element
-        'tokenHistoryGrouped', // Widget type
-        {
-            // token address
-            'address': '0xe94327d07fc17907b4db788e5adf2ed424addff6',
-            options: {
-                'title': 'Augur Rep Token Pulse',
-                'pointSize': 5,
-                'vAxis': {
-                    'title': 'Token operations',
-                }
-            }
-        }
-
-    );
-});
-</script>
 
 
 
 
+                                  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+                                  <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+                                  <div id="gas_burners"></div>
+                                  <script>
+                                      (function(){
+                                      widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+                                      var query = new widgets.query(`
+                                                          query ($network: EthereumNetwork!,
+                                                          $limit: Int!,
+                                                          $offset: Int!,
 
-<div id="token-history-grouped-2"></div>
-<script type="text/javascript">
-    if (typeof (eWgs) === 'undefined') {
-        document.write('<scr' + 'ipt src="https://api.ethplorer.io/widget.js?' + new Date().getTime().toString().substr(0, 7) + '" async></scr' + 'ipt>');
-        var eWgs = [];
-    }
-    eWgs.push(function () {
-        ethplorerWidget.init(
-            '#token-history-grouped-2', // Placeholder element
-            'tokenHistoryGrouped', // Widget type
-            {
-                'period': 90,
-                'type': 'column', // supported types: area, column, line
-                options: {
-                    'title': 'Ethereum Tokens Pulse',
-                    'pointSize': 2,
-                    'hAxis': {
-                        'title': '90 days token operations chart',
-                        'titleTextStyle': {
-                            'color': '#a8a59b',
-                            'italic': true
-                        }
-                    },
-                    'vAxis': {
-                        'title': 'Token operations',
-                    }
-                }
-            }
+                                                          $from: ISO8601DateTime,
+                                                          $till: ISO8601DateTime){
+                                                      ethereum(network: $network ){
+                                                        smartContractCalls(options:{desc: "gasValue" limit: $limit offset:$offset}, date: {
+                                                          since: $from
+                                                          till: $till
+                                                        }
+                                                        external: true
+                                                        ) {
 
-        );
-    });
-</script>
+                                                          smartContract{
+                                                            address {
+                                                              address
+                                                              annotation
+                                                            }
+                                                          }
+
+                                                          gasValue
+                                                          average: gasValue(calculate: average)
+                                                          count
+
+                                                        }
+                                                      }
+                                                    }`);
+                                      var wdts = new widgets.table('#gas_burners', query, 'ethereum.smartContractCalls', {
+                                   "title": "Smart Contracts Burning Maximum of Gas",
+                                   "dataOptions": [
+                                    {
+                                     "title": "Smart Contract",
+                                     "type": "string-ellipsis",
+                                     "path": [
+                                      "smartContract.address.annotation",
+                                      "smartContract.address.address"
+                                     ],
+                                     "urlCallbackName": "smart_contract_path"
+                                    },
+                                    {
+                                     "title": "Calls Count",
+                                     "path": "count",
+                                     "style": "width: 110px;"
+                                    },
+                                    {
+                                     "title": "Gas Cost, ETH",
+                                     "type": "amount",
+                                     "path": "gasValue",
+                                     "style": "width: 110px;"
+                                    },
+                                    {
+                                     "title": "Gas Cost/Call, ETH",
+                                     "type": "amount",
+                                     "path": "average",
+                                     "style": "width: 110px;"
+                                    }
+                                   ]
+                                  });
+                                      query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": "2020-09-18", "till": null, "dateFormat": "%Y-%m-%d"});
+                                      })()
+                                  </script>
+
+
+
+
+                                  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+                                  <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+                                  <div id="transfers_by_currencies"></div>
+                                  <script>
+                                      (function(){
+                                      widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+                                      var query = new widgets.query(`
+                                              query ($network: EthereumNetwork!,
+                                                    $limit: Int!,
+                                                    $offset: Int!,
+                                                    $from: ISO8601DateTime,
+                                                    $till: ISO8601DateTime){
+                                                     ethereum(network: $network){
+                                                        transfers(
+                                                        options:{desc: "count", limit: $limit, offset: $offset},
+                                                        amount: {gt: 0},
+                                                        date: {
+                                                          since: $from
+                                                          till: $till}
+
+                                                        ) {
+                                                            currency {
+                                                              symbol
+                                                              address
+                                                            }
+                                                            count
+
+                                                            senders: count(uniq: senders)
+                                                            receivers: count(uniq: receivers)
+                                                            days: count(uniq:dates)
+
+                                                            from_date: minimum(of: date)
+                                                            till_date: maximum(of: date)
+
+                                                            amount
+                                                        }
+                                                      }
+                                                    }`);
+                                      var wdts = new widgets.table('#transfers_by_currencies', query, 'ethereum.transfers', {
+                                   "title": "Transfers By Currencies",
+                                   "dataOptions": [
+                                    {
+                                     "title": "Currency",
+                                     "type": "string-ellipsis",
+                                     "path": [
+                                      "currency.symbol",
+                                      "currency.name",
+                                      "currency.address"
+                                     ],
+                                     "urlCallbackName": "token_path"
+                                    },
+                                    {
+                                     "title": "First transfer date",
+                                     "path": "from_date"
+                                    },
+                                    {
+                                     "title": "Last transfer date",
+                                     "path": "till_date"
+                                    },
+                                    {
+                                     "title": "Days token transfered",
+                                     "path": "days"
+                                    },
+                                    {
+                                     "title": "Uniq Senders",
+                                     "path": "senders"
+                                    },
+                                    {
+                                     "title": "Uniq Receivers",
+                                     "path": "receivers"
+                                    },
+                                    {
+                                     "title": "Transfered Amount",
+                                     "path": "amount",
+                                     "type": "amount"
+                                    },
+                                    {
+                                     "title": "Transfer Count",
+                                     "path": "count"
+                                    }
+                                   ]
+                                  });
+                                      query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": null, "till": null, "dateFormat": "%Y-%m"});
+                                      })()
+                                  </script>
 
 
 
@@ -610,6 +710,69 @@ eWgs.push(function () {
   </script>
 </div>
 <!-- TradingView Widget END -->
+
+
+
+
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+<div id="transactions_by_time"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+            query ($network: EthereumNetwork!,
+                  $dateFormat: String!,
+
+                  $from: ISO8601DateTime,
+                  $till: ISO8601DateTime){
+                    ethereum(network: $network ){
+                      transactions(options:{asc: "date.date"}, date: {
+                        since: $from
+                        till: $till}
+
+                      ) {
+                        date: date{
+                          date(format: $dateFormat)
+                        }
+                        count: count
+                        gasValue
+                      }
+                    }
+                  }`);
+    var wdts = new widgets.chartByTime('#transactions_by_time', query, 'ethereum.transactions', {
+ "title": "Transactions By Date",
+ "chartOptions": {
+  "vAxes": {
+   "0": {
+    "title": "Transactions count"
+   }
+  },
+  "seriesType": "bars",
+  "series": {
+   "0": {
+    "color": "#a8a59b"
+   }
+  }
+ },
+ "dataOptions": [
+  {
+   "title": {
+    "label": "Date",
+    "type": "date"
+   },
+   "path": "date.date"
+  },
+  {
+   "title": "Transactions count",
+   "path": "count"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": null, "till": null, "dateFormat": "%Y-%m"});
+    })()
+</script>
+
 
 
 
