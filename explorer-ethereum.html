@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
      <head>
-	     
+
 	     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160618603-1"></script>
 <script>
@@ -18,7 +18,7 @@
 <script data-ad-client="ca-pub-5399975515756281" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
-	     
+
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -122,10 +122,10 @@
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item" href="https://datacryptoanalytics.github.io/explorer-binance">Explorador BinanceChain</a>
     <a class="dropdown-item" href="https://datacryptoanalytics.github.io/explorer-blockchain">Explorador Blockchain</a>
-  
+
   </div>
 </div>
-            
+
             <li> <a href="https://liberapay.com/datacryptoanalytics/donate">  <img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a> </li>
     </ul>
 </nav>
@@ -181,7 +181,7 @@
                             <div class="col-lg-8 col-md-12">
                                 <div class="post-meta">
                                      <div>
-						<a class="github-button" href="https://github.com/datacrypto-analytics" aria-label="Follow @datacryptoanalytics on GitHub">Follow @datacrypto-analytics</a>
+						<a class="github-button" href="https://github.com/datacryptoanalytics" aria-label="Follow @datacryptoanalytics on GitHub">Follow @datacrypto-analytics</a>
 
 									</div>
 
@@ -194,37 +194,91 @@
                             <div class="col-lg-8 col-md-12">
                                 <div class="editor-content">
 
-				
-					
-					
-					
-					
-<div id="token-txs-10"></div>
-<script type="text/javascript">
-    if (typeof (eWgs) === 'undefined') {
-        document.write('<scr' + 'ipt src="https://api.ethplorer.io/widget.js?' + new Date().getTime().toString().substr(0, 7) + '" async></scr' + 'ipt>');
-        var eWgs = [];
-    }
-    eWgs.push(function () {
-        ethplorerWidget.init(
-            '#token-txs-10', // Placeholder element
-            'tokenHistory', // Widget type
-		
-            {
-		   
-                address: '0xe94327d07fc17907b4db788e5adf2ed424addff6', // keep empty to show all tokens
-                limit: 5, // Number of records to show
-		    'theme': 'dark',
-            }
 
-        );
-    });
-</script>				
-	
-					
-					
-					
-					
+
+
+
+                                  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+                                  <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+                                  <div id="latest_transactions"></div>
+                                  <script>
+                                      (function(){
+                                      widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+                                      var query = new widgets.query(`
+                                                          query ($network: EthereumNetwork!,
+                                                                  $limit: Int!,
+                                                                  $offset: Int!
+                                                                  $from: ISO8601DateTime,
+                                                                  $till: ISO8601DateTime){
+                                                      ethereum(network: $network){
+                                                        transactions(options:{desc: "block.height", limit: $limit, offset: $offset},
+                                                          date: {since: $from till: $till }
+                                                          ) {
+
+                                                            block {
+                                                              timestamp {
+                                                                time (format: "%Y-%m-%d %H:%M:%S")
+                                                              }
+                                                              height
+                                                            }
+
+                                                            address: sender {
+                                                              address
+                                                              annotation
+                                                            }
+                                                            hash
+                                                            gasValue
+
+                                                        }
+                                                      }
+                                                    }`);
+                                      var wdts = new widgets.table('#latest_transactions', query, 'ethereum.transactions', {
+                                   "title": "Latest Transactions",
+                                   "dataOptions": [
+                                    {
+                                     "title": "Timestamp",
+                                     "type": "string",
+                                     "path": "block.timestamp.time",
+                                     "style": "width: 170px;"
+                                    },
+                                    {
+                                     "title": "Bloco",
+                                     "type": "string",
+                                     "path": "block.height",
+                                     "urlCallbackName": "block_path",
+                                     "style": "width: 80px;"
+                                    },
+                                    {
+                                     "title": "Remetente",
+                                     "type": "string-ellipsis",
+                                     "path": [
+                                      "address.annotation",
+                                      "address.address"
+                                     ],
+                                     "urlCallbackName": "address_path"
+                                    },
+                                    {
+                                     "title": "Hash",
+                                     "type": "string-ellipsis",
+                                     "path": "hash",
+                                     "urlCallbackName": "transaction_path"
+                                    },
+                                    {
+                                     "title": "Gas Custo, ETH",
+                                     "type": "amount",
+                                     "path": "gasValue",
+                                     "style": "width: 110px;"
+                                    }
+                                   ]
+                                  });
+                                      query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": "2020-09-18", "till": null, "dateFormat": "%Y-%m-%d"});
+                                      })()
+                                  </script>
+
+
+
+
+
 <div id="token-history-grouped-3"></div>
 <script type="text/javascript">
     if (typeof (eWgs) === 'undefined') {
@@ -252,11 +306,11 @@
         );
     });
 </script>
-					
-					
-					
-					
-					
+
+
+
+
+
 
 <div id="token-history-grouped-1"></div>
 <script type="text/javascript">
@@ -284,9 +338,9 @@ eWgs.push(function () {
 });
 </script>
 
-					
-					
-					
+
+
+
 
 <div id="token-history-grouped-2"></div>
 <script type="text/javascript">
@@ -319,12 +373,12 @@ eWgs.push(function () {
 
         );
     });
-</script>					
-					
-							
-					
-					
-				
+</script>
+
+
+
+
+
 
 
 
@@ -353,7 +407,7 @@ eWgs.push(function () {
                             <div class="col-lg-4 col-md-12">
                                 <div class="sidebar">
                                      <div class="widget widget-share">
-						    
+
 						  <form class="search-form" action="https://www.blockchain.com/pt/explorer" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="YffrkGedPnJSxSG+togcHbtwIB1oBjgwyOHI0rB7CloILwUfc7hD1bUyYOpiofjrdkULGsZvUHwM3zEeatTNpw==">
   <div class="input-group">
     <input type="text" name="query" class="form-control form-control-sm" placeholder="Enter blockchain address...">
@@ -362,9 +416,9 @@ eWgs.push(function () {
     </div>
   </div>
 </form>
-						    
-						    
-						    
+
+
+
 
 
                                           <!-- TradingView Widget BEGIN -->
