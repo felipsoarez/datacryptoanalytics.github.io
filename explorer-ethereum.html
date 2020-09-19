@@ -278,34 +278,82 @@
 
 
 
+                                  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+                                  <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+                                  <div id="transaction_gas_price_by_time_log"></div>
+                                  <script>
+                                      (function(){
+                                      widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+                                      var query = new widgets.query(`
+                                              query ($network: EthereumNetwork!,
+                                                    $dateFormat: String!,
 
-<div id="token-history-grouped-3"></div>
-<script type="text/javascript">
-    if (typeof (eWgs) === 'undefined') {
-        document.write('<scr' + 'ipt src="https://api.ethplorer.io/widget.js?' + new Date().getTime().toString().substr(0, 7) + '" async></scr' + 'ipt>');
-        var eWgs = [];
-    }
-    eWgs.push(function () {
-        ethplorerWidget.init(
-            '#token-history-grouped-3', // Placeholder element
-            'tokenHistoryGrouped', // Widget type
-            {
-                'period': 90,
-                'theme': 'dark',
-                options: {
-                    'pointSize': 1,
-                    'title': 'Ethereum Tokens Pulse',
-                    'hAxis': {
-                        'title': '90 days token operations chart',
-                    },
-                    'vAxis': {
-                        'title': 'Token operations',
-                    }
-                }
-            }
-        );
-    });
-</script>
+                                                    $from: ISO8601DateTime,
+                                                    $till: ISO8601DateTime){
+                                                      ethereum(network: $network ){
+                                                        transactions(options:{asc: "date.date"}, date: {
+                                                          since: $from
+                                                          till: $till}
+
+                                                        ) {
+                                                          date: date{
+                                                            date(format: $dateFormat)
+                                                          }
+                                                          gasPrice
+                                                          gasValue
+                                                          average: gasValue(calculate: average )
+                                                          maxGasPrice: gasPrice(calculate: maximum)
+                                                          medianGasPrice: gasPrice(calculate: median)
+                                                        }
+                                                      }
+                                                    }`);
+                                      var wdts = new widgets.chartByTime('#transaction_gas_price_by_time_log', query, 'ethereum.transactions', {
+                                   "title": "Gas Price By Date ( Median, Average, Maximum) in Log scale, GWei",
+                                   "chartOptions": {
+                                    "vAxes": {
+                                     "0": {
+                                      "title": "Avg. Gas Price, GWei",
+                                      "scaleType": "log"
+                                     }
+                                    },
+                                    "series": {
+                                     "0": {
+                                      "color": "#28a745"
+                                     },
+                                     "1": {
+                                      "color": "#ffc107"
+                                     },
+                                     "2": {
+                                      "color": "#9bc2cf"
+                                     }
+                                    },
+                                    "seriesType": "lines"
+                                   },
+                                   "dataOptions": [
+                                    {
+                                     "title": {
+                                      "label": "Date",
+                                      "type": "date"
+                                     },
+                                     "path": "date.date"
+                                    },
+                                    {
+                                     "title": "Avg. Gas Price, GWei",
+                                     "path": "gasPrice"
+                                    },
+                                    {
+                                     "title": "Maximum Gas Price, GWei",
+                                     "path": "maxGasPrice"
+                                    },
+                                    {
+                                     "title": "Median Gas Price, GWei",
+                                     "path": "medianGasPrice"
+                                    }
+                                   ]
+                                  });
+                                      query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": null, "till": null, "dateFormat": "%Y-%m"});
+                                      })()
+                                  </script>
 
 
 
