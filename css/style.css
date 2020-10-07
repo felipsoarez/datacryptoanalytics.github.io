@@ -21,3 +21,19 @@ a{
     height: 120px;
 }
 
+#popup {
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 50px 2px #000;
+  padding-bottom: 5px;
+}
+#close {
+  width: 100px;
+  background-color: #cc0033;
+  color: #ffffff;
+  border: none;
+  margin-left: 5px;
+}
