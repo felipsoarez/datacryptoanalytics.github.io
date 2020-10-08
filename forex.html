@@ -239,6 +239,30 @@
 
 
 
+</table>
+<script type="text/javascript">
+	var api = 'http://api.postmon.com.br/v1/cep/';
+	var info;
+   	function setUp() {
+   		var button = select('#botao');
+   		button.mousePressed(cepDados);
+   		document.getElementById("bairro").innerHTML = recebeDados().info.logradouro;
+   		document.getElementById("logradouro").innerHTML = recebeDados().info.logradouro;
+   		document.getElementById("cidade").innerHTML = recebeDados().info.logradouro;
+   		document.getElementById("estado").innerHTML = recebeDados().info.logradouro;
+   	}
+
+   	function cepDados(){
+ 		var url = api + input.value();
+   		loadJSON(url, recebeDados);
+   	}
+
+   	function recebeDados(dados_str){
+        info = JSON.parse(dados_str);
+    }
+</script>					
+					
+					
 
 
 
