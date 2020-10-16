@@ -747,7 +747,7 @@
 </div>
 
 <h4>Transferências por moedas</h4>
-
+<div class"transf-por-moeda">
 
                                   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
                                   <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
@@ -830,12 +830,11 @@
                                       query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": null, "till": null, "dateFormat": "%Y-%m"});
                                       })()
                                   </script>
-
+  </div>
 
   </div>
   <div id="binance" class="tab-pane fade">
-
-
+<div class="transacoes-binance">
 
                                   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
                                   <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
@@ -910,9 +909,9 @@
                                       query.request({"limit": 10, "offset": 0, "network": "bsc", "from": "2020-09-02", "till": null, "dateFormat": "%Y-%m-%d"});
                                       })()
                                   </script>
+</div>
 
-
-
+<div class="transacoes-por-tempo">
                                   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
                                   <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
                                   <div id="transactions_by_time"></div>
@@ -969,12 +968,13 @@
                                       query.request({"limit": 10, "offset": 0, "network": "bsc", "from": null, "till": null, "dateFormat": "%Y-%m"});
                                       })()
                                   </script>
-
+</div>
 
 
 
 <h4>Últimas Transferências</h4>
 
+<div class="ultimas-transf">
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
 <div id="latest_transfers"></div>
@@ -1080,11 +1080,12 @@
     query.request({"limit": 10, "offset": 0, "network": "bsc", "from": "2020-09-02", "till": null, "dateFormat": "%Y-%m-%d"});
     })()
 </script>
-
+</div>
 
 
 <h4>Mineradores</h4>
 
+<div class="mineradores-BinanceSChain">
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
 <div id="miners"></div>
@@ -1147,9 +1148,11 @@
     query.request({"limit": 10, "offset": 0, "network": "bsc", "from": null, "till": null, "dateFormat": "%Y-%m"});
     })()
 </script>
+</div>
 
 <h4>Últimos Blocos</h4>
 
+<div class="ultimos-blocos-bsc">
   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
 <div id="latest_blocks"></div>
@@ -1221,6 +1224,7 @@
     })()
 </script>
 
+</div>
 
 
 
@@ -1240,7 +1244,7 @@
                                     <div class="col-sm-6">
                                             <div class="tags">
                                                 Tags:
-                                                <a href="#">Forex</a>
+                                                <a href="#">Explorer</a>
                                             </div>
                                     </div>
 
