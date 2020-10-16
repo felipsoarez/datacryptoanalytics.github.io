@@ -239,6 +239,7 @@
 <div class="tab-content">
   <div id="bitcoin" class="tab-pane fade show active">
 
+<div class="trasacoes-bitcoin">
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
 <div id="latest_transactions"></div>
@@ -324,8 +325,9 @@
     query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-09-02", "till": null, "dateFormat": "%Y-%m-%d"});
     })()
 </script>
+</div>
 
-
+<div class="grafico-transacoes">
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
 <div id="transactions_by_time"></div>
@@ -383,9 +385,9 @@
     query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2015-08-05", "till": "2020-09-07T23:59:59", "dateFormat": "%Y-%m-%d"});
     })()
 </script>
+</div>
 
-
-
+<div class="ultimos-blocos">
 <h4>Últimos Blocos</h4>
 
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
@@ -445,7 +447,8 @@
     })()
 </script>
 
-
+</div>
+<div class="mineradores">
 
 <h4>Mineradores</h4>
 
@@ -515,13 +518,13 @@
     })()
 </script>
 
-
+</div>
 
 
 
   </div>
   <div id="ethereum" class="tab-pane fade">
-
+<div class="transacoes-ethereum">
   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
                                   <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
                                   <div id="latest_transactions"></div>
@@ -595,7 +598,8 @@
                                       query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": "2020-09-18", "till": null, "dateFormat": "%Y-%m-%d"});
                                       })()
                                   </script>
-
+</div>
+<div class="grafico-transacoes">
 
                                   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
                                   <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
@@ -672,7 +676,8 @@
                                       })()
                                   </script>
 
-
+</div>
+<div class="taxa-gas">
 
                                   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
                                   <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
@@ -739,9 +744,10 @@
                                       query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": "2020-09-18", "till": null, "dateFormat": "%Y-%m-%d"});
                                       })()
                                   </script>
+</div>
 
+<h4>Transferências por moedas</h4>
 
-<h4>Transferências por moedas</h4
 
                                   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
                                   <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
