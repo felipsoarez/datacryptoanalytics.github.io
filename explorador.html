@@ -238,71 +238,7 @@
 
 <div class="tab-content">
   <div id="bitcoin" class="tab-pane fade show active">
-
-
-
-<div class="grafico-transacoes">
-<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
-<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-<div id="transactions_by_time"></div>
-<script>
-    (function(){
-    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
-    var query = new widgets.query(`
-            query ($network: BitcoinNetwork!,
-                  $dateFormat: String!,
-                  $from: ISO8601DateTime,
-                  $till: ISO8601DateTime){
-                    bitcoin(network: $network ){
-                      transactions(options:{asc: "date.date"}, date: {
-                        since: $from
-                        till: $till}
-                      ) {
-                        date: date{
-                          date(format: $dateFormat)
-                        }
-                        count: count
-                        feeValue
-                        avgFee: feeValue(calculate: average)
-                      }
-                    }
-                  }`);
-    var wdts = new widgets.chartByTime('#transactions_by_time', query, 'bitcoin.transactions', {
- "title": "Transactions By Date",
- "chartOptions": {
-  "vAxes": {
-   "0": {
-    "title": "Transações"
-   }
-  },
-  "seriesType": "bars",
-  "series": {
-   "0": {
-    "color": "#a8a59b"
-   }
-  }
- },
- "dataOptions": [
-  {
-   "title": {
-    "label": "Date",
-    "type": "date"
-   },
-   "path": "date.date"
-  },
-  {
-   "title": "Transações",
-   "path": "count"
-  }
- ]
-});
-    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2015-08-05", "till": "2020-09-07T23:59:59", "dateFormat": "%Y-%m-%d"});
-    })()
-</script>
-</div>
-
-<h4>Últimas Transações</h4>
-
+<div class="row">
 <div class="trasacoes-bitcoin">
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
@@ -391,6 +327,65 @@
 </script>
 </div>
 
+<div class="grafico-transacoes">
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+<div id="transactions_by_time"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+            query ($network: BitcoinNetwork!,
+                  $dateFormat: String!,
+                  $from: ISO8601DateTime,
+                  $till: ISO8601DateTime){
+                    bitcoin(network: $network ){
+                      transactions(options:{asc: "date.date"}, date: {
+                        since: $from
+                        till: $till}
+                      ) {
+                        date: date{
+                          date(format: $dateFormat)
+                        }
+                        count: count
+                        feeValue
+                        avgFee: feeValue(calculate: average)
+                      }
+                    }
+                  }`);
+    var wdts = new widgets.chartByTime('#transactions_by_time', query, 'bitcoin.transactions', {
+ "title": "Transactions By Date",
+ "chartOptions": {
+  "vAxes": {
+   "0": {
+    "title": "Transações"
+   }
+  },
+  "seriesType": "bars",
+  "series": {
+   "0": {
+    "color": "#a8a59b"
+   }
+  }
+ },
+ "dataOptions": [
+  {
+   "title": {
+    "label": "Date",
+    "type": "date"
+   },
+   "path": "date.date"
+  },
+  {
+   "title": "Transações",
+   "path": "count"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2015-08-05", "till": "2020-09-07T23:59:59", "dateFormat": "%Y-%m-%d"});
+    })()
+</script>
+</div>
 
 <div class="ultimos-blocos">
 <h4>Últimos Blocos</h4>
@@ -525,7 +520,7 @@
 
 </div>
 
-
+</div>
 
   </div>
 <div id="ethereum" class="tab-pane fade">
