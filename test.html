@@ -238,27 +238,1100 @@
 					
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+    <a class="nav-link active" data-toggle="tab" href="#bitcoin">Bitcoin</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#menu1">Link</a>
+    <a class="nav-link" data-toggle="tab" href="#ethereum">Ethereum</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#menu2">Link</a>
+    <a class="nav-link" data-toggle="tab" href="#binance">BinanceSC</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#">Desativado</a>
+    <a class="nav-link" href="#">Litecoin</a>
   </li>
 </ul>					
 
 
 
 <div class="tab-content">
-  <div id="home" class="tab-pane fade in active">
-    <h3>HOME</h3>
+  <div id="bitcoin" class="tab-pane fade in active">
+    <h3>Bitcoin</h3>
     
 
-                                                                            <!-- TradingView Widget BEGIN -->
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+<div id="latest_transactions"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+              query ($network: BitcoinNetwork!,
+                      $limit: Int!,
+                      $offset: Int!
+                      $from: ISO8601DateTime,
+                      $till: ISO8601DateTime){
+          bitcoin(network: $network){
+            transactions(options:{desc: ["block.height","index"], limit: $limit, offset: $offset},
+              date: {since: $from till: $till }
+              ) {
+                block {
+                  timestamp {
+                    time (format: "%Y-%m-%d %H:%M:%S")
+                  }
+                  height
+                }
+                inputValue
+                outputCount
+                inputCount
+                index
+                hash
+                feeValue
+            }
+          }
+          }`);
+    var wdts = new widgets.table('#latest_transactions', query, 'bitcoin.transactions', {
+ "title": "Latest Transactions",
+ "dataOptions": [
+  {
+   "title": "Timestamp",
+   "type": "string",
+   "path": "block.timestamp.time",
+   "style": "width: 170px;"
+  },
+  {
+   "title": "Bloco",
+   "type": "string",
+   "path": "block.height",
+   "urlCallbackName": "block_path",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "Bloco Indexado",
+   "path": "index",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "Hash",
+   "type": "string-ellipsis",
+   "path": "hash",
+   "urlCallbackName": "transaction_path"
+  },
+  {
+   "title": "Entradas",
+   "path": "inputCount",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "Saídas",
+   "path": "outputCount",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "Taxa",
+   "type": "number",
+   "path": "feeValue",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "BTC",
+   "type": "amount",
+   "path": "inputValue",
+   "style": "width: 110px;"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-09-02", "till": null, "dateFormat": "%Y-%m-%d"});
+    })()
+</script>
+
+
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+<div id="transactions_by_time"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+            query ($network: BitcoinNetwork!,
+                  $dateFormat: String!,
+                  $from: ISO8601DateTime,
+                  $till: ISO8601DateTime){
+                    bitcoin(network: $network ){
+                      transactions(options:{asc: "date.date"}, date: {
+                        since: $from
+                        till: $till}
+                      ) {
+                        date: date{
+                          date(format: $dateFormat)
+                        }
+                        count: count
+                        feeValue
+                        avgFee: feeValue(calculate: average)
+                      }
+                    }
+                  }`);
+    var wdts = new widgets.chartByTime('#transactions_by_time', query, 'bitcoin.transactions', {
+ "title": "Transactions By Date",
+ "chartOptions": {
+  "vAxes": {
+   "0": {
+    "title": "Transações"
+   }
+  },
+  "seriesType": "bars",
+  "series": {
+   "0": {
+    "color": "#a8a59b"
+   }
+  }
+ },
+ "dataOptions": [
+  {
+   "title": {
+    "label": "Date",
+    "type": "date"
+   },
+   "path": "date.date"
+  },
+  {
+   "title": "Transações",
+   "path": "count"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2015-08-05", "till": "2020-09-07T23:59:59", "dateFormat": "%Y-%m-%d"});
+    })()
+</script>
+
+
+
+<h4>Últimos Blocos</h4>
+
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+<div id="latest_blocks"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+                        query ($network: BitcoinNetwork!,
+                                $limit: Int!,
+                                $offset: Int!
+                                $from: ISO8601DateTime,
+                                $till: ISO8601DateTime){
+                    bitcoin(network: $network){
+                      blocks(options:{desc: "height", limit: $limit, offset: $offset},
+                        date: {since: $from till: $till }
+                        ) {
+                          timestamp {
+                            time (format: "%Y-%m-%d %H:%M:%S")
+                          }
+                          height
+                          difficulty
+                          transactionCount
+                          blockSize
+                      }
+                    }
+                  }`);
+    var wdts = new widgets.table('#latest_blocks', query, 'bitcoin.blocks', {
+ "title": "Latest Blocks",
+ "dataOptions": [
+  {
+   "title": "Timestamp",
+   "type": "string",
+   "path": "timestamp.time"
+  },
+  {
+   "title": "Bloco",
+   "path": "height",
+   "urlCallbackName": "block_path"
+  },
+  {
+   "title": "Transações",
+   "path": "transactionCount"
+  },
+  {
+   "title": "Tamanho",
+   "path": "blockSize"
+  },
+  {
+   "title": "Dificuldade",
+   "path": "difficulty"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-09-02", "till": null, "dateFormat": "%Y-%m-%d"});
+    })()
+</script>
+
+
+
+<h4>Mineradores</h4>
+
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+<div id="miners"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+                query ($network: BitcoinNetwork!,
+                        $limit: Int!,
+                        $offset: Int!
+                        $from: ISO8601DateTime,
+                        $till: ISO8601DateTime){
+                  bitcoin(network: $network ){
+                    outputs(options:{desc: "reward", limit: $limit, offset: $offset},
+                      date: { since: $from till: $till}
+                      txIndex: {is: 0}
+                      outputDirection: {is: mining}
+                      outputScriptType: {notIn: [nulldata,nonstandard]}
+                    ) {
+                      address: outputAddress{
+                        address
+                        annotation
+                      }
+                      reward: value
+                      count(uniq: blocks)
+                      min_date: minimum(of: date)
+                      max_date: maximum(of: date)
+                    }
+                  }
+                }`);
+    var wdts = new widgets.table('#miners', query, 'bitcoin.outputs', {
+ "title": "Miners",
+ "dataOptions": [
+  {
+   "title": "Mineradores",
+   "type": "string",
+   "path": [
+    "address.annotation",
+    "address.address"
+   ],
+   "urlCallbackName": "address_path"
+  },
+  {
+   "title": "Bloco",
+   "type": "string",
+   "path": "count"
+  },
+  {
+   "title": "Primeiro Bloco",
+   "path": "min_date"
+  },
+  {
+   "title": "Último Bloco",
+   "path": "max_date"
+  },
+  {
+   "title": "Recompensa, BTC",
+   "type": "number",
+   "path": "reward"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-09-03", "till": "2020-09-03T23:59:59", "dateFormat": "%Y-%m-%d"});
+    })()
+</script>
+
+
+
+
+
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+<div id="graph"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+query ($network: BitcoinNetwork!, $address: String!, $limit: Int!, $from: ISO8601DateTime, $till: ISO8601DateTime) {
+  bitcoin(network: $network) {
+    inbound: coinpath(receiver: {is: $address}, options: {desc: "amount", limit: $limit}, date:{since: $from, till: $till}) {
+      sender {
+        address
+        annotation
+      }
+      receiver {
+        address
+        annotation
+      }
+      amount
+    }
+    outbound: coinpath(sender: {is: $address}, receiver: {not: ""}, options: {desc: "amount", limit: $limit}, date:{since: $from, till: $till}) {
+      sender {
+        address
+        annotation
+      }
+      receiver {
+        address
+        annotation
+      }
+      amount
+    }
+  }
+}
+        `);
+    var wdts = new widgets.template('#graph', query, '', {
+ "title": "Graph",
+ "callback": function(domNode, data){
+                widgets.jqueryLoading(function($){
+                    let _ = widgets.lodash;
+                    let _n = widgets.numeral;
+
+                    let currency = 'BTC';
+
+                    this.prepareNodes = function(nodes){
+                        let prepareNode = function(node){
+                            if (node.address == ''){
+                                return {
+                                    id: node.address,
+                                    label: 'Coinbase',
+                                    group: 'coinbase',
+                                    title: node.address
+                                };
+                            } else {
+                                return {
+                                    id: node.address,
+                                    label: node.annotation || _.truncate(node.address, {length: 15, separator: '...'}),
+                                    group: node.annotation ? 'annotated_address' : 'address',
+                                    title: node.address
+                                };
+                            }
+                        };
+
+                        let prepared = [];
+                        _.each(nodes, function(node){
+                            prepared.push(prepareNode(node.receiver));
+                            prepared.push(prepareNode(node.sender));
+                        });
+                        return prepared;
+                    };
+
+                    this.prepareEdges = function(edges, receiver = true, address = 'bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh'){
+                        let g = this;
+                        let prepareEdge = function(edge){
+                            let currency_name = currency;
+                            let width_counts = Math.log(edge.transfers)+1;
+                            let width = (edge.amount > 1) ? 1.5*Math.log10(edge.amount)+1 : 1;
+                            let value = parseFloat(edge.amount)<=1e-6 ? edge.amount : _n(edge.amount).format('0.0000a');
+
+                            let label = value + ' ' + currency_name;
+
+                            if(receiver){
+                                return {
+                                    from: edge.sender.address,
+                                    to: address,
+                                    arrows: 'to',
+                                    label: label,
+                                    color: {color: 'silver', highlight: '#ff5722'},
+                                    font: {align: 'middle', multi: true, color: 'white', strokeWidth: 4, strokeColor: 'black'},
+                                    smooth: true,
+                                    width: width,
+                                    select_type: 'select_transfers',
+                                    hidden: false,
+                                    id: g.hashCode(['select_transfers', edge.sender.address, address, label])
+                                }
+                            } else {
+                                return {
+                                    from: address,
+                                    to: edge.receiver.address,
+                                    arrows: 'to',
+                                    label: label,
+                                    color: {color: 'white', highlight: '#ff5722'},
+                                    font: {align: 'middle', multi: true, color: 'white', strokeWidth: 4, strokeColor: 'black'},
+                                    smooth: true,
+                                    width: width,
+                                    select_type: 'select_transfers',
+                                    hidden: false,
+                                    id: g.hashCode(['select_transfers', address, edge.receiver.address, label])
+                                }
+                            }
+                        };
+                        let prepared = [];
+                        _.each(edges, function(edge){
+                            prepared.push(prepareEdge(edge));
+                        });
+                        return prepared;
+                    };
+
+                    this.hashCode = function(data){
+                        var string = JSON.stringify(data);
+                        if (Array.prototype.reduce){
+                            return string.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0);
+                        }
+                        var hash = 0;
+                        if (string.length === 0) return hash;
+                        for (var i = 0; i < string.length; i++) {
+                            var character  = string.charCodeAt(i);
+                            hash  = ((hash<<5)-hash)+character;
+                            hash = hash & hash; // Convert to 32bit integer
+                        }
+                        return hash;
+                    };
+
+                    this.dataset = {
+                        nodes: new vis.DataSet(_.uniqBy(this.prepareNodes(data.bitcoin.inbound).concat(this.prepareNodes(data.bitcoin.outbound)), 'id')),
+                        edges: new vis.DataSet(this.prepareEdges(data.bitcoin.inbound).concat(this.prepareEdges(data.bitcoin.outbound, false)))
+                    };
+
+                    this.options = {
+                        height: '600px',
+                        physics: {
+                            stabilization: {
+                                enabled: false,
+                                iterations: 10,
+                                onlyDynamicEdges: true
+                            },
+                            barnesHut: {
+                                damping: 0.4,
+                                avoidOverlap: 0.1,
+                                springConstant: 0.09
+                            }
+                        },
+                        groups: {
+                            smart_contract: {
+                                shape: 'icon',
+                                icon: {
+                                    face: 'FontAwesome',
+                                    code: '\uf013',
+                                    weight: 900,
+                                    size: 40,
+                                    color: '#f0a30a'
+                                },
+                                font:{
+                                    color: 'white'
+                                }
+                            },
+                            multisig: {
+                                shape: 'icon',
+                                icon: {
+                                    face: 'FontAwesome',
+                                    code: '\uf4d3',
+                                    weight: 900,
+                                    size: 40,
+                                    color: '#03a9f4'
+                                },
+                                font:{
+                                    color: 'white'
+                                }
+                            },
+                            address: {
+                                shape: 'icon',
+                                icon: {
+                                    face: 'FontAwesome',
+                                    code: '\uf007',
+                                    weight: 900,
+                                    size: 40,
+                                    color: '#00dbb7'
+                                },
+                                font:{
+                                    color: 'white'
+                                }
+                            },
+                            annotated_address: {
+                                shape: 'icon',
+                                icon: {
+                                    face: 'FontAwesome',
+                                    code: '\uf007',
+                                    weight: 900,
+                                    size: 40,
+                                    color: '#00967b',
+                                },
+                                font: {
+                                    background: '#00967b',
+                                    color: 'white'
+                                }
+                            },
+                            token: {
+                                shape: 'icon',
+                                icon: {
+                                    face: 'FontAwesome',
+                                    code: '\uf51f',
+                                    weight: 900,
+                                    size: 40,
+                                    color: '#ff5722'
+                                },
+                                font:{
+                                    color: 'white'
+                                }
+                            },
+                            dex: {
+                                shape: 'icon',
+                                icon: {
+                                    face: 'FontAwesome',
+                                    code: '\uf021',
+                                    weight: 900,
+                                    size: 40,
+                                    color: '#03a9f4'
+                                },
+                                font:{
+                                    color: 'white'
+                                }
+                            },
+                            MarginPositionToken: {
+                                shape: 'icon',
+                                icon: {
+                                    face: 'FontAwesome',
+                                    code: '\uf1b2',
+                                    weight: 900,
+                                    size: 40,
+                                    color: '#ff5722'
+                                },
+                                font:{
+                                    color: 'white'
+                                }
+                            },
+                            coinbase: {
+                                shape: 'icon',
+                                icon: {
+                                    face: 'FontAwesome',
+                                    code: '\uf0ac',
+                                    weight: 900,
+                                    size: 40,
+                                    color: '#03a9f4'
+                                },
+                                font:{
+                                    color: 'white'
+                                }
+                            }
+                        }
+                    };
+
+                    this.draw = function(){
+                        let g = this;
+                        g.network = new vis.Network(domNode, this.dataset, this.options);
+                        g.dataset.nodes.update({id: 'bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh', physics: false, expanded: true});
+
+                        g.network.on('dragEnd', function (t) {
+                            _.each(t.nodes, function(node, i){
+                                g.dataset.nodes.update({id: node, physics: false});
+                            });
+                        });
+
+                        g.network.on('doubleClick', function(target){
+                            if(target.nodes.length>0){
+                                let node_id = target.nodes[0];
+                                if(g.dataset.nodes.get(node_id).group!='coinbase'){
+                                    g.expand(node_id);
+                                }
+
+                            }
+                        });
+
+                        g.network.on('oncontext', function(target){
+                            if(target.nodes.length>0){
+                                let node = g.dataset.nodes.get(target.nodes[0]);
+                                if(node.group!='coinbase'){
+                                    window.open('/bitcoin'+'/address/'+node.id, '_blank');
+                                }
+                            }
+                        });
+
+                    };
+
+                    this.expand = function(address){
+                        let g = this;
+                        if(!g.dataset.nodes.get(address).expanded){
+                            g.dataset.nodes.update({id: address, physics: false, expanded: true});
+                            query.request({
+                                network: 'bitcoin',
+                                address: address
+                            }, function(result){
+                                _.each(_.uniqBy(g.prepareNodes(result.bitcoin.inbound).concat(g.prepareNodes(result.bitcoin.outbound)), 'id'), function(node){
+                                    if(!g.dataset.nodes.get(node.id)){
+                                        g.dataset.nodes.add(node);
+                                    }
+                                });
+                                _.each(g.prepareEdges(result.bitcoin.inbound, true, address).concat(g.prepareEdges(result.bitcoin.outbound, false, address)), function(edge){
+                                    if(!g.dataset.edges.get(edge.id)){
+                                        g.dataset.edges.add(edge);
+                                    }
+                                });
+
+                            }, false);
+                        }
+                    };
+
+                    this.draw();
+
+                    let jqWrapper = $(domNode);
+
+                    jqWrapper.css({
+                        position: 'relative'
+                    });
+
+                    this.detailLevel = function(wrap, limit){
+                        let graphDetalLevel = $('<div><span>Detail level</span>' +
+                            '<div><i class="fas fa-th-large"></i> <input type="range" min="1" max="100" step="1" value="'+limit+'" title="Detail level"> <i class="fas fa-th"></i></div>' +
+                            '</div>');
+                        wrap.append(graphDetalLevel);
+                        graphDetalLevel.css({
+                            position: 'absolute',
+                            top: '20px',
+                            right: '20px',
+                            maxWidth: '60%'
+                        });
+                        graphDetalLevel.find('input').val(query.variables.limit);
+
+                        let val = $('<div style="width:40px;height:25px;position:absolute;border:1px solid black;background-color:#434e57;text-align:center"></div>');
+                        graphDetalLevel.find('input').on('mousedown', function(e){
+                            $('body').append(val);
+                            val.css({left: e.pageX-20, top: e.pageY-40});
+                            val.html($(this).val());
+                            $(this).on('mousemove', function(e){
+                                let it = $(this);
+                                val.css({left: e.pageX-20, top: e.pageY-40});
+                                val.html($(this).val());
+                            });
+                        }).on('mouseup', function(e){
+                            val.remove();
+                            $(this).off('mousemove');
+                        });
+
+                        graphDetalLevel.find('input').on('change', function(){
+                            let it = $(this);
+                            query.request({
+                                network: 'bitcoin',
+                                address: 'bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh',
+                                limit: parseInt(it.val())
+                            });
+                        });
+                    };
+                    this.detailLevel(jqWrapper, query.variables.limit);
+
+                    this.fullScreen = function(wrap){
+                        let g = this;
+                        let fullscreen = $(wrap.parents('div')[1]);
+                        let links = fullscreen.find('.widgets-links');
+                        $(wrap.parents('div')[0]).height('100%');
+                        wrap.height('100%');
+                        let fullScreenButton = fullscreen.hasClass('graph-fullscreen') ? $('<div title="Minimize"><i class="fas fa-compress"></i></div>') : $('<div title="Fullscreen"><i class="fas fa-expand"></i></div>');
+
+                        links.css({
+                            position: 'absolute',
+                            bottom: '20px',
+                            right: '20px'
+                        });
+
+                        wrap.append(fullScreenButton);
+
+                        fullScreenButton.css({
+                            position: 'absolute',
+                            right: '20px',
+                            bottom: '50px',
+                            color: 'silver'
+                        });
+
+                        fullScreenButton.find('i').css({fontSize: '25px'});
+
+                        fullScreenButton.find('.fas').on('click', function(){
+                            let it = $(this);
+                            if(fullscreen.hasClass('graph-fullscreen')){
+                                g.network.setOptions({height:'600px'});
+                                fullscreen.removeClass('graph-fullscreen');
+                                fullscreen.css({
+                                    position: 'relative',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '100%',
+                                    zIndex: 100,
+                                    backgroundColor: 'transparent'
+                                });
+                                it.addClass('fa-expand');
+                                it.removeClass('fa-compress');
+                            } else {
+                                g.network.setOptions({height:'100%'});
+                                fullscreen.addClass('graph-fullscreen');
+                                fullscreen.css({
+                                    position: 'fixed',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '100%',
+                                    zIndex: 1000,
+                                    backgroundColor: '#434e57'
+                                });
+                                it.addClass('fa-compress');
+                                it.removeClass('fa-expand');
+                            }
+                        });
+                    };
+                    this.fullScreen(jqWrapper);
+                });
+            }
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh", "from": null, "till": null, "dateFormat": "%Y-%m"});
+    })()
+</script>
+                                                     
+	  
+	  
+  </div>
+  <div id="ethereum" class="tab-pane fade">
+   
+	  
+  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+                                  <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+                                  <div id="latest_transactions"></div>
+                                  <script>
+                                      (function(){
+                                      widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+                                      var query = new widgets.query(`
+                                                          query ($network: EthereumNetwork!,
+                                                                  $limit: Int!,
+                                                                  $offset: Int!
+                                                                  $from: ISO8601DateTime,
+                                                                  $till: ISO8601DateTime){
+                                                      ethereum(network: $network){
+                                                        transactions(options:{desc: "block.height", limit: $limit, offset: $offset},
+                                                          date: {since: $from till: $till }
+                                                          ) {
+                                                            block {
+                                                              timestamp {
+                                                                time (format: "%Y-%m-%d %H:%M:%S")
+                                                              }
+                                                              height
+                                                            }
+                                                            address: sender {
+                                                              address
+                                                              annotation
+                                                            }
+                                                            hash
+                                                            gasValue
+                                                        }
+                                                      }
+                                                    }`);
+                                      var wdts = new widgets.table('#latest_transactions', query, 'ethereum.transactions', {
+                                   "title": "Latest Transactions",
+                                   "dataOptions": [
+                                    {
+                                     "title": "Timestamp",
+                                     "type": "string",
+                                     "path": "block.timestamp.time",
+                                     "style": "width: 170px;"
+                                    },
+                                    {
+                                     "title": "Bloco",
+                                     "type": "string",
+                                     "path": "block.height",
+                                     "urlCallbackName": "block_path",
+                                     "style": "width: 80px;"
+                                    },
+                                    {
+                                     "title": "Remetente",
+                                     "type": "string-ellipsis",
+                                     "path": [
+                                      "address.annotation",
+                                      "address.address"
+                                     ],
+                                     "urlCallbackName": "address_path"
+                                    },
+                                    {
+                                     "title": "Hash",
+                                     "type": "string-ellipsis",
+                                     "path": "hash",
+                                     "urlCallbackName": "transaction_path"
+                                    },
+                                    {
+                                     "title": "Gas Custo, ETH",
+                                     "type": "amount",
+                                     "path": "gasValue",
+                                     "style": "width: 110px;"
+                                    }
+                                   ]
+                                  });
+                                      query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": "2020-09-18", "till": null, "dateFormat": "%Y-%m-%d"});
+                                      })()
+                                  </script>
+
+
+
+
+                                  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+                                  <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+                                  <div id="transaction_gas_price_by_time_log"></div>
+                                  <script>
+                                      (function(){
+                                      widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+                                      var query = new widgets.query(`
+                                              query ($network: EthereumNetwork!,
+                                                    $dateFormat: String!,
+                                                    $from: ISO8601DateTime,
+                                                    $till: ISO8601DateTime){
+                                                      ethereum(network: $network ){
+                                                        transactions(options:{asc: "date.date"}, date: {
+                                                          since: $from
+                                                          till: $till}
+                                                        ) {
+                                                          date: date{
+                                                            date(format: $dateFormat)
+                                                          }
+                                                          gasPrice
+                                                          gasValue
+                                                          average: gasValue(calculate: average )
+                                                          maxGasPrice: gasPrice(calculate: maximum)
+                                                          medianGasPrice: gasPrice(calculate: median)
+                                                        }
+                                                      }
+                                                    }`);
+                                      var wdts = new widgets.chartByTime('#transaction_gas_price_by_time_log', query, 'ethereum.transactions', {
+                                   "title": "Gas Price By Date ( Median, Average, Maximum) in Log scale, GWei",
+                                   "chartOptions": {
+                                    "vAxes": {
+                                     "0": {
+                                      "title": "Avg. Gas Price, GWei",
+                                      "scaleType": "log"
+                                     }
+                                    },
+                                    "series": {
+                                     "0": {
+                                      "color": "#28a745"
+                                     },
+                                     "1": {
+                                      "color": "#ffc107"
+                                     },
+                                     "2": {
+                                      "color": "#9bc2cf"
+                                     }
+                                    },
+                                    "seriesType": "lines"
+                                   },
+                                   "dataOptions": [
+                                    {
+                                     "title": {
+                                      "label": "Date",
+                                      "type": "date"
+                                     },
+                                     "path": "date.date"
+                                    },
+                                    {
+                                     "title": "Avg. Gas Price, GWei",
+                                     "path": "gasPrice"
+                                    },
+                                    {
+                                     "title": "Maximum Gas Price, GWei",
+                                     "path": "maxGasPrice"
+                                    },
+                                    {
+                                     "title": "Median Gas Price, GWei",
+                                     "path": "medianGasPrice"
+                                    }
+                                   ]
+                                  });
+                                      query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": null, "till": null, "dateFormat": "%Y-%m"});
+                                      })()
+                                  </script>
+
+
+
+
+
+
+
+
+
+
+                                  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+                                  <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+                                  <div id="gas_burners"></div>
+                                  <script>
+                                      (function(){
+                                      widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+                                      var query = new widgets.query(`
+                                                          query ($network: EthereumNetwork!,
+                                                          $limit: Int!,
+                                                          $offset: Int!,
+                                                          $from: ISO8601DateTime,
+                                                          $till: ISO8601DateTime){
+                                                      ethereum(network: $network ){
+                                                        smartContractCalls(options:{desc: "gasValue" limit: $limit offset:$offset}, date: {
+                                                          since: $from
+                                                          till: $till
+                                                        }
+                                                        external: true
+                                                        ) {
+                                                          smartContract{
+                                                            address {
+                                                              address
+                                                              annotation
+                                                            }
+                                                          }
+                                                          gasValue
+                                                          average: gasValue(calculate: average)
+                                                          count
+                                                        }
+                                                      }
+                                                    }`);
+                                      var wdts = new widgets.table('#gas_burners', query, 'ethereum.smartContractCalls', {
+                                   "title": "Smart Contracts Burning Maximum of Gas",
+                                   "dataOptions": [
+                                    {
+                                     "title": "Smart Contract",
+                                     "type": "string-ellipsis",
+                                     "path": [
+                                      "smartContract.address.annotation",
+                                      "smartContract.address.address"
+                                     ],
+                                     "urlCallbackName": "smart_contract_path"
+                                    },
+                                    {
+                                     "title": "Calls Count",
+                                     "path": "count",
+                                     "style": "width: 110px;"
+                                    },
+                                    {
+                                     "title": "Gas Cost, ETH",
+                                     "type": "amount",
+                                     "path": "gasValue",
+                                     "style": "width: 110px;"
+                                    },
+                                    {
+                                     "title": "Gas Cost/Call, ETH",
+                                     "type": "amount",
+                                     "path": "average",
+                                     "style": "width: 110px;"
+                                    }
+                                   ]
+                                  });
+                                      query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": "2020-09-18", "till": null, "dateFormat": "%Y-%m-%d"});
+                                      })()
+                                  </script>
+
+
+<h4>Transferências por moedas</h4
+
+                                  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
+                                  <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
+                                  <div id="transfers_by_currencies"></div>
+                                  <script>
+                                      (function(){
+                                      widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+                                      var query = new widgets.query(`
+                                              query ($network: EthereumNetwork!,
+                                                    $limit: Int!,
+                                                    $offset: Int!,
+                                                    $from: ISO8601DateTime,
+                                                    $till: ISO8601DateTime){
+                                                     ethereum(network: $network){
+                                                        transfers(
+                                                        options:{desc: "count", limit: $limit, offset: $offset},
+                                                        amount: {gt: 0},
+                                                        date: {
+                                                          since: $from
+                                                          till: $till}
+                                                        ) {
+                                                            currency {
+                                                              symbol
+                                                              address
+                                                            }
+                                                            count
+                                                            senders: count(uniq: senders)
+                                                            receivers: count(uniq: receivers)
+                                                            days: count(uniq:dates)
+                                                            from_date: minimum(of: date)
+                                                            till_date: maximum(of: date)
+                                                            amount
+                                                        }
+                                                      }
+                                                    }`);
+                                      var wdts = new widgets.table('#transfers_by_currencies', query, 'ethereum.transfers', {
+                                   "title": "Transfers By Currencies",
+                                   "dataOptions": [
+                                    {
+                                     "title": "Moeda",
+                                     "type": "string-ellipsis",
+                                     "path": [
+                                      "currency.symbol",
+                                      "currency.name",
+                                      "currency.address"
+                                     ],
+                                     "urlCallbackName": "token_path"
+                                    },
+                                    {
+                                     "title": "Primeira data de transferência",
+                                     "path": "from_date"
+                                    },
+                                    {
+                                     "title": "Data da última transferência",
+                                     "path": "till_date"
+                                    },
+                                    {
+                                     "title": "Tokens transferidos no dia",
+                                     "path": "days"
+                                    },
+                                    {
+                                     "title": "Uniq Senders",
+                                     "path": "senders"
+                                    },
+                                    {
+                                     "title": "Uniq Receivers",
+                                     "path": "receivers"
+                                    },
+                                    {
+                                     "title": "Quantidade",
+                                     "path": "amount",
+                                     "type": "amount"
+                                    },
+                                    {
+                                     "title": "Transfer Count",
+                                     "path": "count"
+                                    }
+                                   ]
+                                  });
+                                      query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": null, "till": null, "dateFormat": "%Y-%m"});
+                                      })()
+                                  </script>	  
+	  
+	  
+  </div>
+  <div id="binance" class="tab-pane fade">
+    <h3>Binance Smart Chain 2</h3>
+    <p>Some content in menu 2.</p>
+  </div>
+</div>
+					
+					
+					
+					
+					
+					
+
+
+
+
+
+
+
+
+
+                      </div>
+                                <div class="row post-footer">
+                                    <div class="col-sm-6">
+                                            <div class="tags">
+                                                Tags:
+                                                <a href="#">Forex</a>
+                                            </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                         <div class="share-post-footer">
+                                            <ul class="share">
+                                            <li><a href="https://fb.me/datacryptopy" class="facebook" target="_blank" /"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                                            <li><a href="https://twitter.com/DataCryptoML" class="twitter" target="_blank" ><ion-icon name="logo-twitter"></ion-icon></a></li>
+                                            <li><a href="https://www.youtube.com/channel/UCxfGBCV9E04Uw4flJLjBCqg?view_as=subscriber" class="youtube" title="" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                                            <li><a href="https://www.instagram.com/analyticsdatacrypto/" class="instagram" title="" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                                            <li><a href="https://github.com/datacrypto-analytics/" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="sidebar">
+                                     <div class="widget widget-share">
+                         <!-- TradingView Widget BEGIN -->
                                   <div class="tradingview-widget-container">
                                     <div class="tradingview-widget-container__widget"></div>
                                     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
@@ -397,60 +1470,7 @@
                                   }
                                     </script>
                                   </div>
-                                  <!-- TradingView Widget END -->	  
-	  
-	  
-  </div>
-  <div id="menu1" class="tab-pane fade">
-    <h3>Menu 1</h3>
-    <p>Some content in menu 1.</p>
-  </div>
-  <div id="menu2" class="tab-pane fade">
-    <h3>Menu 2</h3>
-    <p>Some content in menu 2.</p>
-  </div>
-</div>
-					
-					
-					
-					
-					
-					
-
-
-
-
-
-
-
-
-
-                      </div>
-                                <div class="row post-footer">
-                                    <div class="col-sm-6">
-                                            <div class="tags">
-                                                Tags:
-                                                <a href="#">Forex</a>
-                                            </div>
-                                    </div>
-
-                                    <div class="col-sm-6">
-                                         <div class="share-post-footer">
-                                            <ul class="share">
-                                            <li><a href="https://fb.me/datacryptopy" class="facebook" target="_blank" /"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                                            <li><a href="https://twitter.com/DataCryptoML" class="twitter" target="_blank" ><ion-icon name="logo-twitter"></ion-icon></a></li>
-                                            <li><a href="https://www.youtube.com/channel/UCxfGBCV9E04Uw4flJLjBCqg?view_as=subscriber" class="youtube" title="" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a></li>
-                                            <li><a href="https://www.instagram.com/analyticsdatacrypto/" class="instagram" title="" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                                            <li><a href="https://github.com/datacrypto-analytics/" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-12">
-                                <div class="sidebar">
-                                     <div class="widget widget-share">
-
+                                  <!-- TradingView Widget END -->	
 
 <iframe width="100%" height="550" class="rssdog" src="https://www.rssdog.com/index.php?url=http%3A%2F%2Fxml.fxstreet.com%2Fnews%2Fforex-news%2Findex.xml&mode=html&showonly=&maxitems=0&showdescs=1&desctrim=0&descmax=0&tabwidth=100%25&showdate=1&utf8=1&linktarget=_blank&bordercol=%23d4d0c8&headbgcol=%23999999&headtxtcol=%23ffffff&titlebgcol=%23f1eded&titletxtcol=%23000000&itembgcol=%23ffffff&itemtxtcol=%23000000&ctl=0"></iframe>
 
