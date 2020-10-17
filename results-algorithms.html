@@ -227,6 +227,32 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
                                                       </span>
 
+                                                      <!-- Botão para acionar modal -->
+                                                      <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modalExemplo">
+                                                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABmJLR0QA/wD/AP+gvaeTAAABIElEQVQ4jY3UvUoDQRQF4G9XIaL2IiZoGt9B7H0BO2N8J6tUltraCqIGCf6WgmBvEEvBwpBgLHYCm7Az8cJlBu6Zc+7fbiZtS1gP9w/8zMFPWY4jdDHCOPgIN2gHTNIaeC49jvkT6imS/j9IJt6vIssTmVxiGfsVsYfZMtsJ5U7AbEfirTJRN0H0ix4+I/FryBQj/sbCTLlfOMULdnE4249gI6xCM6L0hrMglin2KJZ1czGiMunJWrjnWElgx0Jpw4jSeQDuJLIZopYr1r4XUboI514im1sMJjtwEgG9hnNTMb0qm3qb47Ei7Y6iN1s4rojfqfjuGnivAMf8HRuxeuuKtZ9Hcp8iKZfZUmxseZpDXOGgqpxsDmnN9I9tEAP+AXUFl1qiYCZ3AAAAAElFTkSuQmCC"/>
+
+                                                      </button>
+
+                                                      <!-- Modal -->
+                                                      <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog" role="document">
+                                                          <div class="modal-content">
+                                                            <div class="modal-header">
+                                                              <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+                                                              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                                                <span aria-hidden="true">&times;</span>
+                                                              </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                              ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                              <button type="button" class="btn btn-dark" data-dismiss="modal">Fechar</button>
+                                                              <button type="button" class="btn btn-dark">Salvar mudanças</button>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
 
 
 
@@ -252,9 +278,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                                 <div id="bitcoin" class="tab-pane fade show active">
                                 <center>
 
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
+
 
                                 <img src="/images/bitcoin-xgboost.png" alt="" style="width:100%" />
                                 <p><b><i> $BTC $USDT </i> Spot price Binance</b></p>
@@ -285,31 +309,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 
 
-                                 <!-- Botão para acionar modal -->
-                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
-                                   Abrir modal de demonstração
-                                 </button>
 
-                                 <!-- Modal -->
-                                 <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                   <div class="modal-dialog" role="document">
-                                     <div class="modal-content">
-                                       <div class="modal-header">
-                                         <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
-                                         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                           <span aria-hidden="true">&times;</span>
-                                         </button>
-                                       </div>
-                                       <div class="modal-body">
-                                         ...
-                                       </div>
-                                       <div class="modal-footer">
-                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                         <button type="button" class="btn btn-primary">Salvar mudanças</button>
-                                       </div>
-                                     </div>
-                                   </div>
-                                 </div>
 
 
                                  <h3>Indicadores Grátis</h3>
