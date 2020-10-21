@@ -77,6 +77,23 @@
     <link rel="alternate" type="application/rss+xml" title=" Blog" href="https://datacryptoanalytics.github.io">
     <script async="" src="page_files/js.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+
+
+  <style>
+  body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+  }
+
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  </style>
+
+
 </head>
 <body class="post-template tag-articles nav-closed scroll">
     <div class="main-container">
@@ -103,7 +120,8 @@
             <li class="nav-news"><a href="https://datacryptoanalytics.github.io/page/downloads" title="Downloads" target="_blank">Downloads</a></li>
             <li class="nav-events"><a href="https://datacryptoanalytics.github.io/explorer-binance" title="Fundo Forex & Bitcoin" target="_blank">Explorador BinanceChain</a></li>
             <li class="nav-about"><a href="https://datacryptoanalytics.github.io/#about" title="Sobre-nós" target="_blank">Sobre-nós</a></li>
-            <li> <a href="https://liberapay.com/datacryptoanalytics/donate">  <img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a> </li>
+            <li><button onclick="myFunction()">Toggle dark mode</button> </li>
+
     </ul>
 </nav>
                     </div>
@@ -1387,5 +1405,14 @@ query ($network: BitcoinNetwork!, $address: String!, $limit: Int!, $from: ISO860
 <div class="share-selected-text-main-container" style="height: 50px; top: 0px; left: 0px;"><div class="share-selected-text-inner"><a class="share-selected-text-btn share-selected-text-btn-twitter" href="https://twitter.com/intent/tweet?url=https://blog.cindicator.com/bitcoin-is-not-digital-gold/&amp;text=%22%22"><i class="icon-sst-twitter fab fa-twitter" style="pointer-events: none;"></i></a>
 						    </div>
 						    </div>
+
+                <script>
+                function myFunction() {
+                   var element = document.body;
+                   element.classList.toggle("dark-mode");
+                }
+                </script>
+
+
 						    </body>
 						    </html>
