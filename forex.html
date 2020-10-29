@@ -195,17 +195,16 @@ let btn = document.querySelector("#btn")
 let list = document.querySelector("#list")
 
 btn.addEventListener("click", function() {
-  fetch('https://blockchain.info/rawaddr/$bitcoin_address')
-   .then(function(response) {
-     console.log(response);
-     return response.json()
+  const URL_TO_FETCH = 'https://api.blockchain.info/stats'; fetch(URL_TO_FETCH, {
+  method: 'POST',
+  mode: 'cors', // pode ser cors ou basic(default)
+  redirect: 'follow',
+  headers: new Headers({
+    'Content-Type': 'text/plain'
   })
-  .then(function(response) {
-    console.log(response);
-    
-  })
-})
-
+}).then(function(response) {
+  // tratar a response
+});
 </script>
 
 
