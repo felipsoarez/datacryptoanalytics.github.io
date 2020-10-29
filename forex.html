@@ -195,7 +195,7 @@ let btn = document.querySelector("#btn")
 let list = document.querySelector("#list")
 
 btn.addEventListener("click", function() {
-  fetch('https://blockchain.info/rawaddr/$bitcoin_address')
+  fetch('https://api.blockchain.info/stats')
    .then(function(response) {
      console.log(response);
      return response.json()
