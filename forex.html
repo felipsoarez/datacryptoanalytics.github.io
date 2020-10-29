@@ -187,6 +187,29 @@
 
 
 
+ <script type="text/javascript">
+ console.log('usando fetch');
+
+ const doGet =  (url) => {
+   const promiseCallback = (resolve, reject) => {
+     fetch(url)
+     .then((response) => {
+       if (!response.ok) throw new Error('Erro ao executar requisição, status ' + response.status);
+       return response.json();
+     })
+     .then(resolve)
+     .then(reject);
+   }
+   return new Promise(promiseCallback);
+ }
+
+doGet('https://swapi.co/api/people/').then(console.log).catch(console.error);
+
+< /script>
+
+
+
+
 
 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
