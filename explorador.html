@@ -356,7 +356,7 @@
 <div class="grafico-transacoes">
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-<div id="transactions_by_time"></div>
+<div id="transactions_by_time_btc"></div>
 <script>
     (function(){
     widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
@@ -379,7 +379,7 @@
                       }
                     }
                   }`);
-    var wdts = new widgets.chartByTime('#transactions_by_time', query, 'bitcoin.transactions', {
+    var wdts = new widgets.chartByTime('#transactions_by_time_btc', query, 'bitcoin.transactions', {
  "title": "Transactions By Date",
  "chartOptions": {
   "vAxes": {
@@ -418,7 +418,7 @@
 
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-<div id="latest_blocks"></div>
+<div id="latest_blocks_btc"></div>
 <script>
     (function(){
     widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
@@ -442,7 +442,7 @@
                       }
                     }
                   }`);
-    var wdts = new widgets.table('#latest_blocks', query, 'bitcoin.blocks', {
+    var wdts = new widgets.table('#latest_blocks_btc', query, 'bitcoin.blocks', {
  "title": "Latest Blocks",
  "dataOptions": [
   {
@@ -480,7 +480,7 @@
 
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-<div id="miners"></div>
+<div id="miners_btc"></div>
 <script>
     (function(){
     widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
@@ -508,7 +508,7 @@
                     }
                   }
                 }`);
-    var wdts = new widgets.table('#miners', query, 'bitcoin.outputs', {
+    var wdts = new widgets.table('#miners_btc', query, 'bitcoin.outputs', {
  "title": "Miners",
  "dataOptions": [
   {
@@ -559,7 +559,7 @@
 <div class="transacoes-ethereum">
   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
                                   <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-                                  <div id="latest_transactions"></div>
+                                  <div id="latest_transactions_eth"></div>
                                   <script>
                                       (function(){
                                       widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
@@ -588,7 +588,7 @@
                                                         }
                                                       }
                                                     }`);
-                                      var wdts = new widgets.table('#latest_transactions', query, 'ethereum.transactions', {
+                                      var wdts = new widgets.table('#latest_transactions_eth', query, 'ethereum.transactions', {
                                    "title": "Latest Transactions",
                                    "dataOptions": [
                                     {
@@ -635,7 +635,7 @@
 
                                   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
                                   <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-                                  <div id="transaction_gas_price_by_time_log"></div>
+                                  <div id="transaction_gas_price_by_time_log_eth"></div>
                                   <script>
                                       (function(){
                                       widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
@@ -660,7 +660,7 @@
                                                         }
                                                       }
                                                     }`);
-                                      var wdts = new widgets.chartByTime('#transaction_gas_price_by_time_log', query, 'ethereum.transactions', {
+                                      var wdts = new widgets.chartByTime('#transaction_gas_price_by_time_log_eth', query, 'ethereum.transactions', {
                                    "title": "Gas Price By Date ( Median, Average, Maximum) in Log scale, GWei",
                                    "chartOptions": {
                                     "vAxes": {
@@ -713,7 +713,7 @@
 
                                   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
                                   <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-                                  <div id="gas_burners"></div>
+                                  <div id="gas_burners_eth"></div>
                                   <script>
                                       (function(){
                                       widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
@@ -742,7 +742,7 @@
                                                         }
                                                       }
                                                     }`);
-                                      var wdts = new widgets.table('#gas_burners', query, 'ethereum.smartContractCalls', {
+                                      var wdts = new widgets.table('#gas_burners_eth', query, 'ethereum.smartContractCalls', {
                                    "title": "Smart Contracts Burning Maximum of Gas",
                                    "dataOptions": [
                                     {
@@ -783,7 +783,7 @@
 
                                   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
                                   <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-                                  <div id="transfers_by_currencies"></div>
+                                  <div id="transfers_by_currencies_eth"></div>
                                   <script>
                                       (function(){
                                       widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
@@ -815,7 +815,7 @@
                                                         }
                                                       }
                                                     }`);
-                                      var wdts = new widgets.table('#transfers_by_currencies', query, 'ethereum.transfers', {
+                                      var wdts = new widgets.table('#transfers_by_currencies_eth', query, 'ethereum.transfers', {
                                    "title": "Transfers By Currencies",
                                    "dataOptions": [
                                     {
@@ -871,7 +871,7 @@
 
                                   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
                                   <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-                                  <div id="latest_transactions"></div>
+                                  <div id="latest_transactions_bnb"></div>
                                   <script>
                                       (function(){
                                       widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
@@ -900,7 +900,7 @@
                                                         }
                                                       }
                                                     }`);
-                                      var wdts = new widgets.table('#latest_transactions', query, 'ethereum.transactions', {
+                                      var wdts = new widgets.table('#latest_transactions_bnb', query, 'ethereum.transactions', {
                                    "title": "Latest Transactions",
                                    "dataOptions": [
                                     {
@@ -947,7 +947,7 @@
 <div class="transacoes-por-tempo">
                                   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
                                   <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-                                  <div id="transactions_by_time"></div>
+                                  <div id="transactions_by_time_bnb"></div>
                                   <script>
                                       (function(){
                                       widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
@@ -969,7 +969,7 @@
                                                         }
                                                       }
                                                     }`);
-                                      var wdts = new widgets.chartByTime('#transactions_by_time', query, 'ethereum.transactions', {
+                                      var wdts = new widgets.chartByTime('#transactions_by_time_bnb', query, 'ethereum.transactions', {
                                    "title": "Transactions By Date",
                                    "chartOptions": {
                                     "vAxes": {
@@ -1010,7 +1010,7 @@
 <div class="ultimas-transf">
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-<div id="latest_transfers"></div>
+<div id="latest_transfers_bnb"></div>
 <script>
     (function(){
     widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
@@ -1051,7 +1051,7 @@
                       }
                     }
                   }`);
-    var wdts = new widgets.table('#latest_transfers', query, 'ethereum.transfers', {
+    var wdts = new widgets.table('#latest_transfers_bnb', query, 'ethereum.transfers', {
  "title": "Latest Transfers",
  "dataOptions": [
   {
@@ -1121,7 +1121,7 @@
 <div class="mineradores-BinanceSChain">
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-<div id="miners"></div>
+<div id="miners_bnb"></div>
 <script>
     (function(){
     widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
@@ -1146,7 +1146,7 @@
                       }
                     }
                   }`);
-    var wdts = new widgets.table('#miners', query, 'ethereum.blocks', {
+    var wdts = new widgets.table('#miners_bnb', query, 'ethereum.blocks', {
  "title": "Miners",
  "dataOptions": [
   {
@@ -1188,7 +1188,7 @@
 <div class="ultimos-blocos-bsc">
   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-<div id="latest_blocks"></div>
+<div id="latest_blocks_bnb"></div>
 <script>
     (function(){
     widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
@@ -1218,7 +1218,7 @@
                       }
                     }
                   }`);
-    var wdts = new widgets.table('#latest_blocks', query, 'ethereum.blocks', {
+    var wdts = new widgets.table('#latest_blocks_bnb', query, 'ethereum.blocks', {
  "title": "Latest Blocks",
  "dataOptions": [
   {
