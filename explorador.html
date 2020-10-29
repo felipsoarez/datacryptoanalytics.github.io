@@ -265,7 +265,7 @@
 
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-<div id="latest_transactions"></div>
+<div id="latest_transact"></div>
 <script>
     (function(){
     widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
@@ -294,7 +294,7 @@
             }
           }
           }`);
-    var wdts = new widgets.table('#latest_transactions', query, 'bitcoin.transactions', {
+    var wdts = new widgets.table('#latest_transact', query, 'bitcoin.transactions', {
  "title": "Latest Transactions",
  "dataOptions": [
   {
@@ -349,6 +349,9 @@
     })()
 </script>
 </div>
+
+
+
 
 <div class="grafico-transacoes">
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">

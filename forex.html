@@ -188,7 +188,6 @@
 
 <button id="btn">Carregar Dados</button>
 <ul id="list">
-
 </ul>
 
 <script type="text/javascript">
@@ -202,7 +201,16 @@ btn.addEventListener("click", function() {
      return response.json()
   })
   .then(function(response) {
-    console.log(response)
+    response.data.foreach(function(user) {
+      let item = document.createElement("li");
+
+      item.innerHTML = '<span>'+user.difficulty+'</span>';
+
+      list.appendChild(item);
+
+
+    })
+    
   })
 })
 
