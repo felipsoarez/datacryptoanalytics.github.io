@@ -200,7 +200,7 @@
     fetch(urll, {mode: 'cors'})
      .then(function(response) {
        console.log(response);
-       return response.json()
+       return response.json();
     })
     .then(function(response) {
       console.log(response);
@@ -211,14 +211,14 @@
 })
   })
   
-function mostrarResposta(response) {
+function mostrarResposta(data) {
   const mensagem = `
-   market_price_usd: ${response.market_price_usd},
-   miners_revenue_btc: ${response.miners_revenue_btc},
-   difficulty: ${response.difficulty},
-   total_btc_sent: ${response.total_btc_sent},
-   trade_volume_usd ${response.trade_volume_usd},
-   trade_volume_btc: ${response.trade_volume_btc}
+   market_price_usd: ${data.market_price_usd},
+   miners_revenue_btc: ${data.miners_revenue_btc},
+   difficulty: ${data.difficulty},
+   total_btc_sent: ${data.total_btc_sent},
+   trade_volume_usd ${data.trade_volume_usd},
+   trade_volume_btc: ${data.trade_volume_btc}
     `;
  alert(mensagem);
 }
