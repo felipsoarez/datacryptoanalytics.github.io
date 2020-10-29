@@ -211,7 +211,23 @@
       mostrarResposta(data);
 })
   })
-  
+
+
+  function atribuirCampos(data)
+{
+const market_price_usd = document.querySelector("#market_price_usd");
+const miners_revenue_btc = document.querySelector("#miners_revenue_btc");
+const difficulty = document.querySelector("#difficulty");
+const total_btc_sent = document.querySelector("#total_btc_sent");
+const trade_volume_usd = document.querySelector("#trade_volume_usd");
+
+market_price_usd.value = data.market_price_usd;
+miners_revenue_btc.value = data.miners_revenue_btc;
+difficulty.value = data.difficulty;
+total_btc_sent.value = data.total_btc_sent;
+trade_volume_usd.value = data.trade_volume_usd;
+}
+
 function mostrarResposta(data) {
   const mensagem = `
    market_price_usd: ${data.market_price_usd},
