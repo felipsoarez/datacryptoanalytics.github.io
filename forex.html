@@ -201,15 +201,7 @@ btn.addEventListener("click", function() {
      return response.json()
   })
   .then(function(response) {
-    response.data.foreach(function(user) {
-      let item = document.createElement("li");
-      console.log(response);
-      item.innerHTML = '<span>'+user.difficulty+'</span>';
-
-      list.appendChild(item);
-
-
-    })
+    console.log(response);
     
   })
 })
