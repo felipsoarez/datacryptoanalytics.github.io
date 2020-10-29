@@ -196,7 +196,7 @@ let list = document.querySelector("#list")
 
 btn.addEventListener("click", function() {
   const URL_TO_FETCH = 'https://api.blockchain.info/stats'; fetch(URL_TO_FETCH, {
-  method: 'POST',
+  method: 'GET',
   mode: 'cors', // pode ser cors ou basic(default)
   redirect: 'follow',
   headers: new Headers({
