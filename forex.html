@@ -208,12 +208,12 @@
   
   function mostrarResposta(response) {
     const mensagem = `
-        CEP: ${cep.cep},
-        Logradouro: ${cep.logradouro},
-        Complemento: ${cep.complemento},
-        Bairro: ${cep.bairro},
-        Cidade ${cep.cidade},
-        Estado: ${cep.estado}
+    market_price_usd: ${response.market_price_usd},
+        miners_revenue_btc: ${response.miners_revenue_btc},
+        difficulty: ${response.difficulty},
+        total_btc_sent: ${response.total_btc_sent},
+        trade_volume_usd ${response.trade_volume_usd},
+        trade_volume_btc: ${response.trade_volume_btc}
     `;
     alert(mensagem);
 }
