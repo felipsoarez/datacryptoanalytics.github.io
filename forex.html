@@ -206,8 +206,21 @@
     })
   })
   
+  function mostrarResposta(response) {
+    const mensagem = `
+        CEP: ${cep.cep},
+        Logradouro: ${cep.logradouro},
+        Complemento: ${cep.complemento},
+        Bairro: ${cep.bairro},
+        Cidade ${cep.cidade},
+        Estado: ${cep.estado}
+    `;
+    alert(mensagem);
+}
+
   </script>
-  
+
+
 
 
 
