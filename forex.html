@@ -206,18 +206,21 @@
       console.log(response);
       
     })
+    .then(data =>{
+      mostrarResposta(data);
+})
   })
   
-  function mostrarResposta(response) {
-    const mensagem = `
-    market_price_usd: ${response.market_price_usd},
-        miners_revenue_btc: ${response.miners_revenue_btc},
-        difficulty: ${response.difficulty},
-        total_btc_sent: ${response.total_btc_sent},
-        trade_volume_usd ${response.trade_volume_usd},
-        trade_volume_btc: ${response.trade_volume_btc}
+function mostrarResposta(response) {
+  const mensagem = `
+   market_price_usd: ${response.market_price_usd},
+   miners_revenue_btc: ${response.miners_revenue_btc},
+   difficulty: ${response.difficulty},
+   total_btc_sent: ${response.total_btc_sent},
+   trade_volume_usd ${response.trade_volume_usd},
+   trade_volume_btc: ${response.trade_volume_btc}
     `;
-    alert(mensagem);
+ alert(mensagem);
 }
 
   </script>
