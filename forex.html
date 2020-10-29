@@ -191,23 +191,23 @@
 </ul>
 
 <script type="text/javascript">
-let btn = document.querySelector("#btn")
-let list = document.querySelector("#list")
-
-btn.addEventListener("click", function() {
-  const URL_TO_FETCH = 'https://api.blockchain.info/stats'; fetch(URL_TO_FETCH, {
-  method: 'GET',
-  mode: 'cors', // pode ser cors ou basic(default)
-  redirect: 'follow',
-  headers: new Headers({
-    'Content-Type': 'text/plain'
+  let btn = document.querySelector("#btn")
+  let list = document.querySelector("#list")
+  
+  btn.addEventListener("click", function() {
+    fetch('https://api.blockchain.info/stats')
+     .then(function(response) {
+       console.log(response);
+       return response.json()
+    })
+    .then(function(response) {
+      console.log(response);
+      
+    })
   })
-}).then(function(response) {
-  // tratar a response
-  console.log(response)
-})
-})
-</script>
+  
+  </script>
+  
 
 
 
