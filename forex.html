@@ -194,9 +194,10 @@
 <script type="text/javascript">
   let btn = document.querySelector("#btn")
   let list = document.querySelector("#list")
-  
+  const url = 'https://api.blockchain.info/stats';
+
   btn.addEventListener("click", function() {
-    fetch('https://blockchain.info/rawaddr/$bitcoin_address', {mode: 'no-cors'})
+    fetch(url, {mode: 'no-cors'})
      .then(function(response) {
        console.log(response);
        return response.json()
