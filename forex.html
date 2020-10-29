@@ -186,28 +186,27 @@
                                 <div class="editor-content">
 
 
+<button id="btn">Carregar Dados</button>
+<ul id="list">
 
- <script type="text/javascript">
- console.log('usando fetch');
+</ul>
 
- const doGet =  (url) => {
-   const promiseCallback = (resolve, reject) => {
-     fetch(url)
-     .then((response) => {
-       if (!response.ok) throw new Error('Erro ao executar requisição, status ' + response.status);
-       return response.json();
-     })
-     .then(resolve)
-     .then(reject);
-   }
-   return new Promise(promiseCallback);
- }
+<script type="text/javascript">
+let btn = document.querySelector("#btn")
+let list = document.querySelector("#list")
 
-doGet('https://blockchain.info/latestblock').then(console.log).catch(console.error);
+btn.addEventListener("click", function() {
+  fetch('https://api.blockchain.info/stats')
+   .then(function(response) {
+     console.log(response);
+     return response.json()
+  })
+  .then(function(response) {
+    console.log(response)
+  })
+})
 
 </script>
-
-
 
 
 
