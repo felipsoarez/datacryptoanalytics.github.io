@@ -194,10 +194,10 @@
 <script type="text/javascript">
   let btn = document.querySelector("#btn")
   let list = document.querySelector("#list")
-  const url = 'https://api.blockchain.info/stats';
+  const urll = 'https://api.blockchain.info/stats';
 
   btn.addEventListener("click", function() {
-    fetch(url, {mode: 'cors'})
+    fetch(urll, {mode: 'cors'})
      .then(function(response) {
        console.log(response);
        return response.json()
