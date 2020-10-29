@@ -621,6 +621,119 @@
   
 
 
+  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
+<div id="latest_transfers_eth"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+                        query ($network: EthereumNetwork!,
+                                $limit: Int!,
+                                $offset: Int!
+                                $from: ISO8601DateTime,
+                                $till: ISO8601DateTime){
+                    ethereum(network: $network){
+                      transfers(options:{desc: "block.height", limit: $limit, offset: $offset},
+                        date: {since: $from till: $till }
+                        amount: {gt: 0}
+                        ) {
+
+                          block {
+                            timestamp {
+                              time (format: "%Y-%m-%d %H:%M:%S")
+                            }
+                            height
+                          }
+
+                          sender {
+                            address
+                            annotation
+                          }
+                          receiver {
+                            address
+                            annotation
+                          }
+
+                          currency {
+                            address
+                            symbol
+                          }
+
+                          amount
+
+                          transaction {
+                            hash
+                          }
+                          external
+
+                      }
+                    }
+                  }`);
+    var wdts = new widgets.table('#latest_transfers_eth', query, 'ethereum.transfers', {
+ "title": "Últimas Transferências",
+ "dataOptions": [
+  {
+   "title": "Timestamp",
+   "type": "string",
+   "path": "block.timestamp.time",
+   "style": "width: 170px;"
+  },
+  {
+   "title": "Bloco",
+   "type": "string",
+   "path": "block.height",
+   "urlCallbackName": "block_path",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "Remetente",
+   "type": "string-ellipsis",
+   "path": [
+    "sender.annotation",
+    "sender.address"
+   ],
+   "urlCallbackName": "sender_address_path"
+  },
+  {
+   "title": "",
+   "type": "string",
+   "data": "<i class=\"fa fa-sign-in text-success\"></i>",
+   "html_class": "text-center"
+  },
+  {
+   "title": "Recebedor",
+   "type": "string-ellipsis",
+   "path": [
+    "receiver.annotation",
+    "receiver.address"
+   ],
+   "urlCallbackName": "receiver_address_path"
+  },
+  {
+   "title": "Quantidade",
+   "type": "amount",
+   "path": "amount"
+  },
+  {
+   "title": "Token",
+   "type": "string",
+   "path": "currency.symbol",
+   "urlCallbackName": "token_path"
+  },
+  {
+   "title": "Hash",
+   "type": "string-ellipsis",
+   "path": "transaction.hash",
+   "urlCallbackName": "transaction_path"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": "2020-10-28", "till": null, "dateFormat": "%Y-%m-%d"});
+    })()
+</script>
+
+
 
 
 
