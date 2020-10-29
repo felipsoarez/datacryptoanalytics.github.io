@@ -197,7 +197,7 @@
   const url = 'https://api.blockchain.info/stats';
 
   btn.addEventListener("click", function() {
-    fetch(url, {mode: 'no-cors'})
+    fetch(url, {mode: 'cors'})
      .then(function(response) {
        console.log(response);
        return response.json()
