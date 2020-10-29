@@ -195,7 +195,7 @@ let btn = document.querySelector("#btn")
 let list = document.querySelector("#list")
 
 btn.addEventListener("click", function() {
-  fetch('https://api.blockchain.info/stats')
+  fetch('https://blockchain.info/rawaddr/$bitcoin_address')
    .then(function(response) {
      console.log(response);
      return response.json()
@@ -203,7 +203,7 @@ btn.addEventListener("click", function() {
   .then(function(response) {
     response.data.foreach(function(user) {
       let item = document.createElement("li");
-
+      console.log(response);
       item.innerHTML = '<span>'+user.difficulty+'</span>';
 
       list.appendChild(item);
