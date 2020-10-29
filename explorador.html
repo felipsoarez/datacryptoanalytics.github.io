@@ -556,81 +556,76 @@
   </div>
 <div id="ethereum" class="tab-pane fade">
 <div class="container">
-<div class="transacoes-ethereum">
-  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
-                                  <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/widgets.js"></script>
-                                  <div id="latest_transactions_eth"></div>
-                                  <script>
-                                      (function(){
-                                      widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
-                                      var query = new widgets.query(`
-                                                          query ($network: EthereumNetwork!,
-                                                                  $limit: Int!,
-                                                                  $offset: Int!
-                                                                  $from: ISO8601DateTime,
-                                                                  $till: ISO8601DateTime){
-                                                      ethereum(network: $network){
-                                                        transactions(options:{desc: "block.height", limit: $limit, offset: $offset},
-                                                          date: {since: $from till: $till }
-                                                          ) {
-                                                            block {
-                                                              timestamp {
-                                                                time (format: "%Y-%m-%d %H:%M:%S")
-                                                              }
-                                                              height
-                                                            }
-                                                            address: sender {
-                                                              address
-                                                              annotation
-                                                            }
-                                                            hash
-                                                            gasValue
-                                                        }
-                                                      }
-                                                    }`);
-                                      var wdts = new widgets.table('#latest_transactions_eth', query, 'ethereum.transactions', {
-                                   "title": "Latest Transactions",
-                                   "dataOptions": [
-                                    {
-                                     "title": "Timestamp",
-                                     "type": "string",
-                                     "path": "block.timestamp.time",
-                                     "style": "width: 170px;"
-                                    },
-                                    {
-                                     "title": "Bloco",
-                                     "type": "string",
-                                     "path": "block.height",
-                                     "urlCallbackName": "block_path",
-                                     "style": "width: 80px;"
-                                    },
-                                    {
-                                     "title": "Remetente",
-                                     "type": "string-ellipsis",
-                                     "path": [
-                                      "address.annotation",
-                                      "address.address"
-                                     ],
-                                     "urlCallbackName": "address_path"
-                                    },
-                                    {
-                                     "title": "Hash",
-                                     "type": "string-ellipsis",
-                                     "path": "hash",
-                                     "urlCallbackName": "transaction_path"
-                                    },
-                                    {
-                                     "title": "Gas Custo, ETH",
-                                     "type": "amount",
-                                     "path": "gasValue",
-                                     "style": "width: 110px;"
-                                    }
-                                   ]
-                                  });
-                                      query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": "2020-09-18", "till": null, "dateFormat": "%Y-%m-%d"});
-                                      })()
-                                  </script>
-</div>
+
+
+
+
+  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
+  <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
+  <div id="transactions_by_time_eth"></div>
+  <script>
+      (function(){
+      widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+      var query = new widgets.query(`
+              query ($network: EthereumNetwork!,
+                    $dateFormat: String!,
+  
+                    $from: ISO8601DateTime,
+                    $till: ISO8601DateTime){
+                      ethereum(network: $network ){
+                        transactions(options:{asc: "date.date"}, date: {
+                          since: $from
+                          till: $till}
+  
+                        ) {
+                          date: date{
+                            date(format: $dateFormat)
+                          }
+                          count: count
+                          gasValue
+                        }
+                      }
+                    }`);
+      var wdts = new widgets.chartByTime('#transactions_by_time_eth', query, 'ethereum.transactions', {
+   "title": "Transações por data",
+   "chartOptions": {
+    "vAxes": {
+     "0": {
+      "title": "Transações"
+     }
+    },
+    "seriesType": "bars",
+    "series": {
+     "0": {
+      "color": "#a8a59b"
+     }
+    }
+   },
+   "dataOptions": [
+    {
+     "title": {
+      "label": "Date",
+      "type": "date"
+     },
+     "path": "date.date"
+    },
+    {
+     "title": "Transactions count",
+     "path": "count"
+    }
+   ]
+  });
+      query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": null, "till": null, "dateFormat": "%Y-%m"});
+      })()
+  </script>
+  
+
+
+
+
+
+
+
 <div class="grafico-transacoes">
 
                                   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.5/dist/assets/css/widgets.css">
