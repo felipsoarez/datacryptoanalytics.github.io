@@ -560,66 +560,6 @@
 
 
 
-  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
-  <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
-  <div id="transactions_by_time_eth"></div>
-  <script>
-      (function(){
-      widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
-      var query = new widgets.query(`
-              query ($network: EthereumNetwork!,
-                    $dateFormat: String!,
-  
-                    $from: ISO8601DateTime,
-                    $till: ISO8601DateTime){
-                      ethereum(network: $network ){
-                        transactions(options:{asc: "date.date"}, date: {
-                          since: $from
-                          till: $till}
-  
-                        ) {
-                          date: date{
-                            date(format: $dateFormat)
-                          }
-                          count: count
-                          gasValue
-                        }
-                      }
-                    }`);
-      var wdts = new widgets.chartByTime('#transactions_by_time_eth', query, 'ethereum.transactions', {
-   "title": "Transações por data",
-   "chartOptions": {
-    "vAxes": {
-     "0": {
-      "title": "Transações"
-     }
-    },
-    "seriesType": "bars",
-    "series": {
-     "0": {
-      "color": "#a8a59b"
-     }
-    }
-   },
-   "dataOptions": [
-    {
-     "title": {
-      "label": "Date",
-      "type": "date"
-     },
-     "path": "date.date"
-    },
-    {
-     "title": "Transactions count",
-     "path": "count"
-    }
-   ]
-  });
-      query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": null, "till": null, "dateFormat": "%Y-%m"});
-      })()
-  </script>
-  
-
 
   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
@@ -730,6 +670,72 @@
  ]
 });
     query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": "2020-10-28", "till": null, "dateFormat": "%Y-%m-%d"});
+    })()
+</script>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
+<div id="transactions_by_time_eth"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+            query ($network: EthereumNetwork!,
+                  $dateFormat: String!,
+
+                  $from: ISO8601DateTime,
+                  $till: ISO8601DateTime){
+                    ethereum(network: $network ){
+                      transactions(options:{asc: "date.date"}, date: {
+                        since: $from
+                        till: $till}
+
+                      ) {
+                        date: date{
+                          date(format: $dateFormat)
+                        }
+                        count: count
+                        gasValue
+                      }
+                    }
+                  }`);
+    var wdts = new widgets.chartByTime('#transactions_by_time_eth', query, 'ethereum.transactions', {
+ "title": "Transações por data",
+ "chartOptions": {
+  "vAxes": {
+   "0": {
+    "title": "Transações"
+   }
+  },
+  "seriesType": "bars",
+  "series": {
+   "0": {
+    "color": "#a8a59b"
+   }
+  }
+ },
+ "dataOptions": [
+  {
+   "title": {
+    "label": "Date",
+    "type": "date"
+   },
+   "path": "date.date"
+  },
+  {
+   "title": "Transactions count",
+   "path": "count"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": null, "till": null, "dateFormat": "%Y-%m"});
     })()
 </script>
 
