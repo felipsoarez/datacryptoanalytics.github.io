@@ -187,6 +187,7 @@
 
 
 <button id="btn">Carregar Dados</button>
+<button id="btn2">Carregar </button>
 <ul id="list">
 </ul>
 
@@ -195,7 +196,7 @@
   let list = document.querySelector("#list")
   
   btn.addEventListener("click", function() {
-    fetch('https://api.blockchain.info/stats')
+    fetch('https://blockchain.info/rawaddr/$bitcoin_address', {mode: 'cors'})
      .then(function(response) {
        console.log(response);
        return response.json()
@@ -220,6 +221,26 @@
 
   </script>
 
+<script type="text/javascript">
+  let btn = document.querySelector("#btn2")
+  let list = document.querySelector("#list")
+  
+  btn.addEventListener("click", function() {
+    fetch('https://blockchain.info/rawaddr/$bitcoin_address', {
+    method: 'get',
+    headers: {
+      "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+    },
+    body: 'foo=bar&lorem=ipsum'
+  })
+  .then(json)
+  .then(function (data) {
+    console.log('Request succeeded with JSON response', data);
+  })
+  .catch(function (error) {
+    console.log('Request failed', error);
+  });
+  </script>
 
 
 
