@@ -246,39 +246,113 @@ function mostrarResposta(data) {
   </script>
 
 
-<canvas id="chart" width="600" height="400"></canvas>
+<div id="chart">
+	<div id="timeline-chart"></div>
+</div>
+
+<div class="loader">
+	<span></span>
+</div>
 
 <script type="text/javascript">
-let LINEDATA = [];
-let data = [];
-let labels = [];
+let ajaxUrl = "https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=30";
+//Bye cryptocompare welcome blockchaininfo
+//https://api.blockchain.info/charts/market-price?format=json
+let dataSet = [];
 
-graph();
-setInterval("graph()", 30000);
-
-function graph() {
-    fetch(`https://api.coindesk.com/v1/bpi/historical/close.json?start=${moment(new Date()).subtract(1, 'month').format('YYYY-MM-DD')}&end=${moment(new Date()).format('YYYY-MM-DD')}`)
-    .then((response) => {
-    LINEDATA = { ...response.data.bpi };
-    data = Object.keys(LINEDATA).map(key => LINEDATA[key]);
-    labels = Object.keys(LINEDATA);
-      console.log(data);
-      console.log(labels);
-    new Chart(document.getElementById("chart"), {
-      type: 'line',
-      data: {
-        labels: labels,
-        datasets: [
-          {
-            label: 'Bitcoin',
-            data: data,
-            borderColor: "#3e95cd",
-          }
-        ]
-      }
-    });
-  });
+function ajax_request(url) {
+	let xhttp;
+	xhttp= new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			handle_chart(this);
+		}
+	}
+	xhttp.open("GET", url, true);
+	xhttp.send();
 }
+
+function handle_chart(data) {
+	let parsed_data = JSON.parse(data.responseText);
+	parsed_data = parsed_data.Data;
+	
+	$.each(parsed_data, function(index, value) {
+			dataSet.push([value.time*1000, value.high]);
+	});
+	
+	let options = {
+		chart: {
+			type: 'area',
+			height: 350,
+		},
+		title: {
+			text: 'Bitcoin price / last 30 days',
+			align: 'left',
+			margin: 10,
+			offsetX: 0,
+			offsetY: 0,
+			floating: false,
+			style: {
+				fontSize:  '24px',
+				color:  '#213043'
+			},
+		},
+		toolbar: {
+			show:false,
+			 tools: {
+        download: false,
+        selection: false,
+        zoom: false,
+        zoomin: false,
+        zoomout: false,
+        pan: false,
+        reset: false
+      },
+		},
+		dataLabels: {
+			enabled: false
+		},
+		tooltip: {
+			x: {
+      	format: "dd MMM yyyy"
+      },
+			fixed: {
+				enabled: false,
+				position: 'topRight'
+			}
+		},
+		fill: {
+			opacity: 1,
+			type: 'gradient'
+		},
+		colors: ['#F8CCCD'],
+		series: [{
+				name: 'BTC (USD)',
+				data: dataSet
+			},
+		],
+		xaxis: {
+			type: "datetime",
+			axisBorder: {
+				show: false
+			},
+			axisTicks: {
+				show: false
+			}
+		}
+	};
+	let chart = new ApexCharts(document.querySelector("#timeline-chart"), options);
+	chart.render();
+}
+
+$(window).on('load', function() {
+	setTimeout(function() {
+		$('.loader').fadeOut();
+		$('#timeline-chart').addClass('loaded');
+	}, 1200);	
+});
+
+ajax_request(ajaxUrl);
 
 </script>
 
