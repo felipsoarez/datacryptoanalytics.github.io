@@ -252,8 +252,22 @@ function mostrarResposta(data) {
   </script>
 
 
-<h1>Authors</h1>
+
 <ul id="authors"></ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Author</th>
+      <th>Title</th>
+      <th>Url</th>
+      <th>Upvotes</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
 
 <script type="text/javascript">
 function createNode(element) {
@@ -268,24 +282,25 @@ const ul = document.getElementById('authors');
 const urlll = 'https://api.blockchain.info/stats';
 fetch(urlll)
 .then((resp) => resp.json())
-.then(function(data) {
-  let authors = data.results; console.log(data)
-  return authors.map(function(author) {
-    let li = createNode('li'),
-        img = createNode('img'),
-        span = createNode('span');
-    img.src = author.picture.medium;
-    span.innerHTML = `${author.market_price_usd} ${author.name.last}`;
-    append(li, img);
-    append(li, span);
-    append(ul, li);
-    console.log(data)
-  })
+.then(function(json) {
+  console.log(json);
+for(var i=0;i< json.difficulty.length; i++){
+  var html = "<tr>";
+  html +="<td>"+json.difficulty[i].difficulty+"</td>";
+  html +="<td>"+json.difficulty[i].market_price_usd+"</td>";
+  html +="<td>"+json.difficulty[i].url+"</td>";
+  html +="<td>"+json.difficulty[i].upvotes+"</td>";
+  html +="</tr>";
+  $('table tbody').append(html);
+}
 })
+
 .catch(function(error) {
   console.log(error);
 });
 
+x = json.difficulty
+console.log(x)
 </script>
 
 
