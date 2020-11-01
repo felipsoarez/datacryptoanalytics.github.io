@@ -2,7 +2,7 @@
 <html lang="en">
      <head>
 
-      
+
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.0/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.0/dist/widgets.js"></script>
 <script data-ad-client="ca-pub-5399975515756281" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -192,83 +192,68 @@
                                 <div class="editor-content">
 
 
-<button id="btn">Carregar Dados</button>
-<button id="btn2">Carregar </button>
-<ul id="list">
-  <div id="market_price"></div>
-  <div id="miners_btc"></div>
-  <div id="difficult"></div>
-  <div id="trade_volume"></div>
-</ul>
-
-<script type="text/javascript">
-  let btn = document.querySelector("#btn")
-  let list = document.querySelector("#list")
-  const urll = 'https://api.blockchain.info/stats';
-
-  btn.addEventListener("click", function() {
-    fetch(urll, {mode: 'cors'})
-     .then(function(response) {
-       console.log(response);
-       return response.json();
-    })
-    .then(function(response) {
-      console.log(response);
-      
-    })
-    .then(data =>{
-      atribuirCampos(data);
-})
-  })
-
-
-  function atribuirCampos(data)
-{
-const market_price = document.querySelector("#market_price_usd");
-const miners_btc = document.querySelector("#miners_revenue_btc");
-const difficult = document.querySelector("#difficulty");
-const total_sent = document.querySelector("#total_btc_sent");
-const trade_volume = document.querySelector("#trade_volume_usd");
-
-market_price.value = data.market_price_usd;
-miners_btc.value = data.miners_revenue_btc;
-difficult.value = data.difficulty;
-total_sent.value = data.total_btc_sent;
-trade_volume.value = data.trade_volume_usd;
-}
-
-function mostrarResposta(data) {
-  const mensagem = `
-  market_price: ${data.market_price_usd},
-  miners_btc: ${data.miners_revenue_btc},
-   difficulty: ${data.difficulty},
-   difficult: ${data.total_btc_sent},
-   total_sent ${data.trade_volume_usd},
-   trade_volume: ${data.trade_volume_btc}
-    `;
- alert(mensagem);
-}
-
-  </script>
 
 
 
-<ul id="authors"></ul>
+  <span class="border-bottom" ></span>
 
- <div id="app"></div>
+  <div class="card-deck">
+        <div class="card border-dark mb-3 border-bottom" style="max-width: 10rem;">
+          <div class="card-header">Bitcoin Price</div>
+          <div class="card-body" id="price">
+            <h5 class="card-title"  ></h5>
+          </div>
+        </div>
+
+        <div class="card border-dark mb-3 border-bottom" style="max-width: 13rem;">
+          <div class="card-header">Difficulty</div>
+          <div class="card-body" id="difficulty">
+            <h5 class="card-title"  ></h5>
+          </div>
+        </div>
+        <div class="card border-dark mb-3 border-bottom" style="max-width: 13rem;">
+          <div class="card-header">Hashrate</div>
+          <div class="card-body" id="hashrate">
+            <h5 class="card-title"  ></h5>
+          </div>
+        </div>
+  </div>
+
+
+
+
   <script src="./script.js"></script>
+  <script type="text/javascript">
+  const urlll = 'https://api.blockchain.info/stats';
 
-<script type="text/javascript">
 
+  const requisicao = fetch(urlll, {mode: 'cors'})
+      .then(Response => {
+          return Response.json();
+      })
+      .then(jsonBody =>{
+      const formatado = jsonBody.market_price_usd.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+      document.getElementById("price").innerHTML = [formatado];
+          console.log(jsonBody);
+          console.log(formatado)
+      })
 
+  console.log(requisicao);
 
-const urlll = 'https://api.blockchain.info/stats';
-    fetch(urlll, {mode: 'cors'})
-     .then(function(response) {
-       console.log(response);
-       return response.json();
-    })
-</script>
+  const requisicaodificuldade = fetch(urlll, {mode: 'cors'})
+      .then(Response => {
+          return Response.json();
+      })
+      .then(jsonBody =>{
+      const formatado = jsonBody.difficulty.toLocaleString('en-US');
+      document.getElementById("difficulty").innerHTML = [formatado];
+      const hashrate = jsonBody.hash_rate.toLocaleString('en-US');
+      document.getElementById("hashrate").innerHTML = [hashrate];
+          console.log(hashrate);
+          console.log()
+      })
+
+    </script>
 
 
 
