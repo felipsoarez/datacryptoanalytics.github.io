@@ -14,6 +14,7 @@
  <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
 
 
+ <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
@@ -49,6 +50,10 @@
     <meta name="twitter:site" content="@DataCryptoML">
 <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script type="text/javascript" async="" src="page_files/analytics.js"></script><script type="application/ld+json">
+
+
+
+
     {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -235,16 +240,22 @@
   const urlll = 'https://api.blockchain.info/stats';
 
 
-  const requisicao = fetch(urlll, {mode: 'cors'})
+  const urll = 'https://blockchain.info/ticker';
+
+
+  const requisicao = fetch(urll, {mode: 'cors'})
       .then(Response => {
           return Response.json();
+          console.log(requisicao)
       })
       .then(jsonBody =>{
-      const formatado = jsonBody.market_price_usd.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-      document.getElementById("price").innerHTML = [formatado];
-          console.log(jsonBody);
-          console.log(formatado)
+        const formatado = jsonBody.USD.last.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+        document.getElementById("price").innerHTML = [formatado];
+            console.log(jsonBody);
+            console.log(formatado)
+          console.log(jsonBody.USD.last);
       })
+
 
   console.log(requisicao);
 
