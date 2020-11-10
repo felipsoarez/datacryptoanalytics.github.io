@@ -14,7 +14,7 @@
   gtag('config', 'UA-160618603-1');
 </script>
 
-
+<link rel="stylesheet" href="assets/css/loading.css" />
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -118,6 +118,7 @@
 
 </head>
 <body class="post-template tag-articles nav-closed scroll">
+    <div id="loader" class="loader"></div>
 
     <div class="main-container">
 
@@ -493,6 +494,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 
     <script type="text/javascript" src="page_files/main.js"></script>
+    <script src="assets/js/jquery-2.1.3.js"></script>
 
 
 
@@ -505,6 +507,14 @@ function myFunction() {
    var element = document.body;
    element.classList.toggle("dark-mode");
 }
+</script>
+
+<script type="text/javascript">
+  // Este evendo é acionado após o carregamento da página
+  jQuery(window).load(function() {
+      //Após a leitura da pagina o evento fadeOut do loader é acionado, esta com delay para ser perceptivo em ambiente fora do servidor.
+      jQuery("#loader").fadeOut("slow");
+  });
 </script>
 
 </body>
