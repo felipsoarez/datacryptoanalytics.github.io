@@ -12,6 +12,8 @@
   gtag('config', 'UA-160618603-1');
 </script>
 
+<link rel="stylesheet" href="assets/css/loading.css" />
+
 
 <script charset="UTF-8" src="//web.webpushs.com/js/push/506b42387b4f44da05d81ac340541567_1.js" async></script>
 
@@ -109,6 +111,8 @@
 
 </head>
 <body class="post-template tag-articles nav-closed scroll">
+  <div id="loader" class="loader"></div>
+
     <div class="main-container">
         <header>
     <div class="container">
@@ -614,6 +618,8 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 
     <script type="text/javascript" src="page_files/main.js"></script>
+    <script src="assets/js/jquery-2.1.3.js"></script>
+
 
 
 
@@ -627,7 +633,13 @@ function myFunction() {
 }
 </script>
 
-
+<script type="text/javascript">
+  // Este evendo é acionado após o carregamento da página
+  jQuery(window).load(function() {
+      //Após a leitura da pagina o evento fadeOut do loader é acionado, esta com delay para ser perceptivo em ambiente fora do servidor.
+      jQuery("#loader").fadeOut("slow");
+  });
+</script>
 
 </body>
 </html>
