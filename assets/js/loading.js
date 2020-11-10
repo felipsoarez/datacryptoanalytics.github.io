@@ -1,3 +1,4 @@
-   //código usando jQuery
-   $(document).ready(function() {
-    $('.load').hide(); });
+//código usando jQuery
+$(document).ready(function() {
+$('.load').hide();
+});
