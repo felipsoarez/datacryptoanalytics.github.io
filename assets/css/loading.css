@@ -1,22 +1,15 @@
-body {
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	min-height: 100vh;
-	transform: scale(5);
-  }
-  
-  .c-loader {
-	animation: is-rotating 1s infinite;
-	border: 6px solid #e5e5e5;
-	border-radius: 50%;
-	border-top-color: #51d4db;
-	height: 50px;
-	width: 50px;
-  }
-  
-  @keyframes is-rotating {
-	to {
-	  transform: rotate(1turn);
-	}
-  }
+.progresso {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid black;
+    height: 90px;
+    width: 120px;
+}
