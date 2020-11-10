@@ -1,18 +1,9 @@
-/*AJAX-LOADER*/
-#loading {
-    background: none no-repeat scroll 50% 50% rgba(255, 255, 255, 0.8);
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    text-align: center;
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('https://datacryptoanalytics.com/images/loading.gif') 50% 50% no-repeat white;
 }
-#loading #fraseLoader {
-    font-size: 25px;
-}
-#loading #imagemLoader{
-    margin-top: 20%;
-}
-/*AJAX-LOADER*/
