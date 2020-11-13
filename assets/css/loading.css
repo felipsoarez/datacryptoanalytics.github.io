@@ -7,3 +7,14 @@
 	z-index: 9999;
 	background: url('https://datacryptoanalytics.com/images/loading.gif') 50% 50% no-repeat white;
 }
+
+.icones { /* Aqui é iniciado a configuração geral dos botões ou icones. */
+    position: fixed; /* Aqui é definido o position como fixed que torna o bloco inserido flutuante com orientação na página geral. */
+    bottom: 2%; /* Para deixar os botões na parte inferior da página é usado o bottom com um valor pequeno, no caso 2%. */
+    left: 50%; /* Para centralizar os botões no meio da página é usado o left com 50%. */
+    padding: 1%; /* Aqui é inserido um pequeno espaço dentro do bloco.  */
+    z-index: 10000000; /* O z-index é usado para uma ordenação do estilo, por isso aqui é usado um valor alto, para ficar por cima dos outros. */
+}
+.icones img:hover { /* Aqui é definido o efeito quando o mouse passa por cima da imagem */
+    filter: invert(100%);  /* Foi usado o filter: invert para colocar as cores opostas das imagens.  */
+}

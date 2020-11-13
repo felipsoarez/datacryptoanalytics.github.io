@@ -260,7 +260,22 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                             <div class="col-lg-8 col-md-12">
 
                                 <div class="editor-content">
-<center>
+
+
+                                  <div class="icones col-sm-12" >
+ <!-- Aqui inicia a div com a class icones que será o bloco que irá conter os icones ou botões. -->
+  <a href="https://api.whatsapp.com/send?text=<?php echo 'http://diretoaoponto.tech'.$_SERVER["REQUEST_URI"]; ?>" target="_blank">
+<!-- Aqui é inserido o link com a url da api do whatsapp com o caminhi da página. Junto no caminho da página é utilizado o PHP para pegar dinamicamente a página atual para isso é usado o domínio seguido de $_SERVER["REQUEST_URI"]; ?>. -->
+    <img class="img-responsive" src="/img/whatsapp-watercolor.png" alt="botão de compartilhamento whatsapp" title="Compartilhe o link da página no whatsapp">
+<!-- Aqui é inserido a imagem. -->
+  </a>
+<!-- Fecha o link. -->
+</div> 
+<!-- Fecha a div icones -->
+ 
+
+                                  <center>
+
                   <script src="https://public.bnbstatic.com/static/js/ocbs/binance-fiat-widget.js"></script>
     <div id="widget"></div>
 
