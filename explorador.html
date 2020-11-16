@@ -665,14 +665,14 @@
 <div class="container">
 
 
-
+<h4>Volume Trades DEX por Exchange</h4>
 
   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
 <div id="dex_trades_by_exchange_pie"></div>
 <script>
     (function(){
-    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'dark'});
     var query = new widgets.query(`
 query ($network: EthereumNetwork!,
 $from: ISO8601DateTime,
