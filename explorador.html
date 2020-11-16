@@ -667,6 +667,62 @@
 
 
 
+  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
+<div id="dex_trades_by_exchange_pie"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+query ($network: EthereumNetwork!,
+$from: ISO8601DateTime,
+$till: ISO8601DateTime){
+ethereum(network: $network){
+dexTrades(options:{desc: "tradeAmount"},
+date: {since: $from till: $till }
+){
+exchange {
+fullName
+}
+trades: count
+tradeAmount(in: USD)
+currencies: count(uniq: buy_currency)
+contracts: count(uniq: smart_contracts)
+}}
+}`);
+    var wdts = new widgets.chart('#dex_trades_by_exchange_pie', query, 'ethereum.dexTrades', {
+ "title": "Count of DEX Trades By Exchange",
+ "chartType": "PieChart",
+ "chartOptions": {
+  "pieSliceText": "label",
+  "pieHole": 0.4,
+  "legend": {
+   "position": "right"
+  },
+  "chartArea": {
+   "left": "0",
+   "right": "15%",
+   "top": 0,
+   "bottom": 0
+  }
+ },
+ "dataOptions": [
+  {
+   "title": "Exchange",
+   "path": "exchange.fullName"
+  },
+  {
+   "title": "Trades Count",
+   "path": "trades"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": null, "till": null, "dateFormat": "%Y-%m"});
+    })()
+</script>
+
+
+
 
   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
