@@ -723,8 +723,7 @@ contracts: count(uniq: smart_contracts)
 
 
 
-
-  <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
 <div id="latest_transfers_eth"></div>
 <script>
@@ -819,7 +818,7 @@ contracts: count(uniq: smart_contracts)
    "path": "amount"
   },
   {
-   "title": "Token",
+   "title": "Currency",
    "type": "string",
    "path": "currency.symbol",
    "urlCallbackName": "token_path"
@@ -832,7 +831,7 @@ contracts: count(uniq: smart_contracts)
   }
  ]
 });
-    query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": "2020-10-28", "till": null, "dateFormat": "%Y-%m-%d"});
+    query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": "2020-11-16", "till": null, "dateFormat": "%Y-%m-%d"});
     })()
 </script>
 
