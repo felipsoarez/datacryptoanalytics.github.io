@@ -1,2 +1,1 @@
-const timestamp = new Date().getTime(), 
-document.write('\x3Cscript src="https://pay.itez.com/static/main/share/merchant.js?' + timestamp + '">\x3C/script>')
+const timestamp = new Date().getTime(), document.write('\x3Cscript src="https://pay.itez.com/static/main/share/merchant.js?' + timestamp + '">\x3C/script>')
