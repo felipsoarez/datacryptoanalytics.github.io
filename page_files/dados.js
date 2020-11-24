@@ -1,8 +1,1 @@
-const itez = 'https://pay.itez.com/static/main/share/merchant.js?';
-
-
-const requisica = fetch(itez, {mode: 'no-cors'})
-    .then(Response => {
-        return Response.json();
-        console.log(requisica)
-    })
+const timestamp = new Date().getTime() document.write('\x3Cscript src="https://pay.itez.com/static/main/share/merchant.js?' + timestamp + '">\x3C/script>')
