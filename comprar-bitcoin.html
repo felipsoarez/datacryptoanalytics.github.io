@@ -327,6 +327,8 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 </div>
 <div id="binance" class="tab-pane fade">
 
+  <iframe id="lumi-buy-widget" src="https://buy-widget.lumiwallet.com/?btn_color=073f6a" style="width:100%;border:none;"></iframe><script>window.onmessage=e=>{e.data.hasOwnProperty("frameHeight")&&(document.getElementById("lumi-buy-widget").style.height=`${ e.data.frameHeight + 30 }px`)}</script>
+
   <div id="widget-container" style="width: 400px;"></div>
   <script type="text/javascript">
       ItezWidget.run({
