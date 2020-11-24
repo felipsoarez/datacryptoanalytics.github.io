@@ -1,6 +1,8 @@
-const timestamp = new Date().getTime() document.write('\x3Cscript src="https://pay.itez.com/static/main/share/merchant.js?' + timestamp + '">\x3C/script>')
+const itez = 'https://pay.itez.com/static/main/share/merchant.js?';
 
-ItezWidget.run({
-target_element: 'widget-container'
-})
 
+const requisicao = fetch(itez, {mode: 'cors'})
+    .then(Response => {
+        return Response.json();
+        console.log(requisicao)
+    })
