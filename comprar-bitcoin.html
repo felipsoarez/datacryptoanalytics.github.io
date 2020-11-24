@@ -341,42 +341,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
   </script>
 
 
-<button id="gem-button">Add Money With Gem</button>
-...
-<script type=”text/javascript” src=”https://packages.gem.co/gem-init.js”></script>
-<script>
-  const onrampConfig = {
-    partnerName: <Company Name>,
-    partnerIconUrl: <Company Icon URL>,
-    apiKey: <Gem API Key>,
-    wallets: [
-      {
-        asset: 'btc',
-        address: <btc wallet address>
-      },
-      {
-        asset: 'eth',
-        address: <eth wallet address>
-      }
-    ],
-    onExit: function(data) {
-      console.log('onExit', data);
-    },
-    onSuccess: function(data) {
-      console.log('onSuccess', data);
-    },
-    onError: function(data) {
-      console.log('onError', data);
-    }
-  };
-  // Instantiate Gem Widget
-  const GO = new Gem.Onramp(onrampConfig);
-  // Launch Gem on click
-  const GemButton = document.getElementById('gem-button');
-  GemButton.onclick = function() {
-    GO.open({ userEmail: <a user’s email>, userId: <a Gem user ID> });
-  };
-</script>
+
 
 
 
