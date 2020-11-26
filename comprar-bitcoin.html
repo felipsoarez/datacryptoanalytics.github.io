@@ -268,13 +268,13 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                                   <div class="editor-content nav-link active #bitcoin">
 <ul class="nav nav-pills">
   <li class="nav-item">
-    <a class="nav-link active" data-toggle="tab" href="#bitcoin"><img src="https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@40582f23f7b512ac9ca70060ee078843a2823a6c/svg/black/bnb.svg"/> Binance</a>
+    <a class="nav-link active" data-toggle="tab" href="#bitcoin"><img src="https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@66d20453c8add12a8555d3822fa6983383cb9562/svg/black/btc.svg"/> Itez</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#ethereum"><img src="https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@40582f23f7b512ac9ca70060ee078843a2823a6c/svg/black/eth.svg"/> SimpleSwap</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#binance"><img src="/images/logo-lumi.svg"/> </a>
+    <a class="nav-link" data-toggle="tab" href="#binance"><img src="https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@40582f23f7b512ac9ca70060ee078843a2823a6c/svg/black/bnb.svg"/> Binance</a>
   </li>
 
 </ul>
@@ -292,7 +292,42 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
                                   <center>
 
-                  <script src="https://public.bnbstatic.com/static/js/ocbs/binance-fiat-widget.js"></script>
+      
+  <script>
+    const timestamp = new Date().getTime()
+    document.write('\x3Cscript src="https://pay.itez.com/static/main/share/merchant.js?' + timestamp + '">\x3C/script>')
+    </script>
+    
+  <div id="widget-container" style="width: 400px;"></div>
+  <script type="text/javascript">
+      ItezWidget.run({
+          target_element: "widget-container",
+          sum: "100", 
+          CUR: "BRL",
+          id: "32869",
+          lang: "PT"
+      });
+  </script>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div id="ethereum" class="tab-pane fade">
+  <div class="container">
+
+    <iframe id="simpleswap-frame" name="SimpleSwap Widget" width="420px" height="400px" src="https://simpleswap.io/widget/f7ed7cd1-0165-4357-a0ea-4987117b2630" frameborder="0"></iframe>
+    <style scoped>#simpleswap-frame{width:100%!important;max-width:480px;height:420px!important;}@media(min-width:476px){#simpleswap-frame {height: 400px!important;}}</style>
+
+  </div>
+</div>
+
+
+
+<div id="binance" class="tab-pane fade">
+
+  <script src="https://public.bnbstatic.com/static/js/ocbs/binance-fiat-widget.js"></script>
     <div id="widget"></div>
 
 			     <script>
@@ -311,40 +346,6 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
             })
         }
     </script>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-<div id="ethereum" class="tab-pane fade">
-  <div class="container">
-
-    <iframe id="simpleswap-frame" name="SimpleSwap Widget" width="420px" height="400px" src="https://simpleswap.io/widget/f7ed7cd1-0165-4357-a0ea-4987117b2630" frameborder="0"></iframe>
-    <style scoped>#simpleswap-frame{width:100%!important;max-width:480px;height:420px!important;}@media(min-width:476px){#simpleswap-frame {height: 400px!important;}}</style>
-
-  </div>
-</div>
-<div id="binance" class="tab-pane fade">
-
-  <iframe id="lumi-buy-widget" src="https://buy-widget.lumiwallet.com/?btn_color=073f6a" style="width:100%;border:none;"></iframe><script>window.onmessage=e=>{e.data.hasOwnProperty("frameHeight")&&(document.getElementById("lumi-buy-widget").style.height=`${ e.data.frameHeight + 30 }px`)}</script>
-
-  <script>
-    const timestamp = new Date().getTime()
-    document.write('\x3Cscript src="https://pay.itez.com/static/main/share/merchant.js?' + timestamp + '">\x3C/script>')
-    </script>
-    
-  <div id="widget-container" style="width: 400px;"></div>
-  <script type="text/javascript">
-      ItezWidget.run({
-          target_element: "widget-container",
-          sum: "100", 
-          CUR: "BRL",
-          id: "32869",
-          lang: "PT"
-      });
-  </script>
-
 </div>
 </div>
 </div>
@@ -586,7 +587,6 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
     <script type="text/javascript" src="page_files/main.js"></script>
-    <script type="text/javascript" src="page_files/dados.js"></script>
 
 <div class="share-selected-text-main-container" style="height: 50px; top: 0px; left: 0px;"><div class="share-selected-text-inner"><a class="share-selected-text-btn share-selected-text-btn-twitter" href="https://twitter.com/intent/tweet?url=https://blog.cindicator.com/bitcoin-is-not-digital-gold/&amp;text=%22%22"><i class="icon-sst-twitter fab fa-twitter" style="pointer-events: none;"></i></a></div></div>
 
