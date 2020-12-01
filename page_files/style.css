@@ -312,7 +312,7 @@ th {
 body {
     font-family: Montserrat, Helvetica, Roboto, 'Segoe Ui', sans-serif;
     color: #3f3f3f;
-    background: rgb(72, 66, 80);
+    background: #fff;
     font-size: 16px
 }
 
@@ -599,8 +599,8 @@ header .blog-logo a {
 }
 
 header .blog-logo img {
-    max-width: 255px;
-    max-height: 180px;
+    max-width: 285px;
+    max-height: 100px;
     height: auto;
     width: auto;
     -webkit-transition: all .3s ease-in-out;
