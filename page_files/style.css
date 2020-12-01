@@ -600,7 +600,7 @@ header .blog-logo a {
 
 header .blog-logo img {
     max-width: 255px;
-    max-height: 100px;
+    max-height: 180px;
     height: auto;
     width: auto;
     -webkit-transition: all .3s ease-in-out;
