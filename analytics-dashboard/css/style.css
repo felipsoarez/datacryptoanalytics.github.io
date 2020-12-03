@@ -127,7 +127,7 @@ ul {
     color: #fff;
     border: 0;
     margin-top: 50px;
-    border-radius: 2px;
+    border-radius: 10px;
     padding: 13px 20px;
     font-weight: 700;
     font-size: 16px;
@@ -514,7 +514,7 @@ ul {
 /*blog*/
 .blog .content {
     background: #262626;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 .blog .content:hover img {
     -moz-transform: scale(1.03);

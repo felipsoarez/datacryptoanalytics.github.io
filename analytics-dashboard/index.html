@@ -247,7 +247,7 @@
 
 
      <!-- grafico mineradores -->
-     <div id="miners" class="blog segments">
+     <div id="minerss" class="blog segments">
         <div class="container">
             <div class="section-title">
                 <h3> Mineradores </h3>
@@ -403,7 +403,7 @@
                 <div class="box-content">
                     <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
 <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
-<div id="miners"></div>
+<div id="miners-table"></div>
 <script>
     (function(){
     widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'dark'});
@@ -439,7 +439,7 @@
                     }
                   }
                 }`);
-    var wdts = new widgets.table('#miners', query, 'bitcoin.outputs', {
+    var wdts = new widgets.table('#miners-table', query, 'bitcoin.outputs', {
  "title": "Mineradores",
  "dataOptions": [
   {
