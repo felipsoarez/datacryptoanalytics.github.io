@@ -37,7 +37,7 @@
 
                 <!-- navbar brand or logo -->
                 <a href="#" class="navbar-brand">
-                    <h2>BLEAK</h2>
+                    <h2>Analytics</h2>
                 </a>
                 <!-- end navbar brand or logo -->
 
@@ -78,10 +78,66 @@
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-sm-12 col-xs-12">
                             <div class="intro-caption">
-                                <span>I am Bleak Peaker</span>
-                                <h2>Graphic Designer</h2>
-                                <button class="button">Contact Me</button>
-                            </div>
+                                <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
+<div id="transactions_by_time"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+    var query = new widgets.query(`
+            query ($network: BitcoinNetwork!,
+                  $dateFormat: String!,
+
+                  $from: ISO8601DateTime,
+                  $till: ISO8601DateTime){
+                    bitcoin(network: $network ){
+                      transactions(options:{asc: "date.date"}, date: {
+                        since: $from
+                        till: $till}
+
+                      ) {
+                        date: date{
+                          date(format: $dateFormat)
+                        }
+                        count: count
+                        feeValue
+                        avgFee: feeValue(calculate: average)
+                      }
+                    }
+                  }`);
+    var wdts = new widgets.chartByTime('#transactions_by_time', query, 'bitcoin.transactions', {
+ "title": "Transactions By Date",
+ "chartOptions": {
+  "vAxes": {
+   "0": {
+    "title": "Transactions count"
+   }
+  },
+  "seriesType": "bars",
+  "series": {
+   "0": {
+    "color": "#ffffff"
+   }
+  }
+ },
+ "dataOptions": [
+  {
+   "title": {
+    "label": "Date",
+    "type": "date"
+   },
+   "path": "date.date"
+  },
+  {
+   "title": "Transactions count",
+   "path": "count"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": null, "till": null, "dateFormat": "%Y-%m"});
+    })()
+</script>
+
                         </div>
                         <div class="col-md-4 col-sm-12 col-xs-12">
                             <div class="intro-image">
