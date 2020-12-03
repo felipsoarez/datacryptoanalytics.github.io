@@ -75,76 +75,66 @@
         <div class="home-intro segments">
             <div class="container">
                 <div class="intro-content box-content">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 col-sm-12 col-xs-12">
-                            <div class="intro-caption">
-                                <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
-<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
-<div id="transactions_by_time"></div>
-<script>
-    (function(){
-    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
-    var query = new widgets.query(`
-            query ($network: BitcoinNetwork!,
-                  $dateFormat: String!,
-
-                  $from: ISO8601DateTime,
-                  $till: ISO8601DateTime){
-                    bitcoin(network: $network ){
-                      transactions(options:{asc: "date.date"}, date: {
-                        since: $from
-                        till: $till}
-
-                      ) {
-                        date: date{
-                          date(format: $dateFormat)
-                        }
-                        count: count
-                        feeValue
-                        avgFee: feeValue(calculate: average)
+                    <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
+                    <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
+                    <div id="transactions_by_time"></div>
+                    <script>
+                        (function(){
+                        widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'light'});
+                        var query = new widgets.query(`
+                                query ($network: BitcoinNetwork!,
+                                      $dateFormat: String!,
+                    
+                                      $from: ISO8601DateTime,
+                                      $till: ISO8601DateTime){
+                                        bitcoin(network: $network ){
+                                          transactions(options:{asc: "date.date"}, date: {
+                                            since: $from
+                                            till: $till}
+                    
+                                          ) {
+                                            date: date{
+                                              date(format: $dateFormat)
+                                            }
+                                            count: count
+                                            feeValue
+                                            avgFee: feeValue(calculate: average)
+                                          }
+                                        }
+                                      }`);
+                        var wdts = new widgets.chartByTime('#transactions_by_time', query, 'bitcoin.transactions', {
+                     "title": "Transactions By Date",
+                     "chartOptions": {
+                      "vAxes": {
+                       "0": {
+                        "title": "Transactions count"
+                       }
+                      },
+                      "seriesType": "bars",
+                      "series": {
+                       "0": {
+                        "color": "#ffffff"
+                       }
                       }
-                    }
-                  }`);
-    var wdts = new widgets.chartByTime('#transactions_by_time', query, 'bitcoin.transactions', {
- "title": "Transactions By Date",
- "chartOptions": {
-  "vAxes": {
-   "0": {
-    "title": "Transactions count"
-   }
-  },
-  "seriesType": "bars",
-  "series": {
-   "0": {
-    "color": "#ffffff"
-   }
-  }
- },
- "dataOptions": [
-  {
-   "title": {
-    "label": "Date",
-    "type": "date"
-   },
-   "path": "date.date"
-  },
-  {
-   "title": "Transactions count",
-   "path": "count"
-  }
- ]
-});
-    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": null, "till": null, "dateFormat": "%Y-%m"});
-    })()
-</script>
-
-                        </div>
-                        <div class="col-md-4 col-sm-12 col-xs-12">
-                            <div class="intro-image">
-                                <img src="images/intro-image.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
+                     },
+                     "dataOptions": [
+                      {
+                       "title": {
+                        "label": "Date",
+                        "type": "date"
+                       },
+                       "path": "date.date"
+                      },
+                      {
+                       "title": "Transactions count",
+                       "path": "count"
+                      }
+                     ]
+                    });
+                        query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": null, "till": null, "dateFormat": "%Y-%m"});
+                        })()
+                    </script>
+                    
                 </div>
             </div>
         </div>
