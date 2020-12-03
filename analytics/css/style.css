@@ -166,6 +166,7 @@ ul {
     color: #fff;
     padding: 8px 40px;
     transition: all .5s ease;
+    border-radius: 10px;
 }
 .navbar .navbar-brand h2 {
     font-weight: 900;
