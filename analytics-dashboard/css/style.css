@@ -169,7 +169,7 @@ ul {
 }
 .navbar .navbar-brand h2 {
     font-weight: 900;
-    background: -webkit-linear-gradient(right, #d61a5e, #ff8c05);
+    background: -webkit-linear-gradient(right, #2224af, #ff8c05);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
