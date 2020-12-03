@@ -245,6 +245,158 @@
     </div>
     <!-- end about -->
 
+
+     <!-- grafico mineradores -->
+     <div id="miners" class="blog segments">
+        <div class="container">
+            <div class="section-title">
+                <h3> - </h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="content">
+                        <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
+<div id="miners_by_time"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'dark'});
+    var query = new widgets.query(`
+            query ($network: BitcoinNetwork!,
+              $dateFormat: String!,
+
+              $from: ISO8601DateTime,
+              $till: ISO8601DateTime){
+                bitcoin(network: $network ){
+                  outputs(options:{asc: "date.date"}, date: {
+                    since: $from
+                    till: $till}
+
+                    txIndex: {is: 0}
+                    outputDirection: {is: mining}
+                    outputScriptType: {notIn: [nulldata, nonstandard]}
+
+                  ) {
+                    date: date{
+                      date(format: $dateFormat)
+                    }
+
+                    count(uniq: addresses)
+
+                    value
+
+                  }
+                }
+              }`);
+    var wdts = new widgets.chartByTime('#miners_by_time', query, 'bitcoin.outputs', {
+ "title": "Mineradores Ativos",
+ "chartOptions": {
+  "vAxes": {
+   "0": {
+    "title": "Unique Miners"
+   }
+  },
+  "seriesType": "bars",
+  "series": {
+   "0": {
+    "color": "#28a745"
+   }
+  }
+ },
+ "dataOptions": [
+  {
+   "title": {
+    "label": "Date",
+    "type": "date"
+   },
+   "path": "date.date"
+  },
+  {
+   "title": "Unique Miners",
+   "path": "count"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": null, "till": null, "dateFormat": "%Y-%m"});
+    })()
+</script>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="content no-mb">
+                        <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
+                        <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
+                        <div id="mined_blocks"></div>
+                        <script>
+                            (function(){
+                            widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'dark'});
+                            var query = new widgets.query(`
+                                    query ($network: BitcoinNetwork!,
+                                      $dateFormat: String!,
+                        
+                                      $from: ISO8601DateTime,
+                                      $till: ISO8601DateTime){
+                                        bitcoin(network: $network ){
+                                          transactions(options:{asc: "date.date"}, date: {
+                                            since: $from
+                                            till: $till}
+                        
+                        
+                                          ) {
+                                            date: date{
+                                              date(format: $dateFormat)
+                                            }
+                        
+                                            count(uniq: blocks)
+                        
+                                            minedValue
+                        
+                                          }
+                                        }
+                                      }`);
+                            var wdts = new widgets.chartByTime('#mined_blocks', query, 'bitcoin.transactions', {
+                         "title": "Blocos Minerados",
+                         "chartOptions": {
+                          "vAxes": {
+                           "0": {
+                            "title": "Block Count"
+                           }
+                          },
+                          "seriesType": "bars",
+                          "series": {
+                           "0": {
+                            "color": "#28a745"
+                           }
+                          }
+                         },
+                         "dataOptions": [
+                          {
+                           "title": {
+                            "label": "Date",
+                            "type": "date"
+                           },
+                           "path": "date.date"
+                          },
+                          {
+                           "title": "Block Count",
+                           "path": "count"
+                          }
+                         ]
+                        });
+                            query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": null, "till": null, "dateFormat": "%Y-%m"});
+                            })()
+                        </script>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fim grafico mineradores -->
+
+    
+
     <!-- resume 
     <div id="resume" class="resume segments">
         <div class="container">
