@@ -104,14 +104,14 @@
                                         }
                                       }`);
                         var wdts = new widgets.chartByTime('#transactions_by_time', query, 'bitcoin.transactions', {
-                     "title": "Transactions By Date",
+                     "title": "Transações ",
                      "chartOptions": {
                       "vAxes": {
                        "0": {
-                        "title": "Transactions count"
+                        "title": "Contagem de transações"
                        }
                       },
-                      "seriesType": "bars",
+                      "seriesType": "line",
                       "series": {
                        "0": {
                         "color": "#ffffff"
@@ -121,13 +121,13 @@
                      "dataOptions": [
                       {
                        "title": {
-                        "label": "Date",
+                        "label": "Data",
                         "type": "date"
                        },
                        "path": "date.date"
                       },
                       {
-                       "title": "Transactions count",
+                       "title": "Contagem de transações",
                        "path": "count"
                       }
                      ]
@@ -299,7 +299,7 @@
   "seriesType": "bars",
   "series": {
    "0": {
-    "color": "#28a745"
+    "color": "#ffffff"
    }
   }
  },
@@ -366,7 +366,7 @@
                           "seriesType": "bars",
                           "series": {
                            "0": {
-                            "color": "#28a745"
+                            "color": "#ffffff"
                            }
                           }
                          },
