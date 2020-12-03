@@ -147,23 +147,98 @@
     <div id="about" class="about segments">
         <div class="container">
             <div class="box-content">
-                <div class="row">
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <div class="content-left">
-                            <div class="section-title section-title-left">
-                                <h3>About Me</h3>
-                            </div>
-                            <div class="content">
-                                <h2>I am a Graphic Designer</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloremque ratione perferendis possimus voluptatibus distinctio
-                                autem expedita qui unde modi impedit officia illum praesentium amet, vero quos natus veritatis totam!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <div class="content-right"></div>
-                    </div>
-                </div>
+                <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
+<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
+<div id="latest_transactions"></div>
+<script>
+    (function(){
+    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'dark'});
+    var query = new widgets.query(`
+              query ($network: BitcoinNetwork!,
+                      $limit: Int!,
+                      $offset: Int!
+                      $from: ISO8601DateTime,
+                      $till: ISO8601DateTime){
+          bitcoin(network: $network){
+            transactions(options:{desc: ["block.height","index"], limit: $limit, offset: $offset},
+              date: {since: $from till: $till }
+              ) {
+
+                block {
+                  timestamp {
+                    time (format: "%Y-%m-%d %H:%M:%S")
+                  }
+                  height
+                }
+
+
+                inputValue
+                outputCount
+                inputCount
+
+                index
+
+                hash
+                feeValue
+
+            }
+          }
+          }`);
+    var wdts = new widgets.table('#latest_transactions', query, 'bitcoin.transactions', {
+ "title": "Latest Transactions",
+ "dataOptions": [
+  {
+   "title": "Timestamp",
+   "type": "string",
+   "path": "block.timestamp.time",
+   "style": "width: 170px;"
+  },
+  {
+   "title": "Block",
+   "type": "string",
+   "path": "block.height",
+   "urlCallbackName": "block_path",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "Index in Block",
+   "path": "index",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "Hash",
+   "type": "string-ellipsis",
+   "path": "hash",
+   "urlCallbackName": "transaction_path"
+  },
+  {
+   "title": "Inputs",
+   "path": "inputCount",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "Outputs",
+   "path": "outputCount",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "Fee, BTC",
+   "type": "number",
+   "path": "feeValue",
+   "style": "width: 80px;"
+  },
+  {
+   "title": "Input Value, BTC",
+   "type": "amount",
+   "path": "inputValue",
+   "style": "width: 110px;"
+  }
+ ]
+});
+    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-12-02", "till": null, "dateFormat": "%Y-%m-%d"});
+    })()
+</script>
+
             </div>
         </div>
     </div>
