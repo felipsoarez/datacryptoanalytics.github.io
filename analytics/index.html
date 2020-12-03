@@ -488,7 +488,82 @@
                 </div>
             </div>
         </div>
-        <!-- end about -->
+        <!-- end mineradores -->
+
+           <!-- blocos -->
+    <div id="about" class="about segments">
+        <div class="container">
+            <div class="section-title">
+                <h3> Últimos Blocos </h3>
+            </div>
+            <div class="box-content">
+                <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
+                <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
+                <div id="latest_blocks"></div>
+                <script>
+                    (function(){
+                    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'dark'});
+                    var query = new widgets.query(`
+                                        query ($network: BitcoinNetwork!,
+                                                $limit: Int!,
+                                                $offset: Int!
+                                                $from: ISO8601DateTime,
+                                                $till: ISO8601DateTime){
+                                    bitcoin(network: $network){
+                                      blocks(options:{desc: "height", limit: $limit, offset: $offset},
+                                        date: {since: $from till: $till }
+                                        ) {
+                
+                
+                                          timestamp {
+                                            time (format: "%Y-%m-%d %H:%M:%S")
+                                          }
+                                          height
+                                          difficulty
+                                          transactionCount
+                
+                                          blockSize
+                
+                                      }
+                                    }
+                                  }`);
+                    var wdts = new widgets.table('#latest_blocks', query, 'bitcoin.blocks', {
+                 "title": "Últimos Blocos",
+                 "dataOptions": [
+                  {
+                   "title": "Timestamp",
+                   "type": "string",
+                   "path": "timestamp.time"
+                  },
+                  {
+                   "title": "Blocos",
+                   "path": "height",
+                   "urlCallbackName": "block_path"
+                  },
+                  {
+                   "title": "Contagem de transações",
+                   "path": "transactionCount"
+                  },
+                  {
+                   "title": "Tamanho",
+                   "path": "blockSize"
+                  },
+                  {
+                   "title": "Dificuldade",
+                   "path": "difficulty"
+                  }
+                 ]
+                });
+                    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-12-02", "till": null, "dateFormat": "%Y-%m-%d"});
+                    })()
+                </script>
+                
+                
+            </div>
+        </div>
+    </div>
+    <!-- end about -->
+
     
     
 
