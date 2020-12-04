@@ -632,15 +632,6 @@ ul {
     margin-bottom: 0;
 }
 
-/*footer*/
-.parceiros {
-    text-align: center;
-    background: #747272;
-}
-.parceiros p {
-    margin-bottom: 0;
-}
-
 /*responsive*/
 @media (max-width: 768px) {
     .box-content {
