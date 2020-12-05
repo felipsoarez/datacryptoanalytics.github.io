@@ -413,6 +413,71 @@
 
 
     
+ <!-- blocos -->
+ <div id="about" class="about segments">
+    <div class="container">
+        <div class="section-title">
+            <h3> Protocolos DEX Smart Contract </h3>
+        </div>
+        <div class="box-content">
+            <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
+            <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
+            <div id="dex_protocols"></div>
+            <script>
+                (function(){
+                widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'dark'});
+                var query = new widgets.query(`
+                                    query ($network: EthereumNetwork!,
+                                            $limit: Int!,
+                                            $offset: Int!
+                                            $from: ISO8601DateTime,
+                                            $till: ISO8601DateTime){
+                                ethereum(network: $network){
+                                  dexTrades(options:{desc: "trades", limit: $limit, offset: $offset},
+                                    date: {since: $from till: $till }
+            
+                                    ) {
+            
+                                      protocol
+            
+                                      trades: count
+                                      currencies: count(uniq: buy_currency)
+                                      contracts: count(uniq: smart_contracts)
+            
+                                  }
+                                }
+                              }`);
+                var wdts = new widgets.table('#dex_protocols', query, 'ethereum.dexTrades', {
+             "title": "DEX Smart Contract Protocols",
+             "dataOptions": [
+              {
+               "title": "Protocolo",
+               "path": "protocol"
+              },
+              {
+               "title": "<span class=\"translation_missing\" title=\"translation missing: en.widgts.titles.trades\">Trades</span>",
+               "path": "trades"
+              },
+              {
+               "title": "<span class=\"translation_missing\" title=\"translation missing: en.widgts.titles.currencies\">Currencies</span>",
+               "path": "currencies"
+              },
+              {
+               "title": "<span class=\"translation_missing\" title=\"translation missing: en.widgts.titles.contracts\">Contracts</span>",
+               "path": "contracts"
+              }
+             ]
+            });
+                query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": null, "till": null, "dateFormat": "%Y-%m"});
+                })()
+            </script>
+            
+            
+            
+        </div>
+    </div>
+</div>
+<!-- end about -->
 
 
     
