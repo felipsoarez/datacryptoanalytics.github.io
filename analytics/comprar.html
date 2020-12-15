@@ -166,32 +166,25 @@
                     <div class="col-md-6">
                         <div class="content no-mb">
     <center>  
-      <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-    <div id="tradingview_fc4c5"></div>
-    <div class="tradingview-widget-copyright"></div>
-    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-    <script type="text/javascript">
-    new TradingView.widget(
-    {
-    "width": "100%",
-    "height": "510",
-    "symbol": "COINBASE:BTCUSD",
-    "interval": "30",
-    "timezone": "Etc/UTC",
-    "theme": "dark",
-    "style": "3",
-    "locale": "br",
-    "toolbar_bg": "#f1f3f6",
-    "enable_publishing": false,
-    "hide_top_toolbar": true,
-    "hide_legend": true,
-    "container_id": "tradingview_fc4c5"
-  }
-    );
-    </script>
-  </div>
-  <!-- TradingView Widget END -->
+        <script src="https://public.bnbstatic.com/static/js/ocbs/binance-fiat-widget.js"></script>
+        <div id="widget"></div>
+        <script>
+           window.onload = function () {
+               var t = document.querySelector('#widget')
+               window.binanceFiatWidget.Widget(t, {
+                   coinInfo: {
+                     fiat: 'BRL',
+                     crypto: 'BTC',
+                     isInUS: false
+                   },
+                   urlParmas: {
+                     us_ref: 'your us refId',
+                     ref: '28097223'
+                   }
+               })
+           }
+        </script>
+  
     </center>
     
                         </div>
