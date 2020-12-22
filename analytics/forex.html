@@ -72,16 +72,15 @@
 
 
     <script type="text/javaScript">
+        window.setInterval(function() {
+            reloadIFrame()
+        }, 3000);
 
-        function autoRefresh(interval) {
-            setTimeout("atualizar();",interval);
+        function reloadIFrame() {
+            console.log('reloading..');
+            document.getElementById('iframe').contentWindow.location.reload();
         }
-        function atualizar() {
-          // faz a lógica desejada...
-        }
-        
     </script>
-    
 </head>
 
 <body>
@@ -260,7 +259,7 @@
 
 
 <center> 
-    <iframe src="//rss.bloople.net/?url=http%3A%2F%2Fxml.fxstreet.com%2Fnews%2Fforex-news%2Findex.xml&showtitle=false&showicon=true&type=html"></iframe>
+    <iframe id="iframe" src="//rss.bloople.net/?url=http%3A%2F%2Fxml.fxstreet.com%2Fnews%2Fforex-news%2Findex.xml&showtitle=false&showicon=true&type=html"></iframe>
 </center>                
             </div>
         </div>
