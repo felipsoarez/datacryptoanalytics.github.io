@@ -777,7 +777,7 @@ ul {
 /* personalizar a barra em geral, aqui estou definindo 10px de largura para a barra vertical
 e 10px de altura para a barra horizontal */
 ::-webkit-scrollbar {
-    width:10px;
+    width:7px;
     height: 10px;
     }
      
