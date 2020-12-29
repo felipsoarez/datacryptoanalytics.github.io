@@ -8,7 +8,7 @@
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          
+
           gtag('config', 'UA-160618603-1');
        </script>
     <meta charset="UTF-8">
@@ -40,13 +40,13 @@
     <meta property="og:title" content="Analytics Smart Contract">
     <meta property="og:description" content="Analytics Smart Contract - Transações DeFi | Web App - DataCrypto Analytics">
     <meta property="og:url" content="https://datacryptoanalytics.github.io/analytics">
-    <meta property="og:image" content="https://datacryptoanalytics.com/logo-pequeno-dta.jpg"
+    <meta property="og:image" content="https://datacryptoanalytics.com/capadatacryptoanalytics.png"
     <meta property="article:publisher" content="https://fb.me/datacryptopy">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Analytics Blockchain">
     <meta name="twitter:description" content="Analytics Smart Contract - Transações DeFi | Web App - DataCrypto Analytics">
     <meta name="twitter:url" content="https://datacryptoanalytics.github.io/analytics">
-    <meta name="twitter:image" content="https://datacryptoanalytics.com/logo-pequeno-dta.jpg">
+    <meta name="twitter:image" content="https://datacryptoanalytics.com/capadatacryptoanalytics.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="DataCrypto Analytics Dev Team">
     <meta name="twitter:label2" content="Filed under">
@@ -116,9 +116,9 @@
             </nav>
         </div>
         <!-- end navbar -->
-<center>        
+<center>
 <a href="https://primexbt.com?signup=120807" target="_blank"><img src="/images/prime-inicio.png" width='66%' height="4%"></a>
- 
+
 </center>
         <!-- home intro -->
         <div class="home-intro segments">
@@ -131,7 +131,7 @@
                 </button>
              </div>
             </div>
-        
+
             <div class="container">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="https://datacryptoanalytics.com/">Inicio</a></li>
@@ -204,7 +204,7 @@
     })()
 </script>
 
-                    
+
                 </div>
             </div>
         </div>
@@ -227,28 +227,28 @@
                     var query = new widgets.query(`
                             query ($network: EthereumNetwork!,
                                   $dateFormat: String!,
-                
+
                                   $from: ISO8601DateTime,
                                   $till: ISO8601DateTime){
                                     ethereum(network: $network ){
                                       dexTrades(options:{asc: "date.date"}, date: {
                                         since: $from
                                         till: $till}
-                
+
                                       ) {
                                         date: date{
                                           date(format: $dateFormat)
                                         }
-                
+
                                         exchange {
                                           fullName
                                         }
-                
+
                                         count
-                
+
                                         tradeAmount(in: USD)
-                
-                
+
+
                                       }
                                     }
                                   }`);
@@ -339,9 +339,9 @@
                     query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": null, "till": null, "dateFormat": "%Y-%m"});
                     })()
                 </script>
-                
 
-                
+
+
             </div>
         </div>
     </div>
@@ -412,7 +412,7 @@
     })()
 </script>
 
-                
+
             </div>
         </div>
     </div>
@@ -420,7 +420,7 @@
 
 
 
-    
+
  <!-- blocos -->
  <div id="about" class="about segments">
     <div class="container">
@@ -443,15 +443,15 @@
                                 ethereum(network: $network){
                                   dexTrades(options:{desc: "trades", limit: $limit, offset: $offset},
                                     date: {since: $from till: $till }
-            
+
                                     ) {
-            
+
                                       protocol
-            
+
                                       trades: count
                                       currencies: count(uniq: buy_currency)
                                       contracts: count(uniq: smart_contracts)
-            
+
                                   }
                                 }
                               }`);
@@ -479,19 +479,19 @@
                 query.request({"limit": 10, "offset": 0, "network": "ethereum", "from": null, "till": null, "dateFormat": "%Y-%m"});
                 })()
             </script>
-            
-            
-            
+
+
+
         </div>
     </div>
 </div>
 <!-- end about -->
 
 
-    
-    
 
-    <!-- resume 
+
+
+    <!-- resume
     <div id="resume" class="resume segments">
         <div class="container">
             <div class="box-content">
@@ -688,11 +688,11 @@
                             </div>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
         </div>
     </div>
-     end resume  
+     end resume
 
     <div id="portfolio" class="portfolio segments">
         <div class="container">
@@ -874,7 +874,7 @@
                                     <a href="https://twitter.com/DataCryptoML"><i class="fab fa-twitter"></i></a>
                                 </li>
                                 <li>
-                                    <a href="https://fb.me/datacryptopy"><i class="fab fa-facebook-f"></i></a>                                   
+                                    <a href="https://fb.me/datacryptopy"><i class="fab fa-facebook-f"></i></a>
                                 </li>
                                 <li>
                                     <a href="https://www.instagram.com/analyticsdatacrypto/"><i class="fab fa-instagram"></i></a>
@@ -957,7 +957,7 @@
         </div>
         <!-- end footer -->
 
-    
+
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -969,7 +969,7 @@
     <script src="js/contact-form.js"></script>
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-    
+
 
 
 </body>
