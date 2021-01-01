@@ -193,7 +193,7 @@
     <p>- <strong>Aula 1</strong> | Introdução ao protocolo HTTP</p>
     <p>- <strong>Aula 2</strong> | Cabeçalho HTTP </p>
     <p>- <strong>Aula 3</strong> | Postman</span></p>
-    <p>-<strong> Aula 4</strong> | Manipulando Cookie e Sessões</p>
+    <p>- <strong> Aula 4</strong> | Manipulando Cookie e Sessões</p>
     <p>- <strong>Aula 5</strong> | Requisições web em Curl e Wget</p>
     <p>- <strong>Aula 6</strong> | Requisições web com Urllib e Requests</p>
     <p>- <strong>Aula 7</strong> | Burpsuite</p>
@@ -214,45 +214,19 @@
         <div class="container">
 
             <div class="section-title">
-                <h3> Notícias  <a href="https://t.me/datacryptoanalytics" target="_blank"><i class="fab fa-telegram"></i></a> </h3>
+                <h3> Tipos de ataques Web </h3>
             </div>
             <div class="box-content">
 
-<center>
+<h4>- Injeção</h4>
+<p>As falhas de injeção, como SQL, OS, XXE e LDAP, ocorrem quando dados não confiáveis são enviados para um intérprete como parte de um comando ou consulta. Por exemplo, na tela de administração do seu sistema, você tem que digitar um usuário e senha para acessar, por trás desse formulário de acesso, o seu sistema normalmente realiza uma consulta ao banco de dados, para verificar se o usuário existe e a senha digitada está correta, o comando para a execução é basicamente o seguinte:</p>
+<p>SELECT id FROM USUARIOS WHERE usuário = ‘textoDigitado’ && senha = ‘textoDigitado2’</p>
+<p>Esse código seleciona o número de identificação do usuário, que tem o mesmo nome e senha digitado no formulário, retornando o resultado ele libera o acesso ao sistema, o grande problema é que utilizando injeção, poderíamos no textoDigitado informar o seguinte:</p>
+<p>‘ OR 1=1</p>
+<p>Que ao ser processado pelo sistema, iria influenciar diretamente no contexto, agora o sistema verifica se o usuário é igual a vazio ou 1 é igual a 1, caso verdadeiro, ele pega o primeiro usuário do sistema e libera o acesso.</p>
+<p>Entendeu o perigo? É possível que o invasor acesse o seu sistema, sem saber nem o usuário e nem a senha.</p>
 
 
-    <script language="JavaScript" type="text/javascript">
-        <!--
-            // Customize the widget by editing the fields below
-            // All fields are required
-
-            // Your Feedity RSS feed URL
-            feedity_widget_feed = "http://xml.fxstreet.com/news/forex-news/index.xml";
-
-            // Number of items to display in the widget
-            feedity_widget_numberofitems = "20";
-
-            // Show feed item description (values: yes or no)
-            feedity_widget_showdescription = "yes";
-
-            // Show feed item published date (values: yes or no)
-            feedity_widget_showdate = "yes";
-
-            // Widget box width (in px, pt, em, or %)
-            feedity_widget_width = "100%";
-
-            // Widget box background color in hex or by name (eg: #ffffff or white)
-            feedity_widget_backcolor = "#262626";
-
-            // Widget text & link color in hex or by name (eg: #000000 or black)
-            feedity_widget_fontcolor = "#ffffff";
-        //-->
-        </script>
-        <script language="JavaScript" type="text/javascript" src="https://feedity.com/js/widget.js"></script>
-
-
-
-</center>
 
             </div>
         </div>
