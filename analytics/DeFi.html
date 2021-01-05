@@ -30,17 +30,7 @@
     monName = new Array ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "agosto", "outubro", "novembro", "dezembro")
     now = new Date
 </script>
-<script type="text/javascript">
-    function time()
-    {
-    today=new Date();
-    h=today.getHours();
-    m=today.getMinutes();
-    s=today.getSeconds();
-    document.getElementById('txt').innerHTML=h+":"+m+":"+s;
-    setTimeout('time()',500);
-    }
-</script>
+
 
 
 <script data-ad-client="ca-pub-5399975515756281" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -91,7 +81,7 @@
 
 </head>
 
-<body onload="time()">
+<body>
 
     <!-- loader -->
     <div class="fakeLoader"></div>
@@ -161,7 +151,7 @@
                 </div>
 
                 <div class="container">
-                    <div id="txt" class="fa fa-clock"> </div>
+                    <div id="real-clock" class="fa fa-clock"></div> 
                     <script language=javascript type="text/javascript">
                         document.write ("<h6>   " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName [now.getMonth() ]   +  " de "  +     now.getFullYear () + ". </h6>")
                     </script>
@@ -985,7 +975,7 @@
         </div>
         <!-- end footer -->
 
-
+        <script src="js/date.js"></script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
