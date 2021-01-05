@@ -30,15 +30,7 @@
     now = new Date
 </script>
 
-<script type="text/javascript">
-var clock = document.getElementById('real-clock');
-    
 
-    setInterval(function () {
-        clock.innerHTML = ((new Date).toLocaleString().substr(11, 8));  
-    }, 1000);
-        
-</script>
 
 <script type="text/javascript">
     function time()
@@ -187,7 +179,6 @@ var clock = document.getElementById('real-clock');
         </div>
 
         <div class="container">
-            <div id="real-clock" class="fa fa-clock"> | </div>
             <div id="txt" class="fa fa-clock"> </div>
         <script language=javascript type="text/javascript">
             document.write ("<h6> " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName [now.getMonth() ]   +  " de "  +     now.getFullYear () + ". </h6>")
@@ -210,12 +201,6 @@ var clock = document.getElementById('real-clock');
                                </li>
                                <li class="nav-item">
                                   <a class="nav-link" data-toggle="tab" href="#ethereum"><img src="https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@40582f23f7b512ac9ca70060ee078843a2823a6c/svg/black/eth.svg"/> Ethereum</a>
-                               </li>
-                               <li class="nav-item">
-                                  <a class="nav-link" data-toggle="tab" href="#binance"><img src="https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@40582f23f7b512ac9ca70060ee078843a2823a6c/svg/black/bnb.svg"/> Binance</a>
-                               </li>
-                               <li class="nav-item">
-                                  <a class="nav-link" data-toggle="tab" href="#litecoin"><img src="https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@40582f23f7b512ac9ca70060ee078843a2823a6c/svg/black/ltc.svg"/> Litecoin</a>
                                </li>
                             </ul>
                             <div class="tab-content">
@@ -246,32 +231,7 @@ var clock = document.getElementById('real-clock');
                                      <p><b> Dados:</b> <img src="/images/binance.png" alt="Binance Exchange Spot Price" /></p>
                                   </center>
                                </div>
-                               <div id="binance" class="tab-pane fade">
-                                  <center>
-                                     <img src="/images/binance-xgboost.png" alt="" style="width:100%" />
-                                     <p><b><i> $BNB $USDT </i> Spot price Binance</b></p>
-                                     <p><b> Algoritmo:</b> XGBoost.py</p>
-                                     <p><b> Dados:</b> <img src="/images/binance.png" alt="Binance Exchange Spot Price" /></p>
-                                     <p><i>Tenha acesso a todos os nossos resultados, assine nosso clube de assinantura e receba atualizações diariamente.</i></p>
-                                     <img src="/images/binance-rl.png" alt="" style="width:100%" />
-                                     <p><b><i> $BNB $USDT </i> Spot price Binance</b></p>
-                                     <p><b> Algoritmo:</b> regressao-linear.py</p>
-                                     <p><b> Dados:</b> <img src="/images/binance.png" alt="Binance Exchange Spot Price" /></p>
-                                  </center>
-                               </div>
-                               <div id="litecoin" class="tab-pane fade">
-                                  <center>
-                                     <img src="/images/litecoin-xgboost.png" alt="" style="width:100%" />
-                                     <p><b><i> $LTC $USDT </i> Spot price Binance</b></p>
-                                     <p><b> Algoritmo:</b> XGBoost.py</p>
-                                     <p><b> Dados:</b> <img src="/images/binance.png" alt="Binance Exchange Spot Price" /></p>
-                                     <p><i>Tenha acesso a todos os nossos resultados, seja membro e tenha acesso a artigos exclusivos para membros, acesso ao grupo exclusivo do Telegram e Você será notificado por e-mail quando novas postagens exclusivas para membros forem publicadas.</i></p>
-                                     <img src="/images/litecoin-rl.png" alt="" style="width:100%" />
-                                     <p><b><i> $LTC $USDT </i> Spot price Binance</b></p>
-                                     <p><b> Algoritmo:</b> regressao-linear.py</p>
-                                     <p><b> Dados:</b> <img src="/images/binance.png" alt="Binance Exchange Spot Price" /></p>
-                                  </center>
-                               </div>
+                               
                             </div>
                          </div>
 
