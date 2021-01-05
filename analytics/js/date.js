@@ -3,15 +3,9 @@ monName = new Array ("janeiro", "fevereiro", "março", "abril", "maio", "junho",
 now = new Date
 
 
+var clock = document.getElementById('real-clock');
+    
 
-function time()
-{
-today=new Date();
-h=today.getHours();
-m=today.getMinutes();
-s=today.getSeconds();
-document.getElementById('txt').innerHTML=h+":"+m+":"+s;
-setTimeout('time()',500);
-}
-
-
+setInterval(function () {
+    clock.innerHTML = ((new Date).toLocaleString().substr(11, 8));  
+}, 1000);
