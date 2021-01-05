@@ -31,6 +31,17 @@
     now = new Date
 </script>
 
+<script language=javascript type="text/javascript">
+var clock = document.getElementById('real-clock');
+    
+
+    setInterval(function () {
+        clock.innerHTML = ((new Date).toLocaleString().substr(11, 8));  
+    }, 1000);
+    
+    
+</script>
+
 
 
     <!-- TrustBox script -->
@@ -174,7 +185,7 @@
         </div>
 
         <div class="container">
-            <div id="real-clock" class="fa fa-clock"> |</div> 
+            <div id="real-clock" class="fa fa-clock"> Desative o bloqueador de anúncios para ativar a hora.</div> 
             <script language=javascript type="text/javascript">
                 document.write ("<h6>   " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName [now.getMonth() ]   +  " de "  +     now.getFullYear () + ". </h6>")
             </script>
