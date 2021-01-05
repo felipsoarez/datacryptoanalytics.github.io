@@ -31,6 +31,16 @@
 </script>
 
 <script type="text/javascript">
+var clock = document.getElementById('real-clock');
+    
+
+    setInterval(function () {
+        clock.innerHTML = ((new Date).toLocaleString().substr(11, 8));  
+    }, 1000);
+        
+</script>
+
+<script type="text/javascript">
     function time()
     {
     today=new Date();
@@ -177,6 +187,7 @@
         </div>
 
         <div class="container">
+            <div id="real-clock" class="fa fa-clock"> | </div>
             <div id="txt" class="fa fa-clock"> </div>
         <script language=javascript type="text/javascript">
             document.write ("<h6> " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName [now.getMonth() ]   +  " de "  +     now.getFullYear () + ". </h6>")
