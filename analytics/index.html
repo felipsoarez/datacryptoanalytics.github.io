@@ -73,7 +73,7 @@
 
 </head>
 
-<body>
+<body onload="time()">
 
     <!-- loader -->
     <div class="fakeLoader"></div>
@@ -154,6 +154,14 @@
                     <li class="breadcrumb-item active">Analytics</li>
                     </ol>
                 </div>
+
+                <div class="container">
+                    <div id="txt" class="fa fa-clock"> </div>
+                    <script language=javascript type="text/javascript">
+                        document.write ("<h6>   " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName [now.getMonth() ]   +  " de "  +     now.getFullYear () + ". </h6>")
+                    </script>
+               
+            </div>
 
 
 
@@ -1111,6 +1119,7 @@
         <!-- end footer -->
 
 
+    <script src="js/date.js"></script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
