@@ -25,7 +25,7 @@
     </script>
 
 <script language=javascript type="text/javascript">
-    dayName = new Array ("domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado")
+    dayName = new Array ("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado")
     monName = new Array ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "agosto", "outubro", "novembro", "dezembro")
     now = new Date
 </script>
@@ -178,7 +178,7 @@
 
         <div class="container">
         <script language=javascript type="text/javascript">
-            document.write ("<h6> Hoje é " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName [now.getMonth() ]   +  " de "  +     now.getFullYear () + ". </h6>")
+            document.write ("<h6> " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName [now.getMonth() ]   +  " de "  +     now.getFullYear () + ". </h6>")
         </script>
         <div><ion-icon name="time-outline"></ion-icon><div id="txt"></div></div>
         </div>
