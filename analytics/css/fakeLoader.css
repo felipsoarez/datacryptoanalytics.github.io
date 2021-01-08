@@ -19,8 +19,8 @@
   top: 0;
   left: 0;
   
-  -webkit-animation: bounce 2.0s infinite ease-in-out;
-  animation: bounce 2.0s infinite ease-in-out;
+  -webkit-animation: bounce 1.0s infinite ease-in-out;
+  animation: bounce 1.0s infinite ease-in-out;
 }
 
 .double-bounce2 {
