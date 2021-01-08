@@ -290,8 +290,8 @@
   margin-left:2px;
   display: inline-block;
   
-  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
-  animation: stretchdelay 1.2s infinite ease-in-out;
+  -webkit-animation: stretchdelay 2.2s infinite ease-in-out;
+  animation: stretchdelay 2.2s infinite ease-in-out;
 }
 
 .spinner6 .rect2 {
