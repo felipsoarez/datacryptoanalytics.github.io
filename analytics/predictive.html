@@ -67,7 +67,7 @@
    </head>
    <body>
       <!-- loader -->
-      <div class="fakeLoader"></div>
+      <div id="fakeLoader" class="fakeLoader"></div>
       <!-- loader -->
       <!-- header -->
       <header id="home">
@@ -657,12 +657,5 @@
       <script src="js/contact-form.js"></script>
       <script src="js/main.js"></script>
       <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-      <script type="text/javascript">
-        // Este evendo é acionado após o carregamento da página
-        jQuery(window).load(function() {
-            //Após a leitura da pagina o evento fadeOut do loader é acionado, esta com delay para ser perceptivo em ambiente fora do servidor.
-            jQuery("#fakeLoader").fadeOut("slow");
-        });
-     </script>
    </body>
 </html>
