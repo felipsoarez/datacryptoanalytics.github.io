@@ -1738,3 +1738,15 @@ button[name="drop"]{
 .drop-content a:hover{
 	background-color: #C9936F;
   }
+
+  .drop-content{
+	display: none;
+	background-color: #E4A87A;
+		
+	position: absolute; 
+  }
+
+
+  .menu-drop{
+	position: relative;
+  }
