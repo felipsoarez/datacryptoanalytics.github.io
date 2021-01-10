@@ -1706,3 +1706,35 @@ e 10px de altura para a barra horizontal */
     display: inline-block; /* deixa o LO do "tamanho do próprio texto" e não da largura inteira da tela*/
     list-style: none; /* rita a "bolinha" do LI*/
 }
+
+
+button[name="drop"]{
+	border: none;
+	cursor: pointer;
+	background-color: #FF7F40;
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+  }
+
+  .drop-content{
+    display: none;
+    background-color: #E4A87A;
+}
+
+
+
+.drop-content a{
+	color: white;
+	padding: 8px 10px;
+	text-decoration: none;
+	display: block;
+  }
+
+  .menu-drop:hover button[name="drop"]{
+	background-color: #E2703D
+  }
+
+.drop-content a:hover{
+	background-color: #C9936F;
+  }
