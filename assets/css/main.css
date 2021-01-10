@@ -1716,37 +1716,28 @@ button[name="drop"]{
 	font-size: 15px;
 	color: white;
   }
-
+  .menu-drop{
+	display: inline-block;
+	position: relative;
+  }
   .drop-content{
-    display: none;
-    background-color: #E4A87A;
-}
-
-
-
-.drop-content a{
+	display: none;
+	background-color: #E4A87A;
+	position: absolute;
+	z-index: 1;
+  }
+  .drop-content a{
 	color: white;
 	padding: 8px 10px;
 	text-decoration: none;
 	display: block;
   }
-
-  .menu-drop:hover button[name="drop"]{
-	background-color: #E2703D
-  }
-
-.drop-content a:hover{
+  .drop-content a:hover{
 	background-color: #C9936F;
   }
-
-  .drop-content{
-	display: none;
-	background-color: #E4A87A;
-		
-	position: absolute; 
+  .menu-drop:hover .drop-content{
+	display: block;
   }
-
-
-  .menu-drop{
-	position: relative;
+  .menu-drop:hover button[name="drop"]{
+	background-color: #E2703D
   }
