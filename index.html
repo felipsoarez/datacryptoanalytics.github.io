@@ -345,21 +345,16 @@
                   </script>
                </div>
                <hr />
-
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" >
-        MSDNAA-Microsoft
-    </a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="https://login.microsoftonline.com/">Suporte MSDNAA</a>
-        <a class="dropdown-item" href="https://login.microsoftonline.com/" target="_blank">E-Mail</a>
-        <a class="dropdown-item" href="https://fatec.onthehub.com/WebStore/Welcome.aspx" target="_blank">Microsoft Imagine</a>
-    </div>          
-</li>
-   
-
-
-
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
 
                <h3 class="major">Produtos & Serviços</h3>
                   <p>
@@ -839,6 +834,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
              jQuery("#loader").fadeOut("slow");
          });
       </script>
+      <script type="text/javascript">
+         $('.dropdown-toggle').dropdown()
+      </script>
+
+
+
+     
       </body>
 </html>
 <!--
