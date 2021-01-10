@@ -1692,50 +1692,17 @@ e 10px de altura para a barra horizontal */
 	overflow: hidden;
   }
   
-  /* Dropdown button */
-  .dropdown .dropbtn {
-	font-size: 16px;
-	border: none;
-	outline: none;
-	color: white;
-	padding: 14px 16px;
-	background-color: inherit;
-	font-family: inherit; /* Important for vertical align on mobile phones */
-	margin: 0; /* Important for vertical align on mobile phones */
-  }
-  
-  /* Add a red background color to navbar links on hover */
-  .navbar a:hover, .dropdown:hover .dropbtn {
-	background-color: red;
-  }
-  
-  /* Dropdown content (hidden by default) */
-  .dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #f9f9f9;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-	float: none;
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-	text-align: left;
-  }
-  
-  /* Add a grey background color to dropdown links on hover */
-  .dropdown-content a:hover {
-	background-color: #ddd;
-  }
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-	display: block;
-  }
-  
+ 
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    transform: translate3d(5px, 28px, 0px); /* distancia entre menu e btn */
+    top: 0px;
+    left: 0px;
+    will-change: transform;
+}
+.dropdown {
+    display: inline-block; /* deixa o LO do "tamanho do próprio texto" e não da largura inteira da tela*/
+    list-style: none; /* rita a "bolinha" do LI*/
+}
