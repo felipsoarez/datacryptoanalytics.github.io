@@ -144,7 +144,7 @@ ul {
     right: 0;
     width: 100%;
     height: 100%;
-    background: #262626;
+    background: #292F33;
     animation: titles 0.4s cubic-bezier(0.25, 0.61, 1, 0.47) forwards;
     transform: translateY(100%);
     animation-delay: .1s;
@@ -162,7 +162,7 @@ ul {
 /*navbar*/
 .navbar {
     margin: 27px 0;
-    background: #262626;
+    background: #292F33;
     color: #fff;
     padding: 8px 40px;
     transition: all .5s ease;
@@ -188,7 +188,7 @@ ul {
     left: 0;
     right: 0;
     z-index: 999;
-    background: #262626;
+    background: #292F33;
     margin-top: 0;
     box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
     transition: all .5s ease;
@@ -514,7 +514,7 @@ ul {
 }
 /*blog*/
 .blog .content {
-    background: #262626;
+    background: #292F33;
     border-radius: 8px;
 }
 .blog .content:hover img {
