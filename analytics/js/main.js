@@ -4,7 +4,7 @@ $(function() {
 
     $('.fakeLoader').fakeLoader({
 
-        timeToHide: 5200, //Time in milliseconds for fakeLoader disappear
+        timeToHide: 7200, //Time in milliseconds for fakeLoader disappear
 
         zIndex: "9999",//Default zIndex
 
