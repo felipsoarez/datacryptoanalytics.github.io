@@ -296,11 +296,10 @@
                <a href="https://www.investopedia.com/terms/s/sma.asp" target="_blank">Média Móvel Simples (SMA)</a> é um método para identificar a direção das tendências para um determinado período de tempo, observando a média de todos os valores dentro dessa janela de tempo. O número de preços em uma janela de tempo é selecionado experimentalmente. Por exemplo, vamos supor que os preços de fechamento dos últimos 5 dias foram 13, 15, 14, 16, 17, o SMA seria (13 + 15 + 14 + 16 + 17) / 5 = 15. Assim, a <i>entrada</i> para nosso conjunto de dados de treinamento é o conjunto de preços em uma única janela de tempo e <i> rótulo </i> é a média móvel calculada desses preços.
              </p>
      
-             <span class="card-title">Try It</span>
      
              <div class="row" id="div_container_getsmafirst">
                <div class="col s12">
-                 <p>But first, <a href="#div_data">fetch stocks data</a> from the previous step.</p>
+                 <p>Mas primeiro, <a href="#div_data">buscar dados</a> da etapa anterior.</p>
                </div>
              </div>
      
@@ -308,18 +307,18 @@
                <div class="col s12">
                  <p>
                    <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
-                   Let's generate the training dataset, hit on the <i>Compute SMA and Draw Chart</i> button to generate the training data for the neural network.
+                   Vamos gerar o conjunto de dados de treinamento, <i>Calcular SMA e desenhar gráfico</i> botão para gerar os dados de treinamento para a rede neural.
                  </p>
                </div>
                <div class="col s6">
                  <div class="input-field col s12">
-                   <label for="input_windowsize">Window Size</label>
+                   <label for="input_windowsize">Tamanho da janela</label>
                    <input type="number" id="input_windowsize" placeholder="a number" value="20">
-                   <small class="form-text text-muted">This is the "time window" for SMA</small>
+                   <small class="form-text text-muted">Esta é a "janela de tempo" para SMA</small>
                  </div>
                </div>
                <div class="col s12">
-                 <button class="waves-effect waves-light btn" id="btn_draw_sma" onclick="onClickDisplaySMA()">Compute SMA and Draw Chart</button>
+                 <button class="waves-effect waves-light btn" id="btn_draw_sma" onclick="onClickDisplaySMA()">Calcular SMA e desenhar gráfico</button>
                  <div class="spinner-border" id="load_draw_sma" style="display:none"></div>
                </div>
              </div>
@@ -338,7 +337,7 @@
                <div class="col s12">
                  <div class="card z-depth-2">
                    <div class="card-content">
-                     <span class="card-title grey-text text-darken-4">Training Data (top 25 rows)</span>
+                     <span class="card-title grey-text text-darken-4">Dados de treinamento (25 linhas principais)</span>
                      <div style="overflow-x: scroll;" id="div_trainingdata">
                    </div>
                  </div>
@@ -352,34 +351,33 @@
      
          <div class="container" id="div_train">
            <div class="card-content">
-             <span class="card-title">Train Neural Network</span>
+             <span class="card-title">Treinar Rede Neural</span>
              <p>
                <!-- [purpose of this step, fun for the reader] -->
-               Now that you have the training data, it is time to create a model for time series prediction, to achieve this we will use <a href="https://js.tensorflow.org/" target="_blank">TensorFlow.js</a> framework.
+               Agora que você tem os dados de treinamento, é hora de criar um modelo para previsão de série temporal. Para isso, usaremos <a href="https://js.tensorflow.org/" target="_blank">TensorFlow.js</a> framework.
              </p>
              <p>
-               <a href="https://js.tensorflow.org/api/latest/#sequential" target="_blank">Sequential model</a> is selected which simply connects each layer and pass the data from input to the output during the training process. In order for the model to learn time series data which are sequential, <a href="https://js.tensorflow.org/api/latest/#layers.rnn" target="_blank">recurrent neural network (RNN) layer</a> layer is created and a number of <a href="https://js.tensorflow.org/api/latest/#layers.lstmCell" target="_blank">LSTM cells</a> are added to the RNN.
+               <a href="https://js.tensorflow.org/api/latest/#sequential" target="_blank">Modelo sequencial</a> é selecionado, o que simplesmente conecta cada camada e passa os dados da entrada para a saída durante o processo de treinamento. Para que o modelo aprenda dados de série temporal que são sequenciais, <a href="https://js.tensorflow.org/api/latest/#layers.rnn" target="_blank">camada de rede neural recorrente (RNN)</a> camada é criada e uma série de <a href="https://js.tensorflow.org/api/latest/#layers.lstmCell" target="_blank">LSTM cells</a> são adicionados ao RNN.
              </p>
              <p>
-               The model will be trained using <a href="https://js.tensorflow.org/api/latest/#train.adam" target="_blank">Adam</a> (<a href="https://arxiv.org/abs/1412.6980" target="_blank">read more</a>), a popular optimisation algorithm for machine learning. <a href="https://js.tensorflow.org/api/latest/#losses.meanSquaredError" target="_blank">Root-means-squared error</a> which determine the difference between predicted values and the actual values, so model is able to learn by minimising the error during the training process.
+               O modelo será treinado usando <a href="https://js.tensorflow.org/api/latest/#train.adam" target="_blank">Adam</a> (<a href="https://arxiv.org/abs/1412.6980" target="_blank">consulte Mais informação</a>), um algoritmo de otimização popular para aprendizado de máquina. <a href="https://js.tensorflow.org/api/latest/#losses.meanSquaredError" target="_blank">Erro de raiz quadrada média</a> que determinam a diferença entre os valores previstos e os valores reais, de forma que o modelo seja capaz de aprender, minimizando o erro durante o processo de treinamento.
              </p>
              <p>
                <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
-               These are the hyperparameters (parameters used in the training process) available for tweaking:
-               <li>Training Dataset Size (%): the amount of data used for training, and remaining data will be used for prediction</li>
-               <li>Epochs: number of times the dataset is used to train the model (<a href="https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/" target="_blank">learn more</a>)</li>
-               <li>Learning Rate: amount of change in the weights during training in each step (<a href="https://machinelearningmastery.com/learning-rate-for-deep-learning-neural-networks/" target="_blank">learn more</a>)</li>
-               <li>Hidden LSTM Layers: to increase the model complexity to learn in higher dimensional space (<a href="https://machinelearningmastery.com/how-to-configure-the-number-of-layers-and-nodes-in-a-neural-network/" target="_blank">learn more</a>)</li>
+               Estes são os hiperparâmetros (parâmetros usados no processo de treinamento) disponíveis para ajustes:
+               <li>Tamanho do conjunto de dados de treinamento (%): a quantidade de dados usados para o treinamento e os dados restantes serão usados para a previsão</li>
+               <li>Epochs: número de vezes que o conjunto de dados é usado para treinar o modelo(<a href="https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/" target="_blank">learn more</a>)</li>
+               <li>Learning Rate: quantidade de mudança nos pesos durante o treinamento em cada etapa (<a href="https://machinelearningmastery.com/learning-rate-for-deep-learning-neural-networks/" target="_blank">learn more</a>)</li>
+               <li>Hidden LSTM Layers:para aumentar a complexidade do modelo para aprender no espaço dimensional superior (<a href="https://machinelearningmastery.com/how-to-configure-the-number-of-layers-and-nodes-in-a-neural-network/" target="_blank">learn more</a>)</li>
              </p>
      
-             <span class="card-title">Try It</span>
              <p>
                <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
-               You may tweak the hyperparameters and then hit the <i>Begin Training Model</i> button to train the model.
+               Você pode ajustar os hiperparâmetros e clicar no botão <i> Iniciar modelo de treinamento </i> para treinar o modelo.
              </p>
              <div class="row" id="div_container_trainfirst">
                <div class="col s12">
-                 <p>Need training data? Explore the previous section to <a href="#div_sma">prepare training data</a>.</p>
+                 <p>Precisa de dados de treinamento? Explore a seção anterior para <a href="#div_sma">preparar dados de treinamento</a>.</p>
                </div>
              </div>
      
@@ -388,7 +386,7 @@
                  <div class="col s12">
                    <p>
                      <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
-                     You may tweak the hyperparameters and then hit the <i>Begin Training Model</i> button to train the model.
+                     Você pode ajustar os hiperparâmetros e, em seguida, acertar o <i>Begin Training Model</i> button to train the model.
                    </p>
                  </div>
                  <div class="col s6">
