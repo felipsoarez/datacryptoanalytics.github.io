@@ -22,7 +22,6 @@
            });
          });
       </script>
-      <script src="//web.webformscr.com/apps/fc3/build/loader.js" sp-form-id="58ea5c69e4016506dbf18e73eba19607840f6ec1d297132add50a2afefaa1ac4"></script>
 
       <script language=javascript type="text/javascript">
          dayName = new Array ("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado")
@@ -291,7 +290,7 @@
              <span class="card-title">Média Móvel Simples</span>
              <p>
                <!-- [purpose of this step, fun for the reader] -->
-               Para este experimento, estamos usando <a href="https://en.wikipedia.org/wiki/Supervised_learning" target="_blank">supervised learning</a>, which means feeding data to the neural network and it learns by mapping input data to the output label. One way to prepare the training dataset is to extract Simple Moving Average from that time series data.
+               Para este experimento, estamos usando <a href="https://en.wikipedia.org/wiki/Supervised_learning" target="_blank">aprendizagem supervisionada</a>, o que significa alimentar dados para a rede neural e aprende mapeando os dados de entrada para o rótulo de saída. Uma maneira de preparar o conjunto de dados de treinamento é extrair a média móvel simples dos dados da série temporal.
              </p>
              <p>
                <a href="https://www.investopedia.com/terms/s/sma.asp" target="_blank">Simple Moving Average (SMA)</a> is a method to identify trends direction for a certain period of time, by looking at the average of all the values within that time window. The number of prices in a time window is selected experimentally. For example, let's assume the closing prices for past 5 days were 13, 15, 14, 16, 17, the SMA would be (13+15+14+16+17)/5 = 15. So the <i>input</i> for our training dataset is the set of prices within a single time window, and <i>label</i> is the computed moving average of those prices.
