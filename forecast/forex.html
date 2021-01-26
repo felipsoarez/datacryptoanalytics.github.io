@@ -186,8 +186,8 @@
              </p>
              <p>
                <!-- [how to use this experiment, outline] -->
-               Existem 4 partes para este experimento:
-               <li>Obter dados históricos de preços</li>
+               A análise é feita em 4 etapas:
+               <li>Obter dados históricos dos preços</li>
                <li>Preparar dados de treinamento para nosso modelo de rede neural</li>
                <li>Treinar a rede neural</li>
                <li>Fazer alguma previsão</li>
@@ -203,10 +203,10 @@
      
          <div class="container" id="div_data">
            <div class="card-content">
-             <span class="card-title">Adquirir dados</span>
+             <span class="card-title"><b>Adquirir dados</b></span>
              <p>
                <!-- [purpose of this step, fun for the reader] -->
-               Antes de podermos treinar a rede neural e fazer previsões, primeiro precisaremos de dados. O tipo de dados que procuramos são séries temporais: uma sequência de números em ordem cronológica. Um bom lugar para buscar esses dados é o <a href="https://www.alphavantage.co" target="_blank">Alpha Vantage Stock API</a>. Esta API nos permite recuperar dados cronológicos sobre preços de ações de empresas específicas dos últimos 20 anos. Você também pode se referir a <a href="https://medium.com/@patrick.collins_58673/stock-api-landscape-5c6e054ee631" target="_blank">este artigo</a>. isso explica os preços ajustados, que é um conceito técnico importante para trabalhar com dados históricos de mercado.
+               Antes de podermos treinar a rede neural e fazer previsões, primeiro precisaremos de dados. O tipo de dados que procuramos são séries temporais: uma sequência de números em ordem cronológica. Um bom lugar para buscar esses dados é o <a href="https://www.alphavantage.co" target="_blank">Alpha Vantage Stock API</a>. Esta API nos permite recuperar dados cronológicos sobre preços de ações de empresas específicas, criptomoedas e Forex dos últimos 20 anos. Você também pode se referir a <a href="https://medium.com/@patrick.collins_58673/stock-api-landscape-5c6e054ee631" target="_blank">este artigo</a>. isso explica os preços ajustados, que é um conceito técnico importante para trabalhar com dados históricos de mercado.
              </p>
              <p>
                Você pode escolher <a href="https://www.alphavantage.co/documentation/#dailyadj" target="_blank">ajustado diariamente</a> or <a href="https://www.alphavantage.co/documentation/#weeklyadj" target="_blank">ajustado semanalmente</a>, valores de abertura/alta/baixa/fechamento/volume, valores de fechamento ajustados diariamente e eventos históricos de divisão / dividendo do patrimônio global especificado, cobrindo mais de 20 anos de dados históricos. Como sugerido por <a href="https://github.com/jinglescode/time-series-forecasting-tensorflowjs/issues/4" target="_blank">desduvauchelle</a> , usar o preço de fechamento ajustado é mais robusto para o desdobramento em comparação com o uso do preço de fechamento.
