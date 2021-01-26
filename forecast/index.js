@@ -61,7 +61,7 @@ function onClickFetchData(){
 
         data_raw.reverse();
 
-        message = "Symbol: " + symbol + " (last refreshed " + last_refreshed + ")";
+        message = "Símbolo: " + symbol + " (última atualização " + last_refreshed + ")";
 
         $("#btn_fetch_data").show();
         $("#load_fetch_data").hide();
