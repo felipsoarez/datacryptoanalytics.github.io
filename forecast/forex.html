@@ -169,7 +169,7 @@
 
 
       <!-- Começa  script prediction -->
-      <div class="container">
+      <div class="blog segments">
          <div class="container">
            <div class="card-content">
              <h1 class="title">Previsão de série temporal com TensorFlow.js</h1>
@@ -187,11 +187,11 @@
              </p>
              <p>
                <!-- [how to use this experiment, outline] -->
-               There are 4 parts to this experiment:
-               <li>get historical stocks prices data</li>
-               <li>prepare training data for our neural network model</li>
-               <li>training the neural network</li>
-               <li>do some prediction</li>
+               Existem 4 partes para este experimento:
+               <li>obter dados históricos de preços</li>
+               <li>preparar dados de treinamento para nosso modelo de rede neural</li>
+               <li>treinar a rede neural</li>
+               <li>fazer alguma previsão</li>
              </p>
              <!-- <button class="waves-effect waves-light btn" type="button" onclick="demo()" id="btn_load_demo">
                Load Snapshot Demo
@@ -204,25 +204,25 @@
      
          <div class="container" id="div_data">
            <div class="card-content">
-             <span class="card-title">Get  Data</span>
+             <span class="card-title">Adquirir dados</span>
              <p>
                <!-- [purpose of this step, fun for the reader] -->
-               Before we can train the neural network and make any predictions, we will first require data. The type of data we are looking for is time series: a sequence of numbers in chronological order. A good place to fetch these data is the <a href="https://www.alphavantage.co" target="_blank">Alpha Vantage Stock API</a>. This API allows us to retrieve chronological data on specific company stocks prices from the last 20 years. You may also refer to <a href="https://medium.com/@patrick.collins_58673/stock-api-landscape-5c6e054ee631" target="_blank">this article</a>. that explains adjusted stock prices, which is an important technical concept for working with historical market data.
+               Antes de podermos treinar a rede neural e fazer previsões, primeiro precisaremos de dados. O tipo de dados que procuramos são séries temporais: uma sequência de números em ordem cronológica. Um bom lugar para buscar esses dados é o <a href="https://www.alphavantage.co" target="_blank">Alpha Vantage Stock API</a>. Esta API nos permite recuperar dados cronológicos sobre preços de ações de empresas específicas dos últimos 20 anos. Você também pode se referir a <a href="https://medium.com/@patrick.collins_58673/stock-api-landscape-5c6e054ee631" target="_blank">este artigo</a>. isso explica os preços ajustados, que é um conceito técnico importante para trabalhar com dados históricos de mercado.
              </p>
              <p>
-               You can either pick <a href="https://www.alphavantage.co/documentation/#dailyadj" target="_blank">daily adjusted</a> or <a href="https://www.alphavantage.co/documentation/#weeklyadj" target="_blank">weekly adjusted</a>, open/high/low/close/volume values, daily adjusted close values, and historical split/dividend events of the global equity specified, covering 20+ years of historical data. As suggested by <a href="https://github.com/jinglescode/time-series-forecasting-tensorflowjs/issues/4" target="_blank">desduvauchelle</a> , using adjusted close price is more robust to stock split compared to using closing price.
+               Você pode escolher <a href="https://www.alphavantage.co/documentation/#dailyadj" target="_blank">ajustado diariamente</a> or <a href="https://www.alphavantage.co/documentation/#weeklyadj" target="_blank">ajustado semanalmente</a>, valores de abertura/alta/baixa/fechamento/volume, valores de fechamento ajustados diariamente e eventos históricos de divisão / dividendo do patrimônio global especificado, cobrindo mais de 20 anos de dados históricos. Como sugerido por <a href="https://github.com/jinglescode/time-series-forecasting-tensorflowjs/issues/4" target="_blank">desduvauchelle</a> , usar o preço de fechamento ajustado é mais robusto para o desdobramento em comparação com o uso do preço de fechamento.
              </p>
              <p>
-               The API yields the following fields:
-               <li>open price</li>
-               <li>highest price of that day</li>
-               <li>lowest price of that day</li>
-               <li>closing price</li>
-               <li>adjusted close price (this is used in this project)</li>
-               <li>volume</li>
+               A API produz os seguintes campos:
+               <li>Preço de abertura</li>
+               <li>Preço mais alto daquele dia</li>
+               <li>Preço mais baixo daquele dia</li>
+               <li>Preço de fechamento</li>
+               <li>Preço de fechamento ajustado (isso é usado neste projeto)</li>
+               <li>Volume</li>
              </p>
              <p>
-               To prepare training dataset for our neural network, we will be using adjusted close stocks price; which also means that we will be aiming to predict future closing price.
+               Para preparar o conjunto de dados de treinamento para nossa rede neural, usaremos o preço de ações de fechamento ajustado; o que também significa que teremos como objetivo prever o preço de fechamento futuro.
              </p>
      
              <span class="card-title">Try It</span>
