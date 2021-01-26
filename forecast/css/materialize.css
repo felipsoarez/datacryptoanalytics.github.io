@@ -1904,10 +1904,6 @@ table span.badge {
 }
 
 
-a {
-  text-decoration: none;
-}
-
 
 @media only screen and (min-width: 992px) {
   html {
@@ -1921,66 +1917,6 @@ a {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
-  line-height: 1.3;
-}
-
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  font-weight: inherit;
-}
-
-h1 {
-  font-size: 4.2rem;
-  line-height: 110%;
-  margin: 2.8rem 0 1.68rem 0;
-}
-
-h2 {
-  font-size: 3.56rem;
-  line-height: 110%;
-  margin: 2.3733333333rem 0 1.424rem 0;
-}
-
-h3 {
-  font-size: 2.92rem;
-  line-height: 110%;
-  margin: 1.9466666667rem 0 1.168rem 0;
-}
-
-h4 {
-  font-size: 2.28rem;
-  line-height: 110%;
-  margin: 1.52rem 0 0.912rem 0;
-}
-
-h5 {
-  font-size: 1.64rem;
-  line-height: 110%;
-  margin: 1.0933333333rem 0 0.656rem 0;
-}
-
-h6 {
-  font-size: 1.15rem;
-  line-height: 110%;
-  margin: 0.7666666667rem 0 0.46rem 0;
-}
-
-em {
-  font-style: italic;
-}
-
-strong {
-  font-weight: 500;
-}
-
-small {
-  font-size: 75%;
-}
-
-.light {
-  font-weight: 300;
-}
 
 .thin {
   font-weight: 200;
