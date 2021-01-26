@@ -410,7 +410,7 @@ video.responsive-video {
 }
 
 .breadcrumb {
-  font-size: 14px;
+  font-size: 12px;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -419,7 +419,7 @@ video.responsive-video {
 .breadcrumb i.material-icons {
   display: inline-block;
   float: left;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .breadcrumb:before {
@@ -430,7 +430,7 @@ video.responsive-video {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 14px;
+  font-size: 12px;
   margin: 0 10px 0 8px;
   -webkit-font-smoothing: antialiased;
 }
