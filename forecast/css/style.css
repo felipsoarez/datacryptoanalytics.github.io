@@ -900,3 +900,17 @@ e 10px de altura para a barra horizontal */
 	background-color: #000;
 	color: #fff
 }
+
+
+.btn, .btn-large, .btn-small,
+.btn-flat {
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}
