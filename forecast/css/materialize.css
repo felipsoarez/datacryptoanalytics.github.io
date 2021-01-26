@@ -3390,7 +3390,7 @@ span.badge[data-badge-caption]::after {
   content: " " attr(data-badge-caption);
 }
 
-nav ul a span.badge {
+ul a span.badge {
   display: inline-block;
   float: none;
   margin-left: 4px;
@@ -4266,13 +4266,6 @@ table span.badge {
   }
 }
 
-nav {
-  color: #fff;
-  background-color: #ee6e73;
-  width: 100%;
-  height: 56px;
-  line-height: 56px;
-}
 
 nav.nav-extended {
   height: auto;
