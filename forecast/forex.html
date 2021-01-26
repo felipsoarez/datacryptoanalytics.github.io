@@ -386,12 +386,12 @@
                  <div class="col s12">
                    <p>
                      <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
-                     Você pode ajustar os hiperparâmetros e, em seguida, acertar o <i>Begin Training Model</i> button to train the model.
+                     Você pode ajustar os hiperparâmetros e, em seguida, acertar o <i>Comece o modelo de treinamento</i> botão para treinar o modelo.
                    </p>
                  </div>
                  <div class="col s6">
                    <div class="input-field col s12">
-                     <label for="input_trainingsize">Training Dataset Size (%)</label>
+                     <label for="input_trainingsize">Tamanho do conjunto de dados de treinamento (%)</label>
                      <input type="number" id="input_trainingsize" placeholder="a number between (1-99)" value="98">
                    </div>
                  </div>
@@ -414,11 +414,11 @@
                    <div class="input-field col s12">
                      <label for="input_hiddenlayers">Hidden LSTM Layers</label>
                      <input type="number" id="input_hiddenlayers" placeholder="a number'" value="4">
-                     <small class="form-text text-muted">Number of LSTM layers</small>
+                     <small class="form-text text-muted">Número de camadas LSTM</small>
                    </div>
                  </div>
                  <div class="col s12">
-                   <button class="waves-effect waves-light btn" id="btn_draw_trainmodel" onclick="onClickTrainModel()">Begin Training Model</button>
+                   <button class="waves-effect waves-light btn" id="btn_draw_trainmodel" onclick="onClickTrainModel()">Comece o modelo de treinamento</button>
                  </div>
                </div>
              </div>
@@ -427,9 +427,9 @@
                <div class="col s12">
                  <div class="card z-depth-2">
                    <div class="card-content">
-                     <span class="card-title grey-text text-darken-4">Training Model</span>
-                     <p>For MSFT, we are expecting a loss of less than 0.1. If it doesn't go below 1.0 by Epoch #5, I would suggest you to refresh the page and try again. Note that, this browser must be active for the training to progress.</p>
-                     <h6>Progress</h6>
+                     <span class="card-title grey-text text-darken-4">Modelo de treinamento</span>
+                     <p>Observe que este navegador deve estar ativo para que o treinamento prossiga.</p>
+                     <h6>Progressos</h6>
                      <!-- <div class="progress">
                        <div class="progress-bar progress-bar-striped progress-bar-animated" id="div_training_progressbar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
                      </div> -->
@@ -453,18 +453,17 @@
      
          <div class="container">
            <div class="card-content">
-             <span class="card-title">Validation</span>
+             <span class="card-title">Validação</span>
              <p>
                <!-- [purpose of this step, fun for the reader] -->
-               Now that you have trained your model, it is time to use the model.predict function from TFJS to predicting future values. We have split the data into 2 sets, a subset of the data is training and the rest is the validation set. The training set has been used for training the model, thus will be using the validation set to validate the model. Since the model has not seen the data in the validation set before, it will be good if the model is able to predict values that are close to the exact values.
+               Agora que você treinou seu modelo, é hora de usar a função model.predict do TFJS para prever valores futuros. Dividimos os dados em 2 conjuntos, um subconjunto dos dados é o treinamento e o resto é o conjunto de validação. O conjunto de treinamento foi usado para treinar o modelo, portanto, usaremos o conjunto de validação para validar o modelo. Como o modelo não viu os dados no conjunto de validação antes, será bom se o modelo for capaz de prever valores que estão próximos dos valores exatos.
              </p>
-             <span class="card-title">Try It</span>
-             <p>So let us use the remaining data for prediction which allow us to see how closely our predicted values are compared to the actual values.</p>
-             <p>But if the model did not predict values that map closely to its true values, check the training loss graph. Generally, this model should converge with the loss to be less than 1. You can increase the number of epochs, or tweak the other learning hyperparameters.</p>
+             <p>Portanto, vamos usar os dados restantes para previsão, o que nos permite ver o quão próximo nossos valores previstos são comparados aos valores reais.</p>
+             <p>Mas se o modelo não previu valores que mapeiam próximos aos seus valores reais, verifique o gráfico de perda de treinamento. Geralmente, este modelo deve convergir com a perda para ser menor que 1. Você pode aumentar o número de épocas ou ajustar os outros hiperparâmetros de aprendizagem.</p>
      
              <div class="row" id="div_container_validatefirst">
                <div class="col s12">
-                 <p>Don’t have a model to perform prediction? <a href="#div_train">Train your model</a>.</p>
+                 <p>Não tem um modelo para realizar a previsão? <a href="#div_train">Treine seu modelo</a>.</p>
                </div>
              </div>
      
@@ -472,11 +471,11 @@
                <div class="col s12">
                  <p>
                    <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
-                   Hit the <i>Validate Model</i> button to see how this model performs. Whohoo!
+                   Clique no botão <i> Validar modelo </in> para ver o desempenho deste modelo. Uau!
                  </p>
                </div>
                <div class="col s6">
-                 <button class="waves-effect waves-light btn" id="btn_validation" onclick="onClickValidate()">Validate Model</button>
+                 <button class="waves-effect waves-light btn" id="btn_validation" onclick="onClickValidate()">Validar Modelo</button>
                  <div class="spinner-border" id="load_validating" style="display:none"></div>
                </div>
              </div>
@@ -484,7 +483,7 @@
                <div class="col s12">
                  <div class="card z-depth-2">
                    <div class="card-content">
-                     <span class="card-title grey-text text-darken-4" id="div_predict_title">Compare True values to Predicted values</span>
+                     <span class="card-title grey-text text-darken-4" id="div_predict_title">Compare os valores reais com os valores previstos</span>
                      <div id="div_validation_graph"></div>
                    </div>
                  </div>
@@ -497,27 +496,26 @@
      
          <div class="container">
            <div class="card-content">
-             <span class="card-title">Make Prediction</span>
+             <span class="card-title">Fazer previsão</span>
              <p>
                <!-- [purpose of this step, fun for the reader] -->
-               Finally, the model has been validated and the predicted values map closely to its true values, we shall use it to predict the future. We will apply the same model.predict function and use the last {{input_windowsize}} data points as the input, because that is our window size. This means that, if our training data is increment daily, we will use the past {{input_windowsize}} days as input, to predict the next day.
+               Finalmente, o modelo foi validado e os valores previstos mapeiam de forma próxima aos seus verdadeiros valores, devemos usá-lo para prever o futuro. Aplicaremos a mesma função model.predict e usaremos os últimos pontos de dados {{input_windowsize}} como entrada, porque esse é o tamanho da nossa janela. Isso significa que, se nossos dados de treinamento forem incrementados diariamente, usaremos os últimos {{input_windowsize}} dias como entrada, para prever o dia seguinte.
              </p>
      
-             <span class="card-title">Try It</span>
              <div class="row" id="div_container_predictfirst">
                <div class="col s12">
-                 <p>Don’t have a model to perform prediction? <a href="#div_train">Train your model</a>.</p>
+                 <p>Não tem um modelo para realizar a previsão? <a href="#div_train">Treinar seu modelo</a>.</p>
                </div>
              </div>
              <div class="row" id="div_container_predict" style="display:none">
                <div class="col s12">
                  <p>
                    <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
-                   Hit the <i>Validate Model</i> button to see how this model performs. Whohoo!
+                   Clique no botão <i> Validar Modelo </i> para ver o desempenho deste modelo. Whohoo!
                  </p>
                </div>
                <div class="col s6">
-                 <button class="waves-effect waves-light btn" id="btn_prediction" onclick="onClickPredict()">Make Prediction</button>
+                 <button class="waves-effect waves-light btn" id="btn_prediction" onclick="onClickPredict()">Fazer previsão</button>
                  <div class="spinner-border" id="load_predicting" style="display:none"></div>
                </div>
              </div>
@@ -525,7 +523,7 @@
                <div class="col s12">
                  <div class="card z-depth-2">
                    <div class="card-content">
-                     <span class="card-title grey-text text-darken-4" id="div_predict_title">Predicted</span>
+                     <span class="card-title grey-text text-darken-4" id="div_predict_title">Previsto</span>
                      <div id="div_prediction_graph"></div>
                    </div>
                  </div>
@@ -539,19 +537,19 @@
      
          <div class="container">
            <div class="card-content">
-             <span class="card-title">Conclusion</span>
+             <span class="card-title">Conclusão</span>
              <p>
-               Why isn’t my Model Performing?<br/>
-               The model has never seen similar data in the past. In March 2020, where the market dipped and recovered within a month or two, this has never happened in history. The model is likely to fail to predict drastic changes in stock prices during those periods.<br/>
-               We can add more features. In a general sense, more features tend to make the model perform better. We can include trading indicators such as Moving average convergence divergence (MACD), Relative strength index (RSI), or Bollinger bands.<br/>
-               Add even more features. One amazing thing that <a href="https://www.alphavantage.co/documentation/#fundamentals" target="_blank">Alpha Vantage API</a> provides is Fundamental Data. This means that you can also include annual and quarterly income statements and cash flows for the company of interest. Who knows, those features might be useful.<br/>
-               There could have many other reasons why the model fails to learn and predict. This is the challenge of machine learning; it is both an art and science to build good performing models.
+               Por que meu modelo não está funcionando?<br/>
+               O modelo nunca viu dados semelhantes no passado. Em março de 2020, quando o mercado despencou e se recuperou em um ou dois meses, isso nunca aconteceu na história. É provável que o modelo não consiga prever mudanças drásticas nos preços das ações durante esses períodos. <br/>
+               Podemos adicionar mais recursos. Em um sentido geral, mais recursos tendem a fazer o modelo funcionar melhor. Podemos incluir indicadores de negociação, como divergência de convergência da média móvel (MACD), índice de força relativa (RSI) ou bandas de Bollinger. <br/>
+               Adicione ainda mais recursos. Uma coisa incrível que a <a href="https://www.alphavantage.co/documentation/#fundamentals" target="_blank"> API Alpha Vantage </a> fornece são os dados fundamentais. Isso significa que você também pode incluir demonstrações de resultados anuais e trimestrais e fluxos de caixa para a empresa de interesse. Quem sabe esses recursos podem ser úteis. <br/>
+               Pode haver muitos outros motivos pelos quais o modelo falha em aprender e prever. Esse é o desafio do aprendizado de máquina; é uma arte e ciência construir modelos de bom desempenho.
              </p>
      
              <p>
-               There are many ways to do time series prediction other than using a simple moving average. Possible future work is to implement this with more data from various sources.<br/>
-               With TensorFlow.js, machine learning on a web browser is possible, and it is actually pretty cool.<br/>
-               Explore the demo on Github, this experiment is 100% educational and by no means a trading prediction tool.
+               Existem muitas maneiras de fazer previsões de séries temporais além de usar uma média móvel simples. Possível trabalho futuro é implementar isso com mais dados de várias fontes. <br/>
+                Com o TensorFlow.js, o aprendizado de máquina em um navegador da Web é possível e, na verdade, muito legal. <br/>
+                Explore a demonstração no Github, esta experiência é 100% educacional e de forma alguma uma ferramenta de previsão de negociação.
              </p>
            </div>
          </div>
