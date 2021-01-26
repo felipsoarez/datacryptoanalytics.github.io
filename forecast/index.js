@@ -108,7 +108,7 @@ function onClickDisplaySMA(){
   Plotly.newPlot( graph_plot, [{ x: timestamps_a, y: prices, name: "Stock Price" }], { margin: { t: 0 } } );
   Plotly.plot( graph_plot, [{ x: timestamps_b, y: sma, name: "SMA" }], { margin: { t: 0 } } );
 
-  $("#div_linegraph_sma_title").text("Stock Price and Simple Moving Average (window: " + window_size + ")" );
+  $("#div_linegraph_sma_title").text("Preço fechamento e média móvel simples (window: " + window_size + ")" );
   $("#btn_draw_sma").show();
   $("#load_draw_sma").hide();
 
