@@ -230,16 +230,16 @@
              <div class="row" id="div_container_getdata">
                <div class="col m4">
                  <div class="input-field col s12">
-                   <label for="input_ticker">Ticker Symbol</label>
+                   <label for="input_ticker">Símbolo</label>
                    <input type="text" id="input_ticker" placeholder="example: MSFT" value="USDJPY">
-                   <small class="form-text text-muted">Demo API key only allows 'MSFT'</small>
+                   <small class="form-text text-muted">Símbolo Forex</small>
                  </div>
                </div>
                <div class="col m4">
                  <div class="input-field col s12">
                    <label for="input_apikey">Alpha Vantage API Key</label>
                    <input type="text" id="input_apikey" placeholder="Input your API key or use 'demo'" value="XLRRSVFGQJLI7S4W">
-                   <small class="form-text text-muted">You can claim your API key from <a href="https://www.alphavantage.co/support/#api-key" target="_blank">alphavantage.co</a></small>
+                   <small class="form-text text-muted">Você pode reivindicar sua chave de API de <a href="https://www.alphavantage.co/support/#api-key" target="_blank">alphavantage.co</a></small>
                  </div>
                </div>
                <div class="col m4">
@@ -248,11 +248,11 @@
                      <option value="Weekly" onchange="onClickChangeDataFreq('Weekly')" selected>Weekly</option>
                      <option value="Daily" onchange="onClickChangeDataFreq('Daily')">Daily</option>
                    </select>
-                   <label>Data Temporal Resolutions</label>
+                   <label>Resoluções temporais de dados</label>
                  </div>
                </div>
                <div class="col s12">
-                 <button class="waves-effect waves-light btn" id="btn_fetch_data" onclick="onClickFetchData()">Fetch Data</button>
+                 <button class="waves-effect waves-light btn" id="btn_fetch_data" onclick="onClickFetchData()">Obter dados</button>
                  <div class="preloader-wrapper small active" id="load_fetch_data" style="display:none">
                    <div class="spinner-layer spinner-green-only">
                      <div class="circle-clipper left">
@@ -272,7 +272,7 @@
                <div class="col s12">
                  <div class="card z-depth-2">
                    <div class="card-content">
-                     <span class="card-title">Loaded Stocks Data</span>
+                     <span class="card-title">Dados carregados</span>
                      <span class="card-title grey-text text-darken-4" id="div_linegraph_data_title">Card Title<</span>
                      <div>
                        <div id="div_linegraph_data" style="width:100%; height:350px;"></div>
@@ -288,10 +288,10 @@
      
          <div class="container" id="div_sma">
            <div class="card-content">
-             <span class="card-title">Simple Moving Average</span>
+             <span class="card-title">Média Móvel Simples</span>
              <p>
                <!-- [purpose of this step, fun for the reader] -->
-               For this experiment, we are using <a href="https://en.wikipedia.org/wiki/Supervised_learning" target="_blank">supervised learning</a>, which means feeding data to the neural network and it learns by mapping input data to the output label. One way to prepare the training dataset is to extract Simple Moving Average from that time series data.
+               Para este experimento, estamos usando <a href="https://en.wikipedia.org/wiki/Supervised_learning" target="_blank">supervised learning</a>, which means feeding data to the neural network and it learns by mapping input data to the output label. One way to prepare the training dataset is to extract Simple Moving Average from that time series data.
              </p>
              <p>
                <a href="https://www.investopedia.com/terms/s/sma.asp" target="_blank">Simple Moving Average (SMA)</a> is a method to identify trends direction for a certain period of time, by looking at the average of all the values within that time window. The number of prices in a time window is selected experimentally. For example, let's assume the closing prices for past 5 days were 13, 15, 14, 16, 17, the SMA would be (13+15+14+16+17)/5 = 15. So the <i>input</i> for our training dataset is the set of prices within a single time window, and <i>label</i> is the computed moving average of those prices.
