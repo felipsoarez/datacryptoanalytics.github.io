@@ -6002,7 +6002,7 @@ body.keyboard-focused .dropdown-content li:focus {
 .chips .input {
   background: none;
   border: 0;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 238, 238, 0.6);
   display: inline-block;
   font-size: 16px;
   height: 3rem;
