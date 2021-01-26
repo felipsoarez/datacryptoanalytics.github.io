@@ -914,3 +914,16 @@ e 10px de altura para a barra horizontal */
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
 }
+
+.input-field.col .dropdown-content [type="checkbox"] + label {
+	top: 1px;
+	left: 0;
+	height: 18px;
+	-webkit-transform: none;
+			transform: none;
+  }
+  
+  .dropdown-trigger {
+	cursor: pointer;
+  }
+  
