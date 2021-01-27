@@ -3011,9 +3011,7 @@ input[type="button"].btn-block {
   opacity: 0;
 }
 
-.collapse:not(.show) {
-  display: none;
-}
+
 
 .collapsing {
   position: relative;
