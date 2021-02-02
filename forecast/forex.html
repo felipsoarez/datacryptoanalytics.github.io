@@ -22,6 +22,7 @@
            });
          });
       </script>
+      <script src="//web.webformscr.com/apps/fc3/build/loader.js" sp-form-id="58ea5c69e4016506dbf18e73eba19607840f6ec1d297132add50a2afefaa1ac4"></script>
 
       <script language=javascript type="text/javascript">
          dayName = new Array ("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado")
@@ -38,28 +39,24 @@
              
              
       </script>
-
-
-
-
-<!-- TrustBox script -->
+      <!-- TrustBox script -->
       <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
       <!-- End TrustBox script -->
       <link rel="icon" href="images/favicon.png">
       <title>Forecasting - DataCrypto Analytics</title>
-      <meta name="description" content="Extraia os preços de uma API online e realize previsões usando Rede Neural Recorrente e Memória de Longo Prazo (LSTM) com estrutura TensorFlow.js">
+      <meta name="description" content="Extraia os preços de uma API online e realize previsões usando Rede Neural Recorrente e Memória de Longo Prazo (LSTM) com estrutura TensorFlow.js.">
       <link rel="canonical" href="https://datacryptoanalytics.com/analytics/forex">
       <meta name="referrer" content="no-referrer-when-downgrade">
       <meta property="og:site_name" content="DataCrypto Analytics">
       <meta property="og:type" content="article">
       <meta property="og:title" content="Machine Learning - DataCrypto Analytics">
-      <meta property="og:description" content="Extraia os preços de uma API online e realize previsões usando Rede Neural Recorrente e Memória de Longo Prazo (LSTM) com estrutura TensorFlow.js">
+      <meta property="og:description" content="Extraia os preços de uma API online e realize previsões usando Rede Neural Recorrente e Memória de Longo Prazo (LSTM) com estrutura TensorFlow.js.">
       <meta property="og:url" content="https://datacryptoanalytics.com/analytics/forex">
       <meta property="og:image" content="https://datacryptoanalytics.com/capadatacryptoanalytics.png"
       <meta property="article:publisher" content="https://fb.me/datacryptopy">
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:title" content="Machine Learning - DataCrypto Analytics">
-      <meta name="twitter:description" content="Extraia os preços de uma API online e realize previsões usando Rede Neural Recorrente e Memória de Longo Prazo (LSTM) com estrutura TensorFlow.js">
+      <meta name="twitter:description" content="Extraia os preços de uma API online e realize previsões usando Rede Neural Recorrente e Memória de Longo Prazo (LSTM) com estrutura TensorFlow.js.">
       <meta name="twitter:url" content="https://datacryptoanalytics.com/analytics/forex">
       <meta name="twitter:image" content="https://datacryptoanalytics.com/capadatacryptoanalytics.png">
       <meta name="twitter:label1" content="Written by">
@@ -72,18 +69,14 @@
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900&amp;display=swap" rel="stylesheet">
       <script src="//tag.goadopt.io/injector.js?website_code=542c64aa-4d09-4d9b-b440-b2f826a2ce09" class="adopt-injector"></script>
       <!-- end font -->
-      
       <link rel="stylesheet" href="css/materialize.css" type="text/css">
-
       <link rel="stylesheet" href="css/bootstrap.css">
-      
       <link rel="stylesheet" href="css/font-awesome.css">
       <link rel="stylesheet" href="css/fakeLoader.css">
       <link rel="stylesheet" href="css/owl.carousel.css">
       <link rel="stylesheet" href="css/owl.theme.default.css">
       <link rel="stylesheet" href="css/magnific-popup.css">
-      
-      <link rel="stylesheet" href="css/style.css" >
+      <link rel="stylesheet" href="css/style.css">
    </head>
    <body>
       <!-- loader -->
@@ -152,405 +145,407 @@
             </button>
          </div>
       </div>
+
+
       <div class="container">
-         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="https://datacryptoanalytics.com/">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="https://datacryptoanalytics.com/analytics/">Forecast</a></li>
-            <li class="breadcrumb-item active">Forex</li>
-         </ol>
-      </div>
-      <div class="container">
-         <div id="real-clock" class="fa fa-clock"> Desative o bloqueador de anúncios para ativar a hora.</div>
-         <script language=javascript type="text/javascript">
-            document.write ("<h6>   " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName [now.getMonth() ]   +  " de "  +     now.getFullYear () + ". </h6>")
-         </script>
-      </div>
-     
+        <ol class="breadcrumb">
+           <li class="breadcrumb-item"><a href="https://datacryptoanalytics.com/">Inicio</a></li>
+           <li class="breadcrumb-item"><a href="https://datacryptoanalytics.com/analytics/">Forecast</a></li>
+           <li class="breadcrumb-item active">Forex</li>
+        </ol>
+     </div>
+     <div class="container">
+        <div id="real-clock" class="fa fa-clock"> Desative o bloqueador de anúncios para ativar a hora.</div>
+        <script language=javascript type="text/javascript">
+           document.write ("<h6>   " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName [now.getMonth() ]   +  " de "  +     now.getFullYear () + ". </h6>")
+        </script>
+     </div>
+    
 
 
 
-      <!-- Começa  script prediction -->
-      <div class="home-intro segments">
-         <div class="container">
-           <div class="card-content">
-             <p>
-               <!-- [write about the purpose for this experiment] -->
-               Redes neurais artificiais podem revelar tendências do mercado financeiro e demonstrar a capacidade da previsão de séries temporais de prever os preços futuros dos ativos financeiros com base em dados históricos anteriores.
-             </p>
-             <p>
-               <!-- [disclaimer] -->
-               <b>Aviso Legal</b>: <i>As informações nestas páginas contêm declarações prospectivas que envolvem riscos e incertezas. Os mercados e instrumentos perfilados nesta página são apenas para fins informativos e não devem, de forma alguma, ser visto como uma recomendação de compra ou venda desses ativos. Você deve fazer sua própria pesquisa completa antes de tomar qualquer decisão de investimento. DataCrypto Analytics não garante de forma alguma que esta informação esteja livre de erros ou distorções materiais. Também não garante que essas informações sejam oportunas. Investir em mercados abertos envolve muitos riscos, incluindo a perda total ou parcial de seu investimento, bem como estresse emocional. Todos os riscos, perdas e custos associados ao investimento, incluindo a perda total do principal, são de sua responsabilidade.</i>
-             </p>
-             <p>
-               <!-- [how to use this experiment, outline] -->
-               A análise é feita em 4 etapas:
-               <li>Obter dados históricos dos preços;</li>
-               <li>Preparar dados de treinamento para nosso modelo de rede neural;</li>
-               <li>Treinar a rede neural;</li>
-               <li>Fazer alguma previsão.</li>
-             </p>
-             <!-- <button class="waves-effect waves-light btn" type="button" onclick="demo()" id="btn_load_demo">
-               Load Snapshot Demo
-             </button>
-             <div id="div_demo_loaded" style="display:none">
-               Demo loaded, scroll down to explore.
-             </div> -->
-           </div>
-         </div>
-     
-         <div class="container" id="div_data">
-           <div class="card-content">
-             <span class="card-title"><b>Adquirir dados</b></span>
-             <p>
-               <!-- [purpose of this step, fun for the reader] -->
-               Antes de podermos treinar a rede neural e fazer previsões, primeiro precisaremos de dados. O tipo de dados que procuramos são séries temporais: uma sequência de números em ordem cronológica. Um bom lugar para buscar esses dados é o <a href="https://www.alphavantage.co" target="_blank">Alpha Vantage Stock API</a>. Esta API nos permite recuperar dados cronológicos sobre preços de ações de empresas específicas, criptomoedas e Forex dos últimos 20 anos. Você também pode se referir a <a href="https://medium.com/@patrick.collins_58673/stock-api-landscape-5c6e054ee631" target="_blank">este artigo</a>. isso explica os preços ajustados, que é um conceito técnico importante para trabalhar com dados históricos de mercado.
-             </p>
-             <p>
-               Você pode escolher <a href="https://www.alphavantage.co/documentation/#dailyadj" target="_blank">ajustado diariamente</a> ou <a href="https://www.alphavantage.co/documentation/#weeklyadj" target="_blank">ajustado semanalmente</a>, valores de abertura/alta/baixa/fechamento/volume, valores de fechamento ajustados diariamente, cobrindo mais de 20 anos de dados históricos. Como sugerido por <a href="https://github.com/jinglescode/time-series-forecasting-tensorflowjs/issues/4" target="_blank">desduvauchelle</a> , usar o preço de fechamento ajustado é mais robusto para o desdobramento em comparação com o uso do preço de fechamento.
-             </p>
-             <p>
-               A API produz os seguintes campos:
-               <li>Preço de abertura</li>
-               <li>Preço mais alto daquele dia</li>
-               <li>Preço mais baixo daquele dia</li>
-               <li>Preço de fechamento</li>
-               <li>Preço de fechamento ajustado (isso é usado neste projeto)</li>
-               <li>Volume</li>
-             </p>
-             <p>
-               Para preparar o conjunto de dados de treinamento para nossa rede neural, usaremos o preço de ações de fechamento ajustado; o que também significa que teremos como objetivo prever o preço de fechamento futuro.
-             </p>
-     
-     
-     
-             <div class="row" id="div_container_getdata">
-               <div class="col m4">
-                 <div class="input-field col s12">
-                   <label for="input_ticker">Símbolo</label>
-                   <input type="text" id="input_ticker" placeholder="example: MSFT" value="USDJPY">
-                   <small class="form-text text-muted">Símbolo Forex</small>
-                 </div>
-               </div>
-               <div class="col m4">
-                 <div class="input-field col s12">
-                   <label for="input_apikey">Alpha Vantage API Key</label>
-                   <input type="text" id="input_apikey" placeholder="Input your API key or use 'demo'" value="XLRRSVFGQJLI7S4W">
-                   <small class="form-text text-muted">Você pode reivindicar sua chave de API de <a href="https://www.alphavantage.co/support/#api-key" target="_blank">alphavantage.co</a></small>
-                 </div>
-               </div>
-               <div class="col m4">
-                 <div class="input-field col s12">
-                   <select onchange="onClickChangeDataFreq(this)">
-                     <option value="Weekly" onchange="onClickChangeDataFreq('Weekly')" selected>Weekly</option>
-                     <option value="Daily" onchange="onClickChangeDataFreq('Daily')">Daily</option>
-                   </select>
-                   <label>Resoluções temporais de dados</label>
-                 </div>
-               </div>
-               <div class="col s12">
-                 <button class="waves-effect waves-light btn" id="btn_fetch_data" onclick="onClickFetchData()">Obter dados</button>
-                 <div class="preloader-wrapper small active" id="load_fetch_data" style="display:none">
-                   <div class="spinner-layer spinner-green-only">
-                     <div class="circle-clipper left">
-                       <div class="circle"></div>
-                     </div><div class="gap-patch">
-                       <div class="circle"></div>
-                     </div><div class="circle-clipper right">
-                       <div class="circle"></div>
-                     </div>
-                   </div>
-                 </div>
-     
-               </div>
-             </div>
-     
-             <div class="container" id="div_container_linegraph" style="display:none">
-               <div class="col s12">
-                 <div class="card z-depth-2">
-                   <div class="card-content">
-                     <span class="card-title">Dados carregados</span>
-                     <span class="card-title grey-text text-darken-4" id="div_linegraph_data_title">Card Title<</span>
-                     <div>
-                       <div id="div_linegraph_data" style="width:100%; height:350px;"></div>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-     
-           </div>
-         </div>
-         <!-- E Get Stocks Data -->
-     
-         <div class="container" id="div_sma">
-           <div class="card-content">
-             <span class="card-title"><b>Média Móvel Simples</b></span>
-             <p>
-               <!-- [purpose of this step, fun for the reader] -->
-               Para este experimento, estamos usando <a href="https://en.wikipedia.org/wiki/Supervised_learning" target="_blank">aprendizagem supervisionada</a>, o que significa alimentar dados para a rede neural e aprende mapeando os dados de entrada para o rótulo de saída. Uma maneira de preparar o conjunto de dados de treinamento é extrair a média móvel simples dos dados da série temporal.
-             </p>
-             <p>
-               <a href="https://www.investopedia.com/terms/s/sma.asp" target="_blank">Média Móvel Simples (SMA)</a> é um método para identificar a direção das tendências para um determinado período de tempo, observando a média de todos os valores dentro dessa janela de tempo. O número de preços em uma janela de tempo é selecionado experimentalmente. Por exemplo, vamos supor que os preços de fechamento dos últimos 5 dias foram 13, 15, 14, 16, 17, o SMA seria (13 + 15 + 14 + 16 + 17) / 5 = 15. Assim, a <i>entrada</i> para nosso conjunto de dados de treinamento é o conjunto de preços em uma única janela de tempo e <i> rótulo </i> é a média móvel calculada desses preços.
-             </p>
-     
-     
-             <div class="row" id="div_container_getsmafirst">
-               <div class="col s12">
-                 <p>Mas primeiro, <a href="#div_data">buscar dados</a> da etapa anterior.</p>
-               </div>
-             </div>
-     
-             <div class="row" id="div_container_getsma" style="display:none">
-               <div class="col s12">
-                 <p>
-                   <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
-                   Vamos gerar o conjunto de dados de treinamento, <i>Calcular SMA e desenhar gráfico</i> botão para gerar os dados de treinamento para a rede neural.
-                 </p>
-               </div>
-               <div class="col s6">
-                 <div class="input-field col s12">
-                   <label for="input_windowsize">Tamanho da janela</label>
-                   <input type="number" id="input_windowsize" placeholder="a number" value="20">
-                   <small class="form-text text-muted">Esta é a "janela de tempo" para SMA</small>
-                 </div>
-               </div>
-               <div class="col s12">
-                 <button class="waves-effect waves-light btn" id="btn_draw_sma" onclick="onClickDisplaySMA()">Calcular SMA e desenhar gráfico</button>
-                 <div class="spinner-border" id="load_draw_sma" style="display:none"></div>
-               </div>
-             </div>
-     
-             <div class="row" id="div_container_sma" style="display:none">
-               <div class="col s12">
-                 <div class="card z-depth-2">
-                   <div class="card-content">
-                     <span class="card-title grey-text text-darken-4" id="div_linegraph_sma_title"></span>
-                       <div id="div_linegraph_sma" style="width:100%; height:350px;"></div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <div class="container" id="div_container_trainingdata" style="display:none">
-               <div class="col s12">
-                 <div class="card z-depth-2">
-                   <div class="card-content">
-                     <span class="card-title grey-text text-darken-4">Dados de treinamento (25 linhas principais)</span>
-                     <div style="overflow-x: scroll;" id="div_trainingdata">
-                   </div>
-                 </div>
-                 </div>
-               </div>
-             </div>
-     
-           </div>
-         </div>
-         <!-- E Simple Moving Average -->
-     
-         <div class="container" id="div_train">
-           <div class="card-content">
-             <span class="card-title"><b>Treinar Rede Neural</b></span>
-             <p>
-               <!-- [purpose of this step, fun for the reader] -->
-               Agora que você tem os dados de treinamento, é hora de criar um modelo para previsão de série temporal. Para isso, usaremos <a href="https://js.tensorflow.org/" target="_blank">TensorFlow.js</a> framework.
-             </p>
-             <p>
-               <a href="https://js.tensorflow.org/api/latest/#sequential" target="_blank">Modelo sequencial</a> é selecionado, o que simplesmente conecta cada camada e passa os dados da entrada para a saída durante o processo de treinamento. Para que o modelo aprenda dados de série temporal que são sequenciais, <a href="https://js.tensorflow.org/api/latest/#layers.rnn" target="_blank">camada de rede neural recorrente (RNN)</a> camada é criada e uma série de <a href="https://js.tensorflow.org/api/latest/#layers.lstmCell" target="_blank">LSTM cells</a> são adicionados ao RNN.
-             </p>
-             <p>
-               O modelo será treinado usando <a href="https://js.tensorflow.org/api/latest/#train.adam" target="_blank">Adam</a> (<a href="https://arxiv.org/abs/1412.6980" target="_blank">consulte Mais informação</a>), um algoritmo de otimização popular para aprendizado de máquina. <a href="https://js.tensorflow.org/api/latest/#losses.meanSquaredError" target="_blank">Erro de raiz quadrada média</a> que determinam a diferença entre os valores previstos e os valores reais, de forma que o modelo seja capaz de aprender, minimizando o erro durante o processo de treinamento.
-             </p>
-             <p>
-               <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
-               Estes são os hiperparâmetros (parâmetros usados no processo de treinamento) disponíveis para ajustes:
-               <li>Tamanho do conjunto de dados de treinamento (%): a quantidade de dados usados para o treinamento e os dados restantes serão usados para a previsão</li>
-               <li>Epochs: número de vezes que o conjunto de dados é usado para treinar o modelo(<a href="https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/" target="_blank">Saber mais</a>)</li>
-               <li>Learning Rate: quantidade de mudança nos pesos durante o treinamento em cada etapa (<a href="https://machinelearningmastery.com/learning-rate-for-deep-learning-neural-networks/" target="_blank">Saber mais</a>)</li>
-               <li>Hidden LSTM Layers:para aumentar a complexidade do modelo para aprender no espaço dimensional superior (<a href="https://machinelearningmastery.com/how-to-configure-the-number-of-layers-and-nodes-in-a-neural-network/" target="_blank">Saber mais</a>)</li>
-             </p>
-     
-             <p>
-               <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
-               Você pode ajustar os hiperparâmetros e clicar no botão <i> Iniciar modelo de treinamento </i> para treinar o modelo.
-             </p>
-             <div class="row" id="div_container_trainfirst">
-               <div class="col s12">
-                 <p>Precisa de dados de treinamento? Explore a seção anterior para <a href="#div_sma">preparar dados de treinamento</a>.</p>
-               </div>
-             </div>
-     
-             <div id="div_container_train" style="display:none">
-               <div class="row">
-                 <div class="col s12">
-                   <p>
-                     <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
-                     Você pode ajustar os hiperparâmetros e, em seguida, acertar o <i>Comece o modelo de treinamento</i> botão para treinar o modelo.
-                   </p>
-                 </div>
-                 <div class="col s6">
-                   <div class="input-field col s12">
-                     <label for="input_trainingsize">Tamanho do conjunto de dados de treinamento (%)</label>
-                     <input type="number" id="input_trainingsize" placeholder="a number between (1-99)" value="98">
-                   </div>
-                 </div>
-                 <div class="col s6">
-                   <div class="input-field col s12">
-                     <label for="input_epochs">Epochs</label>
-                     <input type="number" id="input_epochs" placeholder="a number" value="25">
-                   </div>
-                 </div>
-               </div>
-               <div class="row">
-                 <div class="col s6">
-                   <div class="input-field col s12">
-                     <label for="input_learningrate">Learning Rate</label>
-                     <input type="number" id="input_learningrate" placeholder="a decimal" value="0.01">
-                     <small class="form-text text-muted">Normalmente variam entre 0.01 e 0.1</small>
-                   </div>
-                 </div>
-                 <div class="col s6">
-                   <div class="input-field col s12">
-                     <label for="input_hiddenlayers">Hidden LSTM Layers</label>
-                     <input type="number" id="input_hiddenlayers" placeholder="a number'" value="4">
-                     <small class="form-text text-muted">Número de camadas LSTM</small>
-                   </div>
-                 </div>
-                 <div class="col s12">
-                   <button class="waves-effect waves-light btn" id="btn_draw_trainmodel" onclick="onClickTrainModel()">Comece o modelo de treinamento</button>
-                 </div>
-               </div>
-             </div>
-     
-             <div class="row" id="div_container_training" style="display:none">
-               <div class="col s12">
-                 <div class="card z-depth-2">
-                   <div class="card-content">
-                     <span class="card-title grey-text text-darken-4">Modelo de treinamento</span>
-                     <p>Observe que este navegador deve estar ativo para que o treinamento prossiga.</p>
-                     <h6>Progresso</h6>
-                     <!-- <div class="progress">
-                       <div class="progress-bar progress-bar-striped progress-bar-animated" id="div_training_progressbar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
-                     </div> -->
-                     <div class="progress">
-                       <div class="determinate" id="div_training_progressbar" style="width: 100%"></div>
-                     </div>
-                     <hr/>
-                     <h6>Loss</h6>
-                     <div id="div_linegraph_trainloss" style="width:100%; height:250px;"></div>
-                     <hr/>
-                     <h6>Logs</h6>
-                     <div id="div_traininglog" style="overflow-x: scroll; overflow-y: scroll; height: 250px;"></div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-     
-           </div>
-         </div>
-         <!-- E Train Neural Network -->
-     
-         <div class="container">
-           <div class="card-content">
-             <span class="card-title"><b>Validação</b></span>
-             <p>
-               <!-- [purpose of this step, fun for the reader] -->
-               Agora que você treinou seu modelo, é hora de usar a função model.predict do TFJS para prever valores futuros. Dividimos os dados em 2 conjuntos, um subconjunto dos dados é o treinamento e o resto é o conjunto de validação. O conjunto de treinamento foi usado para treinar o modelo, portanto, usaremos o conjunto de validação para validar o modelo. Como o modelo não viu os dados no conjunto de validação antes, será bom se o modelo for capaz de prever valores que estão próximos dos valores exatos.
-             </p>
-             <p>Portanto, vamos usar os dados restantes para previsão, o que nos permite ver o quão próximo nossos valores previstos são comparados aos valores reais.</p>
-             <p>Mas se o modelo não previu valores que mapeiam próximos aos seus valores reais, verifique o gráfico de perda de treinamento. Geralmente, este modelo deve convergir com a perda para ser menor que 1. Você pode aumentar o número de épocas ou ajustar os outros hiperparâmetros de aprendizagem.</p>
-     
-             <div class="row" id="div_container_validatefirst">
-               <div class="col s12">
-                 <p><i>Não tem um modelo para realizar a previsão? <a href="#div_train">Treine seu modelo</a>.</i>></p>
-               </div>
-             </div>
-     
-             <div class="row" id="div_container_validate" style="display:none">
-               <div class="col s12">
-                 <p>
-                   <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
-                   Clique no botão <i> Validar modelo </i> para ver o desempenho deste modelo. Uau!
-                 </p>
-               </div>
-               <div class="col s6">
-                 <button class="waves-effect waves-light btn" id="btn_validation" onclick="onClickValidate()">Validar Modelo</button>
-                 <div class="spinner-border" id="load_validating" style="display:none"></div>
-               </div>
-             </div>
-             <div class="row" id="div_container_validating" style="display:none">
-               <div class="col s12">
-                 <div class="card z-depth-2">
-                   <div class="card-content">
-                     <span class="card-title grey-text text-darken-4" id="div_predict_title">Compare os valores reais com os valores previstos</span>
-                     <div id="div_validation_graph"></div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-     
-           </div>
-         </div>
-         <!-- E Validation -->
-     
-         <div class="container">
-           <div class="card-content">
-             <span class="card-title"><b>Fazer previsão</b></span>
-             <p>
-               <!-- [purpose of this step, fun for the reader] -->
-               Finalmente, o modelo foi validado e os valores previstos mapeiam de forma próxima aos seus verdadeiros valores, devemos usá-lo para prever o futuro. Aplicaremos a mesma função model.predict e usaremos os últimos pontos de dados {{input_windowsize}} como entrada, porque esse é o tamanho da nossa janela. Isso significa que, se nossos dados de treinamento forem incrementados diariamente, usaremos os últimos {{input_windowsize}} dias como entrada, para prever o dia seguinte.
-             </p>
-     
-             <div class="row" id="div_container_predictfirst">
-               <div class="col s12">
-                 <p><i>Não tem um modelo para realizar a previsão? <a href="#div_train">Treinar seu modelo</a></i>.</p>
-               </div>
-             </div>
-             <div class="row" id="div_container_predict" style="display:none">
-               <div class="col s12">
-                 <p>
-                   <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
-                   Clique no botão <i> Validar Modelo</i> para ver o desempenho deste modelo. Whohoo!
-                 </p>
-               </div>
-               <div class="col s6">
-                 <button class="waves-effect waves-light btn" id="btn_prediction" onclick="onClickPredict()">Fazer previsão</button>
-                 <div class="spinner-border" id="load_predicting" style="display:none"></div>
-               </div>
-             </div>
-             <div class="row" id="div_container_predicting" style="display:none">
-               <div class="col s12">
-                 <div class="card z-depth-2">
-                   <div class="card-content">
-                     <span class="card-title grey-text text-darken-4" id="div_predict_title">Previsto</span>
-                     <div id="div_prediction_graph"></div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-     
-           </div>
-         </div>
-         <!-- E Make Prediction -->
-     
-     
-         <div class="container">
-           <div class="card-content">
-             <span class="card-title"><b>Conclusão</b></span>
-             <p>
-               Por que meu modelo não está funcionando?<br/>
-               O modelo nunca viu dados semelhantes no passado. Em março de 2020, quando o mercado despencou e se recuperou em um ou dois meses, isso nunca aconteceu na história. É provável que o modelo não consiga prever mudanças drásticas nos preços das ações durante esses períodos. <br/>
-               Podemos adicionar mais recursos. Em um sentido geral, mais recursos tendem a fazer o modelo funcionar melhor. Podemos incluir indicadores de negociação, como divergência de convergência da média móvel (MACD), índice de força relativa (RSI) ou bandas de Bollinger. <br/>
-               Adicione ainda mais recursos. Uma coisa incrível que a <a href="https://www.alphavantage.co/documentation/#fundamentals" target="_blank"> API Alpha Vantage </a> fornece são os dados fundamentais. Isso significa que você também pode incluir demonstrações de resultados anuais e trimestrais e fluxos de caixa para a empresa de interesse. Quem sabe esses recursos podem ser úteis. <br/>
-               Pode haver muitos outros motivos pelos quais o modelo falha em aprender e prever. Esse é o desafio do aprendizado de máquina; é uma arte e ciência construir modelos de bom desempenho.
-             </p>
-     
-             <p>
-               Existem muitas maneiras de fazer previsões de séries temporais além de usar uma média móvel simples. Possível trabalho futuro é implementar isso com mais dados de várias fontes. <br/>
-                Com o TensorFlow.js, o aprendizado de máquina em um navegador da Web é possível e, na verdade, muito legal. <br/>
-                Explore a demonstração no Github, esta experiência é 100% educacional e de forma alguma uma ferramenta de previsão de negociação.
-             </p>
-           </div>
-         </div>
-         <!-- E Conclusion -->
+     <!-- Começa  script prediction -->
+     <div class="home-intro segments">
+        <div class="container">
+          <div class="card-content">
+            <p>
+              <!-- [write about the purpose for this experiment] -->
+              Redes neurais artificiais podem revelar tendências do mercado financeiro e demonstrar a capacidade da previsão de séries temporais de prever os preços futuros dos ativos financeiros com base em dados históricos anteriores.
+            </p>
+            <p>
+              <!-- [disclaimer] -->
+              <b>Aviso Legal</b>: <i>As informações nestas páginas contêm declarações prospectivas que envolvem riscos e incertezas. Os mercados e instrumentos perfilados nesta página são apenas para fins informativos e não devem, de forma alguma, ser visto como uma recomendação de compra ou venda desses ativos. Você deve fazer sua própria pesquisa completa antes de tomar qualquer decisão de investimento. DataCrypto Analytics não garante de forma alguma que esta informação esteja livre de erros ou distorções materiais. Também não garante que essas informações sejam oportunas. Investir em mercados abertos envolve muitos riscos, incluindo a perda total ou parcial de seu investimento, bem como estresse emocional. Todos os riscos, perdas e custos associados ao investimento, incluindo a perda total do principal, são de sua responsabilidade.</i>
+            </p>
+            <p>
+              <!-- [how to use this experiment, outline] -->
+              A análise é feita em 4 etapas:
+              <li>Obter dados históricos dos preços;</li>
+              <li>Preparar dados de treinamento para nosso modelo de rede neural;</li>
+              <li>Treinar a rede neural;</li>
+              <li>Fazer alguma previsão.</li>
+            </p>
+            <!-- <button class="waves-effect waves-light btn" type="button" onclick="demo()" id="btn_load_demo">
+              Load Snapshot Demo
+            </button>
+            <div id="div_demo_loaded" style="display:none">
+              Demo loaded, scroll down to explore.
+            </div> -->
+          </div>
+        </div>
+    
+        <div class="container" id="div_data">
+          <div class="card-content">
+            <span class="card-title"><b>Adquirir dados</b></span>
+            <p>
+              <!-- [purpose of this step, fun for the reader] -->
+              Antes de podermos treinar a rede neural e fazer previsões, primeiro precisaremos de dados. O tipo de dados que procuramos são séries temporais: uma sequência de números em ordem cronológica. Um bom lugar para buscar esses dados é o <a href="https://www.alphavantage.co" target="_blank">Alpha Vantage Stock API</a>. Esta API nos permite recuperar dados cronológicos sobre preços de ações de empresas específicas, criptomoedas e Forex dos últimos 20 anos. Você também pode se referir a <a href="https://medium.com/@patrick.collins_58673/stock-api-landscape-5c6e054ee631" target="_blank">este artigo</a>. isso explica os preços ajustados, que é um conceito técnico importante para trabalhar com dados históricos de mercado.
+            </p>
+            <p>
+              Você pode escolher <a href="https://www.alphavantage.co/documentation/#dailyadj" target="_blank">ajustado diariamente</a> ou <a href="https://www.alphavantage.co/documentation/#weeklyadj" target="_blank">ajustado semanalmente</a>, valores de abertura/alta/baixa/fechamento/volume, valores de fechamento ajustados diariamente, cobrindo mais de 20 anos de dados históricos. Como sugerido por <a href="https://github.com/jinglescode/time-series-forecasting-tensorflowjs/issues/4" target="_blank">desduvauchelle</a> , usar o preço de fechamento ajustado é mais robusto para o desdobramento em comparação com o uso do preço de fechamento.
+            </p>
+            <p>
+              A API produz os seguintes campos:
+              <li>Preço de abertura</li>
+              <li>Preço mais alto daquele dia</li>
+              <li>Preço mais baixo daquele dia</li>
+              <li>Preço de fechamento</li>
+              <li>Preço de fechamento ajustado (isso é usado neste projeto)</li>
+              <li>Volume</li>
+            </p>
+            <p>
+              Para preparar o conjunto de dados de treinamento para nossa rede neural, usaremos o preço de ações de fechamento ajustado; o que também significa que teremos como objetivo prever o preço de fechamento futuro.
+            </p>
+    
+    
+    
+            <div class="row" id="div_container_getdata">
+              <div class="col m4">
+                <div class="input-field col s12">
+                  <label for="input_ticker">Símbolo</label>
+                  <input type="text" id="input_ticker" placeholder="example: MSFT" value="USDJPY">
+                  <small class="form-text text-muted">Símbolo Forex</small>
+                </div>
+              </div>
+              <div class="col m4">
+                <div class="input-field col s12">
+                  <label for="input_apikey">Alpha Vantage API Key</label>
+                  <input type="text" id="input_apikey" placeholder="Input your API key or use 'demo'" value="XLRRSVFGQJLI7S4W">
+                  <small class="form-text text-muted">Você pode reivindicar sua chave de API de <a href="https://www.alphavantage.co/support/#api-key" target="_blank">alphavantage.co</a></small>
+                </div>
+              </div>
+              <div class="col m4">
+                <div class="input-field col s12">
+                  <select onchange="onClickChangeDataFreq(this)">
+                    <option value="Weekly" onchange="onClickChangeDataFreq('Weekly')" selected>Weekly</option>
+                    <option value="Daily" onchange="onClickChangeDataFreq('Daily')">Daily</option>
+                  </select>
+                  <label>Resoluções temporais de dados</label>
+                </div>
+              </div>
+              <div class="col s12">
+                <button class="waves-effect waves-light btn" id="btn_fetch_data" onclick="onClickFetchData()">Obter dados</button>
+                <div class="preloader-wrapper small active" id="load_fetch_data" style="display:none">
+                  <div class="spinner-layer spinner-green-only">
+                    <div class="circle-clipper left">
+                      <div class="circle"></div>
+                    </div><div class="gap-patch">
+                      <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                      <div class="circle"></div>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+            </div>
+    
+            <div class="container" id="div_container_linegraph" style="display:none">
+              <div class="col s12">
+                <div class="card z-depth-2">
+                  <div class="card-content">
+                    <span class="card-title">Dados carregados</span>
+                    <span class="card-title grey-text text-darken-4" id="div_linegraph_data_title">Card Title<</span>
+                    <div>
+                      <div id="div_linegraph_data" style="width:100%; height:350px;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+        <!-- E Get Stocks Data -->
+    
+        <div class="container" id="div_sma">
+          <div class="card-content">
+            <span class="card-title"><b>Média Móvel Simples</b></span>
+            <p>
+              <!-- [purpose of this step, fun for the reader] -->
+              Para este experimento, estamos usando <a href="https://en.wikipedia.org/wiki/Supervised_learning" target="_blank">aprendizagem supervisionada</a>, o que significa alimentar dados para a rede neural e aprende mapeando os dados de entrada para o rótulo de saída. Uma maneira de preparar o conjunto de dados de treinamento é extrair a média móvel simples dos dados da série temporal.
+            </p>
+            <p>
+              <a href="https://www.investopedia.com/terms/s/sma.asp" target="_blank">Média Móvel Simples (SMA)</a> é um método para identificar a direção das tendências para um determinado período de tempo, observando a média de todos os valores dentro dessa janela de tempo. O número de preços em uma janela de tempo é selecionado experimentalmente. Por exemplo, vamos supor que os preços de fechamento dos últimos 5 dias foram 13, 15, 14, 16, 17, o SMA seria (13 + 15 + 14 + 16 + 17) / 5 = 15. Assim, a <i>entrada</i> para nosso conjunto de dados de treinamento é o conjunto de preços em uma única janela de tempo e <i> rótulo </i> é a média móvel calculada desses preços.
+            </p>
+    
+    
+            <div class="row" id="div_container_getsmafirst">
+              <div class="col s12">
+                <p>Mas primeiro, <a href="#div_data">buscar dados</a> da etapa anterior.</p>
+              </div>
+            </div>
+    
+            <div class="row" id="div_container_getsma" style="display:none">
+              <div class="col s12">
+                <p>
+                  <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
+                  Vamos gerar o conjunto de dados de treinamento, <i>Calcular SMA e desenhar gráfico</i> botão para gerar os dados de treinamento para a rede neural.
+                </p>
+              </div>
+              <div class="col s6">
+                <div class="input-field col s12">
+                  <label for="input_windowsize">Tamanho da janela</label>
+                  <input type="number" id="input_windowsize" placeholder="a number" value="20">
+                  <small class="form-text text-muted">Esta é a "janela de tempo" para SMA</small>
+                </div>
+              </div>
+              <div class="col s12">
+                <button class="waves-effect waves-light btn" id="btn_draw_sma" onclick="onClickDisplaySMA()">Calcular SMA e desenhar gráfico</button>
+                <div class="spinner-border" id="load_draw_sma" style="display:none"></div>
+              </div>
+            </div>
+    
+            <div class="row" id="div_container_sma" style="display:none">
+              <div class="col s12">
+                <div class="card z-depth-2">
+                  <div class="card-content">
+                    <span class="card-title grey-text text-darken-4" id="div_linegraph_sma_title"></span>
+                      <div id="div_linegraph_sma" style="width:100%; height:350px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container" id="div_container_trainingdata" style="display:none">
+              <div class="col s12">
+                <div class="card z-depth-2">
+                  <div class="card-content">
+                    <span class="card-title grey-text text-darken-4">Dados de treinamento (25 linhas principais)</span>
+                    <div style="overflow-x: scroll;" id="div_trainingdata">
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+        <!-- E Simple Moving Average -->
+    
+        <div class="container" id="div_train">
+          <div class="card-content">
+            <span class="card-title"><b>Treinar Rede Neural</b></span>
+            <p>
+              <!-- [purpose of this step, fun for the reader] -->
+              Agora que você tem os dados de treinamento, é hora de criar um modelo para previsão de série temporal. Para isso, usaremos <a href="https://js.tensorflow.org/" target="_blank">TensorFlow.js</a> framework.
+            </p>
+            <p>
+              <a href="https://js.tensorflow.org/api/latest/#sequential" target="_blank">Modelo sequencial</a> é selecionado, o que simplesmente conecta cada camada e passa os dados da entrada para a saída durante o processo de treinamento. Para que o modelo aprenda dados de série temporal que são sequenciais, <a href="https://js.tensorflow.org/api/latest/#layers.rnn" target="_blank">camada de rede neural recorrente (RNN)</a> camada é criada e uma série de <a href="https://js.tensorflow.org/api/latest/#layers.lstmCell" target="_blank">LSTM cells</a> são adicionados ao RNN.
+            </p>
+            <p>
+              O modelo será treinado usando <a href="https://js.tensorflow.org/api/latest/#train.adam" target="_blank">Adam</a> (<a href="https://arxiv.org/abs/1412.6980" target="_blank">consulte Mais informação</a>), um algoritmo de otimização popular para aprendizado de máquina. <a href="https://js.tensorflow.org/api/latest/#losses.meanSquaredError" target="_blank">Erro de raiz quadrada média</a> que determinam a diferença entre os valores previstos e os valores reais, de forma que o modelo seja capaz de aprender, minimizando o erro durante o processo de treinamento.
+            </p>
+            <p>
+              <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
+              Estes são os hiperparâmetros (parâmetros usados no processo de treinamento) disponíveis para ajustes:
+              <li>Tamanho do conjunto de dados de treinamento (%): a quantidade de dados usados para o treinamento e os dados restantes serão usados para a previsão</li>
+              <li>Epochs: número de vezes que o conjunto de dados é usado para treinar o modelo(<a href="https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/" target="_blank">Saber mais</a>)</li>
+              <li>Learning Rate: quantidade de mudança nos pesos durante o treinamento em cada etapa (<a href="https://machinelearningmastery.com/learning-rate-for-deep-learning-neural-networks/" target="_blank">Saber mais</a>)</li>
+              <li>Hidden LSTM Layers:para aumentar a complexidade do modelo para aprender no espaço dimensional superior (<a href="https://machinelearningmastery.com/how-to-configure-the-number-of-layers-and-nodes-in-a-neural-network/" target="_blank">Saber mais</a>)</li>
+            </p>
+    
+            <p>
+              <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
+              Você pode ajustar os hiperparâmetros e clicar no botão <i> Iniciar modelo de treinamento </i> para treinar o modelo.
+            </p>
+            <div class="row" id="div_container_trainfirst">
+              <div class="col s12">
+                <p>Precisa de dados de treinamento? Explore a seção anterior para <a href="#div_sma">preparar dados de treinamento</a>.</p>
+              </div>
+            </div>
+    
+            <div id="div_container_train" style="display:none">
+              <div class="row">
+                <div class="col s12">
+                  <p>
+                    <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
+                    Você pode ajustar os hiperparâmetros e, em seguida, acertar o <i>Comece o modelo de treinamento</i> botão para treinar o modelo.
+                  </p>
+                </div>
+                <div class="col s6">
+                  <div class="input-field col s12">
+                    <label for="input_trainingsize">Tamanho do conjunto de dados de treinamento (%)</label>
+                    <input type="number" id="input_trainingsize" placeholder="a number between (1-99)" value="98">
+                  </div>
+                </div>
+                <div class="col s6">
+                  <div class="input-field col s12">
+                    <label for="input_epochs">Epochs</label>
+                    <input type="number" id="input_epochs" placeholder="a number" value="25">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s6">
+                  <div class="input-field col s12">
+                    <label for="input_learningrate">Learning Rate</label>
+                    <input type="number" id="input_learningrate" placeholder="a decimal" value="0.01">
+                    <small class="form-text text-muted">Normalmente variam entre 0.01 e 0.1</small>
+                  </div>
+                </div>
+                <div class="col s6">
+                  <div class="input-field col s12">
+                    <label for="input_hiddenlayers">Hidden LSTM Layers</label>
+                    <input type="number" id="input_hiddenlayers" placeholder="a number'" value="4">
+                    <small class="form-text text-muted">Número de camadas LSTM</small>
+                  </div>
+                </div>
+                <div class="col s12">
+                  <button class="waves-effect waves-light btn" id="btn_draw_trainmodel" onclick="onClickTrainModel()">Comece o modelo de treinamento</button>
+                </div>
+              </div>
+            </div>
+    
+            <div class="row" id="div_container_training" style="display:none">
+              <div class="col s12">
+                <div class="card z-depth-2">
+                  <div class="card-content">
+                    <span class="card-title grey-text text-darken-4">Modelo de treinamento</span>
+                    <p>Observe que este navegador deve estar ativo para que o treinamento prossiga.</p>
+                    <h6>Progresso</h6>
+                    <!-- <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated" id="div_training_progressbar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div> -->
+                    <div class="progress">
+                      <div class="determinate" id="div_training_progressbar" style="width: 100%"></div>
+                    </div>
+                    <hr/>
+                    <h6>Loss</h6>
+                    <div id="div_linegraph_trainloss" style="width:100%; height:250px;"></div>
+                    <hr/>
+                    <h6>Logs</h6>
+                    <div id="div_traininglog" style="overflow-x: scroll; overflow-y: scroll; height: 250px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+        <!-- E Train Neural Network -->
+    
+        <div class="container">
+          <div class="card-content">
+            <span class="card-title"><b>Validação</b></span>
+            <p>
+              <!-- [purpose of this step, fun for the reader] -->
+              Agora que você treinou seu modelo, é hora de usar a função model.predict do TFJS para prever valores futuros. Dividimos os dados em 2 conjuntos, um subconjunto dos dados é o treinamento e o resto é o conjunto de validação. O conjunto de treinamento foi usado para treinar o modelo, portanto, usaremos o conjunto de validação para validar o modelo. Como o modelo não viu os dados no conjunto de validação antes, será bom se o modelo for capaz de prever valores que estão próximos dos valores exatos.
+            </p>
+            <p>Portanto, vamos usar os dados restantes para previsão, o que nos permite ver o quão próximo nossos valores previstos são comparados aos valores reais.</p>
+            <p>Mas se o modelo não previu valores que mapeiam próximos aos seus valores reais, verifique o gráfico de perda de treinamento. Geralmente, este modelo deve convergir com a perda para ser menor que 1. Você pode aumentar o número de épocas ou ajustar os outros hiperparâmetros de aprendizagem.</p>
+    
+            <div class="row" id="div_container_validatefirst">
+              <div class="col s12">
+                <p><i>Não tem um modelo para realizar a previsão? <a href="#div_train">Treine seu modelo</a>.</i>></p>
+              </div>
+            </div>
+    
+            <div class="row" id="div_container_validate" style="display:none">
+              <div class="col s12">
+                <p>
+                  <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
+                  Clique no botão <i> Validar modelo </i> para ver o desempenho deste modelo. Uau!
+                </p>
+              </div>
+              <div class="col s6">
+                <button class="waves-effect waves-light btn" id="btn_validation" onclick="onClickValidate()">Validar Modelo</button>
+                <div class="spinner-border" id="load_validating" style="display:none"></div>
+              </div>
+            </div>
+            <div class="row" id="div_container_validating" style="display:none">
+              <div class="col s12">
+                <div class="card z-depth-2">
+                  <div class="card-content">
+                    <span class="card-title grey-text text-darken-4" id="div_predict_title">Compare os valores reais com os valores previstos</span>
+                    <div id="div_validation_graph"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+        <!-- E Validation -->
+    
+        <div class="container">
+          <div class="card-content">
+            <span class="card-title"><b>Fazer previsão</b></span>
+            <p>
+              <!-- [purpose of this step, fun for the reader] -->
+              Finalmente, o modelo foi validado e os valores previstos mapeiam de forma próxima aos seus verdadeiros valores, devemos usá-lo para prever o futuro. Aplicaremos a mesma função model.predict e usaremos os últimos pontos de dados {{input_windowsize}} como entrada, porque esse é o tamanho da nossa janela. Isso significa que, se nossos dados de treinamento forem incrementados diariamente, usaremos os últimos {{input_windowsize}} dias como entrada, para prever o dia seguinte.
+            </p>
+    
+            <div class="row" id="div_container_predictfirst">
+              <div class="col s12">
+                <p><i>Não tem um modelo para realizar a previsão? <a href="#div_train">Treinar seu modelo</a></i>.</p>
+              </div>
+            </div>
+            <div class="row" id="div_container_predict" style="display:none">
+              <div class="col s12">
+                <p>
+                  <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
+                  Clique no botão <i> Validar Modelo</i> para ver o desempenho deste modelo. Whohoo!
+                </p>
+              </div>
+              <div class="col s6">
+                <button class="waves-effect waves-light btn" id="btn_prediction" onclick="onClickPredict()">Fazer previsão</button>
+                <div class="spinner-border" id="load_predicting" style="display:none"></div>
+              </div>
+            </div>
+            <div class="row" id="div_container_predicting" style="display:none">
+              <div class="col s12">
+                <div class="card z-depth-2">
+                  <div class="card-content">
+                    <span class="card-title grey-text text-darken-4" id="div_predict_title">Previsto</span>
+                    <div id="div_prediction_graph"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+        <!-- E Make Prediction -->
+    
+    
+        <div class="container">
+          <div class="card-content">
+            <span class="card-title"><b>Conclusão</b></span>
+            <p>
+              Por que meu modelo não está funcionando?<br/>
+              O modelo nunca viu dados semelhantes no passado. Em março de 2020, quando o mercado despencou e se recuperou em um ou dois meses, isso nunca aconteceu na história. É provável que o modelo não consiga prever mudanças drásticas nos preços das ações durante esses períodos. <br/>
+              Podemos adicionar mais recursos. Em um sentido geral, mais recursos tendem a fazer o modelo funcionar melhor. Podemos incluir indicadores de negociação, como divergência de convergência da média móvel (MACD), índice de força relativa (RSI) ou bandas de Bollinger. <br/>
+              Adicione ainda mais recursos. Uma coisa incrível que a <a href="https://www.alphavantage.co/documentation/#fundamentals" target="_blank"> API Alpha Vantage </a> fornece são os dados fundamentais. Isso significa que você também pode incluir demonstrações de resultados anuais e trimestrais e fluxos de caixa para a empresa de interesse. Quem sabe esses recursos podem ser úteis. <br/>
+              Pode haver muitos outros motivos pelos quais o modelo falha em aprender e prever. Esse é o desafio do aprendizado de máquina; é uma arte e ciência construir modelos de bom desempenho.
+            </p>
+    
+            <p>
+              Existem muitas maneiras de fazer previsões de séries temporais além de usar uma média móvel simples. Possível trabalho futuro é implementar isso com mais dados de várias fontes. <br/>
+               Com o TensorFlow.js, o aprendizado de máquina em um navegador da Web é possível e, na verdade, muito legal. <br/>
+               Explore a demonstração no Github, esta experiência é 100% educacional e de forma alguma uma ferramenta de previsão de negociação.
+            </p>
+          </div>
+        </div>
+        <!-- E Conclusion -->
 
 
 
@@ -644,12 +639,10 @@
             <div class="section-title">
                <h3> Powered by </h3>
             </div>
-               <a href="https://jinglescode.github.io/" target="_blank"> <i class="fab fa-github fa-2x" size="large" ></i> & <img src="images/logo-white-datacrypto.png"  width='97' height="41"></a>
+            <a href="https://jinglescode.github.io/" target="_blank"> <i class="fab fa-github fa-2x" size="large" ></i> & <img src="images/logo-white-datacrypto.png"  width='97' height="41"></a>
          </div>
       </div>
       <!-- end footer -->
-
-   </div> <!-- E container -->
       <!-- footer -->
       <div class="footer segments">
          <div class="container">
@@ -670,22 +663,5 @@
       <script src="js/contact-form.js"></script>
       <script src="js/main.js"></script>
       <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-   
-
-   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-   <script src="https://jinglescode.github.io/assets/js/materialize.min.js" type="text/javascript"></script>
-   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
-   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
- 
-   <script src="./model.js"></script>
-   <script src="./index.js"></script>
- 
-   <script>
-    $(document).ready(function(){
-      $('.tooltipped').tooltip();
-      $('.scrollspy').scrollSpy();
-      $('.sidenav').sidenav();
-    });
-   </script>
    </body>
 </html>
