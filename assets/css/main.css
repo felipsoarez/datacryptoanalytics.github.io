@@ -1685,10 +1685,10 @@ e 10px de altura para a barra horizontal */
 
 /* Style The Dropdown Button */
 .dropbtn {
-	background-color: #212121;
+	background-color: #241506;
 	color: white;
-	padding: 26px;
-	font-size: 16px;
+	padding: 30px;
+	font-size: 10px;
 	border: none;
 	cursor: pointer;
   }
@@ -1705,13 +1705,13 @@ e 10px de altura para a barra horizontal */
 	position: absolute;
 	background-color: #030202;
 	min-width: 360px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 12px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
   }
   
   /* Links inside the dropdown */
   .dropdown-content a {
-	color: black;
+	color: rgb(31, 31, 31);
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
