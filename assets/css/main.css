@@ -1685,10 +1685,10 @@ e 10px de altura para a barra horizontal */
 
 /* Style The Dropdown Button */
 .dropbtn {
-	background-color: #241506;
+	background-color: #181614;
 	color: white;
 	padding: 30px;
-	font-size: 10px;
+	font-size: 13px;
 	border: none;
 	cursor: pointer;
   }
