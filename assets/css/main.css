@@ -1687,7 +1687,7 @@ e 10px de altura para a barra horizontal */
 .dropbtn {
 	background-color: #030202;
 	color: white;
-	padding: 30px 30px;
+	padding: 10px 30px;
 	font-size: 13px;
 	border: none;
 	cursor: pointer;
@@ -1704,7 +1704,7 @@ e 10px de altura para a barra horizontal */
 	display: none;
 	position: relative;
 	background-color: #030202;
-	border-radius: 10px;
+	border-radius: 9px;
 	min-width: 290px;
 	box-shadow: 0px 12px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
