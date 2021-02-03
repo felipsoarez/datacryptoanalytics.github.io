@@ -901,8 +901,8 @@ e 10px de altura para a barra horizontal */
 	color: #fff
 }
 
-@media screen and (max-width: 900px) and (min-width: 550px) {
-	.terminal{
-	display:none;
+@media (max-width: 768px) {
+	.terminal {
+		padding: 30px;
 	}
-	}
+
