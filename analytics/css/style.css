@@ -907,6 +907,7 @@ e 10px de altura para a barra horizontal */
 		left: 10px;
 		bottom: 10px;
 		right: 10px;
+		border-radius: 8px;
 		text-align: center;
 	}
 
