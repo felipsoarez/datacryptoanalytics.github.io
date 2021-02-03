@@ -903,7 +903,7 @@ e 10px de altura para a barra horizontal */
 
 @media (max-width: 768px) {
 	.terminal {
-		position: absolute;
+		position: relative;
 		left: 10px;
 		bottom: 10px;
 		right: 10px;
