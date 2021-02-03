@@ -898,16 +898,6 @@ e 10px de altura para a barra horizontal */
 
 .terminal {
 	background-color: #000;
+	border-radius: 8px;
 	color: #fff
 }
-
-@media (max-width: 768px) {
-	.terminal {
-		position: relative;
-		left: 10px;
-		bottom: 10px;
-		right: 10px;
-		border-radius: 8px;
-		text-align: center;
-	}
-
