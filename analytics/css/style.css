@@ -900,3 +900,9 @@ e 10px de altura para a barra horizontal */
 	background-color: #000;
 	color: #fff
 }
+
+@media screen and (max-width: 900px) and (min-width: 550px) {
+	.terminal{
+	display:none;
+	}
+	}
