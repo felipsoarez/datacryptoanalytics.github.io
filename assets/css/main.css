@@ -532,7 +532,7 @@ input, select, textarea {
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
 			background: #ffffff !important;
-			border-color: #ffffff !important;
+			border-color: #ff8c05 !important;
 			color: #1b1f22;
 			content: '\f00c';
 		}
@@ -540,7 +540,7 @@ input, select, textarea {
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
 			background: rgba(255, 255, 255, 0.075);
-			border-color: #ffffff;
+			border-color: #ff8c05;
 			box-shadow: 0 0 0 1px #ffffff;
 		}
 
