@@ -517,7 +517,7 @@ input, select, textarea {
 				-ms-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 				transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 				border-radius: 8px;
-				border: solid 1px #ffffff;
+				border: solid 1px #ff8c05;
 				content: '';
 				display: inline-block;
 				height: 1.65rem;
