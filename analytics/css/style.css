@@ -916,7 +916,7 @@ e 10px de altura para a barra horizontal */
 	text-align: center;
 	border-radius: 8px;
 	padding: 10px 10px;
-	position: relative;
+	position: absolute;
 	z-index: 1;
 	bottom: 125%;
 	left: 50%;
