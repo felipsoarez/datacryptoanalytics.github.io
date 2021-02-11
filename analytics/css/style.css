@@ -910,6 +910,7 @@ e 10px de altura para a barra horizontal */
   
   .tooltip .tooltiptext {
 	visibility: hidden;
+	width: 300%;
 	background-color: #000;
 	color: #ff8c05;
 	text-align: center;
@@ -932,7 +933,7 @@ e 10px de altura para a barra horizontal */
 	margin-left: -5px;
 	border-width: 5px;
 	border-style: solid;
-	border-color: #555 transparent transparent transparent;
+	border-color: #000 transparent transparent transparent;
   }
   
   .tooltip:hover .tooltiptext {
