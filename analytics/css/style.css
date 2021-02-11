@@ -902,28 +902,41 @@ e 10px de altura para a barra horizontal */
 	color: #fff
 }
 
-/* Tooltip container */
 .tooltip {
 	position: relative;
 	display: inline-block;
-	border-bottom: 2px dotted black; /* If you want dots under the hoverable text */
+	border-bottom: 1px dotted black;
   }
   
-  /* Tooltip text */
   .tooltip .tooltiptext {
 	visibility: hidden;
-	background-color: black;
+	width: 120px;
+	background-color: #555;
 	color: #ff8c05;
 	text-align: center;
+	border-radius: 6px;
 	padding: 5px 0;
-	border-radius: 8px;
-   
-	/* Position the tooltip text - see examples below! */
 	position: absolute;
 	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -60px;
+	opacity: 0;
+	transition: opacity 0.3s;
   }
   
-  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+  }
+  
   .tooltip:hover .tooltiptext {
 	visibility: visible;
+	opacity: 1;
   }
