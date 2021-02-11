@@ -910,7 +910,6 @@ e 10px de altura para a barra horizontal */
   
   .tooltip .tooltiptext {
 	visibility: hidden;
-	width: 120px;
 	background-color: #555;
 	color: #ff8c05;
 	text-align: center;
