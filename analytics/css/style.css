@@ -906,18 +906,17 @@ e 10px de altura para a barra horizontal */
 .tooltip {
 	position: relative;
 	display: inline-block;
-	border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+	border-bottom: 2px dotted black; /* If you want dots under the hoverable text */
   }
   
   /* Tooltip text */
   .tooltip .tooltiptext {
 	visibility: hidden;
-	width: 120px;
 	background-color: black;
-	color: #fff;
+	color: #ff8c05;
 	text-align: center;
 	padding: 5px 0;
-	border-radius: 6px;
+	border-radius: 8px;
    
 	/* Position the tooltip text - see examples below! */
 	position: absolute;
