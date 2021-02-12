@@ -923,6 +923,7 @@ e 10px de altura para a barra horizontal */
 	margin-left: -60px;
 	opacity: 0;
 	transition: opacity 2.3s;
+	text-decoration:none; 
   }
   
   .tooltip .tooltiptext::after {
