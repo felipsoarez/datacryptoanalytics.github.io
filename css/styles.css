@@ -136,9 +136,9 @@ ul {
 
 .button {
 	background: #ff8c05;
-	background: -moz-linear-gradient(-45deg, #ff8c05 0%, #d61a5e 100%);
-	background: -webkit-linear-gradient(-45deg, #ff8c05 0%, #d61a5e 100%);
-	background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 100%);
+	background: -moz-linear-gradient(-45deg, #ff8c05 0%, #920000 100%);
+	background: -webkit-linear-gradient(-45deg, #ff8c05 0%, #920000 100%);
+	background: linear-gradient(135deg, #ff8c05 0%, #920000 100%);
 	color: #fff;
 	border: 0;
 	margin-top: 50px;
