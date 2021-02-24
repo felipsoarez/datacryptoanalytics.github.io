@@ -995,3 +995,9 @@ e 10px de altura para a barra horizontal */
   }
  
 
+  .actions li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 5px;
+	font-size: 1.2em;
+  }
