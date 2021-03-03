@@ -16,14 +16,16 @@ footer
 comment
 ---------*/
 
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Rajdhani&family=Roboto+Condensed:wght@300&display=swap');
+
 
 /*general*/
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Rajdhani', sans-serif;
 	background: #212121;
 	color: #fafafa;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 22px;
 }
 
@@ -35,13 +37,14 @@ h5,
 h6 {
 	line-height: 110%;
 	margin: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Rajdhani', sans-serif;
 	font-weight: 500;
 	color: #fff;
 }
 
 h1 {
 	font-size: 45px;
+	font-family: 'DotGothic16', sans-serif;
 	color: #ff8c05;
 	padding: 0;
 }
@@ -59,7 +62,7 @@ h4 {
 }
 
 h5 {
-	font-size: 16px;
+	font-size: 19px;
 	padding: 8px;
 }
 
@@ -1011,7 +1014,7 @@ e 10px de altura para a barra horizontal */
 	list-style-type: none;
 	padding-right: 5px;
 	padding-top: 25px;
-	font-size: 2.2em;
+	font-size: 28px;
 
   }
 
