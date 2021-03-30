@@ -354,6 +354,41 @@
          </div>
       </div>
       <!-- end noticias -->
+
+          <!-- itez -->
+          <div class="about segments">
+            <div class="container">
+               <div class="section-title">
+                  <h3> FAQ - Perguntas frequentes </h3>
+               </div>
+<button class="accordion">Como funciona?</button>
+<div class="panel">
+  <p>Nossos algoritmos de aprendizado de máquina foram escritos para rodar localmente na sua máquina. É necessário instalar algumas dependências para que funcione corretamente, por exemplo TALib para plotar alguns indicadores, Pandas para criar tabelas, scikit-learn para Regressão Linear, etc. </p>
+</div>
+
+<button class="accordion">Preciso saber programação? </button>
+<div class="panel">
+  <p>Sim, se você não faz parte da nossa Área de Membros e quer usar localmente algum algoritmo é necessario entender o básico de programação em Python e conhecimento em dados.</p>
+</div>
+
+<button class="accordion">O que é a Área de Membros? </button>
+<div class="panel">
+  <p>Percebemos um grande interesse nos algoritmos, mas a maioria não entendia como funcionava ou não conseguiram rodar nossos algoritmos localmente em suas máquinas, então resolvemos criar a Área de Membros, onde toda semana divulgamos resultados dos algoritmos ajudando o Trader na tomada de decisão baseado nos padrões reconhecidos pelos algoritmos, além de alguns cursos e indicadores exclusivos para membros.</p>
+</div>
+
+<button class="accordion">O que é a DataCrypto Analytics? </button>
+<div class="panel">
+  <p> DataCrypto Analytics começou como um projeto Open Source para analisar preços de criptomoedas na Binance com aprendizado de máquina em 2015, com o passar do tempo acabamos desenvolvendo indicadores para TradingView e participar de torneios Data Science para o mercado financeiro, como o da NumerAi.</p>
+</div>
+
+
+
+            </div>
+        </div>
+        <!-- end itez -->
+
+
+
       <!-- resume
          <div id="portfolio" class="portfolio segments">
              <div class="container">
@@ -598,5 +633,21 @@
       <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
       <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
       <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+      <script>
+         var acc = document.getElementsByClassName("accordion");
+         var i;
+         
+         for (i = 0; i < acc.length; i++) {
+           acc[i].addEventListener("click", function() {
+             this.classList.toggle("active");
+             var panel = this.nextElementSibling;
+             if (panel.style.display === "block") {
+               panel.style.display = "none";
+             } else {
+               panel.style.display = "block";
+             }
+           });
+         }
+         </script>
    </body>
 </html>
