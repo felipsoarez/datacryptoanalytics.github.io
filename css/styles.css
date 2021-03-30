@@ -1026,7 +1026,7 @@ e 10px de altura para a barra horizontal */
 	background-color: #292F33;
 	color: #ff8c05;
 	cursor: pointer;
-	padding: 18px;
+	padding: 15px;
 	width: 100%;
 	border: none;
 	text-align: left;
@@ -1034,6 +1034,7 @@ e 10px de altura para a barra horizontal */
 	font-size: 15px;
 	transition: 1.4s;
 	border-radius: 8px;
+	border-width: 15px;
 
   }
   
@@ -1045,10 +1046,17 @@ e 10px de altura para a barra horizontal */
 	display: none;
 	background-color: #1a1a1a00;
 	overflow: hidden;
+	
   }
 
-
-
+  .accordion:after {
+	content: '\002B';
+	color: #ff8c05;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+  }
+  
 
 
 
