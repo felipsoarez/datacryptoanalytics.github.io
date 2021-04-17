@@ -77,7 +77,9 @@ html {
 }
 
 body {
-	margin: 0
+	margin: 0;
+	background: #121212;
+	color: #fafafa;
 }
 
 article,
@@ -311,8 +313,8 @@ th {
 
 body {
 	font-family: Montserrat, Helvetica, Roboto, 'Segoe Ui', sans-serif;
-	color: #3f3f3f;
-	background: #fff;
+	background: #121212;
+	color: #fafafa;
 	font-size: 16px
 }
 
