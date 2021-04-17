@@ -884,7 +884,7 @@ e 10px de altura para a barra horizontal */
 
 ::-webkit-scrollbar {
 	width: 4px;
-	height: 10px;
+	height: 8px;
 }
 
 
@@ -1018,7 +1018,7 @@ e 10px de altura para a barra horizontal */
   }
 
 .videos {
-	border-radius: 8px;
+	border-radius: 10px;
 }
 
 
