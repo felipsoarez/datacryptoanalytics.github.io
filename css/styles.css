@@ -954,7 +954,7 @@ e 10px de altura para a barra horizontal */
 
 /* Style The Dropdown Button */
 .dropbtn {
-	background-color: #1a1a1a00;
+	background-color: #121212;
 	color: white;
 	padding: 10px;
 	font-size: 13px;
@@ -993,7 +993,7 @@ e 10px de altura para a barra horizontal */
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #212121}
+  .dropdown-content a:hover {background-color: #121212}
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
@@ -1003,7 +1003,7 @@ e 10px de altura para a barra horizontal */
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {
-	background-color: #212121;
+	background-color: #121212;
 
   }
  
@@ -1032,7 +1032,7 @@ e 10px de altura para a barra horizontal */
 	text-align: left;
 	outline: none;
 	font-size: 15px;
-	transition: 1.4s;
+	transition: 5.4s;
 	border-radius: 8px;
 	border-width: 15px;
 
