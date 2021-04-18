@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
        <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -136,7 +136,7 @@
         </div>
         <!-- end navbar -->
 <center>
-<a href="https://go.primexbt.com/click?pid=836&offer_id=28" target="_blank"><img src="/images/prime-inicio.png" width='66%' height="4%"></a>
+<a href="https://go.primexbt.com/click?pid=836&offer_id=28" target="_blank"><img src="images/prime-inicio.png" width='66%' height="4%"></a>
 
 </center>
         <!-- home intro -->
@@ -170,490 +170,72 @@
 
 
 
-            <div class="container">
-
-                <div >
-                    <a class="github-button" href="https://github.com/datacrypto-analytics" >Follow @datacrypto-analytics</a>
-                </div>
-
-                <div class="intro-content box-content">
-                    <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
-                    <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
-                    <div id="transactions_by_time"></div>
-                    <script>
-                        (function(){
-                        widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'dark'});
-                        var query = new widgets.query(`
-                                query ($network: BitcoinNetwork!,
-                                      $dateFormat: String!,
-
-                                      $from: ISO8601DateTime,
-                                      $till: ISO8601DateTime){
-                                        bitcoin(network: $network ){
-                                          transactions(options:{asc: "date.date"}, date: {
-                                            since: $from
-                                            till: $till}
-
-                                          ) {
-                                            date: date{
-                                              date(format: $dateFormat)
-                                            }
-                                            count: count
-                                            feeValue
-                                            avgFee: feeValue(calculate: average)
-                                          }
-                                        }
-                                      }`);
-                        var wdts = new widgets.chartByTime('#transactions_by_time', query, 'bitcoin.transactions', {
-                     "title": "Transações ",
-                     "chartOptions": {
-                      "vAxes": {
-                       "0": {
-                        "title": "Contagem de transações"
-                       }
-                      },
-                      "seriesType": "line",
-                      "series": {
-                       "0": {
-                        "color": "#ffffff"
-                       }
-                      }
-                     },
-                     "dataOptions": [
-                      {
-                       "title": {
-                        "label": "Data",
-                        "type": "date"
-                       },
-                       "path": "date.date"
-                      },
-                      {
-                       "title": "Contagem de transações",
-                       "path": "count"
-                      }
-                     ]
-                    });
-                        query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": null, "till": null, "dateFormat": "%Y-%m"});
-                        })()
-                    </script>
-
-                </div>
-            </div>
+                <!-- termos -->
+    <div class="about segments">
+        <div class="container">
+           <div class="section-title">
+              <h1>  </h1>
+           </div>
+     <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+    {
+    "width": "100%",
+    "height": "480",
+    "defaultColumn": "overview",
+    "screener_type": "crypto_mkt",
+    "displayCurrency": "USD",
+    "colorTheme": "dark",
+    "locale": "br",
+    "isTransparent": true
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+  
+  
+        </div>                          
         </div>
-        <!-- end home intro -->
+    </div>
+    <!-- end termos -->
+
+       
 
     </header>
     <!-- end header -->
 
-    <!-- about -->
-    <div class="about segments">
-        <div class="container">
-            <div class="box-content">
-                <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
-                <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
-                <div id="latest_transactions"></div>
-                <script>
-                    (function(){
-                    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'dark'});
-                    var query = new widgets.query(`
-                              query ($network: BitcoinNetwork!,
-                                      $limit: Int!,
-                                      $offset: Int!
-                                      $from: ISO8601DateTime,
-                                      $till: ISO8601DateTime){
-                          bitcoin(network: $network){
-                            transactions(options:{desc: ["block.height","index"], limit: $limit, offset: $offset},
-                              date: {since: $from till: $till }
-                              ) {
-
-                                block {
-                                  timestamp {
-                                    time (format: "%Y-%m-%d %H:%M:%S")
-                                  }
-                                  height
-                                }
-
-
-                                inputValue
-                                outputCount
-                                inputCount
-
-                                index
-
-                                hash
-                                feeValue
-
-                            }
-                          }
-                          }`);
-                    var wdts = new widgets.table('#latest_transactions', query, 'bitcoin.transactions', {
-                 "title": "Latest Transactions",
-                 "dataOptions": [
-                  {
-                   "title": "Timestamp",
-                   "type": "string",
-                   "path": "block.timestamp.time",
-                   "style": "width: 170px;"
-                  },
-                  {
-                   "title": "Bloco",
-                   "type": "string",
-                   "path": "block.height",
-                   "urlCallbackName": "block_path",
-                   "style": "width: 80px;"
-                  },
-                  {
-                   "title": "Index in Bloco",
-                   "path": "index",
-                   "style": "width: 80px;"
-                  },
-                  {
-                   "title": "Hash",
-                   "type": "string-ellipsis",
-                   "path": "hash",
-                   "urlCallbackName": "transaction_path"
-                  },
-                  {
-                   "title": "Entrada",
-                   "path": "inputCount",
-                   "style": "width: 80px;"
-                  },
-                  {
-                   "title": "Saída",
-                   "path": "outputCount",
-                   "style": "width: 80px;"
-                  },
-                  {
-                   "title": "Fee, BTC",
-                   "type": "number",
-                   "path": "feeValue",
-                   "style": "width: 80px;"
-                  },
-                  {
-                   "title": "Input Value, BTC",
-                   "type": "amount",
-                   "path": "inputValue",
-                   "style": "width: 110px;"
-                  }
-                 ]
-                });
-                    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-12-02", "till": null, "dateFormat": "%Y-%m-%d"});
-                    })()
+                <!-- termos -->
+                <div class="about segments">
+                    <div class="container">
+                       <div class="section-title">
+                          <h1> Forex </h1>
+                       </div>
+                           <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+                {
+                "width": "100%",
+                "height": "480",
+                "defaultColumn": "overview",
+                "defaultScreen": "general",
+                "market": "forex",
+                "showToolbar": true,
+                "colorTheme": "dark",
+                "locale": "br",
+                "isTransparent": true
+              }
                 </script>
-
-            </div>
-        </div>
-    </div>
-    <!-- end about -->
-
-
-     <!-- grafico mineradores -->
-     <div class="blog segments">
-        <div class="container">
-            <div class="section-title">
-                <h3> Mineradores </h3>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="content">
-                        <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
-<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
-<div id="miners_by_time"></div>
-<script>
-    (function(){
-    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'dark'});
-    var query = new widgets.query(`
-            query ($network: BitcoinNetwork!,
-              $dateFormat: String!,
-
-              $from: ISO8601DateTime,
-              $till: ISO8601DateTime){
-                bitcoin(network: $network ){
-                  outputs(options:{asc: "date.date"}, date: {
-                    since: $from
-                    till: $till}
-
-                    txIndex: {is: 0}
-                    outputDirection: {is: mining}
-                    outputScriptType: {notIn: [nulldata, nonstandard]}
-
-                  ) {
-                    date: date{
-                      date(format: $dateFormat)
-                    }
-
-                    count(uniq: addresses)
-
-                    value
-
-                  }
-                }
-              }`);
-    var wdts = new widgets.chartByTime('#miners_by_time', query, 'bitcoin.outputs', {
- "title": "Mineradores Ativos",
- "chartOptions": {
-  "vAxes": {
-   "0": {
-    "title": "Mineradores Ativos"
-   }
-  },
-  "seriesType": "bars",
-  "series": {
-   "0": {
-    "color": "#ffffff"
-   }
-  }
- },
- "dataOptions": [
-  {
-   "title": {
-    "label": "Date",
-    "type": "date"
-   },
-   "path": "date.date"
-  },
-  {
-   "title": "Mineradores Ativos",
-   "path": "count"
-  }
- ]
-});
-    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": null, "till": null, "dateFormat": "%Y-%m"});
-    })()
-</script>
-
+              </div>
+              <!-- TradingView Widget END -->
+              
+              
+                    </div>                          
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="content no-mb">
-                        <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
-                        <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
-                        <div id="mined_blocks"></div>
-                        <script>
-                            (function(){
-                            widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'dark'});
-                            var query = new widgets.query(`
-                                    query ($network: BitcoinNetwork!,
-                                      $dateFormat: String!,
-
-                                      $from: ISO8601DateTime,
-                                      $till: ISO8601DateTime){
-                                        bitcoin(network: $network ){
-                                          transactions(options:{asc: "date.date"}, date: {
-                                            since: $from
-                                            till: $till}
-
-
-                                          ) {
-                                            date: date{
-                                              date(format: $dateFormat)
-                                            }
-
-                                            count(uniq: blocks)
-
-                                            minedValue
-
-                                          }
-                                        }
-                                      }`);
-                            var wdts = new widgets.chartByTime('#mined_blocks', query, 'bitcoin.transactions', {
-                         "title": "Blocos Minerados",
-                         "chartOptions": {
-                          "vAxes": {
-                           "0": {
-                            "title": "Contagem de blocos"
-                           }
-                          },
-                          "seriesType": "bars",
-                          "series": {
-                           "0": {
-                            "color": "#ffffff"
-                           }
-                          }
-                         },
-                         "dataOptions": [
-                          {
-                           "title": {
-                            "label": "Date",
-                            "type": "date"
-                           },
-                           "path": "date.date"
-                          },
-                          {
-                           "title": "Contagem de blocos",
-                           "path": "count"
-                          }
-                         ]
-                        });
-                            query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": null, "till": null, "dateFormat": "%Y-%m"});
-                            })()
-                        </script>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- fim grafico mineradores -->
-
-
-
-        <!-- about -->
-        <div class="about segments">
-            <div class="container">
-                <div class="box-content">
-                    <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
-<script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
-<div id="miners-table"></div>
-<script>
-    (function(){
-    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'dark'});
-    var query = new widgets.query(`
-                query ($network: BitcoinNetwork!,
-                        $limit: Int!,
-                        $offset: Int!
-                        $from: ISO8601DateTime,
-                        $till: ISO8601DateTime){
-                  bitcoin(network: $network ){
-                    outputs(options:{desc: "reward", limit: $limit, offset: $offset},
-                      date: { since: $from till: $till}
-
-                      txIndex: {is: 0}
-                      outputDirection: {is: mining}
-                      outputScriptType: {notIn: [nulldata,nonstandard]}
-
-                    ) {
-
-
-                      address: outputAddress{
-                        address
-                        annotation
-                      }
-
-
-                      reward: value
-                      count(uniq: blocks)
-
-                      min_date: minimum(of: date)
-                      max_date: maximum(of: date)
-
-                    }
-                  }
-                }`);
-    var wdts = new widgets.table('#miners-table', query, 'bitcoin.outputs', {
- "title": "Mineradores",
- "dataOptions": [
-  {
-   "title": "Mineradores",
-   "type": "string",
-   "path": [
-    "address.annotation",
-    "address.address"
-   ],
-   "urlCallbackName": "address_path"
-  },
-  {
-   "title": "Contagem de Blocos",
-   "type": "string",
-   "path": "count"
-  },
-  {
-   "title": "Primeiro Bloco",
-   "path": "min_date"
-  },
-  {
-   "title": "Último Bloco",
-   "path": "max_date"
-  },
-  {
-   "title": "Bloco Reward, BTC",
-   "type": "number",
-   "path": "reward"
-  }
- ]
-});
-    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": null, "till": null, "dateFormat": "%Y-%m"});
-    })()
-</script>
-                </div>
-            </div>
-        </div>
-        <!-- end mineradores -->
-
-           <!-- blocos -->
-    <div class="about segments">
-        <div class="container">
-            <div class="section-title">
-                <h3> Últimos Blocos </h3>
-            </div>
-            <div class="box-content">
-                <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/assets/css/widgets.css">
-                <script src="https://cdn.jsdelivr.net/gh/bitquery/widgets@v1.3.8/dist/widgets.js"></script>
-                <div id="latest_blocks"></div>
-                <script>
-                    (function(){
-                    widgets.init('https://graphql.bitquery.io', '', {locale: 'en', theme: 'dark'});
-                    var query = new widgets.query(`
-                                        query ($network: BitcoinNetwork!,
-                                                $limit: Int!,
-                                                $offset: Int!
-                                                $from: ISO8601DateTime,
-                                                $till: ISO8601DateTime){
-                                    bitcoin(network: $network){
-                                      blocks(options:{desc: "height", limit: $limit, offset: $offset},
-                                        date: {since: $from till: $till }
-                                        ) {
-
-
-                                          timestamp {
-                                            time (format: "%Y-%m-%d %H:%M:%S")
-                                          }
-                                          height
-                                          difficulty
-                                          transactionCount
-
-                                          blockSize
-
-                                      }
-                                    }
-                                  }`);
-                    var wdts = new widgets.table('#latest_blocks', query, 'bitcoin.blocks', {
-                 "title": "Últimos Blocos",
-                 "dataOptions": [
-                  {
-                   "title": "Timestamp",
-                   "type": "string",
-                   "path": "timestamp.time"
-                  },
-                  {
-                   "title": "Blocos",
-                   "path": "height",
-                   "urlCallbackName": "block_path"
-                  },
-                  {
-                   "title": "Contagem de transações",
-                   "path": "transactionCount"
-                  },
-                  {
-                   "title": "Tamanho",
-                   "path": "blockSize"
-                  },
-                  {
-                   "title": "Dificuldade",
-                   "path": "difficulty"
-                  }
-                 ]
-                });
-                    query.request({"limit": 10, "offset": 0, "network": "bitcoin", "from": "2020-12-02", "till": null, "dateFormat": "%Y-%m-%d"});
-                    })()
-                </script>
-
-
-            </div>
-        </div>
-    </div>
-    <!-- end about -->
-
+                <!-- end termos -->
+            
 
 
 
