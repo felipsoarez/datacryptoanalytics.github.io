@@ -1,1 +1,1 @@
-importScripts('https://cdn.sendpulse.com/sp-push-worker-fb.js?ver=2.0');
+importScripts('https://web.webpushs.com/sp-push-worker-fb.js?ver=2.0');
