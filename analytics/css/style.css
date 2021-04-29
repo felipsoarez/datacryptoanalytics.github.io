@@ -610,10 +610,12 @@ ul {
 	-moz-transform: scale(1.03);
 	-webkit-transform: scale(1.03);
 	transform: scale(1.03);
+	border-radius: 8px;
 }
 
 .blog .content .image {
 	overflow: hidden;
+	border-radius: 8px;
 }
 
 .blog .content .image img {
