@@ -4,13 +4,11 @@ const urlll = 'https://api.blockchain.info/stats';
 const urll = 'https://blockchain.info/ticker';
 
 
-
 const requisicao = fetch(urll, {
 		mode: 'cors'
 	})
 	.then(Response => {
 		return Response.json();
-		console.log(requisicao)
 	})
 	.then(jsonBody => {
 		const formatado = jsonBody.USD.last.toLocaleString('en-US', {
