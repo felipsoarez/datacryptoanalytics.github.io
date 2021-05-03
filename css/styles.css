@@ -1026,18 +1026,18 @@ e 10px de altura para a barra horizontal */
 	background-color: #292F33;
 	color: #ff8c05;
 	cursor: pointer;
-	padding: 15px;
+	padding: 20px;
 	width: 100%;
 	border: 10px;
 	text-align: center;
 	outline: none;
-	font-size: 15px;
+	font-size: 18px;
 	transition: 2.4s;
 	border-radius: 30px;
 	border-width: 150px;
 	border-color: #ff8c05;
-	-webkit-box-shadow: 1px 1px 6px 1px #000000; 
-	box-shadow: 1px 1px 6px 1px #000000;
+	-webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 10px 0px #000000, 1px 1px 4px 6px rgba(0,0,0,0); 
+	box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 10px 0px #000000, 1px 1px 4px 6px rgba(0,0,0,0);
 
   }
   
