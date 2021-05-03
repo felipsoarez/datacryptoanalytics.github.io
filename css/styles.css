@@ -133,6 +133,8 @@ ul {
 	background: #292F33;
 	padding: 40px;
 	border-radius: 8px;
+	-webkit-box-shadow: 3px 3px 9px 3px #000000; 
+	box-shadow: 3px 3px 9px 3px #000000;
 }
 
 
@@ -216,7 +218,8 @@ ul {
 	z-index: 999;
 	background: #121212;
 	margin-top: 0;
-	box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 5px 5px 15px 5px #000000; 
+	box-shadow: 5px 5px 15px 5px #000000;
 	transition: all .5s ease;
 }
 
@@ -1017,9 +1020,6 @@ e 10px de altura para a barra horizontal */
 
   }
 
-.videos {
-	border-radius: 10px;
-}
 
 
 .accordion {
@@ -1036,6 +1036,8 @@ e 10px de altura para a barra horizontal */
 	border-radius: 30px;
 	border-width: 150px;
 	border-color: #ff8c05;
+	-webkit-box-shadow: 1px 1px 6px 1px #000000; 
+	box-shadow: 1px 1px 6px 1px #000000;
 
   }
   
@@ -1075,3 +1077,9 @@ e 10px de altura para a barra horizontal */
   animation: fa-blink 1.75s linear infinite;
 }
 
+.videos {
+	border-radius: 8px;
+	-webkit-box-shadow: 5px 5px 15px 5px #000000; 
+	box-shadow: 5px 5px 15px 5px #000000;
+
+}
