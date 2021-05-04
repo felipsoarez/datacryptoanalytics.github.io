@@ -182,66 +182,28 @@
          <div class="section-title">
             <h1> Downloads </h1>
          </div>
-
-         <ul>
-            <li>
-               <a rel="Livro" href="https://datacryptoml.000webhostapp.com/downloads/redes-neurais-profundas.pdf">
-                  <ion-icon name="open-outline"></ion-icon>
-                  Redes Neurais Profundas
-               </a>
-            </li>
-            <li>
-               <a rel="Livro" href="https://datacryptoanalytics.com/downloads/Escola-BabyPips-Apostila-Completa-1-2.pdf">
-                  <ion-icon name="open-outline"></ion-icon>
-                  Escola BabyPips - Apostila Completa
-               </a>
-            </li>
-            <li>
-               <a rel="Livro" href="https://datacryptoml.000webhostapp.com/downloads/Crypto%20Anarchy,%20Cyberstates,%20and%20Pirate%20Utopias.pdf">
-                  <ion-icon name="open-outline"></ion-icon>
-                  Crypto Anarchy, Cyberstates, and Pirate Utopias
-               </a>
-            </li>
-            <li>
-               <a rel="Livro" href="https://datacryptoanalytics.com/downloads/Econometria-de-series-temporais-1-edicao-Rodrigo-de-Losso-da-Silveira-Bueno-pdf.pdf">
-                  <ion-icon name="open-outline"></ion-icon>
-                  Econometria de Séries Temporais
-               </a>
-            </li>
-            <li>
-               <a rel="Livro" href="https://datacryptoanalytics.com/downloads/matematica-financeira.pdf">
-                  <ion-icon name="open-outline"></ion-icon>
-                  Matemática Financeira
-               </a>
-            </li>
-            <li>
-               <a rel="Livro" href="https://datacryptoanalytics.com/downloads/mindset-a-nova-psicologia-do-sucesso-carol-dweck.pdf">
-                  <ion-icon name="open-outline"></ion-icon>
-                  Mindset: A nova psicologia do sucesso
-               </a>
-            </li>
-            <li>
-               <a rel="Livro" href="https://datacryptoanalytics.com/downloads/Dominando-Bitcoin.pdf">
-                  <ion-icon name="open-outline"></ion-icon>
-                  Dominando Bitcoin
-               </a>
-            </li>
-            <li>
-               <a rel="Livro" href="https://datacryptoanalytics.com/downloads/WhaleStreet_-_Essential_Tips_PT.pdf">
-                  <ion-icon name="open-outline"></ion-icon>
-                  WhaleStreet - Essential Tips (PT)
-               </a>
-            </li>
-         </ul>
-
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://br.tradingview.com/markets/currencies/economic-calendar/" rel="noopener" target="_blank"><span class="blue-text">Calendário Econômico</span></a> por TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+  {
+  "width": "100%",
+  "height": "100%",
+  "colorTheme": "dark",
+  "isTransparent": true,
+  "locale": "br",
+  "importanceFilter": "-1,0,1",
+  "currencyFilter": "BRL,USD,JPY"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+        
       </div>                          
       </div>
   </div>
   <!-- end termos -->
-
-
-
-
 
 
          
