@@ -41,22 +41,28 @@
       <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
       <!-- End TrustBox script -->
       <link rel="icon" href="images/favicon.png">
-      <title>Downloads - DataCrypto Analytics</title>
-      <meta name="description" content="Downloads">
-      <link rel="canonical" href="https://datacryptoanalytics.com/downloads">
+      <title>Calendário Econômico - DataCrypto Analytics</title>
+      <meta name="HandheldFriendly" content="True">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="/logo-web-datacrypto-analytics.png">
+      <link rel="stylesheet" href="page_files/all.css">
+      <link rel="stylesheet" type="text/css" href="page_files/libraries.css">
+      <link rel="stylesheet" type="text/css" href="page_files/style.css">
+      <meta name="description" content="Calendário Econômico">
+      <link rel="canonical" href="https://datacryptoanalytics.com/calendario-economico">
       <meta name="referrer" content="no-referrer-when-downgrade">
       <meta property="og:site_name" content="DataCrypto Analytics Blog">
       <meta property="og:type" content="article">
-      <meta property="og:title" content="Downloads">
+      <meta property="og:title" content="Calendário Econômico">
       <meta property="og:description" content="">
-      <meta property="og:url" content="https://datacryptoanalytics.com/downloads">
-      <meta property="og:image" content="">
+      <meta property="og:url" content="https://datacryptoanalytics.com/calendario-economico">
+      <meta property="og:image" content="https://datacryptoanalytics.com/capadatacryptoanalytics.png"
       <meta property="article:publisher" content="https://fb.me/datacryptopy">
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="Downloads">
+      <meta name="twitter:title" content="Calendário Econômico">
       <meta name="twitter:description" content="">
-      <meta name="twitter:url" content="https://datacryptoanalytics.com/downloads">
-      <meta name="twitter:image" content="">
+      <meta name="twitter:url" content="https://datacryptoanalytics.com/calendario-economico">
+      <meta name="twitter:image" content="https://datacryptoanalytics.com/capadatacryptoanalytics.png">
       <meta name="twitter:label1" content="Written by">
       <meta name="twitter:data1" content="DataCrypto Analytics Dev Team">
       <meta name="twitter:label2" content="Filed under">
@@ -73,7 +79,7 @@
       <link rel="stylesheet" href="css/owl.carousel.css">
       <link rel="stylesheet" href="css/owl.theme.default.css">
       <link rel="stylesheet" href="css/magnific-popup.css">
-      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/style.css">
    </head>
    <body>
       <!-- loader -->
