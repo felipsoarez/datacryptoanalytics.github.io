@@ -608,8 +608,8 @@ ul {
 .blog .content {
 	background: #292F33;
 	border-radius: 8px;
-	-webkit-box-shadow: 3px 3px 9px 3px #000000; 
-	box-shadow: 3px 3px 9px 3px #000000;
+	-webkit-box-shadow: 5px 5px 15px 5px #000000; 
+	box-shadow: 5px 5px 15px 5px #000000;
 }
 
 .blog .content:hover img {
@@ -1009,8 +1009,8 @@ e 10px de altura para a barra horizontal */
 
 .videos {
 	border-radius: 8px;
-	-webkit-box-shadow: 3px 3px 9px 3px #000000; 
-	box-shadow: 3px 3px 9px 3px #000000;
+	-webkit-box-shadow: 5px 5px 15px 5px #000000; 
+	box-shadow: 5px 5px 15px 5px #000000;
 
 }
 
@@ -1028,6 +1028,6 @@ e 10px de altura para a barra horizontal */
 }
 
 .sombra-black {
-	-webkit-box-shadow: 3px 3px 9px 3px #000000; 
-	box-shadow: 3px 3px 9px 3px #000000;
+	-webkit-box-shadow: 5px 5px 15px 5px #000000; 
+	box-shadow: 5px 5px 15px 5px #000000;
 }
