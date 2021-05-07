@@ -894,7 +894,7 @@ e 10px de altura para a barra horizontal */
 /* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
 
  ::-webkit-scrollbar-track {
-	background: #212121;
+	background: #121212;
 }
 
 

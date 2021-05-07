@@ -10,7 +10,7 @@ $(function() {
 
         spinner: "spinner3",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
 
-        bgColor: "#212121" //Hex, RGB or RGBA colors
+        bgColor: "#121212" //Hex, RGB or RGBA colors
 
     });
        
