@@ -1031,3 +1031,12 @@ e 10px de altura para a barra horizontal */
 	-webkit-box-shadow: 5px 5px 15px 5px #000000; 
 	box-shadow: 5px 5px 15px 5px #000000;
 }
+
+  .actions li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 5px;
+	padding-top: 25px;
+	font-size: 28px;
+
+  }
