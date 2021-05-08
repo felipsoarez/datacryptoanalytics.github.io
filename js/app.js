@@ -110,10 +110,10 @@ function signUp(){
                 userBio: "User biography",
             }
             firebaseRef.child(uid).set(userData);
-            swal('Your Account Created','Your account was created successfully, you can log in now.',
+            swal('Sua conta foi criada','Sua conta foi criada com sucesso, você pode entrar agora.',
             ).then((value) => {
                 setTimeout(function(){
-                    window.location.replace("https://datacryptoanalytics.github.io/dashboard/");
+                    window.location.replace("https://datacryptoanalytics.com/app/membros");
                 }, 1000)
             });
         }).catch((error) => {
@@ -182,10 +182,10 @@ function signIn(){
         firebase.auth().signInWithEmailAndPassword(userSIEmail, userSIPassword).then((success) => {
             swal({
                 type: 'successfull',
-                title: 'Succesfully signed in', 
+                title: 'Conectado com sucesso', 
             }).then((value) => {
                 setTimeout(function(){
-                    window.location.replace("https://datacryptoanalytics.github.io/dashboard/");
+                    window.location.replace("https://datacryptoanalytics.com/app/membros");
                 }, 1000)
             });
         }).catch((error) => {
@@ -194,8 +194,8 @@ function signIn(){
             var errorMessage = error.message;
             swal({
                 type: 'error',
-                title: 'Error',
-                text: "Error",
+                title: 'Erro',
+                text: "Erro",
             })
         });
     }
@@ -299,7 +299,7 @@ function signOut(){
             title: 'Signed Out', 
         }).then((value) => {
             setTimeout(function(){
-                window.location.replace("https://datacryptoanalytics.github.io/login");
+                window.location.replace("https://datacryptoanalytics.com/login");
             }, 1000)
         });
     }).catch(function(error) {
@@ -312,3 +312,77 @@ function signOut(){
         })
     });
 }
+
+function twitterProvider() {
+    // [START auth_twitter_provider_create]
+    var provider = new firebase.auth.TwitterAuthProvider();
+    // [END auth_twitter_provider_create]
+  
+    // [START auth_twitter_provider_params]
+    provider.setCustomParameters({
+      'lang': 'pt'
+    });
+    // [END auth_twitter_provider_params]
+  }
+  
+  function twitterSignInPopup(provider) {
+    // [START auth_twitter_signin_popup]
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => {
+        /** @type {firebase.auth.OAuthCredential} */
+        var credential = result.credential;
+  
+        // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
+        // You can use these server side with your app's credentials to access the Twitter API.
+        var token = credential.accessToken;
+        var secret = credential.secret;
+  
+        // The signed-in user info.
+        var user = result.user;
+        // ...
+      }).catch((error) => {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
+    // [END auth_twitter_signin_popup]
+  }
+  
+  function twitterSignInRedirectResult() {
+    // [START auth_twitter_signin_redirect_result]
+    firebase.auth()
+      .getRedirectResult()
+      .then((result) => {
+        if (result.credential) {
+          /** @type {firebase.auth.OAuthCredential} */
+          var credential = result.credential;
+  
+          // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
+          // You can use these server side with your app's credentials to access the Twitter API.
+          var token = credential.accessToken;
+          var secret = credential.secret;
+          // ...
+        }
+  
+        // The signed-in user info.
+        var user = result.user;
+      }).catch((error) => {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
+    // [END auth_twitter_signin_redirect_result]
+  }
+  
