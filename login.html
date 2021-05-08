@@ -53,18 +53,18 @@
                         </center>
                         <div class="form-group">
                            <label for="userSIEmail">Email <span class="text-danger ml-1">*</span></label>
-                           <input type="email" class="form-control" id="userSIEmail" onblur="checkUserSIEmail()"placeholder="mail@mail.com">
+                           <input type="email" class="form-control" id="userSIEmail" onblur="checkUserSIEmail()"placeholder="satoshi_nakamoto@bitcoin.com">
                            <small id="userSIEmailError" class="form-text text-danger">Por favor, verifique seu email.</small>
                         </div>
                         <div class="form-group">
                            <label for="userSIPassword">Senha<span class="text-danger ml-1">*</span></label>
-                           <input type="password" class="form-control" id="userSIPassword" onblur="checkUserSIPassword()" placeholder="password">
+                           <input type="password" class="form-control" id="userSIPassword" onblur="checkUserSIPassword()" placeholder="senha">
                            <small id="userSIPasswordError" class="form-text text-danger">Por favor, verifique sua senha.</small>
                         </div>
                         <button type="button" class="btn btn-outline-primary text-uppercase mb-3" onclick="signIn()">Entrar</button>
                         <p>Não é membro ainda? cadastre-se aqui: <a href="https://datacryptoanalytics.com/membership"><strong class="text-primary text-uppercase showSignUpForm">Cadastrar</strong></a></p>
-                        <a id="TwitterLogin" class="btn btn-block btn-social btn-twitter" onclick="twitterSignInPopup()">
-                        <i class="fa fa-twitter"></i> Sign in with Twitter </a>
+                        <button id="TwitterLogin" class="btn btn-block btn-social btn-twitter" onclick="TwitterAuthProvider()">
+                        <i class="fa fa-twitter"></i> Sign in with Twitter </button>
                         <a
                            id="GithubLogin" class="btn btn-block btn-social btn-github text-white">
                         <i class="fa fa-github"></i> Sign in with Github
