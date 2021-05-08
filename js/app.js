@@ -83,6 +83,9 @@ function signUp(){
     var checkUserEmailValid = userEmail.match(userEmailFormate);
     var checkUserPasswordValid = userPassword.match(userPasswordFormate);
 
+    var provider = new firebase.auth.TwitterAuthProvider();
+
+
     if(checkUserFullNameValid == null){
         return checkUserFullName();
     }else if(userSurname === ""){
