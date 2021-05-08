@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
    <head>
+ 
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -16,6 +17,15 @@
       <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
       <title>Entrar - DataCrypto Analytics</title>
       <style>
+        @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Rajdhani&family=Roboto+Condensed:wght@300&display=swap');
+        
+body {
+	font-family: 'Rajdhani', sans-serif;
+	background: #121212;
+	font-size: 16px;
+	line-height: 22px;
+}
+        
          /* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
          ::-webkit-scrollbar-track {
          background: #121212;
@@ -35,6 +45,7 @@
       </style>
    </head>
    <body style="background-color:#121212">
+    
       <div class="container-fluid terminal ">
          <div class="row mx-1 terminal">
             <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 text-center mt-5 pb-4 text-white terminal">
@@ -69,6 +80,8 @@
                            id="GithubLogin" class="btn btn-block btn-social btn-github text-white">
                         <i class="fa fa-github"></i> Sign in with Github
                         </a>
+                        <div id="firebaseui-auth-container"></div>
+
                      </div>
                   </div>
                </div>

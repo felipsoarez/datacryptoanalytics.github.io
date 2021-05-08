@@ -19,9 +19,41 @@
              
              
       </script>
+   <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+   <script type="text/javascript">
+     // FirebaseUI config.
+     var uiConfig = {
+       signInSuccessUrl: 'https://datacryptoanalytics.com/app/membros',
+       signInOptions: [
+         // Leave the lines as is for the providers you want to offer your users.
+         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+         firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+         firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+         firebase.auth.GithubAuthProvider.PROVIDER_ID,
+         firebase.auth.EmailAuthProvider.PROVIDER_ID,
+         firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+         firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
+       ],
+       // tosUrl and privacyPolicyUrl accept either url string or a callback
+       // function.
+       // Terms of service url/callback.
+       tosUrl: 'https://datacryptoanalytics.com/termos-legais',
+       // Privacy policy url/callback.
+       privacyPolicyUrl: function() {
+         window.location.assign('https://datacryptoanalytics.com/privacy-policy');
+       }
+     };
+
+     // Initialize the FirebaseUI Widget using Firebase.
+     var ui = new firebaseui.auth.AuthUI(firebase.auth());
+     // The start method will wait until the DOM is loaded.
+     ui.start('#firebaseui-auth-container', uiConfig);
+   </script>
+
 
       <link rel="icon" href="images/favicon.png">
-      <title>Downloads - DataCrypto Analytics</title>
+      <title>Entrar - DataCrypto Analytics</title>
       <meta name="description" content="Downloads">
       <link rel="canonical" href="https://datacryptoanalytics.com/downloads">
       <meta name="referrer" content="no-referrer-when-downgrade">
@@ -143,6 +175,7 @@
          <div class="section-title">
             <h1>  </h1>
          </div>
+         <div id="firebaseui-auth-container"></div>
 
                         <div id="signInForm">
                             <h2 class="h2 text-center text-dark mb-3">Sign In</h2>
