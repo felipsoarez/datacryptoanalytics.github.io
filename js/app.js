@@ -1,6 +1,5 @@
 // xxxxxxxxxx Working For Sign Up Form xxxxxxxxxx
 
-var provider = new firebase.auth.TwitterAuthProvider();
 // xxxxxxxxxx Full Name Validation xxxxxxxxxx
 function checkUserFullName(){
     var userSurname = document.getElementById("userFullName").value;
@@ -82,8 +81,6 @@ function signUp(){
     var checkUserFullNameValid = userFullName.match(userFullNameFormate);
     var checkUserEmailValid = userEmail.match(userEmailFormate);
     var checkUserPasswordValid = userPassword.match(userPasswordFormate);
-
-    var provider = new firebase.auth.TwitterAuthProvider();
 
 
     if(checkUserFullNameValid == null){
