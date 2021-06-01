@@ -1042,7 +1042,6 @@ e 10px de altura para a barra horizontal */
   }
 
 .pulse {
-  background: black;
   border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
   margin: 10px;
