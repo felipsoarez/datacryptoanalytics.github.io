@@ -1090,3 +1090,11 @@ e 10px de altura para a barra horizontal */
   }
 }
 
+.div_teste{
+    width: 60px;
+    height: 24px;
+    position: fixed;
+    z-index: 1000;
+    right: 0rem;
+    top: 6rem;
+}
