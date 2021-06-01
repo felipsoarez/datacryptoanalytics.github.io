@@ -1139,6 +1139,6 @@ e 10px de altura para a barra horizontal */
     height: 24px;
     position: fixed;
     z-index: 1000;
-    right: 1rem;
-    top: 5rem;
+    right: 0rem;
+    top: 6rem;
 }
