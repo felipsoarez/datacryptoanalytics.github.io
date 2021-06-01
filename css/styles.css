@@ -1133,3 +1133,9 @@ e 10px de altura para a barra horizontal */
     box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
   }
 }
+
+.div_teste{
+	float: right;
+	height: 100%;
+	padding: 25px;
+  }
