@@ -1135,7 +1135,10 @@ e 10px de altura para a barra horizontal */
 }
 
 .div_teste{
-	float: right;
-	height: 100%;
-	padding: 25px;
-  }
+    width: 100px;
+    height: 24px;
+    position: fixed;
+    z-index: 1000;
+    right: 3rem;
+    top: 5rem;
+}
