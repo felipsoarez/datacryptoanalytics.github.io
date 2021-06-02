@@ -1098,3 +1098,43 @@ e 10px de altura para a barra horizontal */
     right: 0rem;
     top: 6rem;
 }
+
+
+.accordion {
+	background-color: #1a1a1a00;
+	color: #ff8c05;
+	cursor: pointer;
+	padding: 20px;
+	width: 100%;
+	border: 10px;
+	text-align: left;
+	outline: none;
+	font-size: 18px;
+	transition: 2.4s;
+	border-radius: 30px;
+	border-width: 150px;
+	border-color: #ff8c05;
+
+
+  }
+  
+
+  
+  .panel {
+	padding: 0 18px;
+	padding-top: 20px;
+	display: none;
+	background-color: #1a1a1a00;
+	overflow: hidden;
+	border-color: #ff8c05;
+	
+  }
+
+  .accordion:after {
+	content: '\002B';
+	color: #ff8c05;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+	border-color: #ff8c05;
+  }
