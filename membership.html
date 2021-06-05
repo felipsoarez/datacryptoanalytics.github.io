@@ -462,6 +462,27 @@
             <center> 
                <iframe width="80%" height="500" class="videos" src="https://www.youtube.com/embed/VDToH_a17DE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </center>
+            <div id="paypal-button-container-P-7AT40325XN590631FMC5XHFI"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AeUKs3z5Ui-9cHnrFBSj-Fj24s4MD3q7tBIRUWO9pywaNdT7DySD0iMPeQ7gQkkkmW-OzOUGxlQ7RMr8&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script> 
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-7AT40325XN590631FMC5XHFI'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-7AT40325XN590631FMC5XHFI'); // Renders the PayPal button
+</script>
          </div>
       </div>
       <!-- end itez -->
@@ -559,27 +580,6 @@
                           
                            <center>
                               <a href="https://app.monetizze.com.br/checkout/DKA118987">  <button class="button" >Quero Assinar</button></a>
-                              <div id="paypal-button-container-P-7AT40325XN590631FMC5XHFI"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=AeUKs3z5Ui-9cHnrFBSj-Fj24s4MD3q7tBIRUWO9pywaNdT7DySD0iMPeQ7gQkkkmW-OzOUGxlQ7RMr8&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script> 
-<script>
-  paypal.Buttons({
-      style: {
-          shape: 'pill',
-          color: 'gold',
-          layout: 'vertical',
-          label: 'subscribe'
-      },
-      createSubscription: function(data, actions) {
-        return actions.subscription.create({
-          /* Creates the subscription */
-          plan_id: 'P-7AT40325XN590631FMC5XHFI'
-        });
-      },
-      onApprove: function(data, actions) {
-        alert(data.subscriptionID); // You can add optional success message for the subscriber here
-      }
-  }).render('#paypal-button-container-P-7AT40325XN590631FMC5XHFI'); // Renders the PayPal button
-</script>
                            </center>
                            
                         </div>
