@@ -462,26 +462,26 @@
             <center> 
                <iframe width="80%" height="500" class="videos" src="https://www.youtube.com/embed/VDToH_a17DE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </center>
-            <div id="paypal-button-container-P-7AT40325XN590631FMC5XHFI"></div>
+           <div id="paypal-button-container-P-6TC64894CF720101PMC5XYYA"></div>
 <script src="https://www.paypal.com/sdk/js?client-id=AeUKs3z5Ui-9cHnrFBSj-Fj24s4MD3q7tBIRUWO9pywaNdT7DySD0iMPeQ7gQkkkmW-OzOUGxlQ7RMr8&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script> 
 <script>
   paypal.Buttons({
       style: {
-          shape: 'pill',
+          shape: 'rect',
           color: 'gold',
           layout: 'vertical',
-          label: 'subscribe'
+          label: 'paypal'
       },
       createSubscription: function(data, actions) {
         return actions.subscription.create({
           /* Creates the subscription */
-          plan_id: 'P-7AT40325XN590631FMC5XHFI'
+          plan_id: 'P-6TC64894CF720101PMC5XYYA'
         });
       },
       onApprove: function(data, actions) {
         alert(data.subscriptionID); // You can add optional success message for the subscriber here
       }
-  }).render('#paypal-button-container-P-7AT40325XN590631FMC5XHFI'); // Renders the PayPal button
+  }).render('#paypal-button-container-P-6TC64894CF720101PMC5XYYA'); // Renders the PayPal button
 </script>
          </div>
       </div>
