@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
    <head>
-      <script charset="UTF-8" src="//web.webpushs.com/js/push/94ad127cc2ad096ee5fcb7d67b69e02b_1.js" async></script>
-      <script src="//fbstore.sendpulse.com/loader.js" data-sp-widget-id="d82f3fd7-a801-4839-80cd-81942db3d9cd" async></script>
+      <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="dc_analytics" data-description="Support me on Buy me a coffee!" data-message="" data-color="#ff8c05" data-position="Right" data-x_margin="22" data-y_margin="22"></script>
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160618603-1"></script>
       <script>
@@ -14,30 +13,42 @@
       </script>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script charset="UTF-8" src="//web.webpushs.com/js/push/94ad127cc2ad096ee5fcb7d67b69e02b_1.js" async></script>
+      <script src="//fbstore.sendpulse.com/loader.js" data-sp-widget-id="d82f3fd7-a801-4839-80cd-81942db3d9cd" async></script>
       <script language=javascript type="text/javascript">
          dayName = new Array ("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado")
          monName = new Array ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "agosto", "outubro", "novembro", "dezembro")
          now = new Date
       </script>
+      <script language=javascript type="text/javascript">
+         var clock = document.getElementById('real-clock');
+             
+         
+             setInterval(function () {
+                 clock.innerHTML = ((new Date).toLocaleString().substr(11, 8));  
+             }, 1000);
+             
+             
+      </script>
       <!-- TrustBox script -->
       <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
       <!-- End TrustBox script -->
       <link rel="icon" href="images/favicon.png">
-      <title>Analytics - DataCrypto</title>
-      <meta name="description" content="Analytics - DataCrypto Analytics">
-      <link rel="canonical" href="https://datacryptoanalytics.com/app">
+      <title>Forex (USDJPY) - DataCrypto Analytics</title>
+      <meta name="description" content="Veja análises, notícias e posições dos comerciantes Forex.">
+      <link rel="canonical" href="https://datacryptoanalytics.com/app/forex">
       <meta name="referrer" content="no-referrer-when-downgrade">
       <meta property="og:site_name" content="DataCrypto Analytics">
       <meta property="og:type" content="article">
-      <meta property="og:title" content="Analytics ">
-      <meta property="og:description" content="Analytics - DataCrypto Analytics">
-      <meta property="og:url" content="https://datacryptoanalytics.com/app">
+      <meta property="og:title" content="Forex - DataCrypto Analytics">
+      <meta property="og:description" content="Veja análises, notícias e posições dos comerciantes Forex.">
+      <meta property="og:url" content="https://datacryptoanalytics.com/app/forex">
       <meta property="og:image" content="https://datacryptoanalytics.com/capadatacryptoanalytics2.jpg">
       <meta property="article:publisher" content="https://fb.me/datacryptopy">
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="Analytics Blockchain">
-      <meta name="twitter:description" content="Analytics - DataCrypto Analytics">
-      <meta name="twitter:url" content="https://datacryptoanalytics.com/app">
+      <meta name="twitter:title" content="Forex - DataCrypto Analytics">
+      <meta name="twitter:description" content="Veja análises, notícias e posições dos comerciantes Forex.">
+      <meta name="twitter:url" content="https://datacryptoanalytics.com/app/forex">
       <meta name="twitter:image" content="https://datacryptoanalytics.com/capadatacryptoanalytics2.jpg">
       <meta name="twitter:label1" content="Written by">
       <meta name="twitter:data1" content="DataCrypto Analytics Dev Team">
@@ -80,9 +91,6 @@
                         <a href="https://datacryptoanalytics.com/" class="nav-link">Inicio</a>
                      </li>
                      <li class="nav-item">
-                        <a href="https://datacryptoanalytics.com/app/forex" class="nav-link">Forex</a>
-                     </li>
-                     <li class="nav-item">
                         <a href="https://datacryptoanalytics.com/app/indicadores" class="nav-link">
                            Indicadores
                            <sup class="pulse red">
@@ -101,10 +109,20 @@
                         </a>
                      </li>
                      <li class="nav-item">
+                        <a href="https://datacryptoanalytics.com/app/calendario-economico" class="nav-link">
+                           <i class="far fa-calendar-alt"></i>
+                           Calendário Econômico
+                        </a>
+                     </li>
+                     <li class="nav-item">
                         <a href="https://datacryptoanalytics.com/login" class="nav-link" target="_blank">
                            <i class="fas fa-sign-in-alt"></i>
                            Entrar
                         </a>
+                     </li>
+
+                     <li class="nav-item">
+                        <a href="https://github.com/datacrypto-analytics" class="nav-link"><i class="fab fa-github "></i></a>
                      </li>
                   </ul>
                </div>
@@ -146,442 +164,181 @@
          <center>
             <h2><i class="fas fa-chevron-down fa-blink"></i></h2>
          </center>
-         <!-- home intro -->
-         <div class="home-intro segments">
-            <div class="container">
-               <div class="alert alert-dark alert-dismissible fade show" role="alert">
-                  <i class="fa fa-bell" aria-hidden="true"></i>
-                  <b>Estamos constantemente atualizando e implementando novas funcionalidades, ative as notificações para ficar atualizado quando novas versões saírem! Para acessar a versão antiga </b>
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                  </button>
-               </div>
+      </header>
+      <!-- end header -->
+      </div>
+      <!-- home intro -->
+      <div class="home-intro segments">
+      <div class="container">
+         <div class="alert alert-dark alert-dismissible fade show" role="alert">
+            <b><i class="fa fa-bell" aria-hidden="true"></i> Estamos constantemente atualizando e implementando novas funcionalidades, ative as notificações para ficar atualizado quando novas versões saírem!</b>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+      </div>
+      <div class="container">
+         <div class="alert alert-dark alert-dismissible fade show" role="alert">
+            <i>
+               <i class="fa fa-exclamation-circle" aria-hidden="true"></i>   
+               <!-- [disclaimer] -->
+               <b>Aviso Legal</b>: <i>As informações nestas páginas contêm declarações prospectivas que envolvem riscos e incertezas. Os mercados e instrumentos perfilados nesta página são apenas para fins informativos e não devem, de forma alguma, ser visto como uma recomendação de compra ou venda desses ativos. Você deve fazer sua própria pesquisa completa antes de tomar qualquer decisão de investimento. DataCrypto Analytics não garante de forma alguma que esta informação esteja livre de erros ou distorções materiais. Também não garante que essas informações sejam oportunas. Investir em mercados abertos envolve muitos riscos, incluindo a perda total ou parcial de seu investimento, bem como estresse emocional. Todos os riscos, perdas e custos associados ao investimento, incluindo a perda total do principal, são de sua responsabilidade.</i>
+            </i>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+      </div>
+      <div class="container">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="https://datacryptoanalytics.com/">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="https://datacryptoanalytics.com/app/">Analytics</a></li>
+            <li class="breadcrumb-item active">Forex</li>
+         </ol>
+      </div>
+      <div class="container">
+         <div id="real-clock" class="fa fa-clock"> Desative o bloqueador de anúncios para ativar a hora.</div>
+         <script language=javascript type="text/javascript">
+            document.write ("<h6>   " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName [now.getMonth() ]   +  " de "  +     now.getFullYear () + ". </h6>")
+         </script>
+      </div>
+      <!-- grafico mineradores -->
+      <div class="blog segments">
+         <div class="container">
+            <div class="section-title">
+               <h3>  </h3>
             </div>
-            <div class="container">
-               <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="https://datacryptoanalytics.com/">Inicio</a></li>
-                  <li class="breadcrumb-item active">Analytics</li>
-               </ol>
-            </div>
-            <div class="container">
-               <div id="real-clock" class="fa fa-clock"></div>
-               <script language=javascript type="text/javascript">
-                  document.write ("<h6>   " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName [now.getMonth() ]   +  " de "  +     now.getFullYear () + ". </h6>")
-               </script>
-            </div>
-            <!-- ideias tradingview -->
-            <div class="about segments">
-               <div class="container">
-                  <center>
-                     <!-- TradingView Widget BEGIN -->
-                     <div id="tv-ideas-stream-9c935"></div>
-                     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-                     <script type="text/javascript">
-                        new TradingView.IdeasStreamWidget({
-                          "container_id": "tv-ideas-stream-9c935",
-                          "startingCount": 1,
-                          "width": "100%",
-                          "height": "450",
-                          "mode": "integrate",
-                          "bgColor": "#121212",
-                          "headerColor": "rgba(255, 140, 5)",
-                          "borderColor": "rgba(203, 203, 203, 0)",
-                          "locale": "br",
-                          "sort": "recent",
-                          "time": "day",
-                          "interval": "all",
-                          "stream": "all",
-                          "username": "DataCryptoAnalytics"
-                        });
-                     </script>
-                     <!-- TradingView Widget END -->
-                  </center>
-               </div>
-            </div>
-            <!-- end ideias --> 
-            <!-- termos -->
-            <div class="about segments">
-               <div class="container">
-                  <div class="box-content">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="content">
                      <!-- TradingView Widget BEGIN -->
                      <div class="tradingview-widget-container">
-                        <div class="tradingview-widget-container__widget"></div>
-                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+                        <div id="tradingview_5a087"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                        <script type="text/javascript">
+                           new TradingView.MediumWidget(
                            {
+                           "symbols": [
+                             [
+                               "USDJPY",
+                               "FX:USDJPY|1D"
+                             ],
+                             [
+                               "EURUSD",
+                               "FX:EURUSD|1D"
+                             ],
+                             [
+                               "Bitcoin",
+                               "BYBIT:BTCUSD|1D"
+                             ],
+                             [
+                               "Ethereum",
+                               "BYBIT:ETHUSD|1D"
+                             ]
+                           ],
+                           "chartOnly": false,
                            "width": "100%",
-                           "height": "480",
-                           "defaultColumn": "overview",
-                           "screener_type": "crypto_mkt",
-                           "displayCurrency": "USD",
-                           "colorTheme": "dark",
+                           "height": "450",
                            "locale": "br",
-                           "isTransparent": true
+                           "colorTheme": "dark",
+                           "gridLineColor": "#2A2E39",
+                           "trendLineColor": "rgba(255, 140, 5)",
+                           "fontColor": "#787B86",
+                           "underLineColor": "rgba(255, 140, 5, 0.38)",
+                           "isTransparent": true,
+                           "autosize": false,
+                           "container_id": "tradingview_5a087"
                            }
+                           );
                         </script>
                      </div>
                      <!-- TradingView Widget END -->
                   </div>
                </div>
+               <div class="col-md-6">
+                  <div class="content no-mb">
+                     <center>
+                        <a class="twitter-timeline" data-height="450" data-dnt="true" data-theme="dark" href="https://twitter.com/FXstreetNews?ref_src=twsrc%5Etfw">Tweets by FXstreetNews</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                     </center>
+                  </div>
+                  <h5>
+                     <a href="https://datacryptoanalytics.com/app/calendario-economico" target="_blank">
+                        <i class="far fa-calendar-alt"></i>
+                        Calendário Econômico
+                     </a>
+                  </h5>
+               </div>
             </div>
          </div>
-         <!-- end termos -->
-      </header>
-      <!-- end header -->
-      <!-- termos -->
+      </div>
+      <!-- fim grafico mineradores -->
+      <!-- itez -->
       <div class="about segments">
          <div class="container">
-            <div class="box-content">
+            <center>
                <!-- TradingView Widget BEGIN -->
-               <div class="tradingview-widget-container">
-                  <div class="tradingview-widget-container__widget"></div>
-                  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
-                     {
-                     "width": "100%",
-                     "height": "480",
-                     "defaultColumn": "overview",
-                     "defaultScreen": "general",
-                     "market": "forex",
-                     "showToolbar": true,
-                     "colorTheme": "dark",
-                     "locale": "br",
-                     "isTransparent": true
-                     }
-                  </script>
-               </div>
+               <div id="tv-ideas-stream-9c935"></div>
+               <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+               <script type="text/javascript">
+                  new TradingView.IdeasStreamWidget({
+                    "container_id": "tv-ideas-stream-9c935",
+                    "startingCount": 1,
+                    "width": "100%",
+                    "height": "450",
+                    "mode": "integrate",
+                    "bgColor": "#121212",
+                    "headerColor": "rgba(255, 140, 5)",
+                    "borderColor": "rgba(203, 203, 203, 0)",
+                    "locale": "br",
+                    "sort": "recent",
+                    "time": "day",
+                    "interval": "all",
+                    "stream": "all",
+                    "username": "DataCryptoAnalytics"
+                  });
+               </script>
                <!-- TradingView Widget END -->
+            </center>
+         </div>
+      </div>
+      <!-- end itez --> 
+      <!-- indicadores & indice de sentimento -->
+      <div class="blog segments">
+         <div class="container">
+            <div class="section-title">
+               <h3> Sentimento </h3>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="tooltip" >
+                     <i class="fas fa-info-circle"></i>
+                     <span class="tooltiptext">Movers & Shakers ilustra o desempenho das moedas mais negociadas por meio dos movimentos mais recentes das taxas de câmbio.</span>
+                  </div>
+                  <div class="content">
+                     <script type="text/javascript">DukascopyApplet = {"type":"intraday_movers_and_shakers","params":{"headingColor":"#ff8c05","dateColor":"#ff8c05","valueColor":"#ff8c05","bgColor":"#292F33","width":"100%","height":"480","adv":"popup"}};</script><script type="text/javascript" src="https://freeserv-static.dukascopy.com/2.0/core.js"></script>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="tooltip" >
+                     <i class="fas fa-info-circle"></i>
+                     <span class="tooltiptext">Exibe as porcentagens atuais de posições long (compra) e short (venda) no fluxo de transação. O sentimento de mercado resultante é definido como a diferença entre os dois, com leituras negativas em vermelho sinalizando o sentimento de "venda" e os positivos em verde indicando sentimento de "compra". Os dados são atualizados a cada 30 minutos.</span>
+                  </div>
+                  <div class="content">
+                     <center>
+                        <script type="text/javascript">DukascopyApplet = {"type":"realtime_sentiment_index","params":{"liquidity":"consumers","type":"swfx","sort":"volume","order":"asc","showPairs":true,"showCurrencies":true,"availableInstruments":"l:EUR/USD,USD/JPY,GBP/USD,USD/CAD,USD/CHF,AUD/USD,BTC/USD,ETH/USD,LTC/USD,NZD/USD","availableCurrencies":["AUD","CAD","GBP","JPY","USD","EUR","XAU"],"headingColor":"#ff8c05","dateColor":"#ff8c05","bgColor":"#292F33","width":"100%","height":"480","adv":"popup","lang":"pt"}};</script>
+                        <script type="text/javascript" src="https://freeserv-static.dukascopy.com/2.0/core.js"></script>
+                     </center>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
+      <!-- fim indicadores & indice de sentimento -->
+      <!-- TrustBox widget - Micro Review Count -->
+      <div class="trustpilot-widget" data-locale="pt-BR" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="5fa88ea19262500001e6c0b2" data-style-height="24px" data-style-width="100%" data-theme="dark">
+         <a href="https://br.trustpilot.com/review/datacryptoanalytics.github.io" target="_blank" rel="noopener">Trustpilot</a>
       </div>
-      <!-- end termos -->
-      <!-- resume
-         <div id="resume" class="resume segments">
-             <div class="container">
-                 <div class="box-content">
-                     <div class="section-title">
-                         <h3>My Resume</h3>
-                     </div>
-                     <div class="owl-carousel owl-theme">
-                         <div class="content">
-                             <div class="row ">
-                                 <div class="col-md-6 col-sm-12 col-xs-12">
-                                     <div class="content-left">
-                                         <div class="title-resume">
-                                             <h3>Experience</h3>
-                                             <h2>More than 6 years experience as a <span>Designer</span></h2>
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <div class="col-md-6 col-sm-12 col-xs-12">
-                                     <div class="content-right">
-                                         <ul class="timeline">
-                                             <li>
-                                                 <h4>Pentagon Design</h4>
-                                                 <span>Graphic Designer (2017 - 2019)</span>
-                                             </li>
-                                             <li>
-                                                 <h4>Animate Studio</h4>
-                                                 <span>Graphic Designer (2015 - 2017)</span>
-                                             </li>
-                                             <li>
-                                                 <h4>Cute Studio</h4>
-                                                 <span>Graphic Designer (2014 - 2015)</span>
-                                             </li>
-                                             <li>
-                                                 <h4>City Printing</h4>
-                                                 <span>Graphic Designer (2013 - 2014)</span>
-                                             </li>
-                                         </ul>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="content">
-                             <div class="row ">
-                                 <div class="col-md-6 col-sm-12 col-xs-12">
-                                     <div class="content-left">
-                                         <div class="title-resume">
-                                             <h3>Education</h3>
-                                             <h2>Learning experience in a few <span>Professional Universities</span></h2>
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <div class="col-md-6 col-sm-12 col-xs-12">
-                                     <div class="content-right">
-                                         <ul class="timeline">
-                                             <li>
-                                                 <h4>National University</h4>
-                                                 <span>Graphic Design Faculty (2016 - 2019</span>
-                                             </li>
-                                             <li>
-                                                 <h4>City University</h4>
-                                                 <span>Science Faculty (2012 - 2015)</span>
-                                             </li>
-                                             <li>
-                                                 <h4>International University</h4>
-                                                 <span>Technical Information (2010 - 2012)</span>
-                                             </li>
-                                         </ul>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="content">
-                             <div class="my-skill">
-                                 <div class="row ">
-                                     <div class="col-md-6 col-sm-12 col-xs-12">
-                                         <div class="content-left">
-                                             <div class="title-resume">
-                                                 <h3>Skill</h3>
-                                                 <h2>With good <span>Personal</span> and <span>Professional Skills</span></h2>
-                                             </div>
-                                         </div>
-                                     </div>
-                                     <div class="col-md-6 col-sm-12 col-xs-12">
-                                         <div class="content-right">
-                                             <div id="accordionSkill" class="accordion">
-                                                 <div class="card">
-                                                     <div id="personalSkill" class="card-header">
-                                                         <h2>
-                                                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                                                 <i class="fas fa-circle"></i>Personal Skill
-                                                             </button>
-                                                         </h2>
-                                                     </div>
-         
-                                                     <div id="collapse1" class="collapse collapse-show" aria-labelledby="personalSkill" data-parent="#accordionSkill">
-                                                         <div class="card-body">
-                                                             <ul class="personalSkill">
-                                                                 <li>
-                                                                     <div class="skill-title">
-                                                                         <span>Creativity</span>
-                                                                     </div>
-                                                                     <div class="progress">
-                                                                         <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
-                                                                     </div>
-                                                                 </li>
-                                                                 <li>
-                                                                     <div class="skill-title">
-                                                                         <span>Innovation</span>
-                                                                     </div>
-                                                                     <div class="progress">
-                                                                         <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
-                                                                     </div>
-                                                                 </li>
-                                                                 <li>
-                                                                     <div class="skill-title">
-                                                                         <span>Communication</span>
-                                                                     </div>
-                                                                     <div class="progress">
-                                                                         <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
-                                                                     </div>
-                                                                 </li>
-                                                                 <li>
-                                                                     <div class="skill-title">
-                                                                         <span>Teamwork</span>
-                                                                     </div>
-                                                                     <div class="progress">
-                                                                         <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%"></div>
-                                                                     </div>
-                                                                 </li>
-                                                             </ul>
-                                                         </div>
-                                                     </div>
-                                                 </div>
-         
-                                                 <div class="card">
-                                                     <div id="proSkill" class="card-header">
-                                                         <h2>
-                                                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                                                 <i class="fas fa-circle"></i>Professional Skill
-                                                             </button>
-                                                         </h2>
-                                                     </div>
-         
-                                                     <div id="collapse2" class="collapse" aria-labelledby="proSkill" data-parent="#accordionSkill">
-                                                         <div class="card-body">
-                                                             <ul class="pro-skill">
-                                                                 <li>
-                                                                     <div class="skill-title">
-                                                                         <span>Graphic Design</span>
-                                                                     </div>
-                                                                     <div class="progress">
-                                                                         <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" style="width: 98%"></div>
-                                                                     </div>
-                                                                 </li>
-                                                                 <li>
-                                                                     <div class="skill-title">
-                                                                         <span>HTML & CSS</span>
-                                                                     </div>
-                                                                     <div class="progress">
-                                                                         <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
-                                                                     </div>
-                                                                 </li>
-                                                                 <li>
-                                                                     <div class="skill-title">
-                                                                         <span>JavaScript</span>
-                                                                     </div>
-                                                                     <div class="progress">
-                                                                         <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
-                                                                     </div>
-                                                                 </li>
-                                                                 <li>
-                                                                     <div class="skill-title">
-                                                                         <span>PHP</span>
-                                                                     </div>
-                                                                     <div class="progress">
-                                                                         <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-                                                                     </div>
-                                                                 </li>
-                                                                 <li>
-                                                                     <div class="skill-title">
-                                                                         <span>Photography</span>
-                                                                     </div>
-                                                                     <div class="progress">
-                                                                         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
-                                                                     </div>
-                                                                 </li>
-                                                             </ul>
-                                                         </div>
-                                                     </div>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-          end resume
-         
-         <div id="portfolio" class="portfolio segments">
-             <div class="container">
-                 <div class="box-content">
-                     <div class="section-title">
-                         <h3>My Portfolio</h3>
-                     </div>
-                     <div class="portfolio-filter-menu">
-                         <ul>
-                             <li data-filter="all" class="active">
-                                 <span>See All</span>
-                             </li>
-                             <li data-filter="1">
-                                 <span>House Plant</span>
-                             </li>
-                             <li data-filter="2">
-                                 <span>Flowers</span>
-                             </li>
-                             <li data-filter="3">
-                                 <span>Photography</span>
-                             </li>
-                         </ul>
-                     </div>
-         
-                     <div class="row no-gutters filtr-container">
-                         <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="3">
-                             <div class="content-image">
-                                 <a href="images/portfolio1.jpg" class="portfolio-popup">
-                                     <img src="images/portfolio1.jpg" alt="">
-                                     <div class="image-overlay"></div>
-                                     <div class="portfolio-caption">
-                                         <div class="title">
-                                             <h4>Classic Minimalist Door</h4>
-                                         </div>
-                                         <div class="subtitle">
-                                             <span>Graphic Design</span>
-                                         </div>
-                                     </div>
-                                 </a>
-                             </div>
-                         </div>
-                         <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="1">
-                             <div class="content-image">
-                                 <a href="images/portfolio2.jpg" class="portfolio-popup">
-                                     <img src="images/portfolio2.jpg" alt="">
-                                     <div class="image-overlay"></div>
-                                     <div class="portfolio-caption">
-                                         <div class="title">
-                                             <h4>Green Succulent Plants</h4>
-                                         </div>
-                                         <div class="subtitle">
-                                             <span>Nature Plant</span>
-                                         </div>
-                                     </div>
-                                 </a>
-                             </div>
-                         </div>
-                         <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="2, 1">
-                             <div class="content-image">
-                                 <a href="images/portfolio3.jpg" class="portfolio-popup">
-                                     <img src="images/portfolio3.jpg" alt="">
-                                     <div class="image-overlay"></div>
-                                     <div class="portfolio-caption">
-                                         <div class="title">
-                                             <h4>Yellow Rose Pale Plant</h4>
-                                         </div>
-                                         <div class="subtitle">
-                                             <span>Flower Plant</span>
-                                         </div>
-                                     </div>
-                                 </a>
-                             </div>
-                         </div>
-                         <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="3">
-                             <div class="content-image">
-                                 <a href="images/portfolio4.jpg" class="portfolio-popup">
-                                     <img src="images/portfolio4.jpg" alt="">
-                                     <div class="image-overlay"></div>
-                                     <div class="portfolio-caption">
-                                         <div class="title">
-                                             <h4>Succulent Plant in Pot</h4>
-                                         </div>
-                                         <div class="subtitle">
-                                             <span>Plant House</span>
-                                         </div>
-                                     </div>
-                                 </a>
-                             </div>
-                         </div>
-                         <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="1, 2">
-                             <div class="content-image">
-                                 <a href="images/portfolio5.jpg" class="portfolio-popup">
-                                     <img src="images/portfolio5.jpg" alt="">
-                                     <div class="image-overlay"></div>
-                                     <div class="portfolio-caption">
-                                         <div class="title">
-                                             <h4>Photo of Green Cactus</h4>
-                                         </div>
-                                         <div class="subtitle">
-                                             <span>Plant House</span>
-                                         </div>
-                                     </div>
-                                 </a>
-                             </div>
-                         </div>
-                         <div class="col-md-4 col-sm-12 col-xs-12 filtr-item" data-category="3, 1">
-                             <div class="content-image">
-                                 <a href="images/portfolio6.jpg" class="portfolio-popup">
-                                     <img src="images/portfolio6.jpg" alt="">
-                                     <div class="image-overlay"></div>
-                                     <div class="portfolio-caption">
-                                         <div class="title">
-                                             <h4>Two Feet of Two Ferns</h4>
-                                         </div>
-                                         <div class="subtitle">
-                                             <span>Graphic Design</span>
-                                         </div>
-                                     </div>
-                                 </a>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-          end portfolio -->
+      <!-- End TrustBox widget -->
       <!-- blog -->
       <div id="blog" class="blog segments">
          <div class="container">
@@ -595,9 +352,9 @@
                         <img src="images/blog2.jpg" alt="">
                      </div>
                      <div class="blog-title">
-                        <h4><a href="https://www.buymeacoffee.com/datacryptoml/nocoes-basicas-para-negociar-forex"> Noções básicas para negociar Forex</a></h4>
+                        <h4><a href="https://www.buymeacoffee.com/dc_analytics/nocoes-basicas-para-negociar-forex" target="_blank"> Noções básicas para negociar Forex</a></h4>
                         <div class="date">
-                           Fevereiro 17, 2021 <i class="fas fa-circle"></i> <a href="#"><span>PESQUISA</span></a>
+                           Outubro 20, 2020 <i class="fas fa-circle"></i> <a href="#"><span>EDUCAÇÃO</span></a>
                         </div>
                      </div>
                   </div>
@@ -608,9 +365,9 @@
                         <img src="images/blog2.jpg" alt="">
                      </div>
                      <div class="blog-title">
-                        <h4><a href="https://www.buymeacoffee.com/datacryptoml/explicacao-dos-ciclos-de-mercado-e-da-opiniao-investidor">Explicação dos ciclos de mercado</a></h4>
+                        <h4><a href="https://www.buymeacoffee.com/dc_analytics/explicacao-dos-ciclos-de-mercado-e-da-opiniao-investidor" target="_blank">Explicação dos ciclos de mercado</a></h4>
                         <div class="date">
-                           Abril 15, 2021 <i class="fas fa-circle"></i> <a href="#"><span>EDUCAÇÃO</span></a>
+                           Novembro 20, 2020 <i class="fas fa-circle"></i> <a href="#"><span>EDUCAÇÃO</span></a>
                         </div>
                      </div>
                   </div>
@@ -619,6 +376,13 @@
          </div>
       </div>
       <!-- end blog -->
+      <center>
+         <!-- TrustBox widget - Review Collector -->
+         <div class="trustpilot-widget" data-locale="pt-BR" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="5fa88ea19262500001e6c0b2" data-style-height="52px" data-style-width="100%">
+            <a href="https://br.trustpilot.com/review/datacryptoanalytics.github.io" target="_blank" rel="noopener">Trustpilot</a>
+         </div>
+         <!-- End TrustBox widget -->
+      </center>
       <!-- contact -->
       <div id="contact" class="contact segments">
          <div class="container">
@@ -632,16 +396,16 @@
                         <h2>Entre em contato conosco</h2>
                         <ul>
                            <li>
-                              <a href="https://twitter.com/dc_analytics"><i class="fab fa-twitter fa-2x"></i></a>
+                              <a href="https://twitter.com/DataCryptoML"><i class="fab fa-twitter"></i></a>
                            </li>
                            <li>
-                              <a href="https://fb.me/datacryptopy"><i class="fab fa-facebook-f fa-2x"></i></a>
+                              <a href="https://fb.me/datacryptopy"><i class="fab fa-facebook-f"></i></a>
                            </li>
                            <li>
-                              <a href="https://www.instagram.com/dc_analytics/"><i class="fab fa-instagram fa-2x"></i></a>
+                              <a href="https://www.instagram.com/dc_analytics/"><i class="fab fa-instagram"></i></a>
                            </li>
                            <li>
-                              <a href="https://github.com/datacrypto-analytics"><i class="fab fa-github fa-2x"></i></a>
+                              <a href="https://github.com/datacrypto-analytics"><i class="fab fa-github"></i></a>
                            </li>
                         </ul>
                      </div>
@@ -698,9 +462,7 @@
             <div class="section-title">
                <h3> Powered by </h3>
             </div>
-            <div class="box-content">
-               <a href="https://datacryptoanalytics.com" target="_blank"> <img src="images/logo-white-datacrypto.png"  width='97' height="41"></a>
-            </div>
+            <a href="https://fxstreet.com/" target="_blank"> <img src="images/fxstreet.png"  width='97' height="25"> & <img src="images/logo-white-datacrypto.png"  width='97' height="41"></a>
          </div>
       </div>
       <!-- end footer -->
@@ -733,7 +495,6 @@
                      <li>
                         <a href="https://t.me/datacrypto_bot">
                         <i class="fab fa-telegram"></i>
-                        </ion-icon>
                         </a>
                      </li>
                      <li>
@@ -764,6 +525,7 @@
       <script src="js/jquery.magnific-popup.min.js"></script>
       <script src="js/contact-form.js"></script>
       <script src="js/main.js"></script>
-      <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+      <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
    </body>
 </html>
