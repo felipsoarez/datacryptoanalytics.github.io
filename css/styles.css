@@ -159,6 +159,23 @@ ul {
 	z-index: 99;
 }
 
+.button_a {
+	background: #ff8c05;
+	color: #fff;
+	border: 0;
+	width: 100%;
+	margin-top: 0px;
+	border-radius: 10px;
+	padding: 13px 20px;
+	font-weight: 700;
+	font-size: 16px;
+	overflow: hidden;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	z-index: 99;
+}
+
 .button:hover::after {
 	content: '';
 	position: absolute;
