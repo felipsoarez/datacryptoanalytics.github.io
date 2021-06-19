@@ -996,7 +996,11 @@ e 10px de altura para a barra horizontal */
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ff8c05}
+  .dropdown-content a:hover {
+	  background-color: #ff8c05;
+	  border-radius: 8px;
+	
+	}
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
