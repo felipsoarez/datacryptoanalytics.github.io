@@ -1139,4 +1139,17 @@ e 10px de altura para a barra horizontal */
 	border-color: #ff8c05;
   }
 
-  
+  @keyframes fa-blink {
+	0% { opacity: 1; }
+	50% { opacity: 0.5; }
+	100% { opacity: 0; }
+}
+
+.tradutor{
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+}
+
