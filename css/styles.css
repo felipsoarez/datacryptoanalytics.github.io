@@ -982,6 +982,7 @@ e 10px de altura para a barra horizontal */
 	font-size: 13px;
 	border: none;
 	cursor: pointer;
+	position: inherit;
 
   }
   
