@@ -238,7 +238,7 @@ ul {
 	background: #292F33;
 	margin-top: 0;
 	-webkit-box-shadow: 5px 5px 15px 5px #000000; 
-	box-shadow: 5px 5px 15px 5px #ff8c05;
+	box-shadow: 5px 5px 15px 5px #000000;
 	transition: all .5s ease;
 }
 
