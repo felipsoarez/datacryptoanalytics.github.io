@@ -46,7 +46,7 @@ h1 {
 	font-family: 'Audiowide', cursive;
 	color: #ff8c05;
 	padding: 0;
-	box-shadow: 5px 5px 10px 1px #000;
+	text-shadow: 5px 5px 10px #ff8c05;
 
 }
 
