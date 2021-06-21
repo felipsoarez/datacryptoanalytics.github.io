@@ -1175,3 +1175,9 @@ e 10px de altura para a barra horizontal */
 	filter: drop-shadow(5px 5px 10px #000);
 
 }
+
+.tradutor{
+    position: relative;
+    right: 4rem;
+    top: 1.5rem;
+}
