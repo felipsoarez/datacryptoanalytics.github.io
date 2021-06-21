@@ -1162,8 +1162,8 @@ e 10px de altura para a barra horizontal */
     height: 24px;
     position: fixed;
     z-index: 1000;
-    right: 10rem;
-    top: 2rem;
+    right: 6rem;
+    top: 2.5rem;
 }
 
 .sombra-black {
