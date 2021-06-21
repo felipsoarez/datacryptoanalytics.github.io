@@ -1170,3 +1170,8 @@ e 10px de altura para a barra horizontal */
 	-webkit-box-shadow: 5px 5px 15px 5px #000000; 
 	box-shadow: 5px 5px 15px 5px #000000;
 }
+
+.imsombra{
+	filter: drop-shadow(5px 5px 10px #000);
+
+}
