@@ -43,7 +43,7 @@ h6 {
 
 h1 {
 	font-size: 45px;
-	font-family: 'Audiowide', cursive;
+	font-family: 'DotGothic16', sans-serif;
 	color: #ff8c05;
 	padding: 0;
 	text-shadow: 5px 5px 10px #000000;
@@ -1164,4 +1164,9 @@ e 10px de altura para a barra horizontal */
     z-index: 1000;
     right: 0rem;
     top: 6rem;
+}
+
+.sombra-black {
+	-webkit-box-shadow: 5px 5px 15px 5px #000000; 
+	box-shadow: 5px 5px 15px 5px #000000;
 }
