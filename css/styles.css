@@ -931,7 +931,8 @@ e 10px de altura para a barra horizontal */
 .terminal {
 	background-color: #000;
 	border-radius: 8px;
-	color: #fff
+	color: #fff;
+	box-shadow: 5px 5px 15px 5px #000000;
 }
 
 .tooltip {
