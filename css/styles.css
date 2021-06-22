@@ -56,6 +56,7 @@ h2 {
 
 h3 {
 	font-size: 28px;
+	padding: 5px;
 	
 }
 
@@ -932,7 +933,7 @@ e 10px de altura para a barra horizontal */
 	background-color: #000;
 	border-radius: 8px;
 	color: #fff;
-	padding: 20px;
+	padding: 5px;
 	box-shadow: 5px 5px 15px 5px #000000;
 	height: 150px;
 	width: 96%;
