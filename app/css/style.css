@@ -910,6 +910,7 @@ e 10px de altura para a barra horizontal */
 
  ::-webkit-scrollbar-thumb {
 	background: #ff8c05;
+	border-radius: 8px;
 }
 
 .terminal {
