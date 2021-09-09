@@ -894,6 +894,7 @@ e 10px de altura para a barra horizontal */
 ::-webkit-scrollbar {
 	width: 4px;
 	height: 10px;
+	border-radius: 8px;
 }
 
 
