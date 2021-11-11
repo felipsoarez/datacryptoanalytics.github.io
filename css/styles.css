@@ -1113,7 +1113,7 @@ e 10px de altura para a barra horizontal */
 
 .videos {
 	border-radius: 8px;
-	-webkit-box-shadow: 5px 5px 15px 5px #000000; 
+	-webkit-box-shadow: 5px 5px 15px 5px #968b8b; 
 	box-shadow: 5px 5px 15px 5px #000000;
 
 }
@@ -1236,15 +1236,15 @@ e 10px de altura para a barra horizontal */
 
 
 	section.pricing {
-		background: #007bff;
-		background: linear-gradient(to right, #0062E6, #33AEFF);
+		background: #121212;
+		background: linear-gradient(to right, #121212, #121212);
 	  }
 	  
 	  .pricing .card {
 		border: none;
 		border-radius: 1rem;
 		transition: all 0.2s;
-		box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+		box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.7);
 	  }
 	  
 	  .pricing hr {
@@ -1291,7 +1291,7 @@ e 10px de altura para a barra horizontal */
 		.pricing .card:hover {
 		  margin-top: -.25rem;
 		  margin-bottom: .25rem;
-		  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+		  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.7);
 		}
 	  
 		.pricing .card:hover .btn {
