@@ -1250,6 +1250,7 @@ e 10px de altura para a barra horizontal */
 	  
 	  .pricing hr {
 		margin: 1.5rem 0;
+		background: #ff8c05;
 	  }
 	  
 	  .pricing .card-title {
