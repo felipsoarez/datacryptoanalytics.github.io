@@ -413,7 +413,7 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 1px dotted #ff8c05;
+  border-top: 1px solid #ff8c05;
 }
 
 hr#two {
