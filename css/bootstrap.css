@@ -415,6 +415,8 @@ hr{
   height:15px;
   width:105px;
   border:none;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-radius: 3px;
   border-left:15px solid #ff8c05;
   border-right:15px solid #302100;
