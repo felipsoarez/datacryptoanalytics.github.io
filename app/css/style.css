@@ -53,7 +53,7 @@ h2 {
 
 h3 {
 	font-size: 28px;
-	font-family: 'DotGothic16', sans-serif;
+	font-family: 'Rajdhani', sans-serif;
 	color: #ff8c05;
 	padding: 5px;
 	text-shadow: 5px 5px 10px #000000;
@@ -61,7 +61,8 @@ h3 {
 }
 
 h4 {
-	font-size: 18px;
+	font-size: 28px;
+	font-family: 'Rajdhani', sans-serif;
 }
 
 h5 {
