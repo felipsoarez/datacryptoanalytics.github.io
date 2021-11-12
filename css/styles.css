@@ -1117,9 +1117,9 @@ e 10px de altura para a barra horizontal */
 .pulse {
 	border-radius: 50%;
 	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-	margin: 20px;
+	margin: 10px;
 	height: 20px;
-	width: 20px;
+	width: 22px;
 	transform: scale(1);
 	animation: pulse-black 2s infinite;
 }
