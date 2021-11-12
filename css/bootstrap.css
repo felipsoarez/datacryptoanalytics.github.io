@@ -416,8 +416,8 @@ hr{
   width:105px;
   border:none;
   border-radius: 3px;
-  border-left:15px solid #f00000;
-  border-right:15px solid #300000;
+  border-left:15px solid #ff8c05;
+  border-right:15px solid #302100;
   animation: KITTAnim 1s infinite ease-in-out alternate;
 }
 
@@ -426,8 +426,8 @@ hr:before{
   display:inline-block;
   width:15px;
   height:15px;
-  border-left:15px solid #c00000;
-  border-right:15px solid #600000;
+  border-left:15px solid #ff8c05;
+  border-right:15px solid #604a00;
   animation: KITTAnimBefore 1s infinite ease-in-out alternate;
 }
 
@@ -436,9 +436,9 @@ hr:after{
   display:inline-block;
   width:15px;
   height:15px;
-  border-left:15px solid #300000;
-  background-color:#300000;
-  border-right:15px solid #300000;
+  border-left:15px solid #302100;
+  background-color:#302100;
+  border-right:15px solid #302100;
   animation: KITTAnimAfter 1s infinite ease-in-out alternate;
 }
 
@@ -464,179 +464,7 @@ Do not try at home
 **/
 
 
-@keyframes KITTAnim {
-   0% {
-      background-color:#300000;
-      border-left:15px solid #f00000;
-      border-right:15px solid #300000;
-   }
-   10% {
-      background-color:#300000;
-      border-left:15px solid #f00000;
-      border-right:15px solid #300000;
-   }
-   20% {
-      background-color:#300000;
-      border-left:15px solid #c00000;
-      border-right:15px solid #300000;
-   }
-   30% {
-      background-color:#300000;
-      border-left:15px solid #a00000;
-      border-right:15px solid #300000;
-   }
-   40% {
-      background-color:#300000;
-      border-left:15px solid #600000;
-      border-right:15px solid #300000;
-   }
-   50% {
-      background-color:#600000;
-      border-left:15px solid #300000;
-      border-right:15px solid #300000;
-   }
-   60% {
-      background-color:#a00000;
-      border-left:15px solid #300000;
-      border-right:15px solid #600000;
-   }
-   70% {
-      background-color:#c00000;
-      border-left:15px solid #300000;
-      border-right:15px solid #a00000;
-   }
-   80% {
-      background-color:#f00000;
-      border-left:15px solid #300000;
-      border-right:15px solid #c00000;
-   }
-   90% {
-      background-color:#c00000;
-      border-left:15px solid #300000;
-      border-right:15px solid #f00000;
-   }
-   100% {
-      background-color:#c00000;
-      border-left:15px solid #300000;
-      border-right:15px solid #f00000;
-   }
-}
 
-@keyframes KITTAnimBefore {
-   0% {
-      background-color:#a00000;
-      border-left:15px solid #c00000;
-      border-right:15px solid #600000;
-   }
-   10% {
-      background-color:#a00000;
-      border-left:15px solid #c00000;
-      border-right:15px solid #600000;
-   }
-   20% {
-      background-color:#c00000;
-      border-left:15px solid #f00000;
-      border-right:15px solid #a00000;
-   }
-   30% {
-      background-color:#f00000;
-      border-left:15px solid #c00000;
-      border-right:15px solid #c00000;
-   }
-   40% {
-      background-color:#c00000;
-      border-left:15px solid #a00000;
-      border-right:15px solid #f00000;
-   }
-   50% {
-      background-color:#a00000;
-      border-left:15px solid #600000;
-      border-right:15px solid #c00000;
-   }
-   60% {
-      background-color:#600000;
-      border-left:15px solid #300000;
-      border-right:15px solid #a00000;
-   }
-   70% {
-      background-color:#300000;
-      border-left:15px solid #300000;
-      border-right:15px solid #600000;
-   }
-   80% {
-      background-color:#300000;
-      border-left:15px solid #300000;
-      border-right:15px solid #300000;
-   }
-   90% {
-      background-color:#300000;
-      border-left:15px solid #300000;
-      border-right:15px solid #300000;
-   }
-   100% {
-      background-color:#300000;
-      border-left:15px solid #300000;
-      border-right:15px solid #300000;
-   }
-}
-
-@keyframes KITTAnimAfter {
-   0% {
-      background-color:#300000;
-      border-left:15px solid #300000;
-      border-right:15px solid #300000;
-   }
-   10% {
-      background-color:#300000;
-      border-left:15px solid #300000;
-      border-right:15px solid #300000;
-   }
-   20% {
-      background-color:#300000;
-      border-left:15px solid #600000;
-      border-right:15px solid #300000;
-   }
-   30% {
-      background-color:#600000;
-      border-left:15px solid #a00000;
-      border-right:15px solid #300000;
-   }
-   40% {
-      background-color:#a00000;
-      border-left:15px solid #c00000;
-      border-right:15px solid #600000;
-   }
-   50% {
-      background-color:#c00000;
-      border-left:15px solid #f00000;
-      border-right:15px solid #a00000;
-   }
-   60% {
-      background-color:#f00000;
-      border-left:15px solid #c00000;
-      border-right:15px solid #c00000;
-   }
-   70% {
-      background-color:#c00000;
-      border-left:15px solid #a00000;
-      border-right:15px solid #f00000;
-   }
-   80% {
-      background-color:#a00000;
-      border-left:15px solid #600000;
-      border-right:15px solid #c00000;
-   }
-   90% {
-      background-color:#600000;
-      border-left:15px solid #300000;
-      border-right:15px solid #a00000;
-   }
-   100% {
-      background-color:#600000;
-      border-left:15px solid #300000;
-      border-right:15px solid #a00000;
-   }
-}
 @keyframes KARRAnim {
    0% {
       background-color:#333300;
