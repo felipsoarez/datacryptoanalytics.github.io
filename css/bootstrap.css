@@ -416,6 +416,18 @@ hr {
   border-top: 1px dotted #ff8c05;
 }
 
+hr#two {
+  @include background-image(linear-gradient(left, #ff8c05, white));
+  
+  &:before {
+    left: 90%;
+    width: 20%;
+    padding: 1em;
+    top: 1px;
+  }
+}
+
+
 small,
 .small {
   font-size: 80%;
