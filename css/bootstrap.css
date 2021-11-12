@@ -414,6 +414,18 @@ hr {
   margin-bottom: 1rem;
   border: 0;
   border-top: 1px solid #ff8c05;
+  &:before {
+    
+    content: attr(data-symbol);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: black;
+    color: white;
+    padding: 0.5em 3em;
+    @include transform(translate(-50%, -50%));
+    
+  }
 }
 
 hr#two {
