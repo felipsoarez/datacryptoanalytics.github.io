@@ -1129,7 +1129,7 @@ e 10px de altura para a barra horizontal */
 		transform: scale(0.95);
 		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
 	}
-	70% {
+	50% {
 		transform: scale(1);
 		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
 	}
