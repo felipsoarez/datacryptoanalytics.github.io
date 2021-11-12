@@ -1351,3 +1351,11 @@ section.pricing {
 		opacity: 1;
 	}
 }
+
+.thread1 {
+	top: 0.8em;
+	-webkit-animation: thread2 10s infinite;
+  	-moz-animation:    thread2 10s infinite;
+  	-o-animation:      thread2 10s infinite;
+  	animation:         thread2 10s infinite;	
+}
