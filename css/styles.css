@@ -1071,6 +1071,10 @@ e 10px de altura para a barra horizontal */
 	box-shadow: 5px 5px 5px 0px #000000, inset 1px 1px 3px 0px #000000, 1px 1px 4px 6px rgba(0, 0, 0, 0);
 }
 
+accordion.active, accordion:hover {
+    background-color: #ddd;
+}
+
 .panel {
 	padding: 0 18px;
 	padding-top: 20px;
@@ -1087,6 +1091,10 @@ e 10px de altura para a barra horizontal */
 	float: right;
 	margin-left: 5px;
 	border-color: #ff8c05;
+}
+.accordion.active:after {
+    content: "\2796";
+	color: #ff8c05;
 }
 
 @keyframes fa-blink {

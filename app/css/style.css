@@ -1044,6 +1044,7 @@ accordion.active, accordion:hover {
 }
 .accordion.active:after {
     content: "\2796";
+	color: #ff8c05;
 }
 @keyframes fa-blink {
 	0% {
