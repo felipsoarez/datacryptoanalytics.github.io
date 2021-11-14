@@ -1030,6 +1030,9 @@ e 10px de altura para a barra horizontal */
 	overflow: hidden;
 	border-color: #ff8c05;
 }
+accordion.active, accordion:hover {
+    background-color: #ddd;
+}
 .accordion:after {
 	content: '\002B';
 	color: #ff8c05;
@@ -1037,6 +1040,9 @@ e 10px de altura para a barra horizontal */
 	float: right;
 	margin-left: 5px;
 	border-color: #ff8c05;
+}
+.accordion.active:after {
+    content: "\2796";
 }
 @keyframes fa-blink {
 	0% {
