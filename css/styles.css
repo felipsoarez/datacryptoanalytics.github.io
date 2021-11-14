@@ -1072,7 +1072,7 @@ e 10px de altura para a barra horizontal */
 }
 
 accordion.active, accordion:hover {
-    background-color: #ddd;
+    background-color: #ff8c05;
 }
 
 .panel {
