@@ -1039,12 +1039,13 @@ accordion.active, accordion:hover {
 	color: #ff8c05;
 	font-weight: bold;
 	float: right;
-	margin-left: 5px;
+	margin-left: 10px;
 	border-color: #ff8c05;
 }
 .accordion.active:after {
     content: "\2796";
 	color: #ff8c05;
+	margin-left: 10px;
 }
 @keyframes fa-blink {
 	0% {
