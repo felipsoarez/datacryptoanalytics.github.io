@@ -1005,20 +1005,23 @@ e 10px de altura para a barra horizontal */
 	top: 6rem;
 }
 .accordion {
-	background-color: #1a1a1a00;
+	background-color: #292F33;
 	color: #ff8c05;
 	cursor: pointer;
 	padding: 20px;
 	width: 100%;
 	border: 10px;
-	text-align: left;
+	text-align: center;
 	outline: none;
 	font-size: 18px;
 	transition: 2.4s;
 	border-radius: 30px;
 	border-width: 150px;
 	border-color: #ff8c05;
+	-webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 10px 0px #000000, 1px 1px 4px 6px rgba(0, 0, 0, 0);
+	box-shadow: 5px 5px 5px 0px #000000, inset 1px 1px 3px 0px #000000, 1px 1px 4px 6px rgba(0, 0, 0, 0);
 }
+
 .panel {
 	padding: 0 18px;
 	padding-top: 20px;
