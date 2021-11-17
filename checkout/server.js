@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-const YOUR_DOMAIN = 'https://datacryptoanalytics.com/';
+const YOUR_DOMAIN = 'https://datacryptoanalytics.com/4242';
 
 app.post('/create-checkout-session', async (req, res) => {
   const prices = await stripe.prices.list({
