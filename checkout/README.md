@@ -4,10 +4,16 @@ Explore a full, working code sample of an integration with Stripe Checkout and C
 
 ## Running the sample
 
-1. Run the server
+1. Build the server
 
 ~~~
-go run server.go
+mvn package
 ~~~
 
-2. Go to [http://localhost:4242/checkout.html](http://localhost:4242/checkout.html)
+2. Run the server
+
+~~~
+java -cp target/stripe-payment-1.0.0-SNAPSHOT-jar-with-dependencies.jar com.stripe.sample.Server
+~~~
+
+3. Go to [http://localhost:4242/checkout.html](http://localhost:4242/checkout.html)
