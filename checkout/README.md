@@ -7,13 +7,13 @@ Explore a full, working code sample of an integration with Stripe Checkout and C
 1. Build the server
 
 ~~~
-mvn package
+npm install
 ~~~
 
 2. Run the server
 
 ~~~
-java -cp target/stripe-payment-1.0.0-SNAPSHOT-jar-with-dependencies.jar com.stripe.sample.Server
+npm start
 ~~~
 
 3. Go to [http://localhost:4242/checkout.html](http://localhost:4242/checkout.html)
