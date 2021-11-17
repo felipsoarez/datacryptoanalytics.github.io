@@ -41,7 +41,7 @@ public class Server {
     // If you are using an endpoint defined with the API or dashboard, look in your webhook settings
     // at https://dashboard.stripe.com/webhooks
     String endpointSecret = "whsec_12345";
-    final String YOUR_DOMAIN = "http://localhost:4242";
+    final String YOUR_DOMAIN = "https://datacryptoanalytics.com/";
 
     staticFiles.externalLocation(Paths.get("public").toAbsolutePath().toString());
 
