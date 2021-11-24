@@ -169,7 +169,8 @@ sub {
 }
 
 img {
-	border: 0
+	border: 0;
+	padding: 20px;
 }
 
 svg:not(:root) {
