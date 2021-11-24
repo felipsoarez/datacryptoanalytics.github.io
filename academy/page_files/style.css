@@ -170,6 +170,7 @@ sub {
 
 img {
 	border: 0;
+	vertical-align: middle;
 }
 
 svg:not(:root) {
