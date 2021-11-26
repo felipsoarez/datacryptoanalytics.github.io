@@ -5891,6 +5891,7 @@ a.close.disabled {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1rem;
+  color: #000;
 }
 
 .modal-footer {
