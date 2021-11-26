@@ -334,18 +334,7 @@ strong {
 	font-weight: 700
 }
 
-a {
-	color: #3f3f3f;
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out
-}
 
-a:hover {
-	color: #601eff;
-	text-decoration: none
-}
 
 p {
 	line-height: 24px;
