@@ -5883,6 +5883,7 @@ a.close.disabled {
 .modal-title {
   margin-bottom: 0;
   line-height: 1.5;
+  color: #ff8c05;
 }
 
 .modal-body {
