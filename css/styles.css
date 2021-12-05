@@ -154,6 +154,7 @@ ul {
 	background: linear-gradient(135deg, #ff8c05 0%, #920000 100%);
 	color: #fff;
 	border: 0;
+	width: 100%;
 	margin-top: 0px;
 	border-radius: 26px;
 	padding: 16px 21px;
