@@ -1367,5 +1367,9 @@ section.pricing {
 
 
 
-
+.efeito {
+	transition-duration: .1s;
+	transition-delay: 750ms;
+	opacity: 0;
+}
 
