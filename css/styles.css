@@ -1000,7 +1000,7 @@ ul {
 	position: fixed;
 	background-color: #1a1a1a;
 	border-radius: 8px;
-	width: 100%;
+	min-width: 280px;
 	height: 100%;
 	box-shadow: 0px 12px 16px 0px rgba(0, 0, 0, 0.2);
 	z-index: 1000;
