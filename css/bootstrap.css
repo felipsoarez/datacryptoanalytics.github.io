@@ -5750,6 +5750,8 @@ a.close.disabled {
   height: 100%;
   overflow: hidden;
   outline: 0;
+  -webkit-box-shadow: 5px 5px 15px 5px #ff8c05;
+	box-shadow: 5px 5px 15px 5px #ff8c05;
 }
 
 .modal-dialog {
