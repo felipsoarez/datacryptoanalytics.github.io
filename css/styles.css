@@ -1358,5 +1358,6 @@ section.pricing {
 
 
 
-
-
+.sombra {
+	text-shadow: 5px 5px 15px #000000;
+}
