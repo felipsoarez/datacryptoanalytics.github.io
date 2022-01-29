@@ -152,7 +152,7 @@ ul {
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 100%;
+	width: 30%;
 	height: 100%;
 	background: #292F33;
 	animation: titles 0.4s cubic-bezier(0.25, 0.61, 1, 0.47) forwards;
