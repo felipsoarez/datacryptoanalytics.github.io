@@ -1028,7 +1028,7 @@ e 10px de altura para a barra horizontal */
 	position: fixed;
 	z-index: 1000;
 	right: 0rem;
-	top: 620px;
+	top: 610px;
 }
 .accordion {
 	background-color: #292F33;
