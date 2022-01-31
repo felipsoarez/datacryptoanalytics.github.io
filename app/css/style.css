@@ -1362,7 +1362,7 @@ section.pricing {
 	text-shadow: 5px 5px 15px #000000;
 }
 
-.mexe:hover {
+.mexe {
 	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
 	transform: translate3d(0, 0, 0);
 	backface-visibility: hidden;
