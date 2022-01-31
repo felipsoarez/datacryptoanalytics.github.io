@@ -1122,8 +1122,8 @@ accordion.active, accordion:hover {
 	border-radius: 50%;
 	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
 	margin: 10px;
-	height: 20px;
-	width: 25px;
+	height: 25px;
+	width: 20px;
 	transform: scale(1);
 	animation: pulse-black 2s infinite;
 }
