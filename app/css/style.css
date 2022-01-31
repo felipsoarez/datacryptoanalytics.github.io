@@ -1151,15 +1151,15 @@ accordion.active, accordion:hover {
 @keyframes pulse-red {
 	0% {
 		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+		box-shadow: 0 0 0 0 rgba(39, 255, 9, 0.7);
 	}
 	70% {
 		transform: scale(1);
-		box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+		box-shadow: 0 0 0 10px rgba(39, 255, 9, 0);
 	}
 	100% {
 		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+		box-shadow: 0 0 0 0 rgba(39, 255, 9, 0);
 	}
 }
 
