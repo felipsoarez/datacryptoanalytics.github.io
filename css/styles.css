@@ -188,22 +188,6 @@ ul {
 }
 
 
-.btn_downloads {
-	background: #333333;
-	color: #fff;
-	border: 0;
-	width: 50%;
-	margin-top: 0px;
-	border-radius: 26px;
-	padding: 8px;
-	font-weight: 700;
-	font-size: 20px;
-	overflow: hidden;
-	position: relative;
-	overflow: hidden;
-	display: inline-block;
-	z-index: 99;
-}
 
 .button:hover::after {
 	content: '';
@@ -1445,3 +1429,24 @@ section.pricing {
 	10% { transform: translateY(0); opacity: 1; }
 	100% { transform: translateY(15px); opacity: 0;}
   }
+}
+
+.btn_downloads {
+	background: #333333;
+	color: #fff;
+	border: 0;
+	width: 50%;
+	margin-top: 0px;
+	border-radius: 26px;
+	padding: 8px;
+	font-weight: 700;
+	font-size: 20px;
+	overflow: hidden;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	z-index: 99;
+}
+
+
+
