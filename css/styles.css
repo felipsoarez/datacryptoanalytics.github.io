@@ -165,10 +165,7 @@ ul {
 }
 
 .button {
-	background: #ff8c05;
-	background: -moz-linear-gradient(-45deg, #ff8c05 0%, #920000 100%);
-	background: -webkit-linear-gradient(-45deg, #ff8c05 0%, #920000 100%);
-	background: linear-gradient(135deg, #ff8c05 0%, #920000 100%);
+	background: #301e09;
 	color: #fff;
 	border: 0;
 	width: 50%;
@@ -1446,7 +1443,7 @@ section.pricing {
 	10% { transform: translateY(0); opacity: 1; }
 	100% { transform: translateY(15px); opacity: 0;}
   }
-}
+
 
 
 
