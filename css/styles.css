@@ -168,6 +168,24 @@ ul {
 	z-index: 99;
 }
 
+.btn_downloads {
+	background: rgb(255,140,5);
+	background: linear-gradient(153deg, rgba(255,140,5,1) 0%, rgba(255,140,5,1) 35%, rgba(18,18,18,1) 100%);
+	color: #fff;
+	border: 0;
+	width: 30%;
+	margin-top: 0px;
+	border-radius: 26px;
+	padding: 16px 21px;
+	font-weight: 700;
+	font-size: 20px;
+	overflow: hidden;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	z-index: 99;
+}
+
 .button_a {
 	background: rgb(255,140,5);
 	background: linear-gradient(153deg, rgba(255,140,5,1) 0%, rgba(255,140,5,1) 35%, rgba(18,18,18,1) 100%);
