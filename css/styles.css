@@ -169,14 +169,17 @@ ul {
 }
 
 .btn_downloads {
-	background: rgb(255,140,5);
-	background: linear-gradient(153deg, rgba(255,140,5,1) 0%, rgba(255,140,5,1) 35%, rgba(18,18,18,1) 100%);
+	background: #ff8c05;
+	background: -moz-linear-gradient(-45deg, #ff8c05 0%, #920000 100%);
+	background: -webkit-linear-gradient(-45deg, #ff8c05 0%, #920000 100%);
+	background: linear-gradient(135deg, #ff8c05 0%, #920000 100%);
 	color: #fff;
 	border: 0;
 	width: 30%;
 	margin-top: 0px;
 	border-radius: 26px;
-	padding: 16px 21px;
+	padding: 10px 17px;
+	padding-bottom: 10px;
 	font-weight: 700;
 	font-size: 20px;
 	overflow: hidden;
