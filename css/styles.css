@@ -916,6 +916,7 @@ ul {
 
  ::-webkit-scrollbar-track {
 	background: #121212;
+	height: 80%;
 }
 
  ::-webkit-scrollbar-thumb {
