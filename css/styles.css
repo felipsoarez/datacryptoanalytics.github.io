@@ -1075,7 +1075,7 @@ ul {
 	box-shadow: 5px 5px 5px 0px #000000, inset 1px 1px 3px 0px #000000, 1px 1px 4px 6px rgba(0, 0, 0, 0);
 }
 
-.button:hover::after {
+.accordion:hover::after {
 	content: '';
 	position: absolute;
 	top: 0;
