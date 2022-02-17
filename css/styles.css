@@ -1003,6 +1003,9 @@ ul {
 .dropdown-content {
 	display: none;
 	background-image: url("../images/bg-6.svg");
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
 	position: fixed;
 	background-color: #1a1a1a;
 	border-radius: 8px;
