@@ -1173,12 +1173,12 @@ accordion.active, accordion:hover {
 }
 
 .div_teste {
-	width: 50%;
-	height: 30%;
+	width: 40%;
+	height: 40%;
 	position: fixed;
 	z-index: 1000;
 	left: 2%;
-	top: 90%;
+	top: 95%;
 }
 
 .sombra-black {
