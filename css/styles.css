@@ -1183,6 +1183,16 @@ accordion.active, accordion:hover {
 	top: 80%;
 }
 
+.div_cookie {
+	width: 100%;
+	height: 40%;
+	font-size: 12px;
+	position: fixed;
+	z-index: 1000;
+	left: 2%;
+	top: 80%;
+}
+
 .sombra-black {
 	-webkit-box-shadow: 5px 5px 15px 5px #000000;
 	box-shadow: 5px 5px 15px 5px #000000;
