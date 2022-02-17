@@ -1175,7 +1175,7 @@ accordion.active, accordion:hover {
 .div_teste {
 	width: 40%;
 	height: 60%;
-	font-size: 10px;
+	font-size: 12px;
 	position: fixed;
 	z-index: 1000;
 	left: 2%;
