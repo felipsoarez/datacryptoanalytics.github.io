@@ -1173,11 +1173,11 @@ accordion.active, accordion:hover {
 }
 
 .div_teste {
-	width: 70px;
+	width: 170px;
 	height: 24px;
 	position: fixed;
 	z-index: 1000;
-	left: 10%;
+	left: 2%;
 	top: 90%;
 }
 
