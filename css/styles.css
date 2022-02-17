@@ -1067,7 +1067,7 @@ ul {
 	outline: none;
 	font-size: 18px;
 	transition: 2.4s;
-	border-radius: 30px;
+	border-radius: 18px;
 	border-width: 150px;
 	border-color: #ff8c05;
 	-webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 10px 0px #000000, 1px 1px 4px 6px rgba(0, 0, 0, 0);
