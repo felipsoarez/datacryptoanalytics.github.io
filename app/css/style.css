@@ -1178,7 +1178,7 @@ accordion.active, accordion:hover {
 	position: fixed;
 	z-index: 1000;
 	left: 2%;
-	top: 90%;
+	top: 80%;
 }
 
 .sombra-black {
