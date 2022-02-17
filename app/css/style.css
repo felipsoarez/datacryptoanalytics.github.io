@@ -46,7 +46,7 @@ h1 {
 	font-size: 45px;
 	font-family: 'Rajdhani', sans-serif;
 	color: #ff8c05;
-	padding-bottom: 20px;
+	padding-bottom: 12px;
 	text-shadow: 5px 5px 15px #000000;
 }
 
@@ -147,18 +147,16 @@ ul {
 
 /*button default*/
 
+
 .button {
-	background: #ff8c05;
-	background: -moz-linear-gradient(-45deg, #ff8c05 0%, #920000 100%);
-	background: -webkit-linear-gradient(-45deg, #ff8c05 0%, #920000 100%);
-	background: linear-gradient(135deg, #ff8c05 0%, #920000 100%);
+	background: #121212;
 	color: #fff;
 	border: 0;
-	width: 40%;
+	width: 45%;
 	margin-top: 0px;
-	border-radius: 26px;
-	padding: 16px 21px;
-	padding-bottom: 15px;
+	border-radius: 16px;
+	padding: 8px;
+	padding-right: 8px;
 	font-weight: 700;
 	font-size: 20px;
 	overflow: hidden;
@@ -167,6 +165,8 @@ ul {
 	display: inline-block;
 	z-index: 99;
 }
+
+
 
 .button_a {
 	background: rgb(255,140,5);
@@ -185,6 +185,8 @@ ul {
 	display: inline-block;
 	z-index: 99;
 }
+
+
 
 .button:hover::after {
 	content: '';
@@ -915,6 +917,7 @@ ul {
 
  ::-webkit-scrollbar-track {
 	background: #121212;
+	height: 80%;
 }
 
  ::-webkit-scrollbar-thumb {
@@ -925,11 +928,13 @@ ul {
 .terminal {
 	background-color: #000;
 	border-radius: 8px;
+	border-bottom: 10px;
 	color: #fff;
 	padding: 5px;
+	padding-bottom: 20px;
 	box-shadow: 5px 5px 15px 5px #000000;
-	height: 150px;
-	width: 96%;
+	height: 130px;
+	width: 98%;
 }
 
 .tooltip {
@@ -997,6 +1002,10 @@ ul {
 
 .dropdown-content {
 	display: none;
+	background-image: url("../images/dca_wallpaper_2.jpg");
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
 	position: fixed;
 	background-color: #1a1a1a;
 	border-radius: 8px;
@@ -1164,12 +1173,12 @@ accordion.active, accordion:hover {
 }
 
 .div_teste {
-	width: 70px;
+	width: 170px;
 	height: 24px;
 	position: fixed;
 	z-index: 1000;
-	right: 4rem;
-	top: 1rem;
+	left: 2%;
+	top: 90%;
 }
 
 .sombra-black {
@@ -1362,7 +1371,7 @@ section.pricing {
 	text-shadow: 5px 5px 15px #000000;
 }
 
-.mexe {
+.mexe:hover {
 	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
 	transform: translate3d(0, 0, 0);
 	backface-visibility: hidden;
@@ -1425,3 +1434,9 @@ section.pricing {
 	10% { transform: translateY(0); opacity: 1; }
 	100% { transform: translateY(15px); opacity: 0;}
   }
+
+
+
+
+
+
