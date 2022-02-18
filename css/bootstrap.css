@@ -476,6 +476,11 @@ mark,
   text-transform: uppercase;
 }
 
+.shadow {
+  border: solid 2px;
+  box-shadow: 15px 15px 0 0 #ff8c05;
+}
+
 .blockquote {
   margin-bottom: 1rem;
   font-size: 1.25rem;
