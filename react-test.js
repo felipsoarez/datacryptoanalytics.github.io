@@ -87,7 +87,7 @@ var Navbar = React.createClass({
   }
 });
 
-var intro = React.createClass({
+var intro = React.createComponent({
     render: function() {
       return (
   
