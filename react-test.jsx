@@ -13,7 +13,7 @@ var cookiesAlerta = React.createClass({
     }
   });
 
-var Navbar = React.createClass({
+var Navbar = ReactDOM.createClass({
   render: function() {
     return (
 
