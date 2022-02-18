@@ -484,7 +484,7 @@ mark,
 .blockquote {
   margin-bottom: 1rem;
   font-size: 1.25rem;
-  background-color: #000;
+  background-color: rgb(82, 56, 23);
 }
 
 .blockquote-footer {
