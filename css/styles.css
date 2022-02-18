@@ -1088,7 +1088,7 @@ accordion.active, accordion:hover {
 }
 
 .panel {
-	padding: 0 18px;
+	padding: 10px;
 	padding-top: 20px;
 	display: none;
 	background-color: #1a1a1a00;
