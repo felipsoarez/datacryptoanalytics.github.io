@@ -17,7 +17,6 @@ var Navbar = React.createClass({
   render: function() {
     return (
 
-      {/* navbar */}
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-dark">
           {/* navbar brand or logo */}
@@ -82,7 +81,6 @@ var Navbar = React.createClass({
           </div>
         </nav>
       </div>
-      {/* end navbar */}
     );
   }
 });
