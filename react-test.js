@@ -85,11 +85,10 @@ var Navbar = React.createClass({
   }
 });
 
-var intro = React.createComponent({
+var intro = React.createElement({
     render: function() {
       return (
   
-        {/* home intro */}
         <div id="home" className="home-intro segments">
           <div className="container">
             <div className="section-title">
@@ -268,7 +267,6 @@ var intro = React.createComponent({
             </div>
           </div>
         </div>
-        {/* end intro */}
       );
     }
   });
