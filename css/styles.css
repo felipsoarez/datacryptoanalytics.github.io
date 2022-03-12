@@ -149,7 +149,7 @@ ul {
 
 
 .button {
-	background: #292F33;
+	background: linear-gradient(to right, #292F33, #ff8c05);
 	color: #fff;
 	border: 0;
 	width: 45%;
