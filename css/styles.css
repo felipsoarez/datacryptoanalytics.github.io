@@ -1130,6 +1130,7 @@ accordion.active, accordion:hover {
 	animation: fa-blink 1.75s linear infinite;
 }
 
+
 .videos {
 	border-radius: 8px;
 	-webkit-box-shadow: 5px 5px 15px 5px #968b8b;
