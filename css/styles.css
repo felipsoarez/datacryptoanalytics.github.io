@@ -247,6 +247,9 @@ ul {
 	z-index: 999;
 	background: #292F33;
 	background-image: url("../images/d.jpg");
+	background-position: top; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
 	margin-top: 0;
 	-webkit-box-shadow: 5px 5px 15px 5px #000000;
 	box-shadow: 5px 5px 15px 5px #000000;
