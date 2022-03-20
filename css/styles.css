@@ -281,6 +281,7 @@ ul {
 .home-intro .intro-content .intro-caption h2 {
 	font-size: 70px;
 	font-weight: 900;
+	color: #ff8c05;
 	background: -webkit-linear-gradient(right, #d61a5e, #ff8c05);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
