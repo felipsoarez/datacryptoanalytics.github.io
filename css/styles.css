@@ -642,6 +642,8 @@ ul {
 .blog .content {
 	background: #292F33;
 	border-radius: 8px;
+	-webkit-box-shadow: 3px 3px 9px 3px #000000;
+	box-shadow: 3px 3px 9px 3px #000000;
 }
 
 .blog .content:hover img {
