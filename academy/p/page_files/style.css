@@ -689,7 +689,8 @@ header .bookmark-content .bookmark-popover {
 
 header .inner {
 	display: flex;
-	justify-content: flex-end
+	justify-content: flex-end;
+	padding-top: 15px;
 }
 
 header .navigation {
