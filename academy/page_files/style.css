@@ -80,7 +80,6 @@ body {
 	margin: 0;
 	background: #121212;
 	color: #fafafa;
-	border-radius: 30px;
 }
 
 article,
@@ -169,8 +168,7 @@ sub {
 }
 
 img {
-	border: 0;
-	vertical-align: middle;
+	border: 0
 }
 
 svg:not(:root) {
@@ -336,18 +334,7 @@ strong {
 	font-weight: 700
 }
 
-a {
-	color: #3f3f3f;
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out
-}
 
-a:hover {
-	color: #601eff;
-	text-decoration: none
-}
 
 p {
 	line-height: 24px;
@@ -702,7 +689,8 @@ header .bookmark-content .bookmark-popover {
 
 header .inner {
 	display: flex;
-	justify-content: flex-end
+	justify-content: flex-end;
+	padding-top: 13px;
 }
 
 header .navigation {
@@ -3140,6 +3128,10 @@ footer input[type=email] {
 		padding-bottom: 20px
 	}
 }
+
+
+
+
 
 
 /* personalizar a barra em geral, aqui estou definindo 10px de largura para a barra vertical
