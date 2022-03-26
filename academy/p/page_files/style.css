@@ -2023,8 +2023,8 @@ time+.tags:before {
 }
 
 footer {
-	color: #3f3f3f;
-	background: #eff0f1;
+	color: #ff8c05;
+	background: #000000;
 	padding-top: 50px;
 	text-align: center;
 	margin-top: 50px
@@ -2038,7 +2038,7 @@ footer h3 {
 
 footer .copyright {
 	margin-top: 50px;
-	background: #fff
+	background: #121212
 }
 
 footer .copyright a {
@@ -2046,7 +2046,7 @@ footer .copyright a {
 }
 
 footer .copyright a:hover {
-	border-bottom: 1px solid #601eff
+	border-bottom: 1px solid #ff8c05
 }
 
 footer .copyright p {
