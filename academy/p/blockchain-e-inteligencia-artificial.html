@@ -388,112 +388,57 @@
                                  <div class="sidebar">
                                     <div class="widget widget-share">
                                        <!-- TradingView Widget BEGIN -->
-                                       <div class="tradingview-widget-container">
-                                          <div class="tradingview-widget-container__widget"></div>
-                                          <div class="tradingview-widget-copyright"><a href="https://br.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Dados de Mercado</span></a> por TradingView</div>
-                                          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
-                                             {
-                                             "colorTheme": "light",
-                                             "dateRange": "1d",
-                                             "showChart": true,
-                                             "locale": "br",
-                                             "largeChartUrl": "",
-                                             "isTransparent": true,
-                                             "width": "100%",
-                                             "height": "660",
-                                             "plotLineColorGrowing": "rgba(255, 255, 255, 1",
-                                             "plotLineColorFalling": "rgba(179, 179, 179, 1)",
-                                             "gridLineColor": "rgba(179, 179, 179, 1)",
-                                             "scaleFontColor": "rgba(54, 54, 54)",
-                                             "belowLineFillColorGrowing": "rgba(234, 234, 234, 1)",
-                                             "belowLineFillColorFalling": "rgba(234, 234, 234, 1)",
-                                             "symbolActiveColor": "rgba(234, 234, 234, 1)",
-                                             "tabs": [
-                                             {
-                                                "title": "Criptomoedas",
-                                                "symbols": [
-                                                  {
-                                                    "s": "BYBIT:BTCUSD",
-                                                    "d": "BTCUSD"
-                                                  },
-                                                  {
-                                                    "s": "BYBIT:ETHUSD",
-                                                    "d": "ETHUSD"
-                                                  },
-                                                  {
-                                                    "s": "BYBIT:XRPUSD",
-                                                    "d": "XRPUSD"
-                                                  },
-                                                  {
-                                                    "s": "BYBIT:EOSUSD",
-                                                    "d": "EOSUSD"
-                                                  },
-                                                  {
-                                                    "s": "BINANCE:LTCUSD",
-                                                    "d": "LTCUSD"
-                                                  }
-                                                ]
-                                              },
-                                              {
-                                                "title": "Forex",
-                                                "symbols": [
-                                                  {
-                                                    "s": "FX:USDJPY",
-                                                    "d": "USDJPY"
-                                                  },
-                                                  {
-                                                    "s": "FX:USDCAD",
-                                                    "d": "USDCAD"
-                                                  },
-                                                  {
-                                                    "s": "FX:EURUSD",
-                                                    "d": "EURUSD"
-                                                  },
-                                                  {
-                                                    "s": "FX:GBPUSD",
-                                                    "d": "GBPUSD"
-                                                  },
-                                                  {
-                                                    "s": "FX:AUDUSD",
-                                                    "d": "AUDUSD"
-                                                  },
-                                                  {
-                                                    "s": "OANDA:XAUUSD",
-                                                    "d": "GOLD"
-                                                  }
-                                                ],
-                                                "originalTitle": "Forex"
-                                              },
-                                              {
-                                                "title": "Indices",
-                                                "symbols": [
-                                                  {
-                                                    "s": "TVC:DXY",
-                                                    "d": "DXY"
-                                                  },
-                                                  {
-                                                    "s": "FOREXCOM:SPXUSD",
-                                                    "d": "S&P500"
-                                                  },
-                                                  {
-                                                    "s": "FOREXCOM:NSXUSD",
-                                                    "d": "NASDAQ"
-                                                  },
-                                                  {
-                                                    "s": "FOREXCOM:DJI",
-                                                    "d": "DOW30"
-                                                  },
-                                                  {
-                                                    "s": "INDEX:NKY",
-                                                    "d": "Nikkei 225"
-                                                  }
-                                                ]
-                                              }
-                                             ]
-                                             }
-                                          </script>
-                                       </div>
-                                       <!-- TradingView Widget END -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://br.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Criptomoedas</span></a> por TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+  {
+  "colorTheme": "dark",
+  "dateRange": "12M",
+  "showChart": true,
+  "locale": "br",
+  "largeChartUrl": "",
+  "isTransparent": true,
+  "showSymbolLogo": true,
+  "showFloatingTooltip": false,
+  "width": "100%",
+  "height": "580",
+  "plotLineColorGrowing": "rgba(180, 95, 6, 1)",
+  "plotLineColorFalling": "rgba(255, 152, 0, 1)",
+  "gridLineColor": "rgba(42, 46, 57, 0)",
+  "scaleFontColor": "rgba(120, 123, 134, 1)",
+  "belowLineFillColorGrowing": "rgba(120, 63, 4, 0.12)",
+  "belowLineFillColorFalling": "rgba(127, 96, 0, 0.12)",
+  "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+  "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+  "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
+  "tabs": [
+    {
+      "title": "Criptomoedas",
+      "symbols": [
+        {
+          "s": "BINANCE:BTCUSDT",
+          "d": "Bitcoin"
+        },
+        {
+          "s": "BINANCE:ETHUSDT",
+          "d": "Ethereum"
+        },
+        {
+          "s": "BINANCE:XRPUSDT",
+          "d": "Ripple"
+        },
+        {
+          "s": "BINANCE:SOLUSDT",
+          "d": "Solana"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
                                     </div>
                                  </div>
                               </div>
