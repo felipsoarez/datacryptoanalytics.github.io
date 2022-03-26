@@ -723,8 +723,8 @@ header .info-bar {
 	bottom: -12px;
 	left: 0;
 	width: 100%;
-	border-bottom: 1px solid #ededed;
-	background: #fff;
+	border-bottom: 1px solid #ff8c05;
+	background: #121212;
 	visibility: hidden;
 	opacity: 0;
 	pointer-events: none;
@@ -752,7 +752,7 @@ header .progress {
 }
 
 header .progress:hover {
-	background: #601eff
+	background: #ff8c05
 }
 
 header .progress[style='width: 100%;'] {
