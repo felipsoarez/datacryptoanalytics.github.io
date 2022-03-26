@@ -567,7 +567,7 @@ header {
 	background: #121212;
 	display: flex;
 	align-items: center;
-	border-bottom: 3px solid #121212;
+	border-bottom: 3px solid #ededed;
 	transform: translateY(0);
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
@@ -622,7 +622,7 @@ header nav ul {
 header nav ul li a {
 	font-weight: 400;
 	margin-left: 40px;
-	color: #3f3f3f;
+	color: #ffffff;
 	font-size: 20px;
 	margin: 10px 20px;
 	font-size: 14px;
