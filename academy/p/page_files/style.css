@@ -554,7 +554,7 @@ h6 {
 
 .scroll header {
 	height: 60px;
-	border-bottom: 1px solid #ededed
+	border-bottom: 1px solid #ff8c05
 }
 
 header {
@@ -564,10 +564,10 @@ header {
 	width: 100%;
 	z-index: 999;
 	height: 135px;
-	background: #fff;
+	background: #121212;
 	display: flex;
 	align-items: center;
-	border-bottom: 3px solid #ededed;
+	border-bottom: 3px solid #121212;
 	transform: translateY(0);
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
