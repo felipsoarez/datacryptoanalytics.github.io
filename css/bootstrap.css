@@ -5254,6 +5254,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   color: #1b1e21;
   background-color: #d6d8d9;
   border-color: #c6c8ca;
+  border-radius: 5px;
 }
 
 .alert-dark hr {
