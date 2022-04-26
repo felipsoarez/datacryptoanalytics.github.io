@@ -640,7 +640,7 @@ ul {
 /*blog*/
 
 .blog .content {
-	background-image: radial-gradient(circle, #ff8c05, #f75c58, #c74d7f, #814f87, #43486d, #33415a, #2b3946, #292f33, #292f33, #292f33, #292f33, #292f33);
+	background-image: radial-gradient(circle, #ff8c05, #ff8c05, #ff8c05, #ff8c05, #ff8c05, #ff7436, #fa6051, #eb5367, #b14d85, #6a4e81, #36435f, #292f33);
 	border-radius: 8px;
 	-webkit-box-shadow: 3px 3px 9px 3px #000000;
 	box-shadow: 3px 3px 9px 3px #000000;
