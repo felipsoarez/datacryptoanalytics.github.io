@@ -639,7 +639,7 @@ ul {
 /*blog*/
 
 .blog .content {
-	background: linear-gradient(132deg, rgba(41,47,51,1) 0%, rgba(18,18,18,1) 62%, rgba(255,140,5,1) 100%);
+	background: linear-gradient(132deg, rgba(41,47,51,1) 0%, rgba(18,18,18,1) 72%, rgba(255,140,5,1) 100%);
 	border-radius: 10px;
 	-webkit-box-shadow: 3px 3px 9px 3px #000000;
 	box-shadow: 3px 3px 9px 3px #000000;
