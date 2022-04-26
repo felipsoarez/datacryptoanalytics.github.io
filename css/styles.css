@@ -647,9 +647,9 @@ ul {
 }
 
 .blog .content:hover img {
-	-moz-transform: scale(5.03);
-	-webkit-transform: scale(5.03);
-	transform: scale(5.03);
+	-moz-transform: scale(2.03);
+	-webkit-transform: scale(2.03);
+	transform: scale(2.03);
 }
 
 .blog .content .image {
