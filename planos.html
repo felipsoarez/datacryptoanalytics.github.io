@@ -404,14 +404,26 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
         <div class="col-lg-4 col-md-6 mb-lg-0">
           <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
           <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.</p>
-          <div class="p-1 rounded border">
-            <div class="input-group">
-              <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
-              <div class="input-group-append">
-                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
-              </div>
-            </div>
-          </div>
+          <div id="revue-embed col">
+                           <form action="https://www.getrevue.co/profile/dc_analytics/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
+                              <div class="revue-form-group row">
+                                 <label for="member_email ">Email (*)</label>
+                                 <input class="revue-form-field form-control" placeholder="Seu email... (Obrigatório)" type="email" name="member[email]" id="member_email">
+                              </div>
+                              <div class="revue-form-group row">
+                                 <label for="member_first_name">Nome <span class="optional">(*)</span></label>
+                                 <input class="form-control" placeholder="Nome... (Obrigatório)" type="text" name="member[first_name]" id="member_first_name">
+                              </div>
+                              <div class="revue-form-group row">
+                                 <label for="member_last_name">Sobrenome <span class="optional">(*)</span></label>
+                                 <input class="form-control" placeholder="Sobrenome... (Obrigatório)" type="text" name="member[last_name]" id="member_last_name">
+                              </div>
+                              <div class="revue-form-actions" style="padding: 15px;">
+                                 <input class="button sombra-black"  type="submit" value="Subscribe" name="member[subscribe]" id="member_submit">
+                              </div>
+                              <div class="revue-form-footer" style="padding: 15px;">Ao subscrever, concorda com os termos da Revue & DataCrypto Analytics<a target="_blank" href="https://www.getrevue.co/terms"> Termos de serviço</a> e <a target="_blank" href="https://www.getrevue.co/privacy">Política de Privacidade</a>.</div>
+                           </form>
+                        </div>
         </div>
       </div>
     </div>
