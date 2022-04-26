@@ -415,7 +415,7 @@
             <div class="row">
                <div class="col-md-6">
                   <div class="content">
-                     <div class="image">
+                     <div class=" img-container">
                         <img src="https://pbs.twimg.com/media/FRTMm9sXwAEiWJq?format=png&name=large" alt="">
                      </div>
                      <div class="blog-title">
@@ -432,7 +432,7 @@
                </div>
                <div class="col-md-6">
                   <div class="content no-mb">
-                     <div class="image">
+                     <div class="image img-container">
                         <img src="images/indicadores/BTCUSD_2022-04-26_17-58-20.png" alt="">
                      </div>
                      <div class="blog-title">
@@ -623,6 +623,7 @@
       <!-- end footer -->
       <div class="div_teste">
       </div>
+      <script src="js/js-image-zoom.js"></script>
       <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
       <script src="js/fakeLoader.min.js"></script>
@@ -634,6 +635,21 @@
       <script src="js/main.js"></script>
       <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
       <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+      <script>
+var options1 = {
+    width: 400,
+    zoomWidth: 500,
+    offset: {vertical: 0, horizontal: 10}
+};
+
+// If the width and height of the image are not known or to adjust the image to the container of it
+var options2 = {
+    fillContainer: true,
+    offset: {vertical: 0, horizontal: 10}
+};
+new ImageZoom(document.getElementById("img-container"), options2);
+
+</script>
       <script>
          var acc = document.getElementsByClassName("accordion");
          var i;
