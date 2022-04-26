@@ -640,7 +640,7 @@ ul {
 /*blog*/
 
 .blog .content {
-	background-image: linear-gradient(to right top, #ff8c05, #e85e41, #ba4156, #7f3558, #462a44, #322639, #23202a, #19191a, #1e1e20, #222426, #25292d, #292f33);
+	background-image: linear-gradient(to right, #ff8c05, #e85e41, #ba4156, #7f3558, #462a44, #322639, #23202a, #19191a, #1e1e20, #222426, #25292d, #292f33);
 	border-radius: 8px;
 	-webkit-box-shadow: 3px 3px 9px 3px #000000;
 	box-shadow: 3px 3px 9px 3px #000000;
