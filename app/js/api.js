@@ -16,7 +16,8 @@ var requestOptions = {
       console.log('error: ' + err);
   });
   
-function appendData(data) {
+
+  function appendData(data) {
   var mainContainer = document.getElementById("myData");
   for (var i = 0; i < data.length; i++) {
       var div = document.createElement("div");

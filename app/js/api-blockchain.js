@@ -1,9 +1,5 @@
 const urlll = 'https://api.blockchain.info/stats';
-
-
 const urll = 'https://blockchain.info/ticker';
-
-
 const requisicao = fetch(urll, {
 		mode: 'cors'
 	})
@@ -20,7 +16,6 @@ const requisicao = fetch(urll, {
 		console.log(formatado)
 		console.log(jsonBody.USD.last);
 	})
-
 
 console.log(requisicao);
 
