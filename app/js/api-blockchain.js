@@ -19,6 +19,7 @@ const requisicao = fetch(urll, {
 
 console.log(requisicao);
 
+
 const requisicaodificuldade = fetch(urlll, {
 		mode: 'cors'
 	})
@@ -35,6 +36,7 @@ const requisicaodificuldade = fetch(urlll, {
 			currency: 'USD'
 		});
 		document.getElementById("trade_volume_us").innerHTML = [Trade_volume_usd];
+		
 		console.log(Trade_volume_usd);
 		console.log()
 	})
