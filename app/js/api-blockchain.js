@@ -19,7 +19,6 @@ const requisicao = fetch(urll, {
 
 console.log(requisicao);
 
-
 const requisicaodificuldade = fetch(urlll, {
 		mode: 'cors'
 	})
