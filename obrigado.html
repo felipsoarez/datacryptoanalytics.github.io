@@ -130,9 +130,30 @@
          <div class="container">
            <center> <img src="app/images/bg_login.gif"  class="imsombra" width='30%' height=""></img>
 
-
-            <div id="evermart-upsell-button-div"></div>
-            <script src="https://checkout-prd-api.mycheckout.com.br/api/v1/upsell/upsell.min.js"></script>
+<div id="evermart-upsell-button-div">
+  <button id="evermart-upsell-trigger-1-F5x1pBI"></button>
+  <button id="evermart-upsell-trigger-2-F5x1pBI"></button>
+  <p id="evermart-upsell-buy-status"></p>
+  <div id="evermart-upsell-trigger-decline"></div>
+  <button id="evermart-approved-simulation-trigger">
+    Simular Aprovado
+  </button>
+  <button id="evermart-reproved-balance-simulation-trigger">
+    Simular Reprovado Sem Saldo
+  </button>
+  <button id="evermart-reproved-others-simulation-trigger">
+    Simular Reprovado Outros
+  </button>
+  <div id="evermart-modal-window">
+    <a id="evermart-modal-close-button"></a>
+    <p id="evermart-modal-message-processing"></p>
+    <div id="evermart-modal-button-container">
+      <button id="evermart-modal-accept-button">Sim, mete bala</button>
+      <button id="evermart-modal-decline-button">Não</button>
+    </div>
+  </div>
+</div>
+<script src="https://checkout-prd-api.mycheckout.com.br/api/v1/upsell/upsell.advanced.min.js"></script>
 
 
 
