@@ -340,8 +340,8 @@ output {
 
 summary {
   display: list-item;
-  cursor: pointer;
   font-size: 21px;
+  cursor: pointer;
 }
 
 template {
