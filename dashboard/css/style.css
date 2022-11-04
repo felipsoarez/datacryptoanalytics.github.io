@@ -287,3 +287,21 @@
     background: var(--dark);
     border-color: var(--primary);
 }
+
+
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 8px;
+	border-radius: 8px;
+}
+
+ ::-webkit-scrollbar-track {
+	background: #121212;
+	height: 80%;
+}
+
+ ::-webkit-scrollbar-thumb {
+	background: #ff8c05;
+	border-radius: 8px;
+}
