@@ -305,3 +305,11 @@
 	background: #ff8c05;
 	border-radius: 8px;
 }
+
+.actions li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 5px;
+	padding-top: 25px;
+	font-size: 32px;
+}
