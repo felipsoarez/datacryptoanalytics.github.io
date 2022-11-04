@@ -233,21 +233,49 @@
                                 <h6 class="mb-0">Worldwide Sales</h6>
                                 <a href="">Show All</a>
                             </div>
-                            <div class="content no-mb">
-                                <div class="image " style="cursor: zoom-in;">
-                                   <img src="https://pbs.twimg.com/media/FgvZcIoXgAItx0x?format=png&name=medium" alt="">
-                                </div>
-                                <div class="blog-title">
-                                   <h4><a href="https://discord.com/invite/5ywpZMt6Kp" target="_blank"><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png" class="imsombra" width='5%' /> Ethereum </a></h4>
-                                   <div class="date">
-                                      ETHUSD <i class="fas fa-circle"></i> <a href="https://accounts.binance.com/pt-BR/register?ref=28097223"><span>Binance </span></a> <i class="fas fa-clock"></i> <a style="color:white;"> 1h</a>
-                                   </div>
-                                   <div class="date">
-                                      Nov 04, 2022 <i class="fas fa-circle"></i> <a href="https://dc-analytics.gitbook.io/docs/indicadores/dca-premium"><span>DCA PREMIUM</span></a>
-                                   </div>
-                                   <p style="padding-top: 10px; padding-bottom: 10px;"><i class="fas fa-info-circle"></i> Sobrecomprado no gráfico de uma hora... <a href="https://datacryptoanalytics.com/planos><i class="fas fa-lock" title="Desbloquear análise completa"></i> </a></p>
-                                </div>
-                             </div>
+                           <!-- TradingView Widget BEGIN -->
+                           <div class="tradingview-widget-container">
+                            <div id="tradingview_86a64"></div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                            <script type="text/javascript">
+                            new TradingView.MediumWidget(
+                            {
+                            "symbols": [
+                              [
+                                "BTCUSD",
+                                "COINBASE:BTCUSD|1D"
+                              ],
+                              [
+                                "EURUSD",
+                                "FX_IDC:EURUSD|1D"
+                              ],
+                              [
+                                "USDJPY",
+                                "FX_IDC:USDJPY|1D"
+                              ],
+                              [
+                                "ETHUSD",
+                                "COINBASE:ETHUSD|1D"
+                              ]
+                            ],
+                            "chartOnly": false,
+                            "width": "100%",
+                            "height": "450",
+                            "locale": "br",
+                            "colorTheme": "dark",
+                            "gridLineColor": "rgba(255, 255, 255, 0)",
+                            "trendLineColor": "rgba(233, 125, 3, 1)",
+                            "fontColor": "rgba(255, 255, 255, 1)",
+                            "underLineColor": "rgba(180, 95, 6, 0.3)",
+                            "underLineBottomColor": "rgba(180, 95, 6, 0)",
+                            "isTransparent": true,
+                            "autosize": true,
+                            "container_id": "tradingview_86a64"
+                          }
+                            );
+                            </script>
+                          </div>
+                          <!-- TradingView Widget END -->
                         </div>
                     </div>
                     <div class="col-sm-12 col-xl-6">
@@ -256,49 +284,7 @@
                                 <h6 class="mb-0">Gráfico</h6>
                                 <a href="">Show All</a>
                             </div>
-                           <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-    <div id="tradingview_86a64"></div>
-    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-    <script type="text/javascript">
-    new TradingView.MediumWidget(
-    {
-    "symbols": [
-      [
-        "BTCUSD",
-        "COINBASE:BTCUSD|1D"
-      ],
-      [
-        "EURUSD",
-        "FX_IDC:EURUSD|1D"
-      ],
-      [
-        "USDJPY",
-        "FX_IDC:USDJPY|1D"
-      ],
-      [
-        "ETHUSD",
-        "COINBASE:ETHUSD|1D"
-      ]
-    ],
-    "chartOnly": false,
-    "width": "100%",
-    "height": "450",
-    "locale": "br",
-    "colorTheme": "dark",
-    "gridLineColor": "rgba(255, 255, 255, 0)",
-    "trendLineColor": "rgba(233, 125, 3, 1)",
-    "fontColor": "rgba(255, 255, 255, 1)",
-    "underLineColor": "rgba(180, 95, 6, 0.3)",
-    "underLineBottomColor": "rgba(180, 95, 6, 0)",
-    "isTransparent": true,
-    "autosize": true,
-    "container_id": "tradingview_86a64"
-  }
-    );
-    </script>
-  </div>
-  <!-- TradingView Widget END -->
+
                         </div>
                     </div>
                 </div>
