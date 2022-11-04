@@ -6394,8 +6394,8 @@ textarea.form-control-lg{
     border-radius:50rem !important
 }
 .rounded-top{
-    border-top-left-radius:5px !important;
-    border-top-right-radius:5px !important
+    border-top-left-radius:12px !important;
+    border-top-right-radius:12px !important
 }
 .rounded-end{
     border-top-right-radius:5px !important;
