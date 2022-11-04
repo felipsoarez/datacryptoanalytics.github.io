@@ -33,9 +33,13 @@
         scroll-behavior:smooth
     }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Rajdhani&family=Roboto+Condensed:wght@300&display=swap');
+
+
 body{
     margin:0;
-    font-family:"Open Sans",sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     font-size:1rem;
     font-weight:400;
     line-height:1.5;
