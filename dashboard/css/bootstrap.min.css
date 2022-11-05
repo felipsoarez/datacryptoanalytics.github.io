@@ -9521,3 +9521,13 @@ textarea.form-control-lg{
     }
 }
  
+.icoda li {
+    display: inline;
+	position: absolute; 
+    list-style-type: none;
+	padding-right: 5px;
+	padding-top: 25px;
+	left: 90px; /* posiciona a 90px para a esquerda */ 
+	top: 70px; /* posiciona a 70px para baixo */
+    font-size: 16px;
+	}
