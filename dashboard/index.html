@@ -57,14 +57,14 @@
       <!-- Template Stylesheet -->
       <link href="css/style.css" rel="stylesheet">
       <script>
-         function selector() {
-         $(".alert").stop().fadeTo(1, 1).removeClass('hidden');
-         window.setTimeout(function() {
-         $(".alert").fadeTo(500, 0).slideUp(500, function(){
-         $(".alert").addClass('hidden');
+         $(document).ready(function(){			
+             setTimeout(function() {
+         	$(".alert").fadeOut("slow", function(){
+         		$(this).alert('close');
+         	});				
+             }, 5000);			
          });
-         }, 1000); 
-         }   
+               
       </script>
    </head>
    <body>
@@ -704,8 +704,6 @@
       <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
       <!-- Template Javascript -->
       <script src="js/main.js"></script>
-
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
    </body>
 </html>
