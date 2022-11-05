@@ -9523,11 +9523,11 @@ textarea.form-control-lg{
  
 .icoda li {
     display: inline;
-	position: fixed; 
+	position: relative; 
     list-style-type: none;
 	padding-right: 5px;
 	padding-top: 25px;
-    font-size: 16px;
+    font-size: 20px;
     top: 90px;
 	}
 
