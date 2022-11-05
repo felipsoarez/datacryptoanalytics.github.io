@@ -314,10 +314,13 @@
 	font-size: 32px;
 }
 
-.iconsdash li {
-	display: inline;
-	list-style-type: none;
+.icoda {
+    display: inline;
+	position: absolute; 
+    list-style-type: none;
 	padding-right: 5px;
 	padding-top: 25px;
-	font-size: 16px;
-}
+	left: 90px; /* posiciona a 90px para a esquerda */ 
+	top: 70px; /* posiciona a 70px para baixo */
+    font-size: 16px;
+	}
