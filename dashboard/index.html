@@ -56,16 +56,16 @@
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <!-- Template Stylesheet -->
       <link href="css/style.css" rel="stylesheet">
-      <script>
-         $(document).ready(function(){			
-             setTimeout(function() {
-         	$(".alert").fadeOut("slow", function(){
-         		$(this).alert('close');
-         	});				
-             }, 5000);			
-         });
-               
-      </script>
+      <script type="text/javascript">
+        setTimeout(function () {
+  
+            // Closing the alert
+            $('#alert').alert('close');
+        }, 5000);
+    </script>
+        <script src=
+        "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+            </script>
    </head>
    <body>
       <div class="container-fluid position-relative d-flex p-0">
