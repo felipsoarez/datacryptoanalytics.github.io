@@ -9537,6 +9537,6 @@ textarea.form-control-lg{
 }
 
 .sombra-laranja {
-	-webkit-box-shadow: 2px 2px 5px 1px #ff8c05;
-	box-shadow: 2px 2px 5px 1px #ff8c05;
+	-webkit-box-shadow: 2px 2px 20px 1px #ff8c05;
+	box-shadow: 2px 2px 20px 1px #ff8c05;
 }
