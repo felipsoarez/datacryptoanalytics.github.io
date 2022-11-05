@@ -3992,9 +3992,9 @@ textarea.form-control-lg{
     color:#343646
 }
 .alert-dark{
-    color:#000;
-    background-color:#ccc;
-    border-color:#b3b3b3
+    color:#fff;
+    background-color:#121212;
+    border-color:#121212
 }
 .alert-dark .alert-link{
     color:#000
