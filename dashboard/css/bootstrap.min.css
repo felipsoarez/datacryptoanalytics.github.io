@@ -215,7 +215,8 @@ figure{
     margin:0 0 1rem
 }
 img,svg{
-    vertical-align:middle
+    vertical-align:middle;
+    border-radius: 10px;
 }
 table{
     caption-side:bottom;
