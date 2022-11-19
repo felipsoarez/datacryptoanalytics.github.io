@@ -1077,10 +1077,10 @@ ul {
 }
 
 .accordion {
-	background: #000000;
+	background: #121212;
 	color: #ff8c05;
 	cursor: pointer;
-	padding: 15px;
+	padding: 5px;
 	width: 100%;
 	border: 10px;
 	text-align: left;
@@ -1091,8 +1091,6 @@ ul {
 	border-width: 150px;
 	border-color: #ff8c05;
 	text-shadow: 5px 5px 10px #000000;
-	-webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 10px 0px #000000, 1px 1px 4px 6px rgba(0, 0, 0, 0);
-	box-shadow: 5px 5px 5px 0px #000000, inset 1px 1px 3px 0px #000000, 1px 1px 4px 6px rgba(0, 0, 0, 0);
 }
 
 accordion.active, accordion:hover {
