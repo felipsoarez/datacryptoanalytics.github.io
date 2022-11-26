@@ -16,12 +16,10 @@
     border: none;
     outline: none;
     box-shadow: 0 1px 5px 0 #e6e9ef;
-    background: #ffffff;
+    background: #ff8c05;
     color: #000;
     border-radius: 99px;
-    padding: 16px 32px;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 500;
     cursor: pointer;
 }
