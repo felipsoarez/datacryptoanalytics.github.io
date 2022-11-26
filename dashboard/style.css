@@ -96,8 +96,7 @@
     display: none;
     align-items: center;
     justify-content: center;
-    background: #fff;
-    border-radius: 99px;
+    background: #121212 ;
 }
 
 #loading span:not(:last-child) {
