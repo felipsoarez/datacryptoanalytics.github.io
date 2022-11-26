@@ -10,7 +10,7 @@
 
 .button {
     position: relative;
-    display: flex;
+    display: contents;
     align-items: center;
     justify-content: center;
     border: none;
