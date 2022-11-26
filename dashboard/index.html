@@ -56,6 +56,7 @@
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <!-- Template Stylesheet -->
       <link href="css/style.css" rel="stylesheet">
+      <link rel="stylesheet" href="./style.css" />
       <script type="text/javascript">
         setTimeout(function () {
   
@@ -235,7 +236,28 @@
                   <div class="nav-item dropdown">
                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                      <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                     <span class="d-none d-lg-inline-flex">Trader DCA</span>
+                     <div class="container">
+                        <button class="button" id="connectButton">
+                          <img src="./images/metamask.png" alt="metamask logo" /> Connect wallet
+                  
+                          <span id="loading"
+                            ><span>&bull;</span><span>&bull;</span><span>&bull;</span></span
+                          >
+                        </button>
+                  
+                        <div id="walletID">Your wallet is not connected yet.</div>
+                  
+                        <div id="mobileDeviceWarning">
+                          If you are on a mobile phone, please use MetaMask application's browser
+                          to connect.
+                        </div>
+                      </div>
+                  
+                      <div class="alert" id="installAlert">
+                        Please refresh your browser after installing the Metamask plugin
+                  
+                        <button class="button" id="reloadButton">Reload page</button>
+                      </div>
                      </a>
                      <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                         <a href="#" class="dropdown-item">Perfil</a>
@@ -701,5 +723,6 @@
       <!-- Template Javascript -->
       <script src="js/main.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script type="text/javascript" src="./main.js"></script>
    </body>
 </html>
