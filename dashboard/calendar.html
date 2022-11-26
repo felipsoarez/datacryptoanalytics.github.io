@@ -251,17 +251,35 @@
                             <a href="#" class="dropdown-item text-center">Ver todas as notificações</a>
                         </div>
                     </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">Trader DCA</span>
+                    <div class="nav-item ">
+                        <a href="#" class="nav-link">
+                            <button class="button" id="connectButton">
+                          
+                                <div id="walletID" style="font-size: 12px;">Wallet not connected.</div>
+      
+                                <div id="mobileDeviceWarning" style="font-size: 12px;">
+                                 If you are on a mobile phone, please use MetaMask application's browser
+                                 to connect.
+                                </div>
+                        
+                                <span id="loading"
+                                  ><span>&bull;</span><span>&bull;</span><span>&bull;</span></span
+                                >
+                              </button>
+                            </div>
+                        
+                            <div class="alert" id="installAlert" style="font-size: 12px;">
+                              Please refresh your browser after installing the Metamask plugin
+                        
+                              <button class="button" id="reloadButton">Reload page</button>
+                            </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">Perfil</a>
                             <a href="#" class="dropdown-item">Configurações</a>
                             <a href="https://datacryptoanalytics.com" class="dropdown-item">Log Out</a>
                         </div>
-                    </div>
+                 
                 </div>
             </nav>
             <!-- Navbar End -->
