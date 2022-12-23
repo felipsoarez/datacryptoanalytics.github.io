@@ -1,4 +1,4 @@
 This is a Brave Rewards publisher verification file.
 
 Domain: datacryptoanalytics.com
-Token: 2cafdeaa583a94f138ac6f68ca5651d5fb4fb9709717e0d7c36d995d02d806c6
+Token: d217440cf83a76fd6c7de96bb684cfe7cf7b21c719d0e700e2121dbcb54256aa
