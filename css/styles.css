@@ -1469,4 +1469,8 @@ section.pricing {
 
 
 
-
+.sombra_intro {
+	-webkit-box-shadow: inset 14px 14px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 14px 14px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: inset 14px 14px 14px 0px rgba(0,0,0,0.75);
+}
