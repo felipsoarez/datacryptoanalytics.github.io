@@ -1478,22 +1478,22 @@ section.pricing {
 	0%, 7% {
 	  transform: rotateZ(0);
 	}
-	15% {
+	5% {
 	  transform: rotateZ(-15deg);
 	}
-	20% {
+	10% {
 	  transform: rotateZ(10deg);
 	}
-	25% {
+	15% {
 	  transform: rotateZ(-10deg);
 	}
-	30% {
+	20% {
 	  transform: rotateZ(6deg);
 	}
-	35% {
+	25% {
 	  transform: rotateZ(-4deg);
 	}
-	40%, 100% {
+	30%, 100% {
 	  transform: rotateZ(0);
 	}
   }
