@@ -479,13 +479,13 @@ Header Style
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #e75e8d !important;
+  color: #ff8c05 !important;
 }
 
 .header-area .main-nav .nav li:last-child:hover a,
 .header-area .main-nav .nav li:last-child a.active {
   color: #fff !important;
-  background-color: #e75e8d !important;
+  background-color: #ff8c05 !important;
 }
 
 .background-header .main-nav .nav li:hover a,
