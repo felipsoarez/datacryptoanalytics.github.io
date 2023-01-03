@@ -1641,3 +1641,14 @@ section.pricing {
             transform-origin: left bottom;
   }
 }
+
+
+.coockie-alert {
+	margin: 27px 0;
+	color: #fff;
+	padding: 1px 40px;
+	transition: all .5s ease;
+	border-radius: 35px;
+	backdrop-filter: blur(25px) brightness(75%) saturate(70%);
+
+}
