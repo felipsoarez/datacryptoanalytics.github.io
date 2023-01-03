@@ -91,7 +91,7 @@ a {
   text-decoration: none !important;
 }
 a:hover {
-	color: #F99;
+	color: #ff8c05;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -142,12 +142,12 @@ p {
 }
 
 ::selection {
-  background: #e75e8d;
+  background: #ff8c05;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #e75e8d;
+  background: #ff8c05;
   color: #fff;
 }
 
@@ -159,7 +159,7 @@ p {
 .main-button a {
   font-size: 14px;
   color: #fff;
-  background-color: #e75e8d;
+  background-color: #ff8c05;
   padding: 12px 30px;
   display: inline-block;
   border-radius: 25px;
@@ -173,14 +173,14 @@ p {
 
 .main-button a:hover {
   background-color: #fff;
-  color: #e75e8d;
+  color: #ff8c05;
 }
 
 .main-border-button a {
   font-size: 14px;
-  color: #ec6090;
+  color: #ff8c05;
   background-color: transparent;
-  border: 1px solid #ec6090;
+  border: 1px solid #ff8c05;
   padding: 12px 30px;
   display: inline-block;
   border-radius: 25px;
@@ -195,7 +195,7 @@ p {
 .main-border-button a:hover {
   border-color: #fff;
   background-color: #fff;
-  color: #e75e8d;
+  color: #ff8c05;
 }
 
 .border-no-active a {
@@ -214,7 +214,7 @@ section {
 }
 
 .heading-section h4 {
-  color: #ec6090;
+  color: #ff8c05;
   font-size: 34px;
   text-decoration: none;
   margin-bottom: 30px;
@@ -299,7 +299,7 @@ Pre-loader Style
   height: 16px;
   top: 12px;
   left: 15px;
-  background: #e75e8d;
+  background: #ff8c05;
   border-radius: 50%;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -322,7 +322,7 @@ Pre-loader Style
   width: 16px;
   height: 16px;
   margin-left: 16px;
-  background: #e75e8d;
+  background: #ff8c05;
   border-radius: 50%;
 }
 
@@ -1608,7 +1608,7 @@ Profile Style
     display: inline-block;
     text-align: center;
     line-height: 46px;
-    color: #ec6090;
+    color: #ff8c05;
 }
 
 .clips .item h4 {
@@ -1617,7 +1617,7 @@ Profile Style
 }
 
 .clips .item span i {
-  color: #ec6090;
+  color: #ff8c05;
 }
 
 .clips .item span {
