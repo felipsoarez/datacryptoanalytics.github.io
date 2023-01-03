@@ -221,7 +221,7 @@ ul {
 	padding: 1px 40px;
 	transition: all .5s ease;
 	border-radius: 5px;
-	backdrop-filter: blur(15px) brightness(75%) saturate(70%);
+	backdrop-filter: blur(25px) brightness(75%) saturate(70%);
 
 }
 
@@ -243,9 +243,8 @@ ul {
 
 .navbar.fix {
 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
+	top: 10px;
+	width: 80%;
 	z-index: 999;
 	margin-top: 0;
 	-webkit-box-shadow: 5px 5px 15px 5px #000000;
