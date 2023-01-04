@@ -2,12 +2,12 @@
 <html lang="pt">
    <head>
       <meta charset="utf-8">
-      <title>Dashboard - DataCrypto Analytics</title>
+      <title>Forecast - DataCrypto Analytics</title>
       <meta content="width=device-width, initial-scale=1.0" name="viewport">
       <meta content="" name="keywords">
       <meta content="" name="description">
       <meta name="keywords" content="Forex, Analytics, DataCrypto, Data, Crypto, Bitcoin, Ethereum, DeFi, Criptomoedas, Indicadores, Mercado Financeiro, Trading, TradingView, Trader, Dinheiro">
-      <title>DataCrypto Analytics</title>
+      <title>Forecast - DataCrypto Analytics</title>
       <meta name="description" content="Estratégias de negociação para Criptomoedas & Forex.">
       <meta name="description" content="DataCrypto Analytics permite usar o poder dos dados históricos do mercado para detectar tendências e estimar resultados potenciais.">
       <link rel="canonical" href="https://datacryptoanalytics.com/">
@@ -319,70 +319,61 @@
                <div class="row g-4">
                   <div class="col-sm-12 col-xl-6 ">
                      <div class="bg-secondary text-center rounded">
-                        <!-- TradingView Widget BEGIN -->
-                        <div class="tradingview-widget-container">
-                           <div id="tradingview_86a64"></div>
-                           <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-                           <script type="text/javascript">
-                              new TradingView.MediumWidget(
-                              {
-                              "symbols": [
-                                [
-                                  "BTCUSD",
-                                  "COINBASE:BTCUSD|1D"
-                                ],
-                                [
-                                  "EURUSD",
-                                  "FX_IDC:EURUSD|1D"
-                                ],
-                                [
-                                  "USDJPY",
-                                  "FX_IDC:USDJPY|1D"
-                                ],
-                                [
-                                  "ETHUSD",
-                                  "COINBASE:ETHUSD|1D"
-                                ]
-                              ],
-                              "chartOnly": false,
-                              "width": "100%",
-                              "height": "445",
-                              "locale": "br",
-                              "colorTheme": "dark",
-                              "gridLineColor": "rgba(255, 255, 255, 0)",
-                              "trendLineColor": "rgba(233, 125, 3, 1)",
-                              "fontColor": "rgba(255, 255, 255, 1)",
-                              "underLineColor": "rgba(180, 95, 6, 0.3)",
-                              "underLineBottomColor": "rgba(180, 95, 6, 0)",
-                              "isTransparent": true,
-                              "autosize": true,
-                              "container_id": "tradingview_86a64"
-                              }
-                              );
-                           </script>
-                        </div>
-                        <!-- TradingView Widget END -->
-                     </div>
+    
+            <div class="row" id="div_container_getdata">
+              <div class="col m4">
+                <div class="input-field col s12">
+                  <label for="input_ticker">Símbolo</label>
+                  <input type="text" id="input_ticker" placeholder="example: MSFT" value="USDJPY">
+                  <small class="form-text text-muted">Símbolo Forex</small>
+                </div>
+              </div>
+              <div class="col m4">
+                <div class="input-field col s12">
+                  <label for="input_apikey">Alpha Vantage API Key</label>
+                  <input type="text" id="input_apikey" placeholder="Input your API key or use 'demo'" value="XLRRSVFGQJLI7S4W">
+                  <small class="form-text text-muted">Você pode reivindicar sua chave de API de <a href="https://www.alphavantage.co/support/#api-key" target="_blank">alphavantage.co</a></small>
+                </div>
+              </div>
+              <div class="col m4">
+                <div class="input-field col s12">
+                  <select onchange="onClickChangeDataFreq(this)">
+                    <option value="Weekly" onchange="onClickChangeDataFreq('Weekly')" selected>Weekly</option>
+                    <option value="Daily" onchange="onClickChangeDataFreq('Daily')">Daily</option>
+                  </select>
+                  <label>Resoluções temporais de dados</label>
+                </div>
+              </div>
+              <div class="col s12">
+                <button class="waves-effect waves-light btn" id="btn_fetch_data" onclick="onClickFetchData()">Obter dados</button>
+                <div class="preloader-wrapper small active" id="load_fetch_data" style="display:none">
+                  <div class="spinner-layer spinner-green-only">
+                    <div class="circle-clipper left">
+                      <div class="circle"></div>
+                    </div><div class="gap-patch">
+                      <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                      <div class="circle"></div>
+                    </div>
                   </div>
-                  <div class="col-sm-12 col-xl-6">
-                     <div class="bg-secondary text-center rounded">
-                        <!-- TradingView Widget BEGIN -->
-                        <div class="tradingview-widget-container">
-                           <div class="tradingview-widget-container__widget"></div>
-                           <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
-                              {
-                              "interval": "1h",
-                              "width": "100%",
-                              "isTransparent": true,
-                              "height": 450,
-                              "symbol": "BINANCE:BTCUSDT",
-                              "showIntervalTabs": true,
-                              "locale": "br",
-                              "colorTheme": "dark"
-                              }
-                           </script>
-                        </div>
-                        <!-- TradingView Widget END -->
+                </div>
+              </div>
+            </div>
+    
+            <div class="container" id="div_container_linegraph" style="display:none">
+              <div class="col s12">
+                <div class="card z-depth-2">
+                  <div class="card-content">
+                    <span class="card-title">Dados carregados</span>
+                    <span class="card-title grey-text text-darken-4" id="div_linegraph_data_title">Card Title<</span>
+                    <div>
+                      <div id="div_linegraph_data" style="width:100%; height:350px;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
                      </div>
                   </div>
                </div>
@@ -718,5 +709,11 @@
       <script src="js/main.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <script type="text/javascript" src="./main.js"></script>
+      <!-- Machine Learning JS -->
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+      <script src="./model.js"></script>
+      <script src="./index.js"></script>
    </body>
 </html>
