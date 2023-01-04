@@ -365,33 +365,8 @@
     
                      </div>
                   </div>
-                  <div class="col-sm-12 col-xl-6">
-                     <div class="bg-secondary text-center rounded" style="padding: 15px;">
-                        <div class="row" id="div_container_getsma" style="display:none">
-                            <div class="s12">
-                              <p>
-                                <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
-                                Vamos gerar o conjunto de dados de treinamento, <i>Calcular SMA e desenhar gráfico</i> botão para gerar os dados de treinamento para a rede neural.
-                              </p>
-                            </div>
-                            <div class=" s6">
-                              <div class="input-field col s12">
-                                <label for="input_windowsize">Tamanho da janela</label>
-                                <input class="form-control bg-dark border-0" type="number" id="input_windowsize" placeholder="a number" value="20">
-                                <small class="form-text text-muted">Esta é a "janela de tempo" para SMA</small>
-                              </div>
-                            </div>
-                            <div class=" s12">
-                              <button class="bn30" id="btn_draw_sma" onclick="onClickDisplaySMA()">SMA</button>
-                              <div class="spinner-border" id="load_draw_sma" style="display:none"></div>
-                            </div>
-                          </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <!-- Sales Chart End -->
-            <!-- Blank Start -->
+
+                              <!-- Blank Start -->
             <div class="container-fluid pt-4 px-4">
                <div class="row vh-100 bg-secondary rounded align-items-center justify-content-center mx-0">
                   <div class="text-center">
@@ -436,6 +411,36 @@
                </div>
             </div>
             <!-- Blank End -->
+                  
+
+
+                  <div class="col-sm-12 col-xl-6">
+                     <div class="bg-secondary text-center rounded" style="padding: 15px;">
+                        <div class="row" id="div_container_getsma" style="display:none">
+                            <div class="s12">
+                              <p>
+                                <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
+                                Vamos gerar o conjunto de dados de treinamento, <i>Calcular SMA e desenhar gráfico</i> botão para gerar os dados de treinamento para a rede neural.
+                              </p>
+                            </div>
+                            <div class=" s6">
+                              <div class="input-field col s12">
+                                <label for="input_windowsize">Tamanho da janela</label>
+                                <input class="form-control bg-dark border-0" type="number" id="input_windowsize" placeholder="a number" value="20">
+                                <small class="form-text text-muted">Esta é a "janela de tempo" para SMA</small>
+                              </div>
+                            </div>
+                            <div class=" s12">
+                              <button class="bn30" id="btn_draw_sma" onclick="onClickDisplaySMA()">SMA</button>
+                              <div class="spinner-border" id="load_draw_sma" style="display:none"></div>
+                            </div>
+                          </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Sales Chart End -->
+
             <!-- TA Start -->
             <div class="container-fluid pt-4 px-4">
                <div class="row g-4">
