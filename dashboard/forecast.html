@@ -319,61 +319,70 @@
                <div class="row g-4">
                   <div class="col-sm-12 col-xl-6 ">
                      <div class="bg-secondary text-center rounded">
+                        <div class="row" id="div_container_getdata">
+                            <div class="col m4">
+                              <div class="input-field col s12">
+                                <label for="input_ticker">Símbolo</label>
+                                <input type="text" id="input_ticker" placeholder="example: MSFT" value="USDJPY">
+                                <small class="form-text text-muted">Símbolo Forex</small>
+                              </div>
+                            </div>
+                            <div class="col m4">
+                              <div class="input-field col s12">
+                                <label for="input_apikey">Alpha Vantage API Key</label>
+                                <input type="text" id="input_apikey" placeholder="Input your API key or use 'demo'" value="XLRRSVFGQJLI7S4W">
+                                <small class="form-text text-muted">Você pode reivindicar sua chave de API de <a href="https://www.alphavantage.co/support/#api-key" target="_blank">alphavantage.co</a></small>
+                              </div>
+                            </div>
+                            <div class="col m4">
+                              <div class="input-field col s12">
+                                <select onchange="onClickChangeDataFreq(this)">
+                                  <option value="Weekly" onchange="onClickChangeDataFreq('Weekly')" selected>Weekly</option>
+                                  <option value="Daily" onchange="onClickChangeDataFreq('Daily')">Daily</option>
+                                </select>
+                                <label>Resoluções temporais de dados</label>
+                              </div>
+                            </div>
+                            <div class="col s12">
+                              <button class="waves-effect waves-light btn" id="btn_fetch_data" onclick="onClickFetchData()">Obter dados</button>
+                              <div class="preloader-wrapper small active" id="load_fetch_data" style="display:none">
+                                <div class="spinner-layer spinner-green-only">
+                                  <div class="circle-clipper left">
+                                    <div class="circle"></div>
+                                  </div><div class="gap-patch">
+                                    <div class="circle"></div>
+                                  </div><div class="circle-clipper right">
+                                    <div class="circle"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                                      
     
-            <div class="row" id="div_container_getdata">
-              <div class="col m4">
-                <div class="input-field col s12">
-                  <label for="input_ticker">Símbolo</label>
-                  <input type="text" id="input_ticker" placeholder="example: MSFT" value="USDBTC">
-                  <small class="form-text text-muted">Símbolo Forex</small>
-                </div>
-              </div>
-              <div class="col m4">
-                <div class="input-field col s12">
-                  <label for="input_apikey">Alpha Vantage API Key</label>
-                  <input type="text" id="input_apikey" placeholder="Input your API key or use 'demo'" value="XLRRSVFGQJLI7S4W">
-                  <small class="form-text text-muted">Você pode reivindicar sua chave de API de <a href="https://www.alphavantage.co/support/#api-key" target="_blank">alphavantage.co</a></small>
-                </div>
-              </div>
-              <div class="col m4">
-                <div class="input-field col s12">
-                  <select onchange="onClickChangeDataFreq(this)">
-                    <option value="Weekly" onchange="onClickChangeDataFreq('Weekly')" selected>Weekly</option>
-                    <option value="Daily" onchange="onClickChangeDataFreq('Daily')">Daily</option>
-                  </select>
-                  <label>Resoluções temporais de dados</label>
-                </div>
-              </div>
-              <div class="col s12">
-                <button class="waves-effect waves-light btn" id="btn_fetch_data" onclick="onClickFetchData()">Obter dados</button>
-                <div class="preloader-wrapper small active" id="load_fetch_data" style="display:none">
-                  <div class="spinner-layer spinner-green-only">
-                    <div class="circle-clipper left">
-                      <div class="circle"></div>
-                    </div><div class="gap-patch">
-                      <div class="circle"></div>
-                    </div><div class="circle-clipper right">
-                      <div class="circle"></div>
-                    </div>
+                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-    
-            <div class="container" id="div_container_linegraph" style="display:none">
-              <div class="col s12">
-                <div class="card z-depth-2">
-                  <div class="card-content">
-                    <span class="card-title">Dados carregados</span>
-                    <span class="card-title grey-text text-darken-4" id="div_linegraph_data_title">Card Title<</span>
-                    <div>
-                      <div id="div_linegraph_data" style="width:100%; height:350px;"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-    
+                  <div class="col-sm-12 col-xl-6">
+                     <div class="bg-secondary text-center rounded">
+                        <div class="row" id="div_container_getsma" style="display:none">
+                            <div class="col s12">
+                              <p>
+                                <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
+                                Vamos gerar o conjunto de dados de treinamento, <i>Calcular SMA e desenhar gráfico</i> botão para gerar os dados de treinamento para a rede neural.
+                              </p>
+                            </div>
+                            <div class="col s6">
+                              <div class="input-field col s12">
+                                <label for="input_windowsize">Tamanho da janela</label>
+                                <input type="number" id="input_windowsize" placeholder="a number" value="20">
+                                <small class="form-text text-muted">Esta é a "janela de tempo" para SMA</small>
+                              </div>
+                            </div>
+                            <div class="col s12">
+                              <button class="waves-effect waves-light btn" id="btn_draw_sma" onclick="onClickDisplaySMA()">Calcular SMA e desenhar gráfico</button>
+                              <div class="spinner-border" id="load_draw_sma" style="display:none"></div>
+                            </div>
+                          </div>
                      </div>
                   </div>
                </div>
@@ -383,23 +392,43 @@
             <div class="container-fluid pt-4 px-4">
                <div class="row vh-100 bg-secondary rounded align-items-center justify-content-center mx-0">
                   <div class="text-center">
-                     <!-- TradingView Widget BEGIN -->
-                     <div class="tradingview-widget-container">
-                        <div class="tradingview-widget-container__widget"></div>
-                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
-                           {
-                           "width": "100%",
-                           "height": 523,
-                           "defaultColumn": "overview",
-                           "screener_type": "crypto_mkt",
-                           "displayCurrency": "USD",
-                           "colorTheme": "dark",
-                           "locale": "br",
-                           "isTransparent": true
-                           }
-                        </script>
-                     </div>
-                     <!-- TradingView Widget END -->
+
+
+                    <div class="container" id="div_container_linegraph" style="display:none">
+                        <div class="col s12">
+                          <div class="card z-depth-2">
+                            <div class="card-content">
+                              <span class="card-title">Dados carregados</span>
+                              <span class="card-title grey-text text-darken-4" id="div_linegraph_data_title">Card Title<</span>
+                              <div>
+                                <div id="div_linegraph_data" style="width:100%; height:350px;"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    <div class="row" id="div_container_sma" style="display:none">
+                        <div class="col s12">
+                          <div class="card z-depth-2">
+                            <div class="card-content">
+                              <span class="card-title grey-text text-darken-4" id="div_linegraph_sma_title"></span>
+                                <div id="div_linegraph_sma" style="width:100%; height:350px;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container" id="div_container_trainingdata" style="display:none">
+                        <div class="col s12">
+                          <div class="card z-depth-2">
+                            <div class="card-content">
+                              <span class="card-title grey-text text-darken-4">Dados de treinamento (25 linhas principais)</span>
+                              <div style="overflow-x: scroll;" id="div_trainingdata">
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
                   </div>
                </div>
             </div>
