@@ -268,7 +268,7 @@ select{
     /* Remove estilo padrão do FireFox */
     appearance: none;
     /* Remove estilo padrão do FireFox*/
-    background: #eeeeee;
+    background: #000000;
     /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
     border: 1px solid #ddd;
     padding: 3px;
