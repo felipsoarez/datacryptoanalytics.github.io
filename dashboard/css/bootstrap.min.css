@@ -220,7 +220,8 @@ img,svg{
 }
 table{
     caption-side:bottom;
-    border-collapse:collapse
+    border-collapse:collapse;
+    width: 90%;
 }
 caption{
     padding-top:.5rem;
