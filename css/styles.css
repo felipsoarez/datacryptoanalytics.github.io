@@ -222,7 +222,7 @@ ul {
 	transition: all .5s ease;
 	border-radius: 35px;
 	backdrop-filter: blur(25px) brightness(75%) saturate(70%);
-
+	-webkit-backdrop-filter: blur(25px);
 }
 
 .navbar .navbar-brand h2 {
