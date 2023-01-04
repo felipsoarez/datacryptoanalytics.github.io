@@ -427,8 +427,6 @@
 
 .card {
     position: relative;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
     min-width: 0;
@@ -441,8 +439,6 @@
 
 .striped {
     position: relative;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
     min-width: 0;
