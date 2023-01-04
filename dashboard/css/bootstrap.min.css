@@ -270,6 +270,9 @@ select{
     background: #eeeeee;
     /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
     border: 1px solid #ddd;
+    padding: 3px;
+    border-radius: 10px;
+    color: white;
 }
 select:disabled{
     opacity:1
