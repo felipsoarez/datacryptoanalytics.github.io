@@ -347,6 +347,32 @@
                          
                         </div>
                       </div>
+
+                                  <div class="row" id="div_container_sma" style="display:none">
+              <div class="col s12">
+                <div class="card z-depth-2">
+                  <div class="card-content">
+                    <span class="card-title grey-text text-darken-4" id="div_linegraph_sma_title"></span>
+                      <div id="div_linegraph_sma" style="width:100%; height:350px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container" id="div_container_trainingdata" style="display:none">
+              <div class="col s12">
+                <div class="card z-depth-2">
+                  <div class="card-content">
+                    <span class="card-title grey-text text-darken-4">Dados de treinamento (25 linhas principais)</span>
+                    <div style="overflow-x: scroll;" id="div_trainingdata">
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
                   </div>
                </div>
             </div>
@@ -399,9 +425,7 @@
                         </div>      
                         </div>
              
-
-                
-
+            
 
                   <div class="col-sm-12 col-xl-6">
                      <div class="bg-secondary text-center rounded" style="padding: 15px;">
@@ -436,7 +460,32 @@
                   <div class="col-sm-12 col-xl-6">
                      <div class="bg-secondary text-center rounded">
                       
-
+    
+            <div class="row" id="div_container_getsmafirst">
+              <div class=" s12">
+                <p>Mas primeiro, <a href="#div_data">buscar dados</a> da etapa anterior.</p>
+              </div>
+            </div>
+    
+            <div class="row" id="div_container_getsma" style="display:none">
+              <div class=" s12">
+                <p>
+                  <!-- [how to use, what you want your reader to do after you end, as simple and obvious] -->
+                  Vamos gerar o conjunto de dados de treinamento, <i>Calcular SMA e desenhar gráfico</i> botão para gerar os dados de treinamento para a rede neural.
+                </p>
+              </div>
+              <div class=" s6">
+                <div class="input-field col s12">
+                  <label for="input_windowsize">Tamanho da janela</label>
+                  <input type="number" id="input_windowsize" placeholder="a number" value="20">
+                  <small class="form-text text-muted">Esta é a "janela de tempo" para SMA</small>
+                </div>
+              </div>
+              <div class=" s12">
+                <button class="waves-effect waves-light btn" id="btn_draw_sma" onclick="onClickDisplaySMA()">Calcular SMA e desenhar gráfico</button>
+                <div class="spinner-border" id="load_draw_sma" style="display:none"></div>
+              </div>
+            </div>
 
 
                      </div>
