@@ -564,11 +564,12 @@ header {
 	width: 100%;
 	z-index: 999;
 	height: 135px;
-	background: #121212;
 	display: flex;
 	align-items: center;
 	border-bottom: 3px solid #ededed;
 	transform: translateY(0);
+	backdrop-filter: blur(25px) brightness(75%) saturate(70%);
+	-webkit-backdrop-filter: blur(25px);
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
