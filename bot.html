@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crypto Trading Bot</title>
+  </head>
+  <body>
+    <h1>Crypto Trading Bot</h1>
+    <form>
+      <label for="crypto-pair">Select Crypto Pair:</label>
+      <select id="crypto-pair">
+        <option value="BTC-USD">BTC-USD</option>
+        <option value="ETH-USD">ETH-USD</option>
+        <option value="LTC-USD">LTC-USD</option>
+      </select>
+      <br><br>
+      <label for="strategy">Select Trading Strategy:</label>
+      <select id="strategy">
+        <option value="sma">Simple Moving Average</option>
+        <option value="ema">Exponential Moving Average</option>
+        <option value="rsi">Relative Strength Index</option>
+      </select>
+      <br><br>
+      <button type="button" id="start-bot">Start Bot</button>
+      <button type="button" id="stop-bot">Stop Bot</button>
+    </form>
+    <br><br>
+    <div id="bot-status"></div>
+    <script>
+      const cryptoPair = document.getElementById("crypto-pair");
+      const strategy = document.getElementById("strategy");
+      const startBotBtn = document.getElementById("start-bot");
+      const stopBotBtn = document.getElementById("stop-bot");
+      const botStatus = document.getElementById("bot-status");
+
+      let botRunning = false;
+
+      startBotBtn.addEventListener("click", () => {
+        if (!botRunning) {
+          botRunning = true;
+          botStatus.innerHTML = "Bot is running...";
+          // Connect to exchange API and start trading based on selected strategy
+        } else {
+          botStatus.innerHTML = "Bot is already running...";
+        }
+      });
+
+      stopBotBtn.addEventListener("click", () => {
+        if (botRunning) {
+          botRunning = false;
+          botStatus.innerHTML = "Bot stopped.";
+          // Disconnect from exchange API and stop trading
+        } else {
+          botStatus.innerHTML = "Bot is not running...";
+        }
+      });
+    </script>
+  </body>
+</html>
