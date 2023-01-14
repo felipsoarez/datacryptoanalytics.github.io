@@ -1,661 +1,678 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Dashboard - DataCrypto Analytics</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-
-    <meta name="keywords" content="Forex, Analytics, DataCrypto, Data, Crypto, Bitcoin, Ethereum, DeFi, Criptomoedas, Indicadores, Mercado Financeiro, Trading, TradingView, Trader, Dinheiro">
-    <title>Screener  - DataCrypto Analytics</title>
-    <meta name="description" content="Separe o trigo do joio com este Screener - útil para classificar símbolos por indicadores fundamentais e técnicos.">
-    <meta name="description" content="DataCrypto Analytics permite usar o poder dos dados históricos do mercado para detectar tendências e estimar resultados potenciais.">
-    <link rel="canonical" href="https://datacryptoanalytics.com/">
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    <meta property="og:site_name" content="DataCrypto Analytics">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="DataCrypto Analytics">
-    <meta property="og:description" content="Separe o trigo do joio com este Screener - útil para classificar símbolos por indicadores fundamentais e técnicos.">
-    <meta property="og:url" content="https://datacryptoanalytics.com">
-    <meta property="og:image" content="dashboard/img/dash.jpg">
-    <meta property="article:publisher" content="https://fb.me/datacryptoanalytics">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DataCrypto Analytics">
-    <meta name="twitter:description" content="Separe o trigo do joio com este Screener - útil para classificar símbolos por indicadores fundamentais e técnicos.">
-    <meta name="twitter:url" content="https://datacryptoanalytics.com">
-    <meta name="twitter:image" content="dashboard/img/dash.jpg">
-    <meta name="twitter:label1" content="Written by">
-    <meta name="twitter:data1" content="DataCrypto Analytics Dev Team">
-    <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Analytics">
-    <meta name="twitter:site" content="@dc_analytics">
-    <meta name="robots" content="index, follow">
-    <meta name="rating" content="general">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP88NHWLT6"></script>
-    <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-       
-       gtag('config', 'G-CP88NHWLT6');
-    </script>
-
-
-    <!-- Favicon -->
-    <link href="../images/favicon.png" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
-    
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <script type="text/javascript">
+<html lang="pt">
+   <head>
+      <meta charset="utf-8">
+      <title>Dashboard - DataCrypto Analytics</title>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <meta content="" name="keywords">
+      <meta content="" name="description">
+      <meta name="keywords" content="Forex, Analytics, DataCrypto, Data, Crypto, Bitcoin, Ethereum, DeFi, Criptomoedas, Indicadores, Mercado Financeiro, Trading, TradingView, Trader, Dinheiro">
+      <title>DataCrypto Analytics</title>
+      <meta name="description" content="Estratégias de negociação para Criptomoedas & Forex.">
+      <meta name="description" content="DataCrypto Analytics permite usar o poder dos dados históricos do mercado para detectar tendências e estimar resultados potenciais.">
+      <link rel="canonical" href="https://datacryptoanalytics.com/">
+      <meta name="referrer" content="no-referrer-when-downgrade">
+      <meta property="og:site_name" content="DataCrypto Analytics">
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="DataCrypto Analytics">
+      <meta property="og:description" content="Estratégias de negociação para Criptomoedas & Forex.">
+      <meta property="og:url" content="https://datacryptoanalytics.com">
+      <meta property="og:image" content="/dashboard/img/dash.jpg">
+      <meta property="article:publisher" content="https://fb.me/datacryptoanalytics">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="DataCrypto Analytics">
+      <meta name="twitter:description" content="Estratégias de negociação para Criptomoedas & Forex.">
+      <meta name="twitter:url" content="https://datacryptoanalytics.com">
+      <meta name="twitter:image" content="/dashboard/img/dash.jpg">
+      <meta name="twitter:label1" content="Written by">
+      <meta name="twitter:data1" content="DataCrypto Analytics Dev Team">
+      <meta name="twitter:label2" content="Filed under">
+      <meta name="twitter:data2" content="Analytics">
+      <meta name="twitter:site" content="@dc_analytics">
+      <meta name="robots" content="index, follow">
+      <meta name="rating" content="general">
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP88NHWLT6"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         
+         gtag('config', 'G-CP88NHWLT6');
+      </script>
+      <!-- Favicon -->
+      <link href="../images/favicon.png" rel="icon">
+      <!-- Google Web Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+      <!-- Icon Font Stylesheet -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+      <!-- Libraries Stylesheet -->
+      <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+      <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+      <!-- Customized Bootstrap Stylesheet -->
+      
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- Template Stylesheet -->
+      <link href="css/style.css" rel="stylesheet">
+      <link rel="stylesheet" href="./style.css" />
+      <script type="text/javascript">
         setTimeout(function () {
   
             // Closing the alert
             $('#alert').alert('close');
         }, 5000);
     </script>
-</head>
-
-<body>
-    <div class="container-fluid position-relative d-flex p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+   </head>
+   <body>
+      <div class="container-fluid position-relative d-flex p-0">
+         <!-- Spinner Start -->
+         <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+               <span class="sr-only">Loading...</span>
             </div>
-        </div>
-        <!-- Spinner End -->
-        <script type="text/javascript" id="zsiqchat">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "e90c6a7771671c256d77284d9c27c75c939c0cade7c1a13a26195e31b2f7e9c9073cac119b70eeabb48cd1330b28b2ae", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
-
-
-        <!-- Sidebar Start -->
-        <div class="sidebar pe-4 pb-3">
-            <nav class="navbar bg-secondary navbar-dark">
-                <a href="https://datacryptoanalytics.com" class="navbar-brand mx-4 mb-3">
-                    <img src="/images/logo-white-datacrypto.png" alt="Logo DataCrypto Analytics" class="imsombra" width='122' height="53"></img>
-                </a>
-                <div class="d-flex align-items-center ms-4 mb-4">
-                    <div class="position-relative">
-                        <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
-                    </div>
-                    <div class="ms-3">
-                        <h6 class="mb-0">Trader DCA</h6>
-                        <span>Membro grátis</span>
-                    </div>
-                </div>
-                <div class="navbar-nav w-100">
-                    <a href="https://datacryptoanalytics.com/dashboard" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Alertas</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="https://discord.gg/7zAVJebBa9" class="dropdown-item">Crypto</a>
-                            <a href="https://discord.gg/7zAVJebBa9" class="dropdown-item">Forex</a>
-                            <a href="https://discord.gg/7zAVJebBa9" class="dropdown-item">Commodities</a>
-                        </div>
-                    </div>
-                    
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-chart-line me-2"></i>Indicadores</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="https://dc-analytics.gitbook.io/docs/indicadores/b-and-s-v3.2" class="dropdown-item">- B&S v3.2</a>
-                            <a href="https://dc-analytics.gitbook.io/docs/indicadores/market-makers-pvsra" class="dropdown-item">- Market Makers (PVSRA)</a>
-                            <a href="https://dc-analytics.gitbook.io/docs/indicadores/pva-volume-pvsra" class="dropdown-item">- PVA Volume (PVSRA)</a>
-                            <a href="https://dc-analytics.gitbook.io/docs/indicadores/bitcoin-hash-rate" class="dropdown-item">- Bitcoin Hash Rate</a>
-                            <a href="https://dc-analytics.gitbook.io/docs/indicadores/bitcoin-market-capitalization" class="dropdown-item">- Bitcoin Market Capitalization</a>
-                            <a href="https://dc-analytics.gitbook.io/docs/indicadores/bitcoin-total-output-volume" class="dropdown-item">- Bitcoin Total Output Volume</a>
-                            <a href="https://dc-analytics.gitbook.io/docs/indicadores/dca-premium" class="dropdown-item">- DCA PREMIUM</a>
-                            <a href="https://dc-analytics.gitbook.io/docs/indicadores/cross-sma" class="dropdown-item">- Cross SMA</a>
-                        </div>
-                    </div>
-                    <a href="https://datacryptoanalytics.com/dashboard/screener" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>Screener</a>
-                    <a href="https://datacryptoanalytics.com/dashboard/calendar" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Calendario</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Algoritmos</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="https://dc-analytics.gitbook.io/docs/cryptodash/linux" class="dropdown-item">CryptoDash</a>
-                            <a href="https://dc-analytics.gitbook.io/docs/quant-analysis-cli/untitled" class="dropdown-item">Quant Analysis Cli</a>
-                        </div>
-                    </div>
-
-                </div>
+         </div>
+         <!-- Spinner End -->
+         <script type="text/javascript" id="zsiqchat">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "e90c6a7771671c256d77284d9c27c75c939c0cade7c1a13a26195e31b2f7e9c9073cac119b70eeabb48cd1330b28b2ae", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
+         <!-- Sidebar Start -->
+         <div class="sidebar pe-4 pb-3">
+            <nav class="navbar navbar-dark">
+               <a href="https://datacryptoanalytics.com" class="navbar-brand mx-4 mb-3">
+               <img src="/images/logo-white-datacrypto.png" alt="Logo DataCrypto Analytics" class="imsombra" width='122' height="53"></img>
+               </a>
+               <div class="d-flex align-items-center ms-4 mb-4">
+                  <div class="position-relative">
+                     <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                     <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                  </div>
+                  <div class="ms-3">
+                     <h6 class="mb-0">Trader DCA</h6>
+                     <span>Membro grátis</span>
+                  </div>
+               </div>
+               <div class="navbar-nav w-100">
+                  <a href="https://datacryptoanalytics.com/dashboard" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                  <div class="nav-item dropdown">
+                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Alertas</a>
+                     <div class="dropdown-menu bg-transparent border-0">
+                        <a href="https://discord.gg/7zAVJebBa9" class="dropdown-item">Crypto</a>
+                        <a href="https://discord.gg/8zAVJebBa9" class="dropdown-item">Forex</a>
+                     </div>
+                  </div>
+                  <a href="https://datacryptoanalytics.com/academy/" class="nav-item nav-link"><i class="fa fa-graduation-cap me-2"></i>Academy</a>
+                  <div class="nav-item dropdown">
+                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-chart-line me-2"></i>Indicadores</a>
+                     <div class="dropdown-menu bg-transparent border-0">
+                        <a href="https://dc-analytics.gitbook.io/docs/indicadores/b-and-s-v3.2" class="dropdown-item">- B&S v3.2</a>
+                        <a href="https://dc-analytics.gitbook.io/docs/indicadores/market-makers-pvsra" class="dropdown-item">- Market Makers (PVSRA)</a>
+                        <a href="https://dc-analytics.gitbook.io/docs/indicadores/pva-volume-pvsra" class="dropdown-item">- PVA Volume (PVSRA)</a>
+                        <a href="https://dc-analytics.gitbook.io/docs/indicadores/bitcoin-hash-rate" class="dropdown-item">- Bitcoin Hash Rate</a>
+                        <a href="https://dc-analytics.gitbook.io/docs/indicadores/bitcoin-market-capitalization" class="dropdown-item">- Bitcoin Market Capitalization</a>
+                        <a href="https://dc-analytics.gitbook.io/docs/indicadores/bitcoin-total-output-volume" class="dropdown-item">- Bitcoin Total Output Volume</a>
+                        <a href="https://dc-analytics.gitbook.io/docs/indicadores/dca-premium" class="dropdown-item">- DCA PREMIUM</a>
+                        <a href="https://dc-analytics.gitbook.io/docs/indicadores/cross-sma" class="dropdown-item">- Cross SMA</a>
+                     </div>
+                  </div>
+                  <a href="https://datacryptoanalytics.com/dashboard/screener" class="nav-item nav-link"><i class="fa fa-cubes me-2"></i>Screener</a>
+                  <a href="https://datacryptoanalytics.com/dashboard/calendar" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Calendario</a>
+                  <div class="nav-item dropdown">
+                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Algoritmos</a>
+                     <div class="dropdown-menu bg-transparent border-0">
+                        <a href="https://dc-analytics.gitbook.io/docs/cryptodash/linux" class="dropdown-item">CryptoDash</a>
+                        <a href="https://dc-analytics.gitbook.io/docs/quant-analysis-cli/untitled" class="dropdown-item">Quant Analysis Cli</a>
+                     </div>
+                  </div>
+               </div>
             </nav>
             <span class="icoda">
-                <ul>
-                   <li>
-                      <a href="https://twitter.com/dc_analytics">
-                      <i class="fab fa-twitter"></i>
-                      </a>
-                   </li>
-                   <li>
-                      <a href="https://www.instagram.com/dc_analytics/">
-                      <i class="fab fa-instagram"></i>
-                      </a>
-                   </li>
-
-                   <li>
-                      <a href="https://t.me/dc_analytics">
-                      <i class="fab fa-telegram"></i>
-                      </ion-icon>
-                      </a>
-                   </li>
-                   <li>
-                      <a href="https://github.com/datacrypto-analytics">
-                      <i class="fab fa-github"></i>
-                      </a>
-                   </li>
-                   <li>
-                      <a href="https://discord.gg/7zAVJebBa9">
-                      <i class="fab fa-discord"></i>
-                      </a>
-                   </li>
-                </ul>
-             </span>
-        </div>
-        <!-- Sidebar End -->
-
-
-
-        <!-- Content Start -->
-        <div class="content">
+               <ul>
+                  <li>
+                     <a href="https://twitter.com/dc_analytics">
+                     <i class="fab fa-twitter"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://www.instagram.com/dc_analytics/">
+                     <i class="fab fa-instagram"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://t.me/dc_analytics">
+                     <i class="fab fa-telegram"></i>
+                     </ion-icon>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://github.com/datacrypto-analytics">
+                     <i class="fab fa-github"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://discord.gg/7zAVJebBa9">
+                     <i class="fab fa-discord"></i>
+                     </a>
+                  </li>
+               </ul>
+            </span>
+         </div>
+         <!-- Sidebar End -->
+         <!-- Content Start -->
+         <div class="content">
             <!-- Navbar Start -->
-            <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
-                <a href="https://datacryptoanalytics.com/" class="navbar-brand d-flex d-lg-none me-4">
-                    <img src="../images/favicon.png" alt="Logo DataCrypto Analytics" class="imsombra" width='53' height="53"></img>
-                </a>
-                <a href="#" class="sidebar-toggler flex-shrink-0">
-                    <i class="fa fa-bars"></i>
-                </a>
-                <form class="d-none d-md-flex ms-4">
-                    <input class="form-control bg-dark border-0" type="search" placeholder="Search">
-                </form>
-                <div class="navbar-nav align-items-center ms-auto">
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa fa-envelope me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Mensagens</span>
+            <nav class="navbar navbar-expand navbar-dark sticky-top px-4 py-0">
+               <a href="https://datacryptoanalytics.com/" class="navbar-brand d-flex d-lg-none me-4">
+               <img src="../images/favicon.png" alt="Logo DataCrypto Analytics" class="imsombra" width='53' height="53"></img>
+               </a>
+               <a href="#" class="sidebar-toggler flex-shrink-0">
+               <i class="fa fa-bars"></i>
+               </a>
+               <form class="d-none d-md-flex ms-4">
+                  <input class="form-control bg-dark border-0" type="search" placeholder="Search">
+               </form>
+               <div class="navbar-nav align-items-center ms-auto">
+                  <div class="nav-item dropdown">
+                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                     <i class="fa fa-envelope me-lg-2"></i>
+                     <span class="d-none d-lg-inline-flex">Mensagens</span>
+                     </a>
+                     <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                        <a href="#" class="dropdown-item">
+                           <div class="d-flex align-items-center">
+                              <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                              <div class="ms-2">
+                                 <h6 class="fw-normal mb-0">Bem-vindo</h6>
+                                 <small>Minutos atrás</small>
+                              </div>
+                           </div>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Bem-vindo</h6>
-                                        <small>Minutos atrás</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Oferta especial!</h6>
-                                        <small>Minutos atrás</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="https://dc-analytics.gitbook.io/docs/" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Leia a documentação!</h6>
-                                        <small>Minutos atrás</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item text-center">Ver todas as mensagens</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa fa-bell me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Notificações</span>
+                        <hr class="dropdown-divider">
+                        <a href="#" class="dropdown-item">
+                           <div class="d-flex align-items-center">
+                              <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                              <div class="ms-2">
+                                 <h6 class="fw-normal mb-0">Oferta especial! 🔥</h6>
+                                 <small>Minutos atrás</small>
+                              </div>
+                           </div>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="https://discord.gg/7zAVJebBa9" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">Novo alerta</h6>
-                                <small>Minutos atrás</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="https://discord.gg/7zAVJebBa9" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">Novo alerta</h6>
-                                <small>Minutos atrás</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="https://discord.gg/7zAVJebBa9" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">Novo alerta</h6>
-                                <small>Minutos atrás</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item text-center">Ver todas as notificações</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">Trader DCA</span>
+                        <hr class="dropdown-divider">
+                        <a href="https://dc-analytics.gitbook.io/docs/" class="dropdown-item">
+                           <div class="d-flex align-items-center">
+                              <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                              <div class="ms-2">
+                                 <h6 class="fw-normal mb-0">Leia a documentação!</h6>
+                                 <small>Minutos atrás</small>
+                              </div>
+                           </div>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">Perfil</a>
-                            <a href="#" class="dropdown-item">Configurações</a>
-                            <a href="https://datacryptoanalytics.com" class="dropdown-item">Log Out</a>
-                        </div>
-                    </div>
-                </div>
+                        <hr class="dropdown-divider">
+                        <a href="#" class="dropdown-item text-center">Ver todas as mensagens</a>
+                     </div>
+                  </div>
+                  <div class="nav-item dropdown">
+                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                     <i class="fa fa-bell me-lg-2"></i>
+                     <span class="d-none d-lg-inline-flex">Notificações</span>
+                     </a>
+                     <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                        <a href="https://discord.gg/7zAVJebBa9" class="dropdown-item">
+                           <h6 class="fw-normal mb-0">Novo alerta</h6>
+                           <small>Minutos atrás</small>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="https://discord.gg/7zAVJebBa9" class="dropdown-item">
+                           <h6 class="fw-normal mb-0">Novo alerta</h6>
+                           <small>Minutos atrás</small>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="https://discord.gg/7zAVJebBa9" class="dropdown-item">
+                           <h6 class="fw-normal mb-0">Novo alerta</h6>
+                           <small>Minutos atrás</small>
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="#" class="dropdown-item text-center">Ver todas as notificações</a>
+                     </div>
+                  </div>
+                  <div class="nav-item ">
+                     <a href="#" class="nav-link " >
+                        <button class="button" id="connectButton">
+                          
+                          <div id="walletID" style="font-size: 12px;">Wallet not connected.</div>
+
+                          <div id="mobileDeviceWarning" style="font-size: 12px;">
+                           If you are on a mobile phone, please use MetaMask application's browser
+                           to connect.
+                          </div>
+                  
+                          <span id="loading"
+                            ><span>&bull;</span><span>&bull;</span><span>&bull;</span></span
+                          >
+                        </button>
+                      </div>
+                  
+                      <div class="alert" id="installAlert" style="font-size: 12px;">
+                        Please refresh your browser after installing the Metamask plugin
+                  
+                        <button class="button" id="reloadButton">Reload page</button>
+                      </div>
+                     </a>
+                     
+                  </div>
             </nav>
             <!-- Navbar End -->
-
-
             <!-- Sale & Revenue Start
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-line fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Today Sale</p>
-                                <h6 class="mb-0">$1234</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-bar fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Total Sale</p>
-                                <h6 class="mb-0">$1234</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-area fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Today Revenue</p>
-                                <h6 class="mb-0">$1234</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-pie fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Total Revenue</p>
-                                <h6 class="mb-0">$1234</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            Sale & Revenue End -->
-
-                        <!-- Blank Start -->
-                        <div class="container-fluid pt-4 px-4">
-                            <div class="text-center">
-                               <div id="alert" class="alert alert-dark alert-dismissible fade show sombra-laranja" role="alert">
-                                  <i class="fa fa-exclamation-circle me-2"></i>Acesse pelo Desktop <i class="fa fa-desktop me-2"></i>
-                                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+               <div class="container-fluid pt-4 px-4">
+                   <div class="row g-4">
+                       <div class="col-sm-6 col-xl-3">
+                           <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                               <i class="fa fa-chart-line fa-3x text-primary"></i>
+                               <div class="ms-3">
+                                   <p class="mb-2">Today Sale</p>
+                                   <h6 class="mb-0">$1234</h6>
                                </div>
-                            </div>
-                         </div>
-                         <!--  Blank End -->
+                           </div>
+                       </div>
+                       <div class="col-sm-6 col-xl-3">
+                           <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                               <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                               <div class="ms-3">
+                                   <p class="mb-2">Total Sale</p>
+                                   <h6 class="mb-0">$1234</h6>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-sm-6 col-xl-3">
+                           <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                               <i class="fa fa-chart-area fa-3x text-primary"></i>
+                               <div class="ms-3">
+                                   <p class="mb-2">Today Revenue</p>
+                                   <h6 class="mb-0">$1234</h6>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-sm-6 col-xl-3">
+                           <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                               <i class="fa fa-chart-pie fa-3x text-primary"></i>
+                               <div class="ms-3">
+                                   <p class="mb-2">Total Revenue</p>
+                                   <h6 class="mb-0">$1234</h6>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               Sale & Revenue End -->
+            <!-- Blank Start -->
+            <div class="container-fluid pt-4 px-4">
+               <div class="text-center">
+                  <div id="alert" class="alert alert-dark alert-dismissible fade show sombra-laranja" role="alert">
+                     <i class="fa fa-exclamation-circle me-2"></i>Acesse pelo Desktop <i class="fa fa-desktop me-2"></i>
+                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+               </div>
+            </div>
+            <!--  Blank End -->
+
 
             <!-- Blank Start -->
             <div class="container-fluid pt-4 px-4">
-                <div class="row vh-100 rounded align-items-center justify-content-center mx-0">
-                    <div class="text-center">
-                        <h3>O que é criptoeconomia?</h3>
-                        <p>Em termos simples, a criptoeconomia fornece uma maneira de coordenar o comportamento dos participantes da rede, combinando a criptografia com a economia.
-                           Mais especificamente, a criptoeconomia é uma área da ciência da computação que tenta solucionar problemas de coordenação em ecossistemas digitais através de incentivos da criptografia e da economia.
-                           É essencial considerar a criptoeconomia ao criar redes descentralizadas, pois é o mecanismo que fornece uma maneira de alinhar os incentivos dos participantes sem a necessidade de terceiros confiáveis.
-                           Em vez de ser um subconjunto da economia tradicional, a criptoeconomia é uma mistura de teoria dos jogos, design de mecanismos, matemática e outras metodologias do campo da economia. O objetivo principal é entender como financiar, projetar, desenvolver e facilitar as operações de redes descentralizadas.
-                           Este artigo irá abordar as origens da criptoeconomia e seu papel no desenvolvimento da Bitcoin e de outras redes descentralizadas.
-                        </p>
-                        <h3>Quais problemas a criptoeconomia soluciona?</h3>
-                        <p>Antes do surgimento da Bitcoin, acreditava-se que era impossível criar uma rede peer-to-peer onde o consenso fosse alcançado sem vulnerabilidades significativas a ataques e falhas do sistema.
-                           Esse problema geralmente é chamado de Problema dos Generais Bizantinos. É um dilema lógico que demonstra como, em sistemas distribuídos, é fundamental que os diferentes agentes cheguem a um acordo. O problema pressupõe que, uma vez que alguns dos agentes podem não ser confiáveis, os acordos nunca podem ser feitos e a rede não pode funcionar conforme previsto.
-                           Com a criação da Bitcoin, Satoshi Nakamoto introduziu incentivos econômicos a uma rede peer-to-peer e resolveu esse problema.
-                           Desde então, as redes descentralizadas continuaram a depender da criptografia para obter consenso em relação ao estado da rede e seu histórico. Além disso, a maioria das redes tem incorporado incentivos econômicos que encorajam os participantes a se comportarem de determinadas maneiras.
-                           Essa sinergia de protocolos criptográficos com incentivos econômicos permite um ecossistema inteiramente novo de redes descentralizadas que são resilientes e seguras.
-                        </p>
-                        <h3>O papel da criptoeconomia na mineração de Bitcoin</h3>
-                        <p>O objetivo da Bitcoin é criar uma rede de transferência de valores que verifique com precisão as transferências realizadas e que seja imutável e resistente à censura.
-                           Isso é possível através do processo de mineração, no qual os mineradores que validam um bloco de transações com sucesso, são recompensados em Bitcoin. Esse incentivo econômico encoraja os mineradores a agir honestamente, tornando a rede mais confiável e segura.
-                           O processo de mineração envolve a solução de um difícil problema matemático baseado em um algoritmo de hash criptográfico. Nesse contexto, os hashes são usados para vincular cada bloco ao próximo bloco, criando um conjunto de registros com data e hora das transações aprovadas, chamado de blockchain.
-                           Hashes também são utilizados nos quebra-cabeças computacionais que os mineradores estão competindo para resolver. Além disso, uma das regras de consenso que as transações precisam seguir é que uma bitcoin só pode ser gasta se uma assinatura digital válida for gerada a partir de uma chave privada.
-                           Essas regras tecnológicas relacionadas à mineração estão alinhadas com os requisitos de segurança da rede Bitcoin, incluindo a prevenção de agentes mal-intencionados.
-                        </p>
-                        <h3>Como a criptoeconomia melhora a segurança da Bitcoin?</h3>
-                        <p>O modelo de segurança da Bitcoin é construído em torno do princípio da regra da maioria. Isso significa que agentes mal-intencionados podem potencialmente assumir o controle da blockchain ao obter controle da maior parcela do poder computacional da rede. Esse ataque é chamado de ataque de 51%.
-                           Nesse cenário, os hackers seriam capazes de impedir que novas transações sejam confirmadas ou até mesmo de reverter completamente as transações efetuadas. No entanto, obter o controle dessa quantidade de poder de hash seria extremamente caro e exigiria uma quantidade absurda de hardwares e de eletricidade.
-                           A criptoeconomia é uma das razões pelas quais a Bitcoin foi bem-sucedida. Satoshi Nakamoto implementou premissas para proporcionar certos incentivos para as diferentes classes de participantes da rede. As garantias de segurança do sistema dependem muito da eficácia dessas suposições sobre como os participantes da rede reagem a certos incentivos econômicos.
-                           Sem a robustez de seu protocolo criptográfico, não haveria uma unidade de conta segura com a qual pode-se recompensar os mineradores. Sem os mineradores, não haveria confiança na validade do histórico de transações do ledger distribuído, a menos que fosse verificado por um terceiro confiável, o que seria contrário a uma das principais vantagens da Bitcoin.
-                           Com base em suposições da criptoeconomia, a relação simbiótica entre os mineradores e a rede Bitcoin fornece confiança. No entanto, isso não garante que o sistema irá persistir no futuro.
-                        </p>
-                        <h3>O ciclo da criptoeconomia</h3>
-                        <p>O ciclo da criptoeconomia é um modelo holístico de criptoeconomia. Foi publicado por Joel Monegro e ilustra fluxos abstratos de valor através de diferentes classes de participantes em uma economia peer-to-peer. </p>
-                        <img src="https://image.binance.vision/editor-uploads/futures2/cryptoeconomics-body.png" alt="" style="width:100%" />
-                        <p>O modelo representa um mercado de três lados que inclui mineradores (lado da oferta), usuários (lado da demanda) e investidores (lado do capital). Cada grupo troca valores entre si usando um recurso criptoeconômico escasso (um token).
-                           Na relação minerador-usuário no ciclo, os mineradores são compensados por seu trabalho através de tokens usados pelos usuários. O protocolo de consenso da rede padroniza esse processo, enquanto o modelo criptoeconômico controla quando e como os mineradores são pagos.
-                           É necessário criar uma arquitetura de rede que seja sustentada pelo lado da oferta distribuída (mineradores), desde que os benefícios superem as desvantagens. Os benefícios geralmente incluem resistência à censura, transações sem fronteiras e maior confiabilidade. Porém, sistemas descentralizados tendem a ter desempenho inferior quando comparados aos modelos centralizados.
-                           O papel do investidor nesse modelo é duplo: fornecer liquidez para os mineradores venderem seus tokens e capitalizar a rede, dando suporte a preços de token que estão acima dos custos de mineração.
-                           O modelo exemplifica esses dois papéis dividindo os investidores em dois grupos: traders (investidores de curto prazo/short-term) e hodlers (investidores de longo prazo/long-term).
-                           Os traders criam liquidez para o token, para que os mineradores possam vender seus tokens minerados e cobrir os custos operacionais, enquanto os "holders" (detentores) capitalizam a rede para crescimento, dando suporte aos preços dos tokens. A relação minerador-trader trabalha com um fluxo direto de valores, enquanto a relação minerador-holder trabalha com um fluxo indireto de valores.
-                           De forma simplificada, isso significa que todos os participantes dessa economia dependem um do outro para alcançar seus objetivos econômicos. Essa estrutura cria uma rede robusta e segura. Estar em conformidade com o conjunto de regras do sistema, é mais benéfico para a participação do indivíduo do que a prática de atividades maliciosas - o que, por sua vez, torna a rede mais resiliente.
-                        </p>
-                        <h3>Considerações finais</h3>
-                        <p>Embora seja um conceito relativamente novo que tenha surgido com o nascimento da Bitcoin, a criptoeconomia é um elemento essencial a ser considerado no desenvolvimento de redes descentralizadas.
-                           Isolar as diferentes funções nos modelos criptoeconômicos ajuda a analisar custos, incentivos e fluxos de valor para cada grupo de participantes. Isso também pode ajudar a refletir sobre o poder relativo e identificar potenciais pontos de centralização, o que é importante para projetar modelos mais equilibrados de gerenciamento e distribuição de tokens.
-                           O campo da criptoeconomia e o uso de modelos criptoeconômicos podem ser altamente benéficos no desenvolvimento de redes futuras. Ao estudar modelos criptoeconômicos que já foram experimentados e testados, redes futuras podem ser projetadas para serem ainda mais eficientes e sustentáveis, resultando em um ecossistema mais robusto de economias descentralizadas.
-                        </p>
-                    </div>
-                </div>
+               <div class="row vh-100 bg-secondary rounded align-items-center justify-content-center mx-0">
+
+                                                   <h2 id="O que é psicologia de mercado?">O que é psicologia de mercado?</h2>
+                                    <p>Psicologia de mercado é a ideia de que os movimentos de um mercado refletem (ou são influenciados por) o estado emocional de seus usuários participantes. É um dos principais tópicos da economia comportamental - um campo interdisciplinar que investiga os vários fatores que precedem decisões econômicas.
+                                       Muitos acreditam que as emoções são a principal força motriz por trás das mudanças nos mercados financeiros. E que a variação geral de sentimentos dos investidores é o que cria os chamados ciclos psicológicos do mercado.
+                                       Resumidamente, o sentimento do mercado reflete, de forma geral, o que os investidores e traders sentem em relação à ação do preço de um ativo. Quando o sentimento do mercado é positivo e os preços estão subindo continuamente, existe uma tendência de alta (geralmente chamada de bull market). O oposto é chamado de bear market, quando há um declínio contínuo dos preços.
+                                       Portanto, esse conceito de sentimento do mercado é composto por opiniões e sentimentos individuais de todos os traders e investidores que fazem parte do mercado financeiro. Pode também ser visto como uma representação média do sentimento geral dos participantes do mercado.
+                                       Porém, como em qualquer grupo, nenhuma opinião é unânime. Com base nas teorias da psicologia de mercado, o preço de um ativo tende a mudar constantemente em resposta ao sentimento geral do mercado - que também é dinâmico. Caso contrário, seria muito mais difícil realizar uma trade bem-sucedida.
+                                       Na prática, quando o mercado apresenta uma alta, é provável que seja devido a uma confiança maior entre os traders. Um sentimento positivo de mercado faz com que a demanda aumente e a oferta diminua. O aumento da demanda pode gerar uma postura ainda mais forte dos traders. Da mesma forma, uma forte tendência de baixa geralmente cria um sentimento negativo que reduz a demanda e aumenta a oferta disponível.
+                                    </p>
+                                    <h2 id="Como as emoções mudam durante os ciclos de mercado?">Como as emoções mudam durante os ciclos de mercado?</h2>
+                                    <h3>Tendência de alta</h3>
+                                    <p>Todos os mercados passam por ciclos de expansão e de contração. Quando um mercado está em fase de expansão (mercado em alta), existe um clima de otimismo, crença e ganância. Normalmente, essas são as principais emoções que levam a uma forte atividade de compra.
+                                       É bastante comum ver uma espécie de efeito cíclico ou retroativo durante os ciclos de mercado. Por exemplo, o sentimento do mercado fica mais positivo à medida que os preços sobem. Conforme os preços continuam subindo, o sentimento fica ainda mais positivo e impulsiona o mercado ainda mais.
+                                       Às vezes, um forte senso de ganância e crença domina o mercado de tal maneira que é possível que se forme uma bolha financeira. Nesse cenário, muitos investidores se tornam irracionais, perdendo a noção do valor real e comprando um ativo apenas por acreditarem que o mercado continuará subindo.
+                                       Eles ficam gananciosos e empolgados pelo impulso do mercado, na esperança de obter lucros. Quando o preço aumenta demais, existe um ponto de pico. Geralmente, esse ponto é considerado o ponto de risco financeiro máximo.
+                                       Em alguns casos, o mercado terá um movimento lateral por um tempo enquanto os ativos são vendidos gradativamente. Isso também é conhecido como estágio de distribuição. No entanto, alguns ciclos não apresentam um estágio de distribuição claro e a tendência de baixa começa logo após o topo ter sido atingido.
+                                    <h3>Tendência de baixa</h3>
+                                    <p>Quando o mercado começa a mudar de direção, a euforia pode rapidamente se transformar em complacência, pois muitos traders se recusam a acreditar que a tendência de alta acabou. À medida que os preços continuam a cair, o sentimento do mercado se move rapidamente para o lado negativo. Nesse momento, os traders geralmente apresentam sentimentos de ansiedade, negação e pânico.
+                                       Nesse contexto, podemos descrever a ansiedade como o momento em que os investidores começam a questionar por que o preço está caindo, o que logo leva ao estágio de negação. O período de negação é marcado por uma um sentimento de não aceitação. Muitos investidores insistem em manter suas posições perdedoras, seja porque "é tarde demais para vender" ou porque querem acreditar "que o mercado voltará em breve".
+                                       Porém, à medida que os preços caem ainda mais, a onda de vendas fica mais forte. Nesse momento, o medo e o pânico muitas vezes levam ao que é chamado de capitulação de mercado (quando os traders desistem e vendem seus ativos próximos do valor mais baixo).
+                                       Eventualmente, a tendência de baixa é interrompida à medida que a volatilidade diminui e o mercado se estabiliza. Normalmente, o mercado experimenta movimentos laterais antes que sentimentos de esperança e otimismo voltem a surgir. Esse período de movimentação lateral também é conhecido como estágio de acumulação.
+                                    </p>
+                                    <h2>Como os investidores usam a psicologia de mercado?</h2>
+                                    <p>Supondo que a teoria da psicologia de mercado seja válida, entendê-la pode ajudar um profissional a entrar e sair de posições em momentos mais favoráveis. A atitude geral do mercado é contraprodutiva: o momento de maior oportunidade financeira (para um comprador) geralmente chega quando a maioria das pessoas não tem esperança e o mercado é muito baixo. Por outro lado, o momento de maior risco financeiro geralmente surge quando a maioria está eufórica e com excesso de confiança.
+                                       Dessa forma, alguns traders e investidores tentam fazer a leitura do sentimento de um mercado para identificar as diferentes etapas de seus ciclos psicológicos. Em um cenário ideal, eles usariam essas informações para comprar quando houver pânico (preços mais baixos) e vender quando houver ganância (preços mais altos). Na prática, porém, identificar esses pontos não é uma tarefa fácil. O que pode parecer o ponto de mínima (suporte), pode não se manter, levando a valores ainda mais baixos.
+                                    </p>
+                                    <h2>Análise técnica e psicologia de mercado</h2>
+                                    <p>É fácil olhar para os ciclos do mercado e reconhecer como a psicologia geral mudou. A análise de dados anteriores mostra, de forma muito clara, quais ações e decisões teriam sido as mais rentáveis.
+                                       Entretanto, é muito mais difícil entender como o mercado está mudando à medida que ele avança - e ainda mais difícil de prever o que vem depois. Muitos investidores usam análise técnica (TA) para tentar antecipar os prováveis movimentos futuros do mercado.
+                                       De certa forma, podemos dizer que os indicadores de TA são ferramentas que podem ser usadas para tentar medir o estado psicológico do mercado. Por exemplo, o indicador Relative Strength Index (RSI) pode sugerir quando um ativo é comprado em excesso devido a um forte sentimento positivo do mercado (por exemplo, ganância excessiva).
+                                       O MACD é outro exemplo de indicador que pode ser usado para identificar os diferentes estágios psicológicos de um ciclo de mercado. Resumidamente, a relação entre suas linhas pode indicar quando o momento do mercado está mudando (por exemplo, a tendência de compra está ficando mais fraca).
+                                    </p>
+                                    <h2>Bitcoin e a psicologia de mercado</h2>
+                                    <p>O bull market da Bitcoin de 2017 é um exemplo claro de como a psicologia do mercado afeta os preços e vice-versa. De janeiro a dezembro, a Bitcoin subiu de aproximadamente US$900 para sua máxima histórica de US$20.000. Durante a alta, o sentimento do mercado tornou-se cada vez mais positivo. Surgiram milhares de novos investidores, tomados pela emoção do mercado em alta. FOMO, otimismo excessivo e ganância rapidamente elevaram os preços – até o início da queda.
+                                       A reversão da tendência começou a ocorrer no final de 2017 e no início de 2018. A correção deixou muitos dos que ingressaram tarde com perdas significativas. Mesmo quando a tendência de baixa já estava estabelecida, falsa confiança e complacência fizeram com que muitas pessoas insistissem em fazer HODLing (manter os investimentos).
+                                       Alguns meses depois, o sentimento do mercado ficou muito negativo, pois a confiança dos investidores atingiu o nível mais baixo de todos os tempos. FUD e pânico fizeram com que muitos dos usuários que compravam perto do topo vendessem perto da mínima, gerando perdas significativas. Algumas pessoas ficaram desiludidas com a Bitcoin, embora a tecnologia fosse essencialmente a mesma. Na verdade, sua tecnologia está sendo constantemente aprimorada.
+                                    </p>
+                                    <h2>Vieses cognitivos</h2>
+                                    <p>Os vieses cognitivos são padrões de pensamento comuns que geralmente levam os seres humanos a tomar decisões irracionais. Esses padrões podem afetar traders individuais e o mercado como um todo. Alguns exemplos comuns são:</p>
+                                    <ol>
+                                       <li><u>Viés de confirmação: </u>  a tendência de supervalorizar informações que confirmam nossas próprias crenças, ignorando ou descartando informações que são contrárias a elas. Por exemplo, investidores de um mercado em alta podem concentrar-se mais em notícias positivas, ignorando más notícias ou sinais de que a tendência do mercado está prestes a mudar.</li>
+                                       <li><u>Aversão à perda: </u>  tendência comum dos humanos de temer mais as perdas do que comemorar os ganhos, mesmo que o ganho seja semelhante ou superior. Em outras palavras, a dor de uma perda é geralmente mais intensa do que a alegria de um ganho. Isso pode fazer com que os traders percam boas oportunidades ou vendam por impulsão causada pelo pânico durante períodos de capitulação de mercado.</li>
+                                       <li><u>Efeito de dotação:</u>      tendência das pessoas supervalorizarem as coisas que possuem, simplesmente porque são donas delas. Por exemplo, um investidor que possui uma bolsa de criptomoedas tem mais probabilidade de acreditar no valor delas do que uma pessoa que não tenha criptomoedas.</li>
+                                    </ol>
+                                    <h2>Considerações finais</h2>
+                                    <p>A maioria dos traders e investidores concorda que a psicologia afeta os preços e ciclos do mercado. Embora os ciclos psicológicos do mercado sejam bem conhecidos, eles nem sempre são fáceis de lidar. Desde a Tulip Mania holandesa, nos anos 1600, até a bolha dotcom dos anos 90, mesmo traders qualificados tiveram dificuldades para separar suas atitudes do sentimento geral do mercado. Os investidores enfrentam a difícil tarefa de entender não apenas a psicologia do mercado, mas também sua própria psicologia e como isso afeta seu processo de tomada de decisão.</p>
+            
+               </div>
             </div>
             <!-- Blank End -->
-
-
+            <!-- TA Start -->
+            <div class="container-fluid pt-4 px-4">
+               <div class="row g-4">
+                  <div class="col-sm-12 col-xl-6">
+                     <div class="bg-secondary text-center rounded">
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container">
+                           <div class="tradingview-widget-container__widget"></div>
+                           <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                              {
+                              "feedMode": "all_symbols",
+                              "colorTheme": "dark",
+                              "isTransparent": true,
+                              "displayMode": "regular",
+                              "width": "100%",
+                              "height": 450,
+                              "locale": "en"
+                              }
+                           </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                     </div>
+                  </div>
+                  <div class="col-sm-12 col-xl-6">
+                     <div class="text-center rounded">
+                        <a class="twitter-timeline" data-width="100%" data-height="445" data-theme="dark" href="https://twitter.com/dc_analytics?ref_src=twsrc%5Etfw">Tweets by dc_analytics</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- TA End -->
             <!-- Recent Sales Start
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-secondary text-center rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Recent Salse</h6>
-                        <a href="">Show All</a>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
-                            <thead>
-                                <tr class="text-white">
-                                    <th scope="col"><input class="form-check-input" type="checkbox"></th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Invoice</th>
-                                    <th scope="col">Customer</th>
-                                    <th scope="col">Amount</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01 Jan 2045</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            Recent Sales End -->
-
-
+               <div class="container-fluid pt-4 px-4">
+                   <div class="bg-secondary text-center rounded p-4">
+                       <div class="d-flex align-items-center justify-content-between mb-4">
+                           <h6 class="mb-0">Recent Salse</h6>
+                           <a href="">Show All</a>
+                       </div>
+                       <div class="table-responsive">
+                           <table class="table text-start align-middle table-bordered table-hover mb-0">
+                               <thead>
+                                   <tr class="text-white">
+                                       <th scope="col"><input class="form-check-input" type="checkbox"></th>
+                                       <th scope="col">Date</th>
+                                       <th scope="col">Invoice</th>
+                                       <th scope="col">Customer</th>
+                                       <th scope="col">Amount</th>
+                                       <th scope="col">Status</th>
+                                       <th scope="col">Action</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   <tr>
+                                       <td><input class="form-check-input" type="checkbox"></td>
+                                       <td>01 Jan 2045</td>
+                                       <td>INV-0123</td>
+                                       <td>Jhon Doe</td>
+                                       <td>$123</td>
+                                       <td>Paid</td>
+                                       <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                   </tr>
+                                   <tr>
+                                       <td><input class="form-check-input" type="checkbox"></td>
+                                       <td>01 Jan 2045</td>
+                                       <td>INV-0123</td>
+                                       <td>Jhon Doe</td>
+                                       <td>$123</td>
+                                       <td>Paid</td>
+                                       <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                   </tr>
+                                   <tr>
+                                       <td><input class="form-check-input" type="checkbox"></td>
+                                       <td>01 Jan 2045</td>
+                                       <td>INV-0123</td>
+                                       <td>Jhon Doe</td>
+                                       <td>$123</td>
+                                       <td>Paid</td>
+                                       <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                   </tr>
+                                   <tr>
+                                       <td><input class="form-check-input" type="checkbox"></td>
+                                       <td>01 Jan 2045</td>
+                                       <td>INV-0123</td>
+                                       <td>Jhon Doe</td>
+                                       <td>$123</td>
+                                       <td>Paid</td>
+                                       <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                   </tr>
+                                   <tr>
+                                       <td><input class="form-check-input" type="checkbox"></td>
+                                       <td>01 Jan 2045</td>
+                                       <td>INV-0123</td>
+                                       <td>Jhon Doe</td>
+                                       <td>$123</td>
+                                       <td>Paid</td>
+                                       <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                       </div>
+                   </div>
+               </div>
+               Recent Sales End -->
             <!-- Widgets Start 
+               <div class="container-fluid pt-4 px-4">
+                   <div class="row g-4">
+                       <div class="col-sm-12 col-md-6 col-xl-4">
+                           <div class="h-100 bg-secondary rounded p-4">
+                               <div class="d-flex align-items-center justify-content-between mb-2">
+                                   <h6 class="mb-0">Messages</h6>
+                                   <a href="">Show All</a>
+                               </div>
+                               <div class="d-flex align-items-center border-bottom py-3">
+                                   <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                   <div class="w-100 ms-3">
+                                       <div class="d-flex w-100 justify-content-between">
+                                           <h6 class="mb-0">Jhon Doe</h6>
+                                           <small>15 minutes ago</small>
+                                       </div>
+                                       <span>Short message goes here...</span>
+                                   </div>
+                               </div>
+                               <div class="d-flex align-items-center border-bottom py-3">
+                                   <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                   <div class="w-100 ms-3">
+                                       <div class="d-flex w-100 justify-content-between">
+                                           <h6 class="mb-0">Jhon Doe</h6>
+                                           <small>15 minutes ago</small>
+                                       </div>
+                                       <span>Short message goes here...</span>
+                                   </div>
+                               </div>
+                               <div class="d-flex align-items-center border-bottom py-3">
+                                   <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                   <div class="w-100 ms-3">
+                                       <div class="d-flex w-100 justify-content-between">
+                                           <h6 class="mb-0">Jhon Doe</h6>
+                                           <small>15 minutes ago</small>
+                                       </div>
+                                       <span>Short message goes here...</span>
+                                   </div>
+                               </div>
+                               <div class="d-flex align-items-center pt-3">
+                                   <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                   <div class="w-100 ms-3">
+                                       <div class="d-flex w-100 justify-content-between">
+                                           <h6 class="mb-0">Jhon Doe</h6>
+                                           <small>15 minutes ago</small>
+                                       </div>
+                                       <span>Short message goes here...</span>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-sm-12 col-md-6 col-xl-4">
+                           <div class="h-100 bg-secondary rounded p-4">
+                               <div class="d-flex align-items-center justify-content-between mb-4">
+                                   <h6 class="mb-0">Calender</h6>
+                                   <a href="">Show All</a>
+                               </div>
+                               <div id="calender"></div>
+                           </div>
+                       </div>
+                       <div class="col-sm-12 col-md-6 col-xl-4">
+                           <div class="h-100 bg-secondary rounded p-4">
+                               <div class="d-flex align-items-center justify-content-between mb-4">
+                                   <h6 class="mb-0">To Do List</h6>
+                                   <a href="">Show All</a>
+                               </div>
+                               <div class="d-flex mb-2">
+                                   <input class="form-control bg-dark border-0" type="text" placeholder="Enter task">
+                                   <button type="button" class="btn btn-primary ms-2">Add</button>
+                               </div>
+                               <div class="d-flex align-items-center border-bottom py-2">
+                                   <input class="form-check-input m-0" type="checkbox">
+                                   <div class="w-100 ms-3">
+                                       <div class="d-flex w-100 align-items-center justify-content-between">
+                                           <span>Short task goes here...</span>
+                                           <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="d-flex align-items-center border-bottom py-2">
+                                   <input class="form-check-input m-0" type="checkbox">
+                                   <div class="w-100 ms-3">
+                                       <div class="d-flex w-100 align-items-center justify-content-between">
+                                           <span>Short task goes here...</span>
+                                           <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="d-flex align-items-center border-bottom py-2">
+                                   <input class="form-check-input m-0" type="checkbox" checked>
+                                   <div class="w-100 ms-3">
+                                       <div class="d-flex w-100 align-items-center justify-content-between">
+                                           <span><del>Short task goes here...</del></span>
+                                           <button class="btn btn-sm text-primary"><i class="fa fa-times"></i></button>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="d-flex align-items-center border-bottom py-2">
+                                   <input class="form-check-input m-0" type="checkbox">
+                                   <div class="w-100 ms-3">
+                                       <div class="d-flex w-100 align-items-center justify-content-between">
+                                           <span>Short task goes here...</span>
+                                           <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="d-flex align-items-center pt-2">
+                                   <input class="form-check-input m-0" type="checkbox">
+                                   <div class="w-100 ms-3">
+                                       <div class="d-flex w-100 align-items-center justify-content-between">
+                                           <span>Short task goes here...</span>
+                                           <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               Widgets End -->
+            <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-secondary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h6 class="mb-0">Messages</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Jhon Doe</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                    <span>Short message goes here...</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Jhon Doe</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                    <span>Short message goes here...</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Jhon Doe</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                    <span>Short message goes here...</span>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center pt-3">
-                                <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-0">Jhon Doe</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                    <span>Short message goes here...</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-secondary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Calender</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <div id="calender"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-secondary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">To Do List</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <input class="form-control bg-dark border-0" type="text" placeholder="Enter task">
-                                <button type="button" class="btn btn-primary ms-2">Add</button>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox" checked>
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span><del>Short task goes here...</del></span>
-                                        <button class="btn btn-sm text-primary"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center pt-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               <div class="bg-secondary rounded-top p-4">
+                  <div class="row">
+                     <div class="col-12 col-sm-6 text-center text-sm-start">
+                        &copy; <a href="#">DataCrypto Analytics</a>, All Right Reserved. 
+                     </div>
+                     <div class="col-12 col-sm-6 text-center text-sm-end">
+                        <span class="actions">
+                           <ul>
+                              <li>
+                                 <a href="https://twitter.com/dc_analytics">
+                                 <i class="fab fa-twitter"></i>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="https://www.facebook.com/datacryptoanalytics/">
+                                 <i class="fab fa-facebook"></i>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="https://www.instagram.com/dc_analytics/">
+                                 <i class="fab fa-instagram"></i>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="https://cos.tv/channel/40545870367073280">
+                                 <i class="fab fa-youtube"></i>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="https://t.me/dc_analytics">
+                                 <i class="fab fa-telegram"></i>
+                                 </ion-icon>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="https://github.com/datacrypto-analytics">
+                                 <i class="fab fa-github"></i>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="https://www.linkedin.com/company/datacrypto-analytics/">
+                                 <i class="fab fa-linkedin"></i>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="https://discord.gg/7zAVJebBa9">
+                                 <i class="fab fa-discord"></i>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="https://dc-analytics.medium.com/">
+                                 <i class="fab fa-medium"></i>
+                                 </a>
+                              </li>
+                           </ul>
+                        </span>
+                     </div>
+                  </div>
+               </div>
             </div>
-            Widgets End -->
-
-
-            <!-- Footer Start
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-secondary rounded-top p-4">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">DataCrypto Analytics</a>, All Right Reserved. 
-                        </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <span class="actions">
-                                <ul>
-                                   <li>
-                                      <a href="https://twitter.com/dc_analytics">
-                                      <i class="fab fa-twitter"></i>
-                                      </a>
-                                   </li>
-                                   <li>
-                                      <a href="https://www.facebook.com/datacryptoanalytics/">
-                                      <i class="fab fa-facebook"></i>
-                                      </a>
-                                   </li>
-                                   <li>
-                                      <a href="https://www.instagram.com/dc_analytics/">
-                                      <i class="fab fa-instagram"></i>
-                                      </a>
-                                   </li>
-                                   <li>
-                                      <a href="https://www.youtube.com/channel/UCRdtd6_fRHm52me1obE0csw">
-                                      <i class="fab fa-youtube"></i>
-                                      </a>
-                                   </li>
-                                   <li>
-                                      <a href="https://t.me/dc_analytics">
-                                      <i class="fab fa-telegram"></i>
-                                      </ion-icon>
-                                      </a>
-                                   </li>
-                                   <li>
-                                      <a href="https://github.com/datacrypto-analytics">
-                                      <i class="fab fa-github"></i>
-                                      </a>
-                                   </li>
-                                   <li>
-                                      <a href="https://www.linkedin.com/company/datacrypto-analytics/">
-                                      <i class="fab fa-linkedin"></i>
-                                      </a>
-                                   </li>
-                                   <li>
-                                      <a href="https://discord.gg/7zAVJebBa9">
-                                      <i class="fab fa-discord"></i>
-                                      </a>
-                                   </li>
-                                   <li>
-                                      <a href="https://dc-analytics.medium.com/">
-                                      <i class="fab fa-medium"></i>
-                                      </a>
-                                   </li>
-                                </ul>
-                             </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            Footer End -->
-        </div>
-        <!-- Content End -->
-
-
-        <!-- Back to Top 
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> -->
-    </div>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/chart/chart.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
-
+            <!-- Footer End -->
+         </div>
+         <!-- Content End -->
+         <!-- Back to Top 
+            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> -->
+      </div>
+      <!-- JavaScript Libraries -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="lib/chart/chart.min.js"></script>
+      <script src="lib/easing/easing.min.js"></script>
+      <script src="lib/waypoints/waypoints.min.js"></script>
+      <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+      <script src="lib/tempusdominus/js/moment.min.js"></script>
+      <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+      <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+      <!-- Template Javascript -->
+      <script src="js/main.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script type="text/javascript" src="./main.js"></script>
+   </body>
 </html>
