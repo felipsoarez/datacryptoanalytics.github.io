@@ -215,11 +215,13 @@ figure{
     margin:0 0 1rem
 }
 img,svg{
-    vertical-align:middle
+    vertical-align:middle;
+    border-radius: 10px;
 }
 table{
     caption-side:bottom;
-    border-collapse:collapse
+    border-collapse:collapse;
+    width: 90%;
 }
 caption{
     padding-top:.5rem;
@@ -237,7 +239,8 @@ thead,tbody,tfoot,tr,td,th{
     border-width:0
 }
 label{
-    display:inline-block
+    display:inline-block;
+    padding: 10px 5px;
 }
 button{
     border-radius:0
@@ -258,7 +261,19 @@ button,select{
     cursor:pointer
 }
 select{
-    word-wrap:normal
+    word-wrap:normal;
+    -webkit-appearance: none;
+    /* Remove estilo padrão do Chrome */
+    -moz-appearance: none;
+    /* Remove estilo padrão do FireFox */
+    appearance: none;
+    /* Remove estilo padrão do FireFox*/
+    background: #000000;
+    /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+    border: 1px solid #ddd;
+    padding: 3px;
+    border-radius: 10px;
+    color: white;
 }
 select:disabled{
     opacity:1
@@ -3259,7 +3274,9 @@ textarea.form-control-lg{
     align-items:center;
     justify-content:space-between;
     padding-top:.5rem;
-    padding-bottom:.5rem
+    padding-bottom:.5rem;
+    backdrop-filter: blur(25px) brightness(75%) saturate(70%);
+	-webkit-backdrop-filter: blur(25px);
 }
 .navbar>.container,.navbar>.container-fluid,.navbar>.container-sm,.navbar>.container-md,.navbar>.container-lg,.navbar>.container-xl,.navbar>.container-xxl{
     display:flex;
@@ -9528,7 +9545,7 @@ textarea.form-control-lg{
 	padding-right: 5px;
 	padding-top: 25px;
     font-size: 23px;
-    top: 90px;
+    top: 40px;
 }
 
 .sombra-black {
