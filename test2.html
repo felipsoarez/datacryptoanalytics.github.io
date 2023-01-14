@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Algorithmic Trading</title>
+  <script src="ccxt.js"></script>
+  <script>
+    // Connect to the exchange's API
+    const exchange = new ccxt.binance();
+    var symbol;
+
+    // Define the buy and sell thresholds
+    var buyThreshold;
+    var sellThreshold;
+
+    // Function to place a buy order
+    function buy(amount) {
+      exchange.createOrder(symbol, 'limit', 'buy', amount, buyThreshold)
+      .then(console.log("Buy order placed"))
+      .catch(console.error);
+    }
+
+    // Function to place a sell order
+    function sell(amount) {
+      exchange.createOrder(symbol, 'limit', 'sell', amount, sellThreshold)
+      .then(console.log("Sell order placed"))
+      .catch(console.error);
+    }
+
+    // Function to check the current price and execute the trading strategy
+    function checkPrice() {
+      exchange.fetchTicker(symbol)
+      .then(ticker => {
+        const price = ticker.last;
+        if (price < buyThreshold) {
+          buy(1);
+        } else if (price > sellThreshold) {
+          sell(1);
+        } else {
+          console.log(`Price is between the thresholds. Current price: ${price}`);
+        }
+      })
+      .catch(console.error);
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <label for="symbol">Symbol</label>
+    <input type="text" id="symbol" name="symbol" required>
+    <br>
+    <label for="buyThreshold">Buy Threshold</label>
+    <input type="number" id="buyThreshold" name="buyThreshold" required>
+    <br>
+    <label for="sellThreshold">Sell Th
