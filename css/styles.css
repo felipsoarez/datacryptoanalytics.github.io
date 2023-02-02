@@ -1652,3 +1652,11 @@ section.pricing {
 	backdrop-filter: blur(25px) brightness(75%) saturate(70%);
 	-webkit-backdrop-filter: blur(25px);
 }
+
+
+.avatar {
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
