@@ -150,12 +150,12 @@ ul {
 
 
 .button {
-	background: linear-gradient(to right, #292F33, #ff8c05);
+	background: linear-gradient(to right, #ff8c05, #292F33);
 	color: #fff;
 	border: 0;
 	width: 40%;
 	margin-top: 0px;
-	border-radius: 16px;
+	border-radius: 12px;
 	padding: 8px;
 	padding-right: 8px;
 	font-weight: 700;
