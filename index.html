@@ -338,10 +338,10 @@
                   </div>
                </div>
                <div class="col-md-6">
-                  <div class="container image">
+                  <div class="container floating">
                      <div>
                      <center>
-                        <img src="images/server_discord.png" alt="Categoria servidor Discord" style="padding: 9px; border-radius: 40px; transform: rotate(2deg);" class="img" width="95%" ></a> 
+                        <img src="images/server_discord.png" alt="Categoria servidor Discord" style="padding: 9px; border-radius: 40px; transform: rotate(2deg);" class="imsombra" width="95%" ></a> 
                         </center>
                   </div>
                   <center><p style="font-size: 11px;">Servidor Oficial Discord.</p> </center>
@@ -352,6 +352,47 @@
   
       <!-- fim server_discord --> 
 
+      <div class="blog-slider">
+  <div class="blog-slider__wrp swiper-wrapper">
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        
+        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp" alt="">
+      </div>
+      <div class="blog-slider__content">
+        <span class="blog-slider__code">26 December 2019</span>
+        <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div>
+        <a href="#" class="blog-slider__button">READ MORE</a>
+      </div>
+    </div>
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/jason-leung-798979-unsplash.webp" alt="">
+      </div>
+      <div class="blog-slider__content">
+        <span class="blog-slider__code">26 December 2019</span>
+        <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
+        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+        <a href="#" class="blog-slider__button">READ MORE</a>
+      </div>
+    </div>
+    
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp" alt="">
+      </div>
+      <div class="blog-slider__content">
+        <span class="blog-slider__code">26 December 2019</span>
+        <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+        <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+        <a href="#" class="blog-slider__button">READ MORE</a>
+      </div>
+    </div>
+    
+  </div>
+  <div class="blog-slider__pagination"></div>
+</div>
 
             <!-- Categorias discord -->
       <div id="dca-premium-ds-1" class="container">
@@ -655,6 +696,21 @@
          $(window).on('load',function(){
          $('#myModal').modal('show'); });
       </script>
+      <script>
+         var swiper = new Swiper('.blog-slider', {
+      spaceBetween: 30,
+      effect: 'fade',
+      loop: true,
+      mousewheel: {
+        invert: false,
+      },
+      // autoHeight: true,
+      pagination: {
+        el: '.blog-slider__pagination',
+        clickable: true,
+      }
+    });
+         </script>
 
       <script>
 window.PINGPONG_CONFIG = {"url":"https://datacryptoanalytics.pingpong.host/"};
