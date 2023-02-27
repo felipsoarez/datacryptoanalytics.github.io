@@ -70,12 +70,11 @@
          }
       </script>
 
-      <script src="https://unpkg.com/scrollreveal"></script>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>
-          ScrollReveal({ reset: true });
-
-          ScrollReveal().reveal('.headline');
-      </script>
+         AOS.init();
+       </script>
       <!-- Facebook Pixel Code -->
       <script>
          !function(f,b,e,v,n,t,s)
@@ -208,7 +207,7 @@
       </header>
       <!-- home intro -->
       <div id="home" class="home-intro segments">
-         <div class="container headline">
+         <div class="container">
             <div class="row">
                <div class="col-md-6">
                   <div class="container tracking-in-expand">
@@ -283,7 +282,7 @@
                </div>
                </div>
                <div class="col-md-6 ">
-                  <div class="container">
+                  <div data-aos="fade-left" class="container">
                      <center>
                         <img src="images/bg8.gif" alt="Analista observando Gráfico de dados DCA " class="imsombra"  width="95%"  ></a>
                      </center>
@@ -304,14 +303,14 @@
       </center>
       <!-- parceiros -->
       
-      <div class=" headline container imsombra" style="background: #0d213a;  /* fallback for old browsers */
+      <div class="container imsombra" style="background: #0d213a;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #f4791f, #0d213a);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #f4791f, #0d213a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 ; border-radius:30px">
             <div class="section-title" style="padding-top: 45px;">
                <h1><b> Estamos na </b></h1>
             </div>
-            <div class="image">
+            <div data-aos="fade-left" class="image">
                <center>
                   <a href="https://numer.ai/dc_analytics"><img src="images/numerai.png" alt="Numerai " class="imsombra" width='282' height="103" style="padding: 15px;" ></a> <a href="https://discord.com/invite/5ywpZMt6Kp"><img src="images/Discord-Logo+Wordmark-White.png" alt="Discord " class="imsombra animate__zoomInRight"  width='308' height="103" style="padding: 15px;" ></a>
                </center>
@@ -335,7 +334,7 @@ background: linear-gradient(to right, #f4791f, #0d213a); /* W3C, IE 10+/ Edge, F
 
 
       <!-- server_discord -->
-      <div id="dca-premium-ds" class="container headline">
+      <div id="dca-premium-ds" class="container">
          <div class="container">
             <div class="section-title" style="padding-top: 45px;">
                <h1><b> Servidor Discord </b></h1>
@@ -350,7 +349,7 @@ background: linear-gradient(to right, #f4791f, #0d213a); /* W3C, IE 10+/ Edge, F
                   </div>
                </div>
                <div class="col-md-6">
-                  <div class="container">
+                  <div data-aos="fade-left" class="container">
                      
                      <center>
                         <img src="images/d_discord.gif" alt="Categoria servidor Discord" style="padding: 9px; border-radius: 40px; transform: rotate(2deg);" class="imsombra" width="95%" ></a> 
