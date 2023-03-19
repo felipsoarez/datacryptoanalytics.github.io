@@ -219,7 +219,7 @@ ul {
 	padding: 1px 40px;
 	transition: all .5s ease;
 	border-radius: 35px;
-	backdrop-filter: blur(10px) brightness(85%) saturate(80%);
+	backdrop-filter: blur(10px) brightness(100%) saturate(80%);
 	-webkit-backdrop-filter: blur(10px);
 }
 
