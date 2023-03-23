@@ -214,7 +214,7 @@ ul {
 /*navbar*/
 
 .navbar {
-	margin: 20px 60px;
+	margin: 27px 0;
 	color: #fff;
 	padding: 1px 40px;
 	transition: all .5s ease;
@@ -242,7 +242,7 @@ ul {
 .navbar.fix {
 	position: fixed;
 	top: 10px;
-	width: 90%;
+	width: 81%;
 	z-index: 999;
 	margin-top: 0;
 	-webkit-box-shadow: 5px 5px 15px 5px #000000;
