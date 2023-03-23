@@ -1331,8 +1331,8 @@ section.pricing {
 
 .pricing .card {
 	border: none;
-	border-radius: 8px;
-	background: #0000007a;
+	border-radius: 18px;
+	background: #121212;
 	transition: all 0.2s;
 	box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.7);
 }
