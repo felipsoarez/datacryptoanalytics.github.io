@@ -1677,6 +1677,7 @@ section.pricing {
 @property --num {
 	syntax: "<integer>";
 	initial-value: 0;
+	stop-value: 250;
 	inherits: false;
   }
   
