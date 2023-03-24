@@ -1667,3 +1667,32 @@ section.pricing {
 }
 
 
+.container-color {
+	background: #0d213a;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #f4791f, #0d213a);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #f4791f, #0d213a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+; 	border-radius:30px;
+}
+
+@property --num {
+	syntax: "<integer>";
+	initial-value: 0;
+	inherits: false;
+  }
+  
+.number-traders {
+	animation: counter 20s infinite ease-in-out;
+	counter-reset: num var(--num);
+  }
+.number-traders::after {
+	content: counter(num);
+  }
+  
+  @keyframes counter {
+	from {
+	  --num: 0;
+	}
+	to {
+	  --num: 250;
+	}
+  }
