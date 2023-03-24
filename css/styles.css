@@ -1697,3 +1697,20 @@ section.pricing {
 	  --num: 250;
 	}
   }
+
+
+
+.bg{
+  background-color: #1e1f26;
+  height: 100vh;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.level{
+  background-color: #00d1b2;
+  padding: 5rem 0;
+  color: #ffffff;
+  margin: 0!important;
+}

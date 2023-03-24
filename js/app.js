@@ -1,5 +1,6 @@
 // xxxxxxxxxx Working For Sign Up Form xxxxxxxxxx
 
+
 // xxxxxxxxxx Full Name Validation xxxxxxxxxx
 function checkUserFullName(){
     var userSurname = document.getElementById("userFullName").value;

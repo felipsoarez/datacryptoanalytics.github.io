@@ -449,7 +449,7 @@ background: linear-gradient(to right, #f4791f, #0d213a); /* W3C, IE 10+/ Edge, F
                   <div class="card mb-5 mb-lg-0">
                      <div class="card-body">
                         <h5 class="card-title text-muted text-uppercase text-center">Assertividade</h5>
-                        <h6 class="card-price text-center" data-vanilla-counter data-start-at="0" data-end-at="80" data-time="10000" data-delay="0" data-format="{}%" > </h6>
+                        <h6 class="card-price text-center" data-vanilla-counter data-start-at="0" data-end-at="83" data-time="10000" data-delay="0" data-format="{}%" > </h6>
                         <span > </span>
                         <hr>
                        <p>Nossa principal estratégia/indicador teve mais de 80% de assertividade em todas as suas operações.</p>
@@ -725,6 +725,34 @@ window.PINGPONG_CONFIG = {"url":"https://datacryptoanalytics.pingpong.host/"};
 <script>
    VanillaCounter();
 </script>
+<script>
+import { CountUp } from 'https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.js'
+
+function countStart(){
+  const $counters = document.querySelectorAll(".js-count-up"),
+        options = {
+          useEasing: true,
+          useGrouping: true,
+          separator: ",",
+          decimal: "."
+        };
+
+  $counters.forEach( (item) => {
+    const value = item.dataset.value;
+    const counter = new CountUp(item, value, options);
+    counter.start();
+  });
+}
+
+new Waypoint({
+  element: document.querySelector('.level'),
+  handler: function() {
+    countStart()
+    //this.destroy() //for once
+  },
+  offset: '50%'
+});
+   </script>
 
 </body>
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
