@@ -1080,7 +1080,7 @@ ul {
 	text-align: left;
 	outline: none;
 	font-size: 18px;
-	transition: 2.4s;
+	transition: all 0.30s ease-in-out;
 	border-radius: 18px;
 	border-width: 150px;
 	border-color: #ff8c05;
