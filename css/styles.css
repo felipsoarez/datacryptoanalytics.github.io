@@ -1714,3 +1714,31 @@ section.pricing {
   color: #ffffff;
   margin: 0!important;
 }
+
+
+.color-cont {
+	border-radius: 35px;
+	padding: 10px;
+	background-image: linear-gradient(
+  75deg,
+  hsl(32deg 100% 51%) 0%,
+  hsl(31deg 89% 51%) 0%,
+  hsl(30deg 79% 50%) 0%,
+  hsl(29deg 73% 49%) 0%,
+  hsl(28deg 68% 47%) 1%,
+  hsl(27deg 64% 45%) 3%,
+  hsl(26deg 60% 43%) 5%,
+  hsl(25deg 55% 41%) 8%,
+  hsl(24deg 51% 39%) 13%,
+  hsl(22deg 46% 37%) 19%,
+  hsl(20deg 41% 35%) 26%,
+  hsl(18deg 35% 33%) 35%,
+  hsl(14deg 29% 30%) 44%,
+  hsl(8deg 22% 28%) 54%,
+  hsl(353deg 16% 25%) 64%,
+  hsl(323deg 12% 22%) 74%,
+  hsl(262deg 14% 20%) 83%,
+  hsl(228deg 27% 18%) 92%,
+  hsl(213deg 63% 14%) 100%
+);
+}
