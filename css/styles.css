@@ -1742,3 +1742,20 @@ section.pricing {
   hsl(213deg 63% 14%) 100%
 );
 }
+
+
+.square {
+    opacity: 0;
+    transform: scale(1.2);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .square {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+}
+
+.square-transition {
+    opacity: 1;
+    transform: none;
+}
