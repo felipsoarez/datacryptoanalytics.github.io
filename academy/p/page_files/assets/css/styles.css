@@ -1364,13 +1364,13 @@ section.pricing {
 
 
 a:any-link {
-	border: 1px solid blue;
+	text-decoration: none;
 	color: orange;
 }
   
 /* WebKit browsers */
 a:-webkit-any-link {
-	border: 1px solid blue;
+	text-decoration: none;
 	color: orange; 
 }
 
