@@ -107,9 +107,9 @@ p {
 
 abbr[data-original-title],
 abbr[title] {
-	text-decoration: underline;
-	-webkit-text-decoration: underline dotted;
-	text-decoration: underline dotted;
+	text-decoration: none;
+	-webkit-text-decoration: none ;
+	text-decoration: none;
 	cursor: help;
 	border-bottom: 0
 }
@@ -3242,14 +3242,14 @@ fieldset:disabled a.btn {
 
 .btn-link:hover {
 	color: #ff8c05;
-	text-decoration: underline;
+	text-decoration: none;
 	background-color: transparent;
 	border-color: transparent
 }
 
 .btn-link.focus,
 .btn-link:focus {
-	text-decoration: underline;
+	text-decoration: none;
 	border-color: transparent;
 	box-shadow: none
 }
@@ -3480,7 +3480,7 @@ tbody.collapse.show {
 .dropdown-item:active {
 	color: #fff;
 	text-decoration: none;
-	background-color: #007bff
+	background-color: #000
 }
 
 .dropdown-item.disabled,
@@ -4919,7 +4919,7 @@ tbody.collapse.show {
 }
 
 .breadcrumb-item+.breadcrumb-item:hover::before {
-	text-decoration: underline
+	text-decoration: none
 }
 
 .breadcrumb-item+.breadcrumb-item:hover::before {
@@ -5061,7 +5061,7 @@ tbody.collapse.show {
 .badge-primary[href]:hover {
 	color: #fff;
 	text-decoration: none;
-	background-color: #0062cc
+	background-color: #000
 }
 
 .badge-secondary {
@@ -9202,7 +9202,7 @@ a.text-dark:hover {
 		box-shadow: none!important
 	}
 	a:not(.btn) {
-		text-decoration: underline
+		text-decoration: none
 	}
 	abbr[title]::after {
 		content: " (" attr(title) ")"

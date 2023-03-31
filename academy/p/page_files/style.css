@@ -1396,7 +1396,7 @@ time+.tags:before {
 }
 
 .content-inner .post-content .editor-content a {
-	text-decoration: underline
+	text-decoration: none
 }
 
 .content-inner .post-content blockquote {
@@ -3155,3 +3155,17 @@ e 10px de altura para a barra horizontal */
     ::-webkit-scrollbar-thumb {
     background: #3f3f3f;
     }
+
+
+
+
+	a:any-link {
+		text-decoration: none;
+		color: orange;
+	}
+	  
+	/* WebKit browsers */
+	a:-webkit-any-link {
+		color: orange; 
+	}
+	
