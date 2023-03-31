@@ -610,7 +610,7 @@ header a svg path {
 }
 
 header a:hover svg path {
-	fill: #601eff
+	fill: #ff8c05
 }
 
 header nav ul {
@@ -871,7 +871,7 @@ header .counter.shake {
 }
 
 .modal .close:hover {
-	color: #601eff
+	color: #ff8c05
 }
 
 .modal h3 {
@@ -1952,7 +1952,7 @@ time+.tags:before {
 }
 
 .share-selected-text-main-container .share-selected-text-inner:hover:after {
-	border-color: #1da1f2 transparent transparent
+	border-color: #ff8c05 transparent transparent
 }
 
 .share-selected-text-main-container .share-selected-text-btn {
@@ -3100,12 +3100,12 @@ footer input[type=email] {
 }
 
 .footer-support:hover {
-	color: #601eff
+	color: #ff8c05
 }
 
 .footer-support:hover path {
 	transition: .25s all ease-in-out;
-	stroke: #601eff
+	stroke: #ff8c05
 }
 
 @media (min-width:768px) {

@@ -3236,12 +3236,12 @@ fieldset:disabled a.btn {
 
 .btn-link {
 	font-weight: 400;
-	color: #007bff;
+	color: #ff8c05;
 	background-color: transparent
 }
 
 .btn-link:hover {
-	color: #0056b3;
+	color: #ff8c05;
 	text-decoration: underline;
 	background-color: transparent;
 	border-color: transparent
@@ -4945,13 +4945,13 @@ tbody.collapse.show {
 	padding: .5rem .75rem;
 	margin-left: -1px;
 	line-height: 1.25;
-	color: #007bff;
+	color: #ff8c05;
 	background-color: #fff;
 	border: 1px solid #dee2e6
 }
 
 .page-link:hover {
-	color: #0056b3;
+	color: #ff8c05;
 	text-decoration: none;
 	background-color: #e9ecef;
 	border-color: #dee2e6
@@ -4981,7 +4981,7 @@ tbody.collapse.show {
 .page-item.active .page-link {
 	z-index: 1;
 	color: #fff;
-	background-color: #007bff;
+	background-color: #ff8c05;
 	border-color: #007bff
 }
 
@@ -5687,7 +5687,7 @@ button.close {
 	flex-direction: column;
 	width: 100%;
 	pointer-events: auto;
-	background-color: #fff;
+	background-color: #121212;
 	background-clip: padding-box;
 	border: 1px solid rgba(0, 0, 0, .2);
 	border-radius: .3rem;
@@ -9477,6 +9477,7 @@ a.text-dark:hover {
 	-webkit-animation: a 1s 0s infinite ease-in-out forwards;
 	animation: a 1s 0s infinite ease-in-out forwards
 }
+
 
 
 /*# sourceMappingURL=fluidbox.min.css.map */
