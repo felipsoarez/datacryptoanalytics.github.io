@@ -1366,13 +1366,13 @@ section.pricing {
 
 a:any-link {
 	text-decoration: none;
-	color: orange;
+	color: #ff8c05;
 }
   
 /* WebKit browsers */
 a:-webkit-any-link {
 	text-decoration: none;
-	color: orange; 
+	color: #ff8c05; 
 }
 
 

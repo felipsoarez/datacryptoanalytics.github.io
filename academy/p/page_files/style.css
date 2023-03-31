@@ -1210,7 +1210,7 @@ time+.tags:before {
 
 .post .img-holder {
 	overflow: hidden;
-	border-radius: 5px
+	border-radius: 25px
 }
 
 .post .excerpt {
@@ -1252,6 +1252,7 @@ time+.tags:before {
 	position: relative;
 	background-repeat: no-repeat;
 	background-position: center;
+	border-radius: 25px;
 	background-size: cover
 }
 
@@ -1349,7 +1350,7 @@ time+.tags:before {
 	height: auto;
 	position: relative;
 	margin: 0;
-	border-radius: 5px
+	border-radius: 25px
 }
 
 .editor-content .kg-gallery-container {
@@ -3161,12 +3162,12 @@ e 10px de altura para a barra horizontal */
 
 	a:any-link {
 		text-decoration: none;
-		color: orange;
+		color: #ff8c05;
 	}
 	  
 	/* WebKit browsers */
 	a:-webkit-any-link {
 		text-decoration: none;
-		color: orange; 
+		color: #ff8c05; 
 	}
 	
