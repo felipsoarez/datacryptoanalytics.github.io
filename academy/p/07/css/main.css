@@ -68,7 +68,7 @@
      --footerbar-bg:#0f172a;
      --footerbar-color:#f8fafc;
      --footerbar-hover-color:#ff8c05;
-     --modal-bg:#334155;
+     --modal-bg:#121212;
      --button-bg:#3b82f6;
      --button-color:#fff;
      --gray-bg:rgba(255,255,255,.025);
@@ -306,6 +306,7 @@ iframe[src*="youtube.com"]{
     z-index:1;
     transform-origin:center;
     opacity:0;
+    background-image: url(/images/favicon.png);
     transition:opacity .35s ease
 }
  .thumbnail.ynvXdm,.avatar.ynvXdm{
