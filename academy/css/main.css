@@ -328,6 +328,8 @@ iframe[src*="youtube.com"]{
     font-weight:400;
     z-index:5;
     padding:0 8px;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+	box-shadow: 5px 5px 15px 5px #000000;
     border-radius:var(--radius)
 }
  .rtl .entry-thumbnail .entry-tag{
