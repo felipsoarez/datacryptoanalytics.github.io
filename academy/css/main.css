@@ -3493,7 +3493,9 @@ iframe[src*="youtube.com"]{
     background:currentColor;
     font-size:18px;
     font-weight:400;
-    padding:0 16px
+    padding:0 16px;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+	box-shadow: 5px 5px 15px 5px #000000;
 }
  .sidebar .social .instagram a{
     background:var(--instagram)
