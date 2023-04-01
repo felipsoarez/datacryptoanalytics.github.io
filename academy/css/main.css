@@ -110,7 +110,7 @@ caption{
 img{
     border:none;
     position:relative;
-    border-radius: 25px;
+    border-radius: 15px;
     filter: drop-shadow(5px 5px 10px #000);
 
 }
