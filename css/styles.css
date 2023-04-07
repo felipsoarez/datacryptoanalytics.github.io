@@ -1759,3 +1759,9 @@ section.pricing {
     opacity: 1;
     transform: none;
 }
+
+
+
+video::-webkit-media-controls {
+	visibility: hidden;
+}
