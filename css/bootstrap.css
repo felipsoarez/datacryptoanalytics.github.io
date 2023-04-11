@@ -426,7 +426,6 @@ hr {
     position: absolute;
     top: 0;
     left: 50%;
-    background: black;
     color: white;
     padding: 0.5em 3em;
     @include transform(translate(-50%, -50%));
