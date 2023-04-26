@@ -1,4 +1,5 @@
 User-Agent: *
-Disallow: 
+Disallow: /images/logo-white-datacrypto.webp
+Disallow: /images/bg8.gif
 
 Sitemap: https://datacryptoanalytics.com/sitemap.xml
