@@ -5,4 +5,5 @@ Disallow: /images/trust.png
 Disallow: /images/discord-logo-wordmark-white.webp
 Disallow: /images/numerai.webp
 
+
 Sitemap: https://datacryptoanalytics.com/sitemap.xml
