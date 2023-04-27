@@ -7,7 +7,7 @@ body{
     align-items: center;
 }
 .divCover img{
-    width: 70%;
+    width: 100%;
 }
 a{
     text-decoration: none !important;
