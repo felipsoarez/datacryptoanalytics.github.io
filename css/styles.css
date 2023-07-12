@@ -1074,12 +1074,12 @@ ul {
 	background: #121212;
 	color: #ff8c05;
 	cursor: pointer;
-	padding: 5px;
+	padding: 13px;
 	width: 100%;
 	border: 10px;
 	text-align: left;
 	outline: none;
-	font-size: 18px;
+	font-size: 15px;
 	transition: all 0.30s ease-in-out;
 	border-radius: 18px;
 	border-width: 150px;
