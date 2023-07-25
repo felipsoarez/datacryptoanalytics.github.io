@@ -508,6 +508,7 @@ ul {
 
 .portfolio .content-image {
 	position: relative;
+	border-radius: 20px;
 }
 
 .portfolio .content-image:hover .image-overlay {
