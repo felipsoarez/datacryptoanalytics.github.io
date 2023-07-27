@@ -1646,12 +1646,12 @@ section.pricing {
 	width: 290px;
     height: 45px;
     bottom: 1%;
-	left: 1%;
+	left: 25%;
 	font-size: 14px;
 	color: #fff;
 	padding: 10px 20px;
 	transition: all .5s ease;
-	border-radius: 35px;
+	border-radius: 15px;
 	backdrop-filter: blur(10px) brightness(85%) saturate(80%);
 	-webkit-backdrop-filter: blur(15px);
 }
