@@ -1726,7 +1726,7 @@ section.pricing {
 	padding: 10px;
 	border-width: 2px;
 	border-style: solid;
-	border-color: black;
+	border-color: #e47e094a;
 	background-image: linear-gradient(
   75deg,
   hsl(32deg 100% 51%) 0%,
