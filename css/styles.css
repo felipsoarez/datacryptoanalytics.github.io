@@ -1916,7 +1916,10 @@ video::-webkit-media-controls {
 }
 
 
-
+.demo_wrap {
+	overflow: hidden;
+	position: relative;
+  }
 
 .shark_member {
 	opacity: 15%;
