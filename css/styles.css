@@ -1916,6 +1916,19 @@ video::-webkit-media-controls {
 }
 
 
+
+
+.shark_member {
+	opacity: 15%;
+	position: absolute;
+	left: 0;
+	border-radius: 20px;
+	bottom: 0;
+	width: 95%;
+	height: auto;
+  }
+
+
 .pulsate-bck {
 	-webkit-animation: pulsate-bck 0.5s ease-in-out infinite both;
 	        animation: pulsate-bck 0.5s ease-in-out infinite both;
@@ -2033,4 +2046,6 @@ video::-webkit-media-controls {
 	}
   }
   
+
+
 
