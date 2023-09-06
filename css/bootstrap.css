@@ -146,13 +146,11 @@ sup {
 }
 
 a {
-  color: #007bff;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #0056b3;
   text-decoration: underline;
 }
 
@@ -1223,8 +1221,8 @@ pre code {
   }
   .col-lg-4 {
     -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    flex: 0 0 24.9%;
+    max-width: 26.6%;
   }
   .col-lg-5 {
     -ms-flex: 0 0 41.666667%;
