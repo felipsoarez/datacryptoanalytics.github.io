@@ -1980,7 +1980,7 @@ video::-webkit-media-controls {
 	left: 0;
 	border-radius: 20px;
 	bottom: 0;
-	width: 95%;
+	width: 100%;
 	height: auto;
   }
 
