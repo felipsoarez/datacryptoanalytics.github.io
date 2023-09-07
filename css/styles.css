@@ -1894,6 +1894,9 @@ section.pricing {
 );
 }
 
+.color_bg {
+	color: linear-gradient(to right, #f4791f, #0d213a);
+}
 
 .square {
     opacity: 0;
