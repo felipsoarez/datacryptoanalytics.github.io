@@ -1981,7 +1981,7 @@ video::-webkit-media-controls {
 	border-radius: 20px;
 	bottom: 0;
 	width: 100%;
-	height: auto;
+	height: 100%;
   }
 
 
