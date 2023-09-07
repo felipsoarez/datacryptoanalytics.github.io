@@ -1865,9 +1865,11 @@ section.pricing {
 .color-cont {
 	border-radius: 35px;
 	padding: 10px;
-	border-width: 2px;
+	border-width: 1px;
 	border-style: solid;
 	border-color: #e47e094a;
+	-webkit-box-shadow: 5px 5px 15px 5px #000000;
+	box-shadow: 5px 5px 15px 5px #000000;
 	background-image: linear-gradient(
   75deg,
   hsl(32deg 100% 51%) 0%,
