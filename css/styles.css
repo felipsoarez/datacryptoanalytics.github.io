@@ -1891,8 +1891,6 @@ section.pricing {
 .color-cont {
 	border-radius: 35px;
 	padding: 10px;
-	border-width: 1px;
-	border-style: solid;
 	border-color: #e47e094a;
 	backdrop-filter: blur(10px) brightness(100%) saturate(80%);
 	-webkit-backdrop-filter: blur(10px);
