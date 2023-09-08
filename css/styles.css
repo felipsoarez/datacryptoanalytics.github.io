@@ -599,8 +599,6 @@ ul {
 
 .portfolio .row .col-md-4 {
 	padding: 15px;
-	-webkit-backdrop-filter: blur(20px);
-	backdrop-filter: blur(20px);
 }
 
 .portfolio .portfolio-filter-menu {

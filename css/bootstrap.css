@@ -572,11 +572,10 @@ pre code {
 }
 
 .container .box {
-  background-color: rgba(0, 0, 0, 0.438);
-	backdrop-filter: blur(20px) brightness(90%) saturate(90%);
-	-webkit-backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.281);
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
   transition: all ease .3s;
-  border-radius: 20px;
 }
 
 @media (min-width: 576px) {
@@ -618,7 +617,8 @@ pre code {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }
 
 .no-gutters {
@@ -4577,46 +4577,44 @@ input[type="button"].btn-block {
 }
 
 .card {
-  padding: 20px;
-  width: 330px;
-  min-height: 370px;
-  border-radius: 20px;
-  background: #212121;
-  box-shadow: 5px 5px 8px #1b1b1b,
-             -5px -5px 8px #272727;
-  transition: 0.4s;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #292F33;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 8px;
 }
 
-.card:hover {
-  translate: 0 -10px;
+.card > hr {
+  margin-right: 0;
+  margin-left: 0;
 }
 
-.card-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #b2eccf;
-  margin: 15px 0 0 10px;
+.card > .list-group:first-child .list-group-item:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 
-.card-image {
-  min-height: 170px;
-  background-color: #313131;
-  border-radius: 15px;
-  background: #313131;
-  box-shadow: inset 5px 5px 3px #2f2f2f,
-            inset -5px -5px 3px #333333;
+.card > .list-group:last-child .list-group-item:last-child {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
 }
 
 .card-body {
-  margin: 13px 0 0 10px;
-  color: rgb(184, 184, 184);
-  font-size: 15px;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
 }
 
-
-.by-name {
-  font-weight: 700;
+.card-title {
+  margin-bottom: 0.75rem;
 }
+
 .card-subtitle {
   margin-top: -0.375rem;
   margin-bottom: 0;
