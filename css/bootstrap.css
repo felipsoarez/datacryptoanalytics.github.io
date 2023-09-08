@@ -576,6 +576,7 @@ pre code {
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   transition: all ease .3s;
+  border-radius: 20px;
 }
 
 @media (min-width: 576px) {
