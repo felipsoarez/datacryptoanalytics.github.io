@@ -17,12 +17,13 @@ comment
 ---------*/
 
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Rajdhani&family=Roboto+Condensed:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat+Subrayada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Share+Tech+Mono&family=Share+Tech&family=Montserrat+Subrayada&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sofia');
 
 /*general*/
 
 body {
-	font-family: 'Rajdhani', sans-serif;
+	font-family: 'Share Tech', sans-serif;
 	background: #121212;
 	color: #fafafa;
 	font-size: 16px;
@@ -37,21 +38,21 @@ h5,
 h6 {
 	line-height: 110%;
 	margin: 0;
-	font-family: 'Rajdhani', sans-serif;
+	font-family: 'Share Tech', sans-serif;
 	font-weight: 500;
 	color: #fff;
 }
 
 h1 {
-	font-size: 40px;
-	font-family: 'Rajdhani', sans-serif;
+	font-size: 50px;
+	font-family: 'Share Tech', sans-serif;
 	color: #ff8c05;
 	padding-bottom: 0px;
 	text-shadow: 5px 5px 15px #000000;
 }
 
 h2 {
-	font-size: 36px;
+	font-size: 46px;
 	color: #ff8c05;
 }
 
@@ -61,7 +62,7 @@ h3 {
 
 h4 {
 	font-size: 22px;
-	font-family: 'Rajdhani', sans-serif;
+	font-family: 'Share Tech', sans-serif;
 	color: #ff8c05;
 	padding: 5px;
 	text-shadow: 5px 5px 10px #000000;
@@ -142,6 +143,8 @@ ul {
 	-webkit-box-shadow: 3px 3px 9px 3px #000000;
 	box-shadow: 3px 3px 9px 3px #000000;
 }
+
+
 
 
 /*button default*/
@@ -1220,6 +1223,28 @@ ul {
 	background-color: #121212;
 }
 
+@keyframes float {
+	0% {
+	  filter: 0 5px 15px 0px rgba(0,0,0,0.6);
+	  transform: translatey(0px);
+	}
+	50% {
+	  filter: 0 25px 15px 0px rgba(0,0,0,0.2);
+	  transform: translatey(-20px);
+	}
+	100% {
+	  filter: 0 5px 15px 0px rgba(0,0,0,0.6);
+	  transform: translatey(0px);
+	}
+  }
+
+  .avatar {
+	filter: drop-shadow(5px 5px 10px #000);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	img { width: 100%; height: auto; }
+  }
+
 .actions li {
 	display: inline;
 	list-style-type: none;
@@ -2131,7 +2156,13 @@ z
 			  transform: translate(0);
 	}
   }
-  
+/* -------------------
+*/
+
+
+
+
+
 
 
 
