@@ -44,7 +44,7 @@ h6 {
 }
 
 h1 {
-	font-size: 40px;
+	font-size: 50px;
 	font-family: 'Share Tech', sans-serif;
 	color: #ff8c05;
 	padding-bottom: 0px;
@@ -52,7 +52,7 @@ h1 {
 }
 
 h2 {
-	font-size: 36px;
+	font-size: 46px;
 	color: #ff8c05;
 }
 
@@ -143,6 +143,8 @@ ul {
 	-webkit-box-shadow: 3px 3px 9px 3px #000000;
 	box-shadow: 3px 3px 9px 3px #000000;
 }
+
+
 
 
 /*button default*/
