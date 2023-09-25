@@ -1220,6 +1220,28 @@ ul {
 	background-color: #121212;
 }
 
+@keyframes float {
+	0% {
+	  filter: 0 5px 15px 0px rgba(0,0,0,0.6);
+	  transform: translatey(0px);
+	}
+	50% {
+	  filter: 0 25px 15px 0px rgba(0,0,0,0.2);
+	  transform: translatey(-20px);
+	}
+	100% {
+	  filter: 0 5px 15px 0px rgba(0,0,0,0.6);
+	  transform: translatey(0px);
+	}
+  }
+
+  .avatar {
+	filter: drop-shadow(5px 5px 10px #000);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	img { width: 100%; height: auto; }
+  }
+
 .actions li {
 	display: inline;
 	list-style-type: none;
