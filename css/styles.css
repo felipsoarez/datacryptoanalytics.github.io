@@ -38,14 +38,14 @@ h5,
 h6 {
 	line-height: 110%;
 	margin: 0;
-	font-family: 'Share Tech Mono', sans-serif;
+	font-family: 'Share Tech', sans-serif;
 	font-weight: 500;
 	color: #fff;
 }
 
 h1 {
 	font-size: 40px;
-	font-family: 'Share Tech Mono', sans-serif;
+	font-family: 'Share Tech', sans-serif;
 	color: #ff8c05;
 	padding-bottom: 0px;
 	text-shadow: 5px 5px 15px #000000;
@@ -62,7 +62,7 @@ h3 {
 
 h4 {
 	font-size: 22px;
-	font-family: 'Share Tech Mono', sans-serif;
+	font-family: 'Share Tech', sans-serif;
 	color: #ff8c05;
 	padding: 5px;
 	text-shadow: 5px 5px 10px #000000;
