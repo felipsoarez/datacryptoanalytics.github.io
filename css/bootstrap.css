@@ -4199,8 +4199,6 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -4219,6 +4217,7 @@ input[type="button"].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  font-size: 20px;
 }
 
 .navbar-nav .nav-link {
