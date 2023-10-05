@@ -363,8 +363,6 @@ ul {
 	padding: 1px 40px;
 	transition: all .5s ease;
 	border-radius: 2px;
-	backdrop-filter: blur(10px) brightness(100%) saturate(80%);
-	-webkit-backdrop-filter: blur(5px);
 }
 
 .navbar .navbar-brand h2 {
@@ -386,14 +384,14 @@ ul {
 	top: 0px;
 	width: 100%;
 	z-index: 999;
-	border: #1a1a1a00;
-	border-width: 1px;
 	margin-top: 0;
 	-webkit-box-shadow: 5px 5px 15px 5px #000000;
 	box-shadow: 5px 5px 15px 5px #000000;
 	transition: all .5s ease;
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
+	backdrop-filter: blur(10px) brightness(100%) saturate(80%);
+	-webkit-backdrop-filter: blur(5px);
 }
 
 
