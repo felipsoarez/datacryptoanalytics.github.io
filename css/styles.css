@@ -364,14 +364,12 @@ ul {
 	transition: all .5s ease;
 	border-radius: 2px;
 	backdrop-filter: blur(10px) brightness(100%) saturate(80%);
-	-webkit-backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(5px);
 }
 
 .navbar .navbar-brand h2 {
 	font-weight: 900;
-	background: -webkit-linear-gradient(right, #2224af, #ff8c05);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
@@ -388,10 +386,14 @@ ul {
 	top: 0px;
 	width: 100%;
 	z-index: 999;
+	border: #1a1a1a00;
+	border-width: 1px;
 	margin-top: 0;
 	-webkit-box-shadow: 5px 5px 15px 5px #000000;
 	box-shadow: 5px 5px 15px 5px #000000;
 	transition: all .5s ease;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 
 
@@ -1393,8 +1395,10 @@ accordion.active, accordion:hover {
 	font-size: 12px;
 	position: fixed;
 	z-index: 1000;
-	left: 2%;
-	top: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 
 .sombra-black {
@@ -1833,16 +1837,18 @@ section.pricing {
 
 
 .coockie-alert {
-	width: 290px;
+	width: 230px;
     height: 45px;
-    bottom: 1%;
-	left: 25%;
 	font-size: 14px;
 	color: #fff;
-	padding: 10px 20px;
-	transition: all .5s ease;
+	transition: all .9s ease;
 	border-radius: 15px;
-	backdrop-filter: blur(10px) brightness(85%) saturate(80%);
+	position: fixed;
+	top: 95%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -130px;
+	backdrop-filter: blur(5px) brightness(50%) saturate(90%);
 	-webkit-backdrop-filter: blur(15px);
 }
 
