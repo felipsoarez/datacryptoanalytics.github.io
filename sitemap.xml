@@ -63,9 +63,9 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://datacryptoanalytics.com/test</loc>
+  <loc>https://datacryptoanalytics.com/legal-terms</loc>
   <lastmod>2023-10-05T23:18:23+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://datacryptoanalytics.com/academy/p/07/gerenciamento-de-riscos-no-trading-de-criptomoedas</loc>
@@ -121,56 +121,6 @@
   <loc>https://datacryptoanalytics.com/academy/p/07/media-movel-convergente-e-divergente</loc>
   <lastmod>2023-10-05T23:18:22+00:00</lastmod>
   <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/dashboard/index.html</loc>
-  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/dashboard/button.html</loc>
-  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/dashboard/typography.html</loc>
-  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/dashboard/element.html</loc>
-  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/dashboard/widget.html</loc>
-  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/dashboard/form.html</loc>
-  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/dashboard/chart.html</loc>
-  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/dashboard/signin.html</loc>
-  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/dashboard/signup.html</loc>
-  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/dashboard/blank.html</loc>
-  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
-  <priority>0.41</priority>
 </url>
 <url>
   <loc>https://datacryptoanalytics.com/academy/p/07/indice-de-forca-relativa</loc>
