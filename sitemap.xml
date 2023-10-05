@@ -9,118 +9,174 @@
 
 <url>
   <loc>https://datacryptoanalytics.com/</loc>
-  <lastmod>2023-01-17T00:19:15+00:00</lastmod>
+  <lastmod>2023-10-05T23:18:23+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://datacryptoanalytics.com/privacy-policy</loc>
-  <lastmod>2023-01-17T00:19:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://datacryptoanalytics.com/membership</loc>
-  <lastmod>2023-01-17T00:19:15+00:00</lastmod>
+  <lastmod>2023-10-05T23:18:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://datacryptoanalytics.com/dashboard/</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
-  <priority>1.00</priority>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://datacryptoanalytics.com/planos</loc>
-  <lastmod>2023-01-17T00:19:15+00:00</lastmod>
+  <loc>https://datacryptoanalytics.com/indicators</loc>
+  <lastmod>2023-10-05T23:18:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/price</loc>
+  <lastmod>2023-10-05T23:18:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://datacryptoanalytics.com/academy/</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://datacryptoanalytics.com/indicadores</loc>
-  <lastmod>2023-01-17T00:19:15+00:00</lastmod>
-  <priority>1.00</priority>
+  <loc>https://datacryptoanalytics.com/alerts</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://datacryptoanalytics.com/termos-legais</loc>
-  <lastmod>2023-01-17T00:19:15+00:00</lastmod>
+  <loc>https://datacryptoanalytics.com/docs/</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/privacy-policy</loc>
+  <lastmod>2023-10-05T23:18:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://datacryptoanalytics.com/dashboard/screener</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://datacryptoanalytics.com/dashboard/calendar</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/test</loc>
+  <lastmod>2023-10-05T23:18:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/academy/p/07/gerenciamento-de-riscos-no-trading-de-criptomoedas</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/academy/p/07/web3-introdu%C3%A7%C3%A3o</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/academy/p/07/lightning-network-bitcoin</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://datacryptoanalytics.com/academy/p/introducao-a-criptoeconomia-para-iniciantes</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://datacryptoanalytics.com/academy/p/guia-para-iniciantes-sobre-graficos-de-velas</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/academy/p/guia-basico-gerenciamento-de-riscos</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/academy/p/a-psicologia-dos-ciclos-de-mercado</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/academy/p/o-que-e-machine-learning</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/academy/p/uma-introducao-a-teoria-das-ondas-de-elliott</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/academy/p/teoria-de-dow</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/academy/p/07/indice-de-forca-relativa</loc>
-  <lastmod>2023-04-03T00:19:14+00:00</lastmod>
-  <priority>0.98</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/academy/p/o-que-sao-esquemas-de-piramide-e-ponzi</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://datacryptoanalytics.com/academy/p/redes-neurais-profundas</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
+  <loc>https://datacryptoanalytics.com/academy/p/07/a-psicologia-dos-ciclos-de-mercado</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://datacryptoanalytics.com/academy/p/guia-para-iniciantes-sobre-tecnologia-blockchain.html</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://datacryptoanalytics.com/academy/p/blockchain-e-inteligencia-artificial</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
+  <loc>https://datacryptoanalytics.com/academy/p/guia-para-iniciantes-sobre-graficos-de-velas</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://datacryptoanalytics.com/academy/p/nocoes-basicas-para-negociar-forex</loc>
-  <lastmod>2023-01-17T00:19:14+00:00</lastmod>
+  <loc>https://datacryptoanalytics.com/academy/p/guia-para-iniciantes-sobre-tecnologia-blockchain</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
   <priority>0.64</priority>
 </url>
+<url>
+  <loc>https://datacryptoanalytics.com/academy/p/guia-basico-gerenciamento-de-riscos</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/dashboard/table.html</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/academy/p/07/media-movel-convergente-e-divergente</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/dashboard/index.html</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/dashboard/button.html</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/dashboard/typography.html</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/dashboard/element.html</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/dashboard/widget.html</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/dashboard/form.html</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/dashboard/chart.html</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/dashboard/signin.html</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/dashboard/signup.html</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/dashboard/blank.html</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://datacryptoanalytics.com/academy/p/07/indice-de-forca-relativa</loc>
+  <lastmod>2023-10-05T23:18:22+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
 
 </urlset>
