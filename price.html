@@ -77,8 +77,9 @@
    </head>
    
    <body>
+       <!-- ZOHO 
       <script type="text/javascript" id="zsiqchat">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "e90c6a7771671c256d77284d9c27c75c939c0cade7c1a13a26195e31b2f7e9c9073cac119b70eeabb48cd1330b28b2ae", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
-      
+      -->
       <!-- loader -->
       <div class="fakeLoader"></div>
       <!-- loader -->
@@ -594,5 +595,20 @@ publishable-key="pk_live_51HPKNxHJ8xTPZhVw9gKt8dU7u6bVNtDjVTr2mg3bd1HjQwGTBCfMCo
            });
          }
       </script>
+            <script>
+               function initFreshChat() {
+                 window.fcWidget.init({
+                       token: "64006c78-6430-49d7-817a-7b9c08708b8d",
+                 host: "https://datacryptoanalytics.freshchat.com"
+                 });
+               }
+               function initialize(i,t){var e;i.getElementById(t)?
+               initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,
+               e.src="https://datacryptoanalytics.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}
+               function initiateCall(){initialize(document,"Freshchat-js-sdk")}
+               window.addEventListener?window.addEventListener("load",initiateCall,!1):
+               window.attachEvent("load",initiateCall,!1);
+             </script>
+            
    </body>
 </html>
