@@ -118,11 +118,24 @@
    <body>
       <script data-who="💎 Made with naker.io 💎" src="https://d23jutsnau9x47.cloudfront.net/back/v1.0.9/viewer.js" data-option="{|environment|:{|gradient|:|radial|,|sensitivity|:0.5,|colorStart|:[18,18,18,1],|colorEnd|:[0,0,0,1]},|particle|:{|life|:7.9,|power|:0.065,|texture|:|https://res.cloudinary.com/naker-io/image/upload/v1566560053/window_03.png|,|number|:44,|colorStart|:[37,37,37,0.67],|colorEnd|:[3,3,3,0.74],|sizeStart|:1.95,|sizeEnd|:3.9,|direction1|:{|x|:0,|y|:100,|z|:0},|direction2|:{|x|:0,|y|:0,|z|:0}},|waterMark|:false}" data-container=".bg"></script>
      <!--    <script type="text/javascript" id="zsiqchat">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "e90c6a7771671c256d77284d9c27c75c939c0cade7c1a13a26195e31b2f7e9c9073cac119b70eeabb48cd1330b28b2ae", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
-     ZOHO  -->
+     ZOHO 
       <script
       src='//fw-cdn.com/10925344/3685270.js'
       chat='true'>
-      </script>
+      </script> -->
+      <script>
+         function initFreshChat() {
+           window.fcWidget.init({
+             WEB_CHAT_PAYLOAD
+           });
+         }
+         function initialize(i,t){var e;i.getElementById(t)?
+         initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,
+         e.src="https://datacryptoanalytics.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}
+         function initiateCall(){initialize(document,"Freshchat-js-sdk")}
+         window.addEventListener?window.addEventListener("load",initiateCall,!1):
+         window.attachEvent("load",initiateCall,!1);
+       </script>
       <!-- loader -->
       <div class="fakeLoader"></div>
       <!-- loader -->
