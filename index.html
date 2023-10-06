@@ -123,19 +123,7 @@
       src='//fw-cdn.com/10925344/3685270.js'
       chat='true'>
       </script> -->
-      <script>
-         function initFreshChat() {
-           window.fcWidget.init({
-             WEB_CHAT_PAYLOAD
-           });
-         }
-         function initialize(i,t){var e;i.getElementById(t)?
-         initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,
-         e.src="https://datacryptoanalytics.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}
-         function initiateCall(){initialize(document,"Freshchat-js-sdk")}
-         window.addEventListener?window.addEventListener("load",initiateCall,!1):
-         window.attachEvent("load",initiateCall,!1);
-       </script>
+  
       <!-- loader -->
       <div class="fakeLoader"></div>
       <!-- loader -->
@@ -957,6 +945,20 @@
          });
             
       </script>
+      <script>
+         function initFreshChat() {
+           window.fcWidget.init({
+                 token: "64006c78-6430-49d7-817a-7b9c08708b8d",
+           host: "https://datacryptoanalytics.freshchat.com"
+           });
+         }
+         function initialize(i,t){var e;i.getElementById(t)?
+         initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,
+         e.src="https://datacryptoanalytics.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}
+         function initiateCall(){initialize(document,"Freshchat-js-sdk")}
+         window.addEventListener?window.addEventListener("load",initiateCall,!1):
+         window.attachEvent("load",initiateCall,!1);
+       </script>
       
    </body>
    <script async src="https://static.wdgtsrc.com/assets/loader.js" data-chats-widget-id="0461ccac-b349-4a15-82a5-059af0818f8f"></script>
