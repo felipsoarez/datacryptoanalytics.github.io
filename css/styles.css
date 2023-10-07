@@ -1408,6 +1408,12 @@ accordion.active, accordion:hover {
 	filter: drop-shadow(5px 5px 10px #000);
 }
 
+.int-sombra {
+	-webkit-box-shadow: inset 0px -27px 28px 4px rgba(0,0,0,1);
+	-moz-box-shadow: inset 0px -27px 28px 4px rgba(0,0,0,1);
+	box-shadow: inset 0px -27px 28px 4px rgba(0,0,0,1);
+}
+
 .tradutor {
 	display: inline-block;
 	vertical-align: middle;
