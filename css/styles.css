@@ -1962,9 +1962,6 @@ section.pricing {
 	border-radius: 35px;
 }
 
-.block:after {
-	filter: blur(50px);
-}
 
 .square {
     opacity: 0;
