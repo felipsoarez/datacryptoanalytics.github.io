@@ -2025,6 +2025,9 @@ section.pricing {
 		hsl(353deg 16% 25%),
 		hsl(323deg 12% 22%)
 	  );
+	background-size: 400%;
+	width: 100%;
+	height: 100%;
 	border-radius: 35px;
 	z-index: -1;
 	animation: steam 20s linear infinite;
