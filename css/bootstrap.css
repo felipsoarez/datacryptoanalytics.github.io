@@ -1540,23 +1540,33 @@ pre code {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #212529;
+  border-radius: 25px;
 }
 
-.table th,
+.table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #000000;
+  text-align: left;
+}
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid #000000;
+  text-align: center;
 }
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
+  background-color: #000;
+  border-top: 1px solid #00000000;
+  border-radius: 15px;
+  text-align: center;
+  filter: drop-shadow(5px 5px 10px #000);
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  border-top: 2px solid #000000;
 }
 
 .table-sm th,
@@ -1565,12 +1575,12 @@ pre code {
 }
 
 .table-bordered {
-  border: 1px solid #dee2e6;
+  border: 1px solid #000000;
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #dee2e6;
+  border: 1px solid #000000;
 }
 
 .table-bordered thead th,
