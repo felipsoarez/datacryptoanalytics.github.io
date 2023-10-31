@@ -2320,7 +2320,54 @@ z
 
 
 
-.bg-gif {
-	background-image: url('/images/trendcrypto.gif') repeat-y 100% 100% fixed;
+.gif-container {
+	background: url("images/trendcrypto.gif") center;
 	background-size: cover;
+}
+
+:root {
+	--gradient-shadow: linear-gradient(
+		45deg,
+		#ff8c05,
+		#000000
+	);
+}
+.shadow {
+	display: flex;
+	position: sticky;
+	color: #fff;
+	background: linear-gradient(0deg, #000, #262626);
+	border-radius: 35px;
+}
+.shadow:before,
+.shadow:after {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	border-radius: 35px;
+	background: var(--gradient-shadow);
+	background-size: 80%;
+	width: calc(100% + 1px);
+	height: calc(100% + 1px);
+	z-index: -1;
+	animation: animate 20s linear infinite;
+}
+
+.shadow:after {
+	filter: blur(20px);
+	border-radius: 35px;
+
+}
+
+@keyframes animate {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 300% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
 }
