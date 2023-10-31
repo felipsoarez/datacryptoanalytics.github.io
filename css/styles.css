@@ -985,11 +985,10 @@ ul {
 	
 	@media (max-width:720px){
 	.footer{
-	text-align:left;
+	text-align:center;
 	padding:5%;
 	}
 	.footer .ro ul li{
-	display:block;
 	margin:10px 0px;
 	text-align:left;
 	}
