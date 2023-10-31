@@ -620,6 +620,15 @@ pre code {
   margin-left: -15px;
 }
 
+.row-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -1226,6 +1235,11 @@ pre code {
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 24.9%;
     max-width: 26.6%;
+  }
+  .col-lg-4-footer {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 22.9%;
+    max-width: 33%;
   }
   .col-lg-5 {
     -ms-flex: 0 0 41.666667%;
@@ -8134,7 +8148,7 @@ button.bg-dark:focus {
 
 .pt-5,
 .py-5 {
-  padding-top: 3rem !important;
+  padding-top: 1rem !important;
 }
 
 .pr-5,
@@ -8144,7 +8158,7 @@ button.bg-dark:focus {
 
 .pb-5,
 .py-5 {
-  padding-bottom: 3rem !important;
+  padding-bottom: 2rem !important;
 }
 
 .pl-5,
