@@ -2371,3 +2371,152 @@ z
 		background-position: 0 0;
 	}
 }
+
+
+.bn30 {
+	border: 5em;
+	cursor: pointer;
+	outline: none;
+	font-size: 16px;
+	-webkit-transform: translate(0);
+	transform: translate(0);
+	background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+	padding: 0.7em 2em;
+	border-radius: 65px;
+	box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+	-webkit-transition: box-shadow 0.25s;
+	transition: box-shadow 0.25s;
+	color: white;
+  }
+  
+  .bn30 .text {
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+  }
+  
+  .bn30:after {
+	content: "";
+	border-radius: 18px;
+	position: absolute;
+	margin: 4px;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	background: #0e0e10;
+  }
+  
+  .bn30:hover {
+	background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+	box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+  }
+  
+  .bn30:hover .text {
+	background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+  }
+
+  /* -------------------
+
+*/
+
+
+.Btn_shark {
+	width: 140px;
+	height: 40px;
+	border: none;
+	border-radius: 10px;
+	background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+	background-size: 250%;
+	background-position: left;
+	color: #ffd277;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition-duration: 1s;
+	overflow: hidden;
+  }
+  
+  .Btn_shark::before {
+	position: absolute;
+	content: "🦈 Shark Trader";
+	color: #ffd277;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 97%;
+	height: 90%;
+	border-radius: 8px;
+	transition-duration: 1s;
+	background-color: rgba(0, 0, 0, 0.842);
+	background-size: 200%;
+  }
+  
+  .Btn_shark:hover {
+	background-position: right;
+	transition-duration: 1s;
+  }
+  
+  .Btn_shark:hover::before {
+	background-position: right;
+	transition-duration: 1s;
+  }
+  
+  .Btn_shark:active {
+	transform: scale(0.95);
+  }
+
+
+    /* -------------------
+
+*/
+.Btn_whale {
+	width: 140px;
+	height: 40px;
+	border: none;
+	border-radius: 10px;
+	background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+	background-size: 250%;
+	background-position: left;
+	color: #ffd277;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition-duration: 1s;
+	overflow: hidden;
+  }
+  
+  .Btn_whale::before {
+	position: absolute;
+	content: "🐋 Whale Trader";
+	color: #ffd277;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 97%;
+	height: 90%;
+	border-radius: 8px;
+	transition-duration: 1s;
+	background-color: rgba(0, 0, 0, 0.842);
+	background-size: 200%;
+  }
+  
+  .Btn_whale:hover {
+	background-position: right;
+	transition-duration: 1s;
+  }
+  
+  .Btn_whale:hover::before {
+	background-position: right;
+	transition-duration: 1s;
+  }
+  
+  .Btn_whale:active {
+	transform: scale(0.95);
+  }
