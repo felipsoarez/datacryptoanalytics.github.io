@@ -2181,6 +2181,21 @@ z
 
 */
 
+.img-opacity {
+	content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url('images/mont.png ');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
 
 
 .before,
