@@ -2212,10 +2212,9 @@ z
 
 .before figcaption,
 .after figcaption {
-	background: #fff;
-	border: 1px solid #c0c0c0;
-	border-radius: 12px;
-	color: #2e3452;
+	background: #121212;
+	border-radius: 17px;
+	color: #ff8c05;
 	opacity: 0.8;
 	padding: 12px;
 	position: absolute;
